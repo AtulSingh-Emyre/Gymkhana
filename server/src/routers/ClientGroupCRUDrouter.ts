@@ -1,6 +1,6 @@
-import {Router, Response, Request} from 'express';
-import {ClientGroupController} from '../controllers/ClientGroupController';
-import {AuthSetup} from '../middlewares/authentication-setup';
+import { Router, Response, Request } from 'express';
+import { ClientGroupController } from '../controllers/ClientGroupController';
+import { AuthSetup } from '../middlewares/authentication-setup';
 
 //@Route: /client-group-management
 //@AUTH required
@@ -20,19 +20,19 @@ class ClientGroupCRUDRouter {
     this.router.post(
       '/add-user-to-group',
       AuthSetup.isAuthenticated,
-      ClientGroupController.addClient,
+      ClientGroupController.addClient
     );
 
     this.router.post(
       '/analyst/remove-user',
       AuthSetup.isAuthenticated,
-      ClientGroupController.removeClient,
+      ClientGroupController.removeClient
     );
 
     this.router.post(
       '/analyst/new-group',
       AuthSetup.isAuthenticated,
-      ClientGroupController.addClientGroup,
+      ClientGroupController.addClientGroup
     );
 
     this.router.post('/group-data/purge', ClientGroupController.purge);
@@ -41,14 +41,14 @@ class ClientGroupCRUDRouter {
     this.router.put(
       '/analyst/group/rename',
       AuthSetup.isAuthenticated,
-      ClientGroupController.renameGroups,
+      ClientGroupController.renameGroups
     );
   }
   deleteRoutes() {
     this.router.put(
       '/analyst/group/delete',
       AuthSetup.isAuthenticated,
-      ClientGroupController.deleteGroup,
+      ClientGroupController.deleteGroup
     );
   }
 }

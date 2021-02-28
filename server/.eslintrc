@@ -9,9 +9,12 @@
     "ecmaVersion": 2018, // Allows for the parsing of modern ECMAScript features
     "sourceType": "module" // Allows for the use of imports
   },
+  // Missing return type on function.eslint@typescript-eslint/explicit-function-return-type
+
   "rules": {
     "no-error-on-unmatched-pattern": "off",
     "@typescript-eslint/no-explicit-any": "off", // TODO: Remove this.
+    "@typescript-eslint/explicit-function-return-type.md" :"off",
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     "@typescript-eslint/explicit-function-return-type": "off"
@@ -25,5 +28,5 @@
       }
     }
   ],
-  "ignorePatterns": ["./node_modules/*"]
+  "ignorePatterns": ["./node_modules/*","./src/*"]
 }

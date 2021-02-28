@@ -1,27 +1,28 @@
-import {Request, Response, NextFunction, query} from 'express';
-import AnalystPostBuySell, {
-  AnalystPostBuySellDocument,
-} from '../models/Analyst/AnalystPostBuySell';
-// import Comment from '../models/mongoDB/Comment';
-// import Posts from '../models/mongoDB/AnalystPostBuySell';
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import { Request, Response, NextFunction } from 'express';
 
-enum Errors {
-  STATUS_401 = 'invalid data provided',
-  STATUS_501 = 'server error,please try again',
-}
+// enum Errors {
+//   STATUS_401 = 'invalid data provided',
+//   STATUS_501 = 'server error,please try again'
+// }
 
-export class AnalystPostController {
-  static async savePost(req: Request, res: Response, next: NextFunction) {
+export class CouncilMemberController {
+  static async getCouncilMembersAll(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) {
     try {
       const postDoc = {
         ...req.body.post,
-        subscibeClient: await JSON.parse(req.body.post.subscibeClient),
+        subscibeClient: await JSON.parse(req.body.post.subscibeClient)
       };
       const newPost = await new AnalystPostBuySell(postDoc);
       await newPost.save();
       res.status(200).json({
-        data: {_id: newPost._id},
-        success: true,
+        data: { _id: newPost._id },
+        success: true
       });
     } catch (error) {
       next(error);
@@ -47,25 +48,25 @@ export class AnalystPostController {
           limit: number;
         };
       };
-      var queryTime = {};
+      let queryTime = {};
       // Time-period-wise filter :
       if (req.body.time.isAll) {
       } else if (!(req.body.isIntraday && req.body.isInterday)) {
         if (req.body.time.isIntraday) {
-          queryTime = {...queryTime, isIntraday: true};
+          queryTime = { ...queryTime, isIntraday: true };
         } else if (req.body.time.isInterday) {
-          queryTime = {...queryTime, isIntraday: false};
+          queryTime = { ...queryTime, isIntraday: false };
         } else {
         }
       }
-      var queryUser = {};
+      let queryUser = {};
       // User-group wise filter :
       if (req.body.user.isUser) {
-        queryUser = {...queryUser, analyst: req.body.user.id};
+        queryUser = { ...queryUser, analyst: req.body.user.id };
       } else if (req.body.user.groups) {
         queryUser = {
           ...queryUser,
-          'subscibeClient.groupId': {$in: req.body.user.groups},
+          'subscibeClient.groupId': { $in: req.body.user.groups }
         };
       } else {
       }
@@ -75,30 +76,30 @@ export class AnalystPostController {
       const posts: any = req.body.user.isUser
         ? await AnalystPostBuySell.find({
             ...queryTime,
-            ...queryUser,
+            ...queryUser
           })
             .skip(req.body.options.skip)
             .limit(req.body.options.limit)
             .sort({
-              updated_at: -1,
+              updated_at: -1
             })
         : await AnalystPostBuySell.find({
             $or: [
-              {...queryTime, ...queryUser},
-              {...queryTime, isFree: true},
-            ],
+              { ...queryTime, ...queryUser },
+              { ...queryTime, isFree: true }
+            ]
           })
             .skip(req.body.options.skip)
             .limit(req.body.options.limit)
             .sort({
-              updated_at: -1,
+              updated_at: -1
             });
 
       console.log(posts);
       return res.json({
         success: true,
         data: posts,
-        message: 'post data gained',
+        message: 'post data gained'
       });
     } catch (error) {
       next(error);
@@ -111,7 +112,7 @@ export class AnalystPostController {
           res.json({
             status: 'ok',
 
-            success: 'Deletion was successful',
+            success: 'Deletion was successful'
           });
         } else {
           throw new Error('request failed');
@@ -140,8 +141,8 @@ export class AnalystPostController {
       return res.json({
         success: true,
         data: {
-          message: 'Like status changed successfully',
-        },
+          message: 'Like status changed successfully'
+        }
       });
     } catch (error) {
       next(error);

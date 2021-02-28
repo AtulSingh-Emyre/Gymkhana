@@ -1,6 +1,6 @@
-import {Router, Response, Request} from 'express';
-import {UserController} from '../controllers/UserController';
-import {AuthSetup} from '../middlewares/authentication-setup';
+import { Router, Response, Request } from 'express';
+import { UserController } from '../controllers/UserController';
+import { AuthSetup } from '../middlewares/authentication-setup';
 
 // @Route: user-management/
 
@@ -18,19 +18,19 @@ class UserRouter {
     this.router.get(
       '/user/:id',
       AuthSetup.isAuthenticated,
-      UserController.getUser,
+      UserController.getUser
     );
     this.router.get(
       '/analyst/leaderboard',
       AuthSetup.isAuthenticated,
-      UserController.getLeaderboard,
+      UserController.getLeaderboard
     );
   }
   postRoutes() {
     this.router.post(
       '/user/update',
       AuthSetup.isAuthenticated,
-      UserController.updateUser,
+      UserController.updateUser
     );
   }
   putRoutes() {}

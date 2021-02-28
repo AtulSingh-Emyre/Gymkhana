@@ -1,6 +1,6 @@
-import {Router, Response, Request} from 'express';
-import {authorize} from 'passport';
-import {AuthController} from '../controllers/AuthController';
+import { Router, Response, Request } from 'express';
+import { authorize } from 'passport';
+import { AuthController } from '../controllers/AuthController';
 
 //@Route: /auth
 //@AUTH not required

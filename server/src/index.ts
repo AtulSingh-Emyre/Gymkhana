@@ -1,4 +1,4 @@
-import {Server} from './server';
+import { Server } from './server';
 // const options = {
 //   key: fs.readFileSync('key.pem'),
 //   cert: fs.readFileSync('cert.pem'),

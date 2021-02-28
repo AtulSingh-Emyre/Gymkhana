@@ -1,5 +1,5 @@
-import {group} from 'console';
-import {Request, Response, NextFunction} from 'express';
+import { group } from 'console';
+import { Request, Response, NextFunction } from 'express';
 import UserDetail from '../models/User/UserAuthDetails';
 import User from '../models/User/UserAuthDetails';
 export class UserController {
@@ -23,11 +23,11 @@ export class UserController {
         DOB: user.DOB,
         description: user.description,
         interests: user.interests,
-        experience: user.experience,
+        experience: user.experience
       };
       res.status(200).json({
         data: userDataToSend,
-        success: true,
+        success: true
       });
     } catch (error) {
       next(error);
@@ -38,12 +38,12 @@ export class UserController {
     try {
       await User.findByIdAndUpdate(req.body.id, {
         ...req.body.userData,
-        updated_at: new Date(),
+        updated_at: new Date()
       });
       res.status(200).json({
         success: true,
         data: {},
-        message: 'user details updated',
+        message: 'user details updated'
       });
     } catch (err) {
       next(err);
@@ -52,12 +52,12 @@ export class UserController {
 
   static async deleteUser(req: Request, res: Response, next: NextFunction) {
     try {
-      User.deleteMany({id: req.body.phone}, () => {
+      User.deleteMany({ id: req.body.phone }, () => {
         res.json({
           status: 'ok',
           data: {},
           message: 'user data delted',
-          error: 'user data failed to be deleted',
+          error: 'user data failed to be deleted'
         });
       });
     } catch (err) {
@@ -67,18 +67,18 @@ export class UserController {
   static async getLeaderboard(req: Request, res: Response, next: NextFunction) {
     try {
       const leaderboard = await UserDetail.find({
-        roles: [{Analyst: true}, {Trader: false}],
+        roles: [{ Analyst: true }, { Trader: false }]
       }).select({
         _id: 1,
         name: 1,
         work_mail: 1,
         phone: 1,
         avatar: 1,
-        isActive: 1,
+        isActive: 1
       });
       res.json({
         success: true,
-        data: leaderboard,
+        data: leaderboard
       });
     } catch (err) {
       next(err);
@@ -91,7 +91,7 @@ export class UserController {
           status: 'ok',
           data: {},
           message: 'all user data delted',
-          error: 'user data failed to be deleted',
+          error: 'user data failed to be deleted'
         });
       });
     } catch (err) {

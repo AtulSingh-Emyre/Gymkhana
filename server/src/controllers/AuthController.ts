@@ -1,14 +1,14 @@
-import {Request, Response, NextFunction} from 'express';
-import {getEnvironmentVariables} from '../environments/env';
+import { Request, Response, NextFunction } from 'express';
+import { getEnvironmentVariables } from '../environments/env';
 import request from 'request';
 import jwt from 'jsonwebtoken';
-import UserDetail, {IUserAuthData} from '../models/User/UserAuthDetails';
+import UserDetail, { IUserAuthData } from '../models/User/UserAuthDetails';
 import ClientGroup from '../models/client/ClientGroup';
 import * as nodemailer from 'nodemailer';
 import Mailgen from 'mailgen';
 enum errorMessages {
   STATUS_401 = 'invalid data provided, please try again',
-  STATUS_501 = 'server error, please try again',
+  STATUS_501 = 'server error, please try again'
 }
 
 export const transporter = nodemailer.createTransport({
@@ -16,15 +16,15 @@ export const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: getEnvironmentVariables().email,
-    pass: getEnvironmentVariables().password,
-  },
+    pass: getEnvironmentVariables().password
+  }
 });
 const MailGenerator = new Mailgen({
   theme: 'default',
   product: {
     name: 'Nodemailer',
-    link: 'http://localhost:5000/',
-  },
+    link: 'http://localhost:5000/'
+  }
 });
 
 export class AuthController {
@@ -41,27 +41,27 @@ export class AuthController {
           req.body.phone +
           '/' +
           otp,
-        headers: {'content-type': 'application/x-www-form-urlencoded'},
-        form: {},
+        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        form: {}
       };
       await request(options, function (error: any, response: any, body: any) {
         console.log(JSON.parse(body));
         if (JSON.parse(body).Status == 'Success') {
           return res.status(501).json({
             success: false,
-            message: errorMessages.STATUS_501,
+            message: errorMessages.STATUS_501
           });
         }
         if (JSON.parse(body).Status !== 'Success')
           return res.status(200).json({
             data: {
-              otp,
+              otp
             },
-            success: true,
+            success: true
           });
         return res.status(401).json({
           message: errorMessages.STATUS_401,
-          success: false,
+          success: false
         });
       });
     } catch (err) {
@@ -73,11 +73,11 @@ export class AuthController {
     try {
       let query;
       if (req.body.user.phone) {
-        query = {phone: req.body.user.phone};
+        query = { phone: req.body.user.phone };
       }
       if (req.body.user.work_mail) {
         query = {
-          work_mail: req.body.user.work_mail,
+          work_mail: req.body.user.work_mail
         };
       }
       const user = await UserDetail.findOne(query);
@@ -85,7 +85,7 @@ export class AuthController {
         console.log('creating new user');
 
         const user = await new UserDetail({
-          ...req.body.user,
+          ...req.body.user
         });
         await user.save();
         const token = await jwt.sign(user.toJSON(), 'asdf');
@@ -105,38 +105,38 @@ export class AuthController {
           website_url: user.website_url,
           DOB: user.DOB,
           interests: user.interests,
-          isActive: user.isActive,
+          isActive: user.isActive
         };
         const newGroup = await new ClientGroup({
           groupName: 'Default',
-          analystId: user._id,
+          analystId: user._id
         });
         await newGroup.save();
         const groups = [
           {
             _id: newGroup._id,
             userList: newGroup.userList,
-            groupName: newGroup.groupName,
-          },
+            groupName: newGroup.groupName
+          }
         ];
 
         return res.status(200).json({
           data: {
             user: JSON.stringify(userAuthData),
             groups: await JSON.stringify(groups),
-            token,
+            token
           },
-          sucess: true,
+          sucess: true
         });
       }
       if (user) {
         console.log('existing user found');
 
         const token = await jwt.sign(user.toJSON(), 'asdf');
-        const groups = await ClientGroup.find({analystId: user._id}).select({
+        const groups = await ClientGroup.find({ analystId: user._id }).select({
           _id: 1,
           userList: 1,
-          groupName: 1,
+          groupName: 1
         });
         const userAuthData: IUserAuthData = {
           id: user._id,
@@ -154,15 +154,15 @@ export class AuthController {
           website_url: user.website_url,
           DOB: user.DOB,
           interests: user.interests,
-          isActive: user.isActive,
+          isActive: user.isActive
         };
         return res.status(200).json({
           data: {
             user: JSON.stringify(userAuthData),
             groups: JSON.stringify(groups),
-            token,
+            token
           },
-          success: true,
+          success: true
         });
       }
     } catch (err) {
@@ -176,20 +176,20 @@ export class AuthController {
         body: {
           intro:
             "Welcome to Tradycoon! We're very excited to have you on board. Your verification otp is: " +
-            otp,
-        },
+            otp
+        }
       };
       let mail = MailGenerator.generate(response);
       let message = {
         from: getEnvironmentVariables().email,
         to: req.body.userMail,
         subject: 'Verification',
-        html: mail,
+        html: mail
       };
       await transporter.sendMail(message);
       return res.status(200).json({
         success: true,
-        otp: otp,
+        otp: otp
       });
     } catch (error) {
       next(error);
@@ -200,7 +200,7 @@ export class AuthController {
     await UserDetail.deleteMany({});
     const user = await UserDetail.find({});
     res.json({
-      user,
+      user
     });
   }
 }

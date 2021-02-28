@@ -12,8 +12,8 @@ export interface Environment {
   accountSID: string;
   authToken: string;
   phoneAuthapi: string;
-  password:string;
-  email:string;
+  password: string;
+  email: string;
 }
 
 export function getEnvironmentVariables() {
