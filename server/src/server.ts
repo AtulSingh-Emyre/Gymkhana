@@ -1,17 +1,12 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import express from 'express';
-import { Request, Response, NextFunction } from 'express';
-import cookieParser from 'cookie-parser';
-import session from 'express-session';
+import { Response } from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
-import passport from 'passport';
 //server file imports
-import AuthRouter from './routers/AuthRouter';
-import UserRouter from './routers/UserRouter';
 import { getEnvironmentVariables } from './environments/env';
-import AnalystPostRouter from './routers/CouncilMemberRouter';
-import CommentRouter from './routers/CommentRouter';
-import ClientGroupCRUDrouter from './routers/ClientGroupCRUDrouter';
+import CouncilMemberRouter from './routers/CouncilMemberRouter';
 
 export class Server {
   public app: express.Application = express();
@@ -23,43 +18,15 @@ export class Server {
   }
 
   setConfigurations() {
-    this.app.use(cookieParser());
     this.connectMongoDb();
     this.configureBodyParser();
-    this.configureExpressSession();
-    this.configurePassport();
     console.log('Configurations have been successfully setup');
-  }
-
-  configureExpressSession() {
-    this.app.use(
-      session({
-        secret: 'abcdefg',
-        resave: true,
-        saveUninitialized: false
-      })
-    );
-    console.log('Express session configured');
-  }
-
-  configurePassport() {
-    this.app.use(passport.initialize());
-    this.app.use(passport.session());
-    console.log('passport initialize and session setup');
   }
 
   configureBodyParser() {
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: true }));
     console.log('body-parser setup');
-  }
-
-  setRoutes() {
-    this.app.use('/auth', AuthRouter);
-    this.app.use('/user-management', UserRouter);
-    this.app.use('/analyst', AnalystPostRouter);
-    this.app.use('/client-group-management', ClientGroupCRUDrouter);
-    // this.app.use('/post/comment', CommentRouter);
   }
 
   connectMongoDb() {
@@ -73,6 +40,10 @@ export class Server {
     });
   }
 
+  setRoutes() {
+    this.app.use('/council', CouncilMemberRouter);
+  }
+
   error404Handler() {
     this.app.use((req, res) => {
       res.status(404).json({
@@ -83,7 +54,7 @@ export class Server {
   }
 
   handleErrors() {
-    this.app.use((error: any, req: any, res: Response, next: NextFunction) => {
+    this.app.use((error: any, req: any, res: Response) => {
       const errorStatus = req.errorStatus || 500;
       res.status(errorStatus).json({
         message: error.message || 'Something Went Wrong. Please Try Again',

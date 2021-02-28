@@ -31,7 +31,6 @@ const Dashboard: React.FC = () => {
 
       setFoods(response.data);
     }
-
     loadFoods();
   }, []);
 
