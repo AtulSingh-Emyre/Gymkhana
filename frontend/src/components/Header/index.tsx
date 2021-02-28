@@ -12,11 +12,11 @@ interface IHeaderProps {
 const Header: React.FC<IHeaderProps> = ({ openModal }) => (
   <Container>
     <header>
-      <img src={Logo} alt="GoRestaurant" />
+      <img src={Logo} alt="Go Restaurant" />
       <nav>
         <div>
           <button type="button" onClick={openModal}>
-            <div className="text">Novo Prato</div>
+            <div className="text">IIT Dharwad</div>
             <div className="icon">
               <FiPlusSquare size={24} />
             </div>
