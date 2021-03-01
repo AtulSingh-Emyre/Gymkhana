@@ -16,17 +16,20 @@ class CouncilMemberRouter {
     // this.deleteRoutes();
   }
   getRoutes() {
+    // Getting data of the current list of council members
     this.router.get(
-      '/all-members',
-      CouncilMemberController.getCouncilMembersAll
+      '/current/all-members',
+      CouncilMemberController.getCouncilMembersAllCurrent
     );
+    // Getting a specific council member from current year
     this.router.get(
-      '/current/:query'
-      // CouncilMemberController.getCouncilMembersCurrent
+      '/current/:query',
+      CouncilMemberController.getCouncilMembersCurrentQueried
     );
+    // Getting a specific council member from previous year
     this.router.get(
-      '/council/:year/:query'
-      // CouncilMemberController.getCouncilMemberPrev
+      '/prev/:year/:query',
+      CouncilMemberController.getCouncilMemberPrevQueried
     );
   }
 
