@@ -1,60 +1,27 @@
-import React, {
-  InputHTMLAttributes,
-  useEffect,
-  useRef,
-  useState,
-  useCallback,
-} from 'react';
+import React from 'react';
+import { Button, Form, FormControl, Row, Col } from 'react-bootstrap';
 
-import { IconBaseProps } from 'react-icons';
-import { useField } from '@unform/core';
+const Input = () => {
+  return (
+    <Form>
+      <Form.Group controlId="formBasicName">
+        <Form.Label>Name</Form.Label>
+        <Form.Control type="text" placeholder="Name" />
+      </Form.Group>
+      
+      <Form.Group controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+    </Form.Text>
+      </Form.Group>
 
-import { Container } from './styles';
-
-interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  name: string;
-  icon?: React.ComponentType<IconBaseProps>;
+      <Button variant="primary" type="submit">
+        Submit
+  </Button>
+    </Form>
+  )
 }
 
-const Input: React.FC<IInputProps> = ({ name, icon: Icon, ...rest }) => {
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  const [isFocused, setIsFocused] = useState(false);
-  const [isFilled, setIsFilled] = useState(false);
-
-  const { fieldName, defaultValue, registerField } = useField(name);
-
-  const handleInputFocus = useCallback(() => {
-    setIsFocused(true);
-  }, []);
-
-  const handleInputBlur = useCallback(() => {
-    setIsFocused(false);
-
-    setIsFilled(!!inputRef.current?.value);
-  }, []);
-
-  useEffect(() => {
-    registerField({
-      name: fieldName,
-      ref: inputRef.current,
-      path: 'value',
-    });
-  }, [fieldName, registerField]);
-
-  return (
-    <Container isFilled={isFilled} isFocused={isFocused}>
-      {Icon && <Icon size={20} />}
-
-      <input
-        onFocus={handleInputFocus}
-        onBlur={handleInputBlur}
-        defaultValue={defaultValue}
-        ref={inputRef}
-        {...rest}
-      />
-    </Container>
-  );
-};
-
-export default Input;
+export default Input
