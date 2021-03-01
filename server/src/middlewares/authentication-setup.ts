@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import * as jwt from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
 import { getEnvironmentVariables } from '../environments/env';
