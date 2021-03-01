@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import EventsCalendar from '../../components/EventsCalendar';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Input from '../../components/Input';
 
-interface IFoodPlate {
-}
 
-const Dashboard: React.FC = () => {
+
+const Contact: React.FC = () => {
   return (
     <>
     <Header />
-      <EventsCalendar/>
+    <Input />
       <Footer />
     </>
   );
 };
 
-export default Dashboard;
+export default Contact;
