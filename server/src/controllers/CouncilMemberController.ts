@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { Request, Response, NextFunction } from 'express';
-import { getSheet } from '../middlewares/spreadsheet-reader';
-import { CouncilSchema } from '../models/client/CouncilSchema';
+import { CouncilSchema, prevCouncil } from '../models/client/CouncilSchema';
 const readXlsxFile = require('read-excel-file/node');
 
 export class CouncilMemberController {
@@ -37,8 +36,11 @@ export class CouncilMemberController {
         schema: CouncilSchema,
         sheet: 1
       });
+      if (t.errors.length != 0)
+        throw new Error('Something went wrong, please try again');
+
       const data: any = [];
-      t.forEach((row: any) => {
+      t.rows.forEach((row: any) => {
         if (row.post === query || row.council === query) data.push(row);
       });
       res.status(200).json({
@@ -55,28 +57,30 @@ export class CouncilMemberController {
     next: NextFunction
   ) {
     try {
-      const sheet = await getSheet(1);
+      const t = await readXlsxFile('./src/Assets/council.xlsx', {
+        schema: prevCouncil,
+        sheet: 2
+      });
+      if (t.errors.length != 0)
+        throw new Error('Something went wrong, please try again');
+
       const query = req.params.query;
       const year = req.params.year;
-      const rows = await sheet.getRows();
-      const data: any = {};
-      rows.forEach((row: any) => {
-        if (
-          (row.Post === query || row.Council === query || query === 'all') &&
-          row.Year === year
-        )
-          data[row.Council] = {
-            ...data[row.Council],
-            [row.Post]: {
-              name: row.Name,
-              email: row.Email,
-              phone: row.Phone,
-              website: row.Website
-            }
-          };
+      const data: any = [];
+      t.rows.forEach((row: any) => {
+        if (year != 'all') {
+          if (
+            (row.Post === query || row.Council === query || query === 'all') &&
+            row.Year === parseInt(year)
+          )
+            data.push(row);
+        } else {
+          if (row.Post === query || row.Council === query || query === 'all')
+            data.push(row);
+        }
       });
       res.status(200).json({
-        data,
+        data: t.rows,
         success: true
       });
     } catch (error) {
