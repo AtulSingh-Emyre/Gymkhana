@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
   return (
     <>
     <Header />
-    <Input />
+    <Input title="Contact Form"/>
       <Footer />
     </>
   );

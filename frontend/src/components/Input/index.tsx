@@ -1,9 +1,12 @@
 import React from 'react';
 import { Button, Form, FormControl, Row, Col,Container } from 'react-bootstrap';
 
-const Input = () => {
+const Input = (props: any) => {
   return (
     <Container>
+      <div>
+        <label htmlFor="">{props.title}</label>
+      </div>
     <div className="my-5">
       <Form>
         <div className="my-2">
@@ -27,7 +30,7 @@ const Input = () => {
           </Row>
         </div>
       </Form>
-      <div className="my-2">
+      <div className="my-2" style={{textAlign:"center"}}>
         <Button variant="secondary" size="lg">
           Submit
     </Button>

@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import Dashboard from '../pages/Dashboard';
 import Contact from '../pages/Contact';
 import Notices from '../pages/Notices';
+import Calendar from '../pages/Calendar';
 
 
 const Routes: React.FC = () => (
@@ -12,6 +13,7 @@ const Routes: React.FC = () => (
     <Route path="/" exact component={Dashboard} />
     <Route path="/contact"  component={Contact} />
     <Route path="/notices"  component={Notices} />
+    <Route path="/calendar"  component={Calendar} />
     
   </Switch>
 );
