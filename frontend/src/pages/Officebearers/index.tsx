@@ -2,17 +2,18 @@ import React, { useState, useEffect } from 'react';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import Homepage from '../../components/Homepage';
+import Details from '../../components/Details';
 
 
-const Dashboard: React.FC = () => {
+
+const Officebearers: React.FC = () => {
   return (
     <>
       <Header />
-      <Homepage />
+      <Details />
       <Footer />
     </>
   );
 };
 
-export default Dashboard;
+export default Officebearers;

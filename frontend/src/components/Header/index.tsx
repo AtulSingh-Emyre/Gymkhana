@@ -1,27 +1,31 @@
 import React from 'react';
-import { Button,Navbar,Nav,NavDropdown,Form,FormControl } from 'react-bootstrap';
+import { Button, Navbar, Nav, NavDropdown, } from 'react-bootstrap';
 import logo from "../../assets/logo.png";
 
 const Header = () => (
   <Navbar bg="light" expand="lg" >
-  
-  <img src={logo} style={{width:100, marginTop: -7}} />
-  <Navbar.Brand href="#home">Indian Institute of Technology, Dharwad</Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="ml-auto" >
-      <Nav.Link href="/">HOME</Nav.Link>
-      <Nav.Link href="#link">OFFICE BEARERS</Nav.Link>
-      <Nav.Link href="#link">COUNCILS</Nav.Link>
-      <Nav.Link href="/notices">NOTICES</Nav.Link>
-      <Nav.Link href="#link">STUDENT BODIES</Nav.Link>
-      <Nav.Link href="/calendar">CALENDAR</Nav.Link>
-      <Nav.Link href="#link">TEAM</Nav.Link>
-      <Nav.Link href="/contact">CONTACT</Nav.Link>
-    </Nav>
-    
-  </Navbar.Collapse>
-</Navbar>
+
+    <img src={logo} style={{ width: 70, marginTop: -7, marginLeft: 10 }} />
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="ml-auto" >
+        <Nav.Link href="/">HOME</Nav.Link>
+        <Nav.Link href="/office">OFFICE BEARERS</Nav.Link>
+        <NavDropdown title="COUNCILS" id="basic-nav-dropdown">
+          <NavDropdown.Item href="#action/3.1">TECHNICAL COUNCILS</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.2">CULTURAL COUNCILS</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.3">SPORTS COUNCILS</NavDropdown.Item>
+        </NavDropdown>
+        <Nav.Link href="/notices">NOTICES</Nav.Link>
+        <Nav.Link href="#link">STUDENT BODIES</Nav.Link>
+        <Nav.Link href="/calendar">CALENDAR</Nav.Link>
+        <Nav.Link href="#link">TEAM</Nav.Link>
+        <Nav.Link href="/contact">CONTACT</Nav.Link>
+      </Nav>
+
+    </Navbar.Collapse>
+  </Navbar>
+
 );
 
 export default Header;
