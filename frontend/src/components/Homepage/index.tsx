@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './style.css'
 
+
 const Homepage = () => (
   <div>
     <div className="home ">

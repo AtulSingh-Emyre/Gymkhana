@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, Navbar, Nav, NavDropdown, } from 'react-bootstrap';
 import logo from "../../assets/logo.png";
+import './style.css';
 
 const Header = () => (
-  <Navbar bg="light" expand="lg" >
+  <Navbar  expand="lg" >
 
     <img src={logo} style={{ width: 70, marginTop: -7, marginLeft: 10 }} />
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
