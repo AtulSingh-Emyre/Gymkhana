@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { Request, Response, NextFunction } from 'express';
 import { InventorySchema } from '../models/client/Inventory';
-const readXlsxFile = require('read-excel-file/node');
+import reader from 'xlsx';
 
 export class InventoryController {
   static async getAllInventory(
@@ -11,37 +11,28 @@ export class InventoryController {
     next: NextFunction
   ) {
     try {
-      const t = await readXlsxFile('./src/Assets/council.xlsx', {
-        schema: InventorySchema,
-        sheet: 3
-      });
-      if (t.errors.length != 0)
-        throw new Error('Something went wrong, please try again');
+      const file = reader.readFile('./src/Assets/council.xlsx');
+      const t = reader.utils.sheet_to_json(file.Sheets[2]);
       res.status(200).json({
-        data: t.rows,
+        data: t,
         success: true
       });
     } catch (error) {
       next(error);
     }
   }
-  static async getCouncilMembersCurrentQueried(
+  static async getInventorysQueried(
     req: Request,
     res: Response,
     next: NextFunction
   ) {
     try {
       const query = req.params.query;
-      const t = await readXlsxFile('./src/Assets/council.xlsx', {
-        schema: CouncilSchema,
-        sheet: 1
-      });
-      if (t.errors.length != 0)
-        throw new Error('Something went wrong, please try again');
-
+      const file = reader.readFile('./src/Assets/council.xlsx');
+      const t = reader.utils.sheet_to_json(file.Sheets[2]);
       const data: any = [];
-      t.rows.forEach((row: any) => {
-        if (row.post === query || row.council === query) data.push(row);
+      t.forEach((row: any) => {
+        if (row.club === query || row.council === query) data.push(row);
       });
       res.status(200).json({
         data,
@@ -51,23 +42,19 @@ export class InventoryController {
       next(error);
     }
   }
-  static async getCouncilMemberPrevQueried(
+  static async postNewInventoryItem(
     req: Request,
     res: Response,
     next: NextFunction
   ) {
     try {
-      const t = await readXlsxFile('./src/Assets/council.xlsx', {
-        schema: prevCouncil,
-        sheet: 2
-      });
-      if (t.errors.length != 0)
-        throw new Error('Something went wrong, please try again');
-
-      const query = req.params.query;
-      const year = req.params.year;
-      const data: any = [];
-      t.rows.forEach((row: any) => {
+      const id = new Date() + '' + req.body.id;
+      const details = req.body.det;
+      const newItem = { id, ...details };
+      const file = reader.readFile('./src/Assets/council.xlsx');
+      const t = reader.utils.sheet_to_json(file.Sheets[2]);
+      const data: any = [newItem];
+      t.forEach((row: any) => {
         if (year != 'all') {
           if (
             (row.Post === query || row.Council === query || query === 'all') &&

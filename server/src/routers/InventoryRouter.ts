@@ -23,7 +23,7 @@ class InventoryRouter {
 
   postRoutes() {
     // Posting a new Inventory
-    this.router.post('/new', InventoryController.postNewInventory);
+    this.router.post('/new', InventoryController.postNewInventoryItem);
   }
   putRoutes() {
     // Updating an existing Inventory
