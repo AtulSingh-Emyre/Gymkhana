@@ -7,6 +7,9 @@ import Contact from '../pages/Contact';
 import Notices from '../pages/Notices';
 import Calendar from '../pages/Calendar';
 import Officebearers from '../pages/Officebearers';
+import Technicalcouncil from '../pages/Technicalcouncil';
+import Sportscouncil from '../pages/Sportscouncil';
+import Culturalcouncil from '../pages/Culturalcouncil';
 
 
 const Routes: React.FC = () => (
@@ -16,6 +19,9 @@ const Routes: React.FC = () => (
     <Route path="/notices"  component={Notices} />
     <Route path="/calendar"  component={Calendar} />
     <Route path="/office"  component={Officebearers} />
+    <Route path="/technical"  component={Technicalcouncil} />
+    <Route path="/sports"  component={Sportscouncil} />
+    <Route path="/cultural"  component={Culturalcouncil} />
     
   </Switch>
 );

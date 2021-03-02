@@ -21,14 +21,7 @@ const Homepage = () => (
 
       </div>
     </div>
-    <Row>
-      <Col>
-        About Us
-      </Col>
-      <Col>
-        About Us
-      </Col>
-    </Row>
+  
   </div>
 );
 

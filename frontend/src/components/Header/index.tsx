@@ -13,9 +13,9 @@ const Header = () => (
         <Nav.Link href="/">HOME</Nav.Link>
         <Nav.Link href="/office">OFFICE BEARERS</Nav.Link>
         <NavDropdown title="COUNCILS" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">TECHNICAL COUNCILS</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">CULTURAL COUNCILS</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">SPORTS COUNCILS</NavDropdown.Item>
+          <NavDropdown.Item href="/technical">TECHNICAL COUNCILS</NavDropdown.Item>
+          <NavDropdown.Item href="/cultural">CULTURAL COUNCILS</NavDropdown.Item>
+          <NavDropdown.Item href="/sports">SPORTS COUNCILS</NavDropdown.Item>
         </NavDropdown>
         <Nav.Link href="/notices">NOTICES</Nav.Link>
         <Nav.Link href="#link">STUDENT BODIES</Nav.Link>
