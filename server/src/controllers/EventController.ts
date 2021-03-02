@@ -1,50 +1,120 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { Request, Response, NextFunction } from 'express';
+import { dbsConnection } from '../middlewares/postegre-init';
 import Event from '../models/client/Event';
+import moment from 'moment';
+const table = 'gymkhana_event_data';
+const event =
+  'CREATE TABLE IF NOT EXISTS ' +
+  table +
+  ` (
+  document_id serial PRIMARY KEY, 
+  council VARCHAR(10),
+  club VARCHAR(20),
+  title VARCHAR(20),
+  venue VARCHAR(20),
+  desc_info VARCHAR(100),
+  attachment VARCHAR(100),
+  create_date TIMESTAMP,
+  start_date TIMESTAMP,
+  end_date TIMESTAMP
+  );`;
 
 export class EventController {
   static async getAllEvents(req: Request, res: Response, next: NextFunction) {
     try {
-      const data = await Event.find({});
+      const client = await dbsConnection();
+      await client.query(event);
+      const query = 'SELECT * FROM ' + table;
+      const resp = await client.query(query);
+      await client.end();
+      console.log(resp);
+      // const data = await Event.find({});
       res.status(200).json({
-        data,
+        data: resp,
         success: true
       });
     } catch (error) {
       next(error);
     }
   }
-  static async getEventsQueried(
+  static async getEventsCurrent(
     req: Request,
     res: Response,
     next: NextFunction
   ) {
     try {
-      const year = parseInt(req.params.year);
-      const query: any = req.params.query;
-      const data = await Event.find({
-        start: {
-          $gte: new Date(year, 1, 1)
-        },
-        end: {
-          $lt: new Date(year + 1, 1, 1)
-        },
-        ...query
-      });
+      const time = moment().subtract(1, 'days').format('YYYY-MM-DD HH:mm:ss');
+      const client = await dbsConnection();
+      await client.query(event);
+      const query =
+        `SELECT * FROM ` +
+        table +
+        ` WHERE end_date > now() + interval '1 day';`;
+      const resp = await client.query(query);
+      await client.end();
       res.status(200).json({
-        data,
+        data: resp,
         success: true
       });
     } catch (error) {
       next(error);
     }
   }
+
+  static async getEventsPrevious(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) {
+    try {
+      const time = moment().subtract(0, 'days').format('YYYY-MM-DD HH:mm:ss');
+      const client = await dbsConnection();
+      await client.query(event);
+      const query =
+        `SELECT * FROM ` +
+        table +
+        ` WHERE end_date < now() + interval '1 day';`;
+      const resp = await client.query(query);
+      await client.end();
+      res.status(200).json({
+        data: resp,
+        success: true
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
+
   static async postNewEvent(req: Request, res: Response, next: NextFunction) {
     try {
-      const event = req.body.data;
-      const newEvent = new Event(event);
-      await newEvent.save();
+      // const event = req.body.data;
+      const newEvent = req.body.data;
+      const queryText =
+        `INSERT INTO ` +
+        table +
+        `(
+        council, club, title, venue, desc_info, attachment, create_date, start_date, end_date) VALUES(
+          $1, $2,$3,$4,$5,$6,$7,$8,$9)`;
+      const queryValues = [
+        newEvent.council,
+        newEvent.club,
+        newEvent.title,
+        newEvent.venue,
+        newEvent.desc_info,
+        newEvent.attachment,
+        moment().format('YYYY-MM-DD HH:mm:ss'),
+        moment().add(-10, 'days').format('YYYY-MM-DD HH:mm:ss'),
+        moment().add(-3, 'days').format('YYYY-MM-DD HH:mm:ss')
+      ];
+      const query = {
+        text: queryText,
+        values: queryValues
+      };
+      const client = await dbsConnection();
+      await client.query(event);
+      await client.query(query);
       res.status(200).json({
         success: true
       });

@@ -17,8 +17,10 @@ class EventRouter {
   getRoutes() {
     // Getting data of all the events ordered by time from latest.
     this.router.get('/all', EventController.getAllEvents);
-    // Getting events conducted by specific council/club in a specific year
-    this.router.get('/:year/:query', EventController.getEventsQueried);
+    // Getting upcoming/on-going events
+    this.router.get('/current', EventController.getEventsCurrent);
+    // Getting previous events
+    this.router.get('/prev', EventController.getEventsPrevious)
   }
 
   postRoutes() {
@@ -31,7 +33,7 @@ class EventRouter {
   }
   deleteRoutes() {
     // Deleting an existing event
-    this.router.delete('/delete', EventController.deleteEvents);
+    this.router.delete('/delete/:id', EventController.deleteEvents);
   }
 }
 
