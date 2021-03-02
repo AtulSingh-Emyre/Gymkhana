@@ -45,7 +45,6 @@ export class EventController {
     next: NextFunction
   ) {
     try {
-      const time = moment().subtract(1, 'days').format('YYYY-MM-DD HH:mm:ss');
       const client = await dbsConnection();
       await client.query(event);
       const query =
@@ -69,7 +68,6 @@ export class EventController {
     next: NextFunction
   ) {
     try {
-      const time = moment().subtract(0, 'days').format('YYYY-MM-DD HH:mm:ss');
       const client = await dbsConnection();
       await client.query(event);
       const query =
@@ -124,9 +122,40 @@ export class EventController {
   }
   static async updateEvents(req: Request, res: Response, next: NextFunction) {
     try {
-      await Event.findByIdAndUpdate(req.body.id, {
-        ...req.body.update
-      });
+      const newEvent = req.body.data;
+      const queryText =
+        `UPDATE ` +
+        table +
+        ` council = $1, 
+        club = $2 , 
+        title = $3, 
+        venue = $4, 
+        desc_info = $5, 
+        attachment = $6, 
+        create_date = $7, 
+        start_date = $8, 
+        end_date = $9
+        WHERE document_id = $10
+        `;
+      const queryValues = [
+        newEvent.council,
+        newEvent.club,
+        newEvent.title,
+        newEvent.venue,
+        newEvent.desc_info,
+        newEvent.attachment,
+        moment().format('YYYY-MM-DD HH:mm:ss'),
+        moment().add(-10, 'days').format('YYYY-MM-DD HH:mm:ss'),
+        moment().add(-3, 'days').format('YYYY-MM-DD HH:mm:ss'),
+        newEvent.document_id
+      ];
+      const query = {
+        text: queryText,
+        values: queryValues
+      };
+      const client = await dbsConnection();
+      await client.query(event);
+      await client.query(query);
       res.status(200).json({
         success: true
       });
@@ -136,6 +165,15 @@ export class EventController {
   }
   static async deleteEvents(req: Request, res: Response, next: NextFunction) {
     try {
+      const queryText = `DELETE FROM ` + table + ` WHERE document_id = $1`;
+      const queryParam = [req.params.id];
+      const query = {
+        text: queryText,
+        values: queryParam
+      };
+      const client = await dbsConnection();
+      await client.query(event);
+      await client.query(query);
       await Event.findByIdAndDelete(req.body.id);
       res.status(200).json({
         success: true

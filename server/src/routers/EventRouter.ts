@@ -20,7 +20,7 @@ class EventRouter {
     // Getting upcoming/on-going events
     this.router.get('/current', EventController.getEventsCurrent);
     // Getting previous events
-    this.router.get('/prev', EventController.getEventsPrevious)
+    this.router.get('/prev', EventController.getEventsPrevious);
   }
 
   postRoutes() {
