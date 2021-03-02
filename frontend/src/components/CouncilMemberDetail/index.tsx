@@ -40,23 +40,25 @@ const Details = () => {
   
   
   return ( 
-  <div>
-    <Row>
-      <Col xs={3} md={3}>
+  // <div style={container}>
+    <Row >
+      <Col 
+      xs={3} md={3}
+      >
         <MemberCard person={temp[0]}/>
       </Col>
-      <Col xs={3} md={3}>
+      <Col 
+      xs={3} md={3}
+      >
         <MemberCard person={temp[2]}/>
       </Col>
-      <Col xs={3} md={3}>
-        <MemberCard person={temp[1]}/>
+      <Col xs={3} md={3}>      
+        <MemberCard person={temp[1]}/>  
       </Col>
       <Col xs={3} md={3}>
         <MemberCard person={temp[1]}/>
       </Col>
     </Row>
-  </div>
 
 )};
-
 export default Details;

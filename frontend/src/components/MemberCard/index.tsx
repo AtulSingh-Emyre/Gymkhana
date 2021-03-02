@@ -14,7 +14,7 @@ interface IProps {
 const MemberCard : React.FC<IProps> = (props: IProps) => {
     return (
         <Card style={{ alignItems:'center',alignSelf:'center' }}>
-          <Card.Img variant="top" src="https://i.pinimg.com/originals/ca/35/1a/ca351aa5a5f238f94878240f2dbb673f.jpg" />
+          <Card.Img variant="top" src="https://i.pinimg.com/originals/ca/35/1a/ca351aa5a5f238f94878240f2dbb673f.jpg" style={img} />
           <Card.Body style={{alignItems:'center',alignSelf:'center'}}>
             <Card.Title style={{color:'black', alignItems:'center', alignSelf:'center'}} >
               <h5>General Secretary</h5>
@@ -29,6 +29,10 @@ const MemberCard : React.FC<IProps> = (props: IProps) => {
           </Card.Body>
         </Card>
     );
+}
+
+const img : React.CSSProperties = {
+  width:30
 }
 
 export default MemberCard;
