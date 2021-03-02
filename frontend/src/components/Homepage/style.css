@@ -1,17 +1,21 @@
 .home{
-    background-image: url('https://static.toiimg.com/photo/72975551.cms');
+    background-image: url(../../assets/logoc.jpg); 
+    background-repeat:no-repeat;
     width: inherit;
-    height: 500px;
+    height: 610px;
+    background-size: cover;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
     background-attachment: scroll;
-   margin-bottom: 0;
+    margin-bottom: 0;
     
 }
 .tex{
-    margin: auto;
-  width: 50%;
+    margin: auto; 
+    width: 50%;
     position: relative;
-  padding: 10px;
+    padding: 10px;
+    
 }
+

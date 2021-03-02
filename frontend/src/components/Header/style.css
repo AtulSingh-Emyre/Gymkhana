@@ -1,0 +1,16 @@
+.nav-link {
+    background-color: #EADFFF ;
+    color: rgba(0, 0, 0, 1) ;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    
+  }
+.navbar{
+    background-color: #EADFFF;
+    height: 80px;
+    
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+}
