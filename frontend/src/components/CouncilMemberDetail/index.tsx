@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Card, Image, CardColumns, Button } from 'react-bootstrap';
+import { useMediaQuery } from 'react-responsive';
 import MemberCard from '../MemberCard';
 import './style.css'
 
@@ -35,48 +36,80 @@ const temp = [
   }
 ]
 
-const Details = () => {
-  return (
-    <div style={{ height:'125%' }}>
-      <Row style={{height: '50%', width:'100%', padding:'2.5%'}}>
-        <Col 
-        xs={4} md={3} className="comp"
-        style={col_style}
-        >
-          <MemberCard person={temp[0]} />
-        </Col>
-        <Col 
-        xs={4} md={3} className="comp"
-        style={col_style}
-        >
-          <MemberCard person={temp[2]} />
-        </Col>
-        <Col 
-        xs={4} md={3} className="comp" 
-        style={col_style}>
-          <MemberCard person={temp[1]} />
-        </Col>
-      </Row>
-      <Row style={{height: '50%', width:'100%', padding:'2.5%'}}>
-        <Col xs={3} md={3} className="comp"
-        style={col_style}
-        >
-          <MemberCard person={temp[1]} />
-        </Col>
-        <Col xs={3} md={3} className="comp"
-        style={col_style}
-        >
-          <MemberCard person={temp[3]} />
-        </Col>
-      </Row>
-    </div>
+interface IdeviceInfo {
+  isDesktopOrLaptop : boolean,
+  isBigScreen : boolean,
+  isTabletOrMobile : boolean,
+  isTabletOrMobileDevice : boolean,
+  isPortrait : boolean,
+  isRetina : boolean
+}
 
-  )
+interface IProps {
+  deviceInfo: IdeviceInfo
+}
+
+const Details: React.FC<IProps> = (props: IProps) => {
+  const wideScreenDeviceView = (<div style={container}>
+  <Row style={row_style}>
+    <Col 
+    xs={4} md={3} 
+    style={col_style}
+    >
+      <MemberCard person={temp[0]} />
+    </Col>
+    <Col 
+    xs={4} md={3} 
+    style={col_style}
+    >
+      <MemberCard person={temp[2]} />
+    </Col>
+    <Col 
+    xs={4} md={3} 
+    style={col_style}>
+      <MemberCard person={temp[1]} />
+    </Col>
+    <Col xs={3} md={3} 
+    style={col_style}
+    >
+      <MemberCard person={temp[1]} />
+    </Col>
+    <Col xs={3} md={3} 
+    style={col_style}
+    >
+      <MemberCard person={temp[3]} />
+    </Col>
+  </Row>
+</div>);
+  return (
+    <>
+    {
+    wideScreenDeviceView
+    } 
+    </>
+  );
 };
+const container : React.CSSProperties = {
+  minHeight: '300px',
+  maxWidth: '100%',
+  paddingTop: '5%',
+  paddingBottom: '5%'
+}
+
+const row_style : React.CSSProperties = {
+  height: '100%',
+  margin: 'auto',
+  padding: '3%',
+  maxWidth: '100%',
+}
 
 const col_style : React.CSSProperties = {
-  flex:1,
-  // width:'20%',
-  height:'100%'
+  height: '100%',
+  margin: 'auto',
+  padding: '1%',
+  maxWidth: '250px',
+  minWidth: '250px',
+  maxHeight: '400px',
+  minHeight: '350px',
 } 
 export default Details;
