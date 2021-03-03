@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Navbar, Nav, NavDropdown, Container, } from 'react-bootstrap';
-import { StyleSheet, css } from 'aphrodite';
 import logo from "../../assets/logo.png";
 
 const Header = () => (

@@ -36,17 +36,17 @@ const temp = [
   }
 ]
 
-interface IdeviceInfo {
-  isDesktopOrLaptop : boolean,
-  isBigScreen : boolean,
-  isTabletOrMobile : boolean,
-  isTabletOrMobileDevice : boolean,
-  isPortrait : boolean,
-  isRetina : boolean
-}
+// interface IdeviceInfo {
+//   isDesktopOrLaptop : boolean,
+//   isBigScreen : boolean,
+//   isTabletOrMobile : boolean,
+//   isTabletOrMobileDevice : boolean,
+//   isPortrait : boolean,
+//   isRetina : boolean
+// }
 
 interface IProps {
-  deviceInfo: IdeviceInfo
+  // deviceInfo: IdeviceInfo
 }
 
 const Details: React.FC<IProps> = (props: IProps) => {
@@ -90,10 +90,10 @@ const Details: React.FC<IProps> = (props: IProps) => {
   );
 };
 const container : React.CSSProperties = {
-  minHeight: '300px',
+  // minHeight: '300px',
   maxWidth: '100%',
   paddingTop: '5%',
-  paddingBottom: '5%'
+  // paddingBottom: '5%'
 }
 
 const row_style : React.CSSProperties = {
