@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button, Form, FormControl, Row, Col,Container } from 'react-bootstrap';
 
-const Input = (props: any) => {
+const Input = () => {
   return (
-    <Container>
-      <div>
-        <label htmlFor="">{props.title}</label>
+    <div>
+      <div style={{marginTop:'90px',textAlign:'center'}}>
+        <h2 style={{color:'black'}}>Contact Form</h2>
       </div>
-    <div className="my-5">
+    <div className="my-5" >
       <Form>
         <div className="my-2">
           <Row>
@@ -36,7 +36,7 @@ const Input = (props: any) => {
     </Button>
       </div>
     </div>
-    </Container>
+    </div>
   )
 }
 
