@@ -57,26 +57,26 @@ const Details: React.FC<IProps> = (props: IProps) => {
   <Row style={row_style}>
     <Col 
     xs={4} md={3} 
-    style={isBigScreen?col_style: {...col_style,...col_style_small}}
+    style={col_style}
     >
       <MemberCard person={temp[0]} />
     </Col>
     <Col 
     xs={4} md={3} 
-    style={isBigScreen?col_style: {...col_style,...col_style_small}}    >
+    style={col_style}    >
       <MemberCard person={temp[2]} />
     </Col>
     <Col 
     xs={4} md={3} 
-    style={isBigScreen?col_style: {...col_style,...col_style_small}}>
+    style={col_style}>
       <MemberCard person={temp[1]} />
     </Col>
     <Col xs={3} md={3} 
-        style={isBigScreen?col_style: {...col_style,...col_style_small}}>
+        style={col_style}>
       <MemberCard person={temp[1]} />
     </Col>
     <Col xs={3} md={3} 
-        style={isBigScreen?col_style: {...col_style,...col_style_small}}>
+        style={col_style}>
       <MemberCard person={temp[3]} />
     </Col>
   </Row>
