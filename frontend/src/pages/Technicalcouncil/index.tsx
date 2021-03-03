@@ -10,7 +10,7 @@ const Technicalcouncil: React.FC = () => {
   return (
     <>
       <Header />
-      <Carouselcomp />
+      {/* <Carouselcomp /> */}
       <Footer />
     </>
   );

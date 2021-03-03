@@ -1,14 +1,30 @@
 import React from 'react'
 import { Carousel, CarouselItem } from 'react-bootstrap';
-const Carouselcomp = () => {
+import logo from '../../assets/interiitsmeet.jpg';
+
+interface IProps {
+  images : {
+      image1: string,
+      gsAcad: string,
+
+  }
+}
+
+
+
+
+const Carouselcomp = (prop : IProps) => {
+
+  var image1 = prop.images.image1
   return (
+    
     <div>
       <Carousel fade>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
-            alt="First slide"
+            src={prop.images.image1}
+            alt={prop.images.gsAcad}
           />
           <Carousel.Caption>
             <h3>First slide label</h3>
