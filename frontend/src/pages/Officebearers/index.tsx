@@ -12,7 +12,7 @@ const Officebearers: React.FC = () => {
       <div style={element}>
       <Header />
       <Details />
-      <Footer />
+      <Footer/>
       </div>
     </div>
   );
