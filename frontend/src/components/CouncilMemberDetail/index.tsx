@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Card, Image, CardColumns, Button } from 'react-bootstrap';
-import { useMediaQuery } from 'react-responsive';
+import MediaQuery, { useMediaQuery } from 'react-responsive';
 import MemberCard from '../MemberCard';
 import './style.css'
 
@@ -50,33 +50,33 @@ interface IProps {
 }
 
 const Details: React.FC<IProps> = (props: IProps) => {
+  const isBigScreen = useMediaQuery({ query: '(min-device-width: 250px)' })
+  
+  
   const wideScreenDeviceView = (<div style={container}>
   <Row style={row_style}>
     <Col 
     xs={4} md={3} 
-    style={col_style}
+    style={isBigScreen?col_style: {...col_style,...col_style_small}}
     >
       <MemberCard person={temp[0]} />
     </Col>
     <Col 
     xs={4} md={3} 
-    style={col_style}
-    >
+    style={isBigScreen?col_style: {...col_style,...col_style_small}}    >
       <MemberCard person={temp[2]} />
     </Col>
     <Col 
     xs={4} md={3} 
-    style={col_style}>
+    style={isBigScreen?col_style: {...col_style,...col_style_small}}>
       <MemberCard person={temp[1]} />
     </Col>
     <Col xs={3} md={3} 
-    style={col_style}
-    >
+        style={isBigScreen?col_style: {...col_style,...col_style_small}}>
       <MemberCard person={temp[1]} />
     </Col>
     <Col xs={3} md={3} 
-    style={col_style}
-    >
+        style={isBigScreen?col_style: {...col_style,...col_style_small}}>
       <MemberCard person={temp[3]} />
     </Col>
   </Row>
@@ -112,4 +112,7 @@ const col_style : React.CSSProperties = {
   maxHeight: '400px',
   minHeight: '350px',
 } 
+const col_style_small : React.CSSProperties = {
+  // minWidth: '100%',
+}
 export default Details;

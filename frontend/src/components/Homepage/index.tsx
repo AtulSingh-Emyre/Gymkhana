@@ -1,15 +1,14 @@
 import React from 'react';
 import { Container, Row, Col, Button, Image, Jumbotron } from 'react-bootstrap';
 import './style.css'
-import { MDBBtn } from "mdbreact";
+import { StyleSheet } from 'aphrodite';
 
 
 
 const Homepage = () => (
   <div>
-    <Jumbotron>
-      <div className="home">
-        <div className="tex">
+    <Jumbotron style={jumb}>
+       <Container style={{flex:1}}>
           <Row>
             <h1>Welcome to IIT Dharwad</h1>
           </Row>
@@ -17,14 +16,18 @@ const Homepage = () => (
             <p>The home of pink sunsets, rich heritage and culture and, of
 								course, engineering xP.</p>
           </Row>
+          </Container>
           <Row>
+          <Container style={{flex:1, position:'absolute', bottom: 10}}>
             <Button variant="warning">Know more</Button>
+          </Container>
           </Row>
-        </div>
-
-      </div>
     </Jumbotron>
-    <div className="aboutus">
+    <div
+    style = {aboutUsContainer}
+    // className="aboutus"
+    >
+      <Container>
       <div>
         <h2 style={{ color: 'blueviolet' }}>About</h2>
       </div>
@@ -38,8 +41,42 @@ const Homepage = () => (
 
         <button className="bbtn"><a href="#" style={{ color: 'white' }}>Constitution</a></button>
       </div>
+      </Container>
     </div>
   </div>
 );
+
+const jumb: React.CSSProperties = {
+  backgroundImage: `url(${require(`../../assets/logoc.jpg`)})`, 
+  backgroundRepeat:`no-repeat`,
+  backgroundSize: `cover`,
+  backgroundPosition: `center`,
+  width: '100%',
+  position:'relative',
+  minHeight: '400px',
+}
+
+const jumbRowContainer : React.CSSProperties = {
+
+}
+
+const aboutUsContainer : React.CSSProperties = {
+  maxWidth: '100%',
+  position: 'relative',
+
+}
+
+const styles = StyleSheet.create({
+  jumb: {
+    display:'flex',
+    justifyContent:'space-between',
+    backgroundImage: `url(${require(`../../assets/logoc.jpg`)})`, 
+    backgroundRepeat:`no-repeat`,
+    backgroundSize: `cover`,
+    backgroundPosition: `center`,
+    width: '100%',
+    minHeight: '400px'    
+  }
+})
 
 export default Homepage;

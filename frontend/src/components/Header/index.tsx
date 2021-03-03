@@ -7,7 +7,10 @@ const Header = () => (
   expand="lg" 
   collapseOnSelect
   fixed = {'top'}
+  // className = {'navbar-fixed-top'}
   style = {{
+    position:'sticky',
+    top: 0,
     backgroundColor:'aqua', 
     paddingLeft:'2%', 
     paddingRight:'2%', 

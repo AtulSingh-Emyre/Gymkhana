@@ -1,36 +1,10 @@
-.home{
-    background-image: url(../../assets/logoc.jpg); 
-    background-repeat:no-repeat;
-    /*width: inherit;*/
-    height: 630px;
-    background-size: cover;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    /*background-attachment: scroll;*/
-    background-position: center;
-    margin-bottom: 0;
-    width: 100%;
-    /*height: auto;*/
-    padding: 100px 100px;
-    background-position: center;
-    
-}
 .tex{
     margin: auto; 
     margin-top: 100px;
    margin-left: 60px;
-    width: 50%;
+    width: 75%;
     position: relative;
     padding: 10px;
-    
-}
-
-.aboutus{
-    padding-top: 20px;
-    padding-left: 90px;
-    position: center;
-    justify-content: center;
 }
 
 .bbtn{

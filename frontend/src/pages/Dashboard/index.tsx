@@ -7,11 +7,11 @@ import Homepage from '../../components/Homepage';
 
 const Dashboard: React.FC = () => {
   return (
-    <>
+    <div style={{minWidth:'100%'}} >
       <Header />
-      <Homepage />
+      <Homepage/>
       <Footer />
-    </>
+    </div>
   );
 };
 
