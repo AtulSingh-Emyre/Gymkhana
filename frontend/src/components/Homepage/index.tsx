@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button, Image } from 'react-bootstrap';
+import { Container, Row, Col, Button, Image, Jumbotron } from 'react-bootstrap';
 import './style.css'
 import { MDBBtn } from "mdbreact";
 
@@ -7,21 +7,23 @@ import { MDBBtn } from "mdbreact";
 
 const Homepage = () => (
   <div>
-    <div className="home ">
-      <div className="tex">
-        <Row>
-          <h1>Welcome to IIT Dharwad</h1>
-        </Row>
-        <Row>
-          <p>The home of pink sunsets, rich heritage and culture and, of
+    <Jumbotron>
+      <div className="home">
+        <div className="tex">
+          <Row>
+            <h1>Welcome to IIT Dharwad</h1>
+          </Row>
+          <Row>
+            <p>The home of pink sunsets, rich heritage and culture and, of
 								course, engineering xP.</p>
-        </Row>
+          </Row>
+          <Row>
+            <Button variant="warning">Know more</Button>
+          </Row>
+        </div>
 
-        <Row>
-          <Button variant="warning">Know more</Button>
-        </Row>
       </div>
-    </div>
+    </Jumbotron>
     <div className="aboutus">
       <div>
         <h2 style={{ color: 'blueviolet' }}>About</h2>
@@ -34,7 +36,7 @@ const Homepage = () => (
           The moto of Technology Students' Gymkhana is YOGAH KARMASU KAUSALAM which in English means "Perfection in action is Yoga". Our goal is to bring overall development in IITians through cultivating and nurturing their extra-curricular talents.
                         </p>
 
-        <button className="bbtn"><a href="#" style={{color:'white'}}>Constitution</a></button>
+        <button className="bbtn"><a href="#" style={{ color: 'white' }}>Constitution</a></button>
       </div>
     </div>
   </div>
