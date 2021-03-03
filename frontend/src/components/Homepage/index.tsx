@@ -21,7 +21,7 @@ const Homepage = () => (
         </Row>
       </div>
     </div>
-    <div>
+    <div className="aboutus">
       <Row>
         <Col style={{ color: 'black' }}>
           About us
