@@ -1,21 +1,22 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter, } from "mdbreact";
 import './style.css';
+import SocialButtonsPage from  '../socialmediaicons';
 
 const Footer = () => {
   return (
     <MDBFooter color="purple" className="font-small pt-4 mt-4 " >
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
-          <MDBCol md="6">
+          <MDBCol md="6" >
             <h5 className="title">Contact Us</h5>
             <p>
               Here you can use rows and columns here to organize your footer
               content.
             </p>
           </MDBCol>
-          <MDBCol md="6">
-            <h5 className="title">Social Media Handles</h5>
+          <MDBCol md="4">
+            <h5 className="title">Quick Links</h5>
             <ul>
               <li className="list-unstyled">
                 <a href="#!">Link 1</a>
@@ -31,7 +32,11 @@ const Footer = () => {
               </li>
             </ul>
           </MDBCol>
-          
+          <MDBCol md="2">
+            <h5 className="title" style={{marginLeft:'13px'}}>Our Handles</h5>
+            <SocialButtonsPage />
+          </MDBCol>
+
         </MDBRow>
       </MDBContainer>
       <div className="footer-copyright text-center py-3">
