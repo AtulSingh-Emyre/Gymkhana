@@ -3,22 +3,43 @@ import Carouselcomp from '../../components/Carousel';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import logo from '../../assets/interiitsmeet.jpg'
-import Clubsndetails from '../../components/Clubsndetails'
+import { JsonToTable } from "react-json-to-table";
 
+import BootstrapTable from 'react-bootstrap-table-next';
 
 const Sportscouncil: React.FC = () => {
+
+const columns = [
+  {
+    dataField: 'id',
+    text: '#'
+  },{
+  dataField: 'clubname',
+  text: 'Sports Clubs'
+}, {
+  dataField: 'secyname',
+  text: 'Club Secretary'
+}, {
+  dataField: 'memblink',
+  text: 'Club Members'
+},
+ ];
+const products = [
+  {
+    id: "1",
+    clubname: "Tennis",
+    secyname:  "Huzaif",
+    memblink: "google",
+  }
+];
   return (
     <>
       <Header />
+      <h1>Sports Council</h1>
       <Carouselcomp images={{image1:'../../assets/interiitsmeet.jpg', gsAcad:"hello"}}/>
-      <Clubsndetails  
-      council={{councilname:"Sports"}} 
-      club1={{clubname:"Tennis Club",clubsec:"Huzaif Barkati"}} 
-      club2={{clubname:"Table Tennis Club",clubsec:"Shivaram"}} 
-      club3={{clubname:"",clubsec:""}} 
       
       
-      />
+      <BootstrapTable keyField='id' data={products} columns={ columns } />
       <Footer />
     </>
   );
