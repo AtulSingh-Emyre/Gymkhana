@@ -5,8 +5,14 @@ import { Carousel, CarouselItem } from 'react-bootstrap';
 interface IProps {
   images : {
       image1: string,
-      gsAcad: string,
-
+      title1: string,
+      caption1: string,
+      image2: string,
+      title2: string,
+      caption2: string,
+      image3: string,
+      title3: string,
+      caption3: string,
   }
 }
 
@@ -25,11 +31,11 @@ const Carouselcomp = (prop : IProps) => {
             className="d-block w-100"
             // `url(${require(`../../assets/logoc.jpg`)})`
             src={prop.images.image1}
-            alt={prop.images.gsAcad}
+            alt={prop.images.caption1}
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>{prop.images.title1}</h3>
+            <p>{prop.images.caption1}</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
