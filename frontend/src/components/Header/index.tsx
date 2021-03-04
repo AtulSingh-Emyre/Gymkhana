@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Navbar, Nav, NavDropdown, Container, } from 'react-bootstrap';
 import logo from "../../assets/logo.png";
+import Example from '../Modal';
 
 const Header = () => (
   <Navbar  
@@ -29,7 +30,7 @@ const Header = () => (
         </NavDropdown>
         <Nav.Link href="/notices">NOTICES</Nav.Link>
         <Nav.Link href="/calendar">CALENDAR</Nav.Link>
-        <Nav.Link href="/contact">CONTACT</Nav.Link>
+        <Nav.Link href="#"><Example /></Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
