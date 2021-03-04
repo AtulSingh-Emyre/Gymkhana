@@ -1,6 +1,6 @@
 import React from 'react'
 import { Carousel, CarouselItem } from 'react-bootstrap';
-import logo from '../../assets/interiitsmeet.jpg';
+// import logo from '../../assets/interiitsmeet.jpg';
 
 interface IProps {
   images : {
@@ -23,6 +23,7 @@ const Carouselcomp = (prop : IProps) => {
         <Carousel.Item>
           <img
             className="d-block w-100"
+            // `url(${require(`../../assets/logoc.jpg`)})`
             src={prop.images.image1}
             alt={prop.images.gsAcad}
           />
