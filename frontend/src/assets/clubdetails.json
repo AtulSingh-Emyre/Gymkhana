@@ -1,0 +1,28 @@
+{
+    "sports": [
+    {
+        "id": "1",
+    "clubname": "Ten",
+    "secyname":  "Huzaiff",
+    "memblink": "google"
+    }
+        ],
+    
+    "technical" :[
+        {
+        "id": "1",
+    "clubname": "Coding",
+    "secyname":  "Huzaiff",
+    "memblink": "google"
+        }
+    ],
+    "cultural" :[
+        {
+        "id": "1",
+    "clubname": "Dance",
+    "secyname":  "Huzaiff",
+    "memblink": "google"
+        }
+    ]
+
+}

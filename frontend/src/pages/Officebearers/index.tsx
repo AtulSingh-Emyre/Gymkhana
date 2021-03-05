@@ -11,7 +11,7 @@ const Officebearers: React.FC = () => {
     <div style={container}>
       <Header />
       <Details />
-      <PreviousCouncilMems user={{gsTech:"", gsAcad:""}} />
+      <PreviousCouncilMems user={{gsAcadUG:"", gsAcadPG:"", gsCult:"", gsHos:"",gsTech:"",gsSports:""}} />
       <Footer/>
     </div>
   );
