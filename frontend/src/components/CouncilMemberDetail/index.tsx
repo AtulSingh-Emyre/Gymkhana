@@ -13,27 +13,83 @@ const temp = [
     website: '',
     image: ''
   }, {
-    name: 'Atul Singh',
+    name: 'M Sai Harsha',
     phone: 7892128329,
     email: 'abc@g.c',
-    councilPost: 'Technical Affairs',
+    councilPost: 'Academic Affairs',
     website: '',
     image: ''
   }, {
-    name: 'Atul Singh',
+    name: 'Gowri Y Subedar',
     phone: 7892128329,
     email: 'abc@g.c',
-    councilPost: 'Technical Affairs',
+    councilPost: 'Cultural Affairs',
     website: '',
     image: ''
   }, {
-    name: 'Atul Singh',
+    name: 'Durga Naga Sai Rahul M',
     phone: 7892128329,
     email: 'abc@g.c',
-    councilPost: 'Technical Affairs',
+    councilPost: 'Hostel Affairs',
     website: '',
     image: ''
-  }
+  }, {
+    name: 'Yogesh Dhyani',
+    phone: 7892128329,
+    email: 'abc@g.c',
+    councilPost: 'Sports Affairs',
+    website: '',
+    image: ''
+  }, {
+    name: 'Savsaviya Brinal Sureshbhai',
+    phone: 7892128329,
+    email: 'abc@g.c',
+    councilPost: 'Sports Affairs',
+    website: '',
+    image: ''
+  }, {
+    name: 'Tella Rajashekar Reddy',
+    phone: 7892128329,
+    email: 'abc@g.c',
+    councilPost: 'Jr. General Secretary',
+    website: '',
+    image: ''
+  }, {
+    name: 'Tabish Khalid Halim',
+    phone: 7892128329,
+    email: 'abc@g.c',
+    councilPost: 'Technical Affairs (Jr)',
+    website: '',
+    image: ''
+  }, {
+    name: 'Rahul Prajapat',
+    phone: 7892128329,
+    email: 'abc@g.c',
+    councilPost: 'Sports Affairs (Jr)',
+    website: '',
+    image: ''
+  }, {
+    name: 'Smriti Jha',
+    phone: 7892128329,
+    email: 'abc@g.c',
+    councilPost: 'Cultural Affairs (Jr)',
+    website: '',
+    image: ''
+  }  , {
+    name: 'Kamtekar Varad Mahesh',
+    phone: 7892128329,
+    email: 'abc@g.c',
+    councilPost: 'Hostel Affairs (Jr)',
+    website: '',
+    image: ''
+  }, {
+    name: 'Sanghasheela',
+    phone: 7892128329,
+    email: 'abc@g.c',
+    councilPost: 'Mess Affairs (Jr)',
+    website: '',
+    image: ''
+  }      
 ]
 
 // interface IdeviceInfo {
@@ -55,30 +111,16 @@ const Details: React.FC<IProps> = (props: IProps) => {
   
   const wideScreenDeviceView = (<div style={container}>
   <Row style={row_style}>
-    <Col 
-    xs={4} md={3} 
-    style={col_style}
-    >
-      <MemberCard person={temp[0]} />
-    </Col>
-    <Col 
-    xs={4} md={3} 
-    style={col_style}    >
-      <MemberCard person={temp[2]} />
-    </Col>
-    <Col 
-    xs={4} md={3} 
-    style={col_style}>
-      <MemberCard person={temp[1]} />
-    </Col>
-    <Col xs={3} md={3} 
-        style={col_style}>
-      <MemberCard person={temp[1]} />
-    </Col>
-    <Col xs={3} md={3} 
-        style={col_style}>
-      <MemberCard person={temp[3]} />
-    </Col>
+    {
+      temp.map(data => 
+        ( <Col 
+        xs={3} md={3} 
+        style={col_style}
+        >
+          <MemberCard person={data} />
+        </Col>    
+      ))
+    }
   </Row>
 </div>);
   return (
