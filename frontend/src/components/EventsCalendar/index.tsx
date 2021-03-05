@@ -3,13 +3,22 @@ import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { Container } from 'react-bootstrap';
+import { EventsSingleton, IEvent } from '../../model/EventsModel';
+import SelectedEventCard from '../SelectedEventCard';
 
 moment.locale('en-GB');
 const localizer = momentLocalizer(moment)
 
+
 interface IProps{}
 
-const EventsCalendar :React.FC<IProps> = ({}) => (
+const EventsCalendar :React.FC<IProps> = ({}) => {
+  // const [EventChecked, setEventChecked] = React.useState<boolean>(false);
+  const [SelectedEvent, setSelectedEvent] = React.useState<IEvent|null>(null);
+  const obj = EventsSingleton.getInstance();
+  const events = obj.getAllEvents();
+
+  return (
   <Container style={{paddingTop:'5%'}}>
     <div>
       <h5>
@@ -18,27 +27,28 @@ const EventsCalendar :React.FC<IProps> = ({}) => (
     </div>
     <Calendar
         localizer={localizer}
-        events={[
-            {
-            'title': 'My event',
-            'allDay': false,
-            'start': new Date(2021, 2, 1, 10, 0), // 10.00 AM
-            'end': new Date(2021, 2, 1, 14, 0), // 2.00 PM 
+        events={
+          events.map((event:IEvent) =>{
+            const data = {
+              ...event,
+              start : moment(event.start, 'MMMM Do YYYY, h:mm:ss a').toDate(),
+              end : moment(event.end, 'MMMM Do YYYY, h:mm:ss a').toDate()
             }
-        ]}
+          return data;
+          } )
+          }
         startAccessor="start"
         endAccessor="end"
         style={{ height: 500 }}
-        onSelectEvent={(event:any)=> {console.log(event)
+        onSelectEvent={(event:any)=> {
+          setSelectedEvent({...event, start: moment(event.start).format('MMMM Do YYYY, h:mm a'), end:moment(event.end).format('MMMM Do YYYY, h:mm a') });
         }}
     />
     <div>
       {/* here goes new event data form */}
     </div>
-    <div>
-      {/* here goes selected event data */}
-    </div>
+    { SelectedEvent? <SelectedEventCard event = {SelectedEvent} />: <></>}
     </Container>
-);
+)};
 
 export default EventsCalendar;

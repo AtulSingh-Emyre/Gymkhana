@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container,Pagination,Table, } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
+import { EventsSingleton } from '../../model/EventsModel';
 import NoticeTableRow from '../NoticeTableRow';
 
 
@@ -8,34 +9,9 @@ const Card = () => {
   const wideScreenQuery = useMediaQuery({
     query: '(min-device-width: 700px)'
   });
-  const data = [
-    {
-        event: '12345678901234567890',
-        organiser: 'AI Club',
-        date: '7/03/2020',
-        time: '5:30pm',
-        venue: 'Room 23',
-        poster: 'www.google.com',
-        result: 'www.google.com'
-    },
-    {
-      event: 'weekly gambit arena',
-        organiser: 'Chess Club',
-        date: '8/03/2020',
-        time: '5:30pm',
-        venue: 'Board games room',
-        poster: 'www.google.com',
-        result: 'www.google.com'
-    }, {
-      event: 'Coding hackathon',
-        organiser: 'Coding club',
-        date: '15/03/2020',
-        time: '6:30pm',
-        venue: 'Room 23',
-        poster: 'www.google.com',
-        result: 'www.google.com'
-    }  
-  ]
+  const obj = EventsSingleton.getInstance();
+  const data = obj.getAllEvents();
+
   const wideScreenView = (
   <Table striped bordered hover style={container}>
     <thead>
@@ -51,17 +27,19 @@ const Card = () => {
     </thead>
     <tbody>
       {
-        data.map( (data,index) => (
+        data.map( (data,index) => data.notice?(
+          
           <NoticeTableRow  data={{
             attachment:[{poster: data.poster},{result:data.result}],
-            date: data.date,
+            date: data.start.split(',')[0],
             id: index+1,
             organiser: data.organiser,
-            event: data.event,
-            time: data.time,
+            event: data.title,
+            time: data.start.split(',')[1],
             venue: data.venue
           }} />
-        ))
+        
+        ): <></>)
       }
     </tbody>
   </Table>);
@@ -77,14 +55,14 @@ const Card = () => {
     </thead>
     <tbody>
     {
-        data.map( (data,index) => (
+        data.map( (data,index) => data.notice?(
           <NoticeTableRow  data={{
             attachment:[{poster: data.poster},{result:data.result}],
-            date: data.date,
+            date: data.start.split(',')[0],
             id: index+1,
             organiser: data.organiser,
             }} />
-        ))
+        ):<></>)
       }
     </tbody>
     </Table>
