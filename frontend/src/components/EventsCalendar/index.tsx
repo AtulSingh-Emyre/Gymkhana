@@ -2,6 +2,7 @@ import React from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
+import { Container } from 'react-bootstrap';
 
 moment.locale('en-GB');
 const localizer = momentLocalizer(moment)
@@ -9,7 +10,12 @@ const localizer = momentLocalizer(moment)
 interface IProps{}
 
 const EventsCalendar :React.FC<IProps> = ({}) => (
-  <div style={{ height: 700 }}>
+  <Container style={{paddingTop:'5%'}}>
+    <div>
+      <h5>
+        Events Calendar
+      </h5>
+    </div>
     <Calendar
         localizer={localizer}
         events={[
@@ -26,7 +32,13 @@ const EventsCalendar :React.FC<IProps> = ({}) => (
         onSelectEvent={(event:any)=> {console.log(event)
         }}
     />
-  </div>
+    <div>
+      {/* here goes new event data form */}
+    </div>
+    <div>
+      {/* here goes selected event data */}
+    </div>
+    </Container>
 );
 
 export default EventsCalendar;
