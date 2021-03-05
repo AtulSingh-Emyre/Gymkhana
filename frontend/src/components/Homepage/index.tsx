@@ -2,11 +2,19 @@ import React from 'react';
 import { Container, Row, Col, Button, Image, Jumbotron } from 'react-bootstrap';
 import './style.css'
 import { StyleSheet } from 'aphrodite';
+import { bounce } from 'react-animations';
+import Radium, {StyleRoot} from 'radium';
 
-
+const testani = {
+  bounce: {
+    animation: 'x 1s',
+    animationName: Radium.keyframes(bounce, 'bounce')
+  }
+}
 
 const Homepage = () => (
   <div>
+    
     <Jumbotron style={jumb}>
       <Container style={{ flex: 1 }}>
         <Row>
@@ -28,7 +36,7 @@ const Homepage = () => (
     // className="aboutus"
     >
       <Container>
-        <div>
+        <div >
           <h2 style={{ color: 'blueviolet' }}>About</h2>
         </div>
         <div>
@@ -38,7 +46,7 @@ const Homepage = () => (
           <p style={{ color: 'black' }}>
             The moto of Technology Students' Gymkhana is YOGAH KARMASU KAUSALAM which in English means "Perfection in action is Yoga". Our goal is to bring overall development in IITians through cultivating and nurturing their extra-curricular talents.
                         </p>
-
+         
           <button className="bbtn"><a href="#" style={{ color: 'white' }}>Constitution</a></button>
         </div>
       </Container>
