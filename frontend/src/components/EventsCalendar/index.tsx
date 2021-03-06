@@ -10,45 +10,45 @@ moment.locale('en-GB');
 const localizer = momentLocalizer(moment)
 
 
-interface IProps{}
+interface IProps { }
 
-const EventsCalendar :React.FC<IProps> = ({}) => {
+const EventsCalendar: React.FC<IProps> = ({ }) => {
   // const [EventChecked, setEventChecked] = React.useState<boolean>(false);
-  const [SelectedEvent, setSelectedEvent] = React.useState<IEvent|null>(null);
+  const [SelectedEvent, setSelectedEvent] = React.useState<IEvent | null>(null);
   const obj = EventsSingleton.getInstance();
   const events = obj.getAllEvents();
-
   return (
-  <Container style={{paddingTop:'5%'}}>
-    <div>
-      <h2>
-        Student Activities Calendar
-      </h2>
-    </div>
-    <Calendar
+    <Container style={{ paddingTop: '5%' }}>
+      <div>
+        <h1 style={{ marginBottom: '15px', textAlign: 'center', color: 'red' }}>
+          Student Activities Calendar
+        </h1>
+      </div>
+      <Calendar
         localizer={localizer}
         events={
-          events.map((event:IEvent) =>{
+          events.map((event: IEvent) => {
             const data = {
               ...event,
-              start : moment(event.start, 'MMMM Do YYYY, h:mm:ss a').toDate(),
-              end : moment(event.end, 'MMMM Do YYYY, h:mm:ss a').toDate()
+              start: moment(event.start, 'MMMM Do YYYY, h:mm:ss a').toDate(),
+              end: moment(event.end, 'MMMM Do YYYY, h:mm:ss a').toDate()
             }
-          return data;
-          } )
-          }
+            return data;
+          })
+        }
         startAccessor="start"
         endAccessor="end"
         style={{ height: 500 }}
-        onSelectEvent={(event:any)=> {
-          setSelectedEvent({...event, start: moment(event.start).format('MMMM Do YYYY, h:mm a'), end:moment(event.end).format('MMMM Do YYYY, h:mm a') });
+        onSelectEvent={(event: any) => {
+          setSelectedEvent({ ...event, start: moment(event.start).format('MMMM Do YYYY, h:mm a'), end: moment(event.end).format('MMMM Do YYYY, h:mm a') });
         }}
-    />
-    <div>
-      {/* here goes new event data form */}
-    </div>
-    { SelectedEvent? <SelectedEventCard event = {SelectedEvent} />: <></>}
+      />
+      <div>
+        {/* here goes new event data form */}
+      </div>
+      { SelectedEvent ? <SelectedEventCard event={SelectedEvent} /> : <></>}
     </Container>
-)};
+  )
+};
 
 export default EventsCalendar;

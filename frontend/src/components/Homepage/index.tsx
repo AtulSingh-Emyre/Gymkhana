@@ -25,11 +25,7 @@ const Homepage = () => (
 								course, engineering xP.</p>
         </Row>
       </Container>
-      <Row>
-        <Container style={{ flex: 1, bottom: 10 }}>
-          <button className="bbtn1" ><a href="#" style={{ color: 'white' }}>Know More</a></button>
-        </Container>
-      </Row>
+
     </Jumbotron>
     <div
       style={aboutUsContainer}
