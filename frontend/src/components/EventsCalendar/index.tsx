@@ -21,9 +21,9 @@ const EventsCalendar :React.FC<IProps> = ({}) => {
   return (
   <Container style={{paddingTop:'5%'}}>
     <div>
-      <h5>
-        Events Calendar
-      </h5>
+      <h2>
+        Student Activities Calendar
+      </h2>
     </div>
     <Calendar
         localizer={localizer}

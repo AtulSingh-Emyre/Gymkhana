@@ -20,7 +20,7 @@ const Example = () => {
                 size='lg'
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal title</Modal.Title>
+                    <Modal.Title>Contact Us</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
