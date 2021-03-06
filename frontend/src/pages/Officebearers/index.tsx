@@ -10,9 +10,10 @@ const Officebearers: React.FC = () => {
   return (
     <div style={container}>
       <Header />
+
       <Details />
-      <PreviousCouncilMems user={{gsAcadUG:"", gsAcadPG:"", gsCult:"", gsHos:"",gsTech:"",gsSports:""}} />
-      <Footer/>
+      <PreviousCouncilMems user={{ gsAcadUG: "", gsAcadPG: "", gsCult: "", gsHos: "", gsTech: "", gsSports: "" }} />
+      <Footer />
     </div>
   );
 };
