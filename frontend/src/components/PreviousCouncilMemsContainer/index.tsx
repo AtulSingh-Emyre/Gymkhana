@@ -1,10 +1,15 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import PreviousCouncilMems from '../PreviousCouncilMems';
-
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import {faYoutube, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+//   import { IconPack } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+  
 const data = [
     {
-        year: '2020', 
+        year: '2020 - 2021', 
         gsCult: "Sonu Sourav", 
         gsHos: "Sonu Sourav", 
         gsTech: "Sonu Sourav", 
@@ -12,7 +17,7 @@ const data = [
         gsMess: "Sonu Sourav", 
     },
      {
-        year: '2019',  
+        year: '2019 - 2020',  
         gsCult: "Sonu Sourav", 
         gsHos: "Sonu Sourav", 
         gsTech: "Sonu Sourav", 
@@ -20,7 +25,7 @@ const data = [
         gsMess: "Sonu Sourav", 
     },
      {
-        year:'2018',  
+        year:'2018 - 2019',  
         gsCult: "Sonu Sourav", 
         gsHos: "Sonu Sourav", 
         gsTech: "Sonu Sourav", 
@@ -28,7 +33,7 @@ const data = [
         gsMess: "Sonu Sourav", 
     },
     { 
-        year:'2017',
+        year:'2017 - 2018',
         gsCult: "Sonu Sourav", 
         gsHos: "Sonu Sourav", 
         gsTech: "Sonu Sourav", 
@@ -42,19 +47,30 @@ const data = [
 const PreviousCouncilMemsContainer = () => {
     return (
         <div style={container}>
-            <Row style={container}>
-                {
-                    data.map(council => {
-                        return (
-                            <>
-                            <Col xs={10} xl={6} md={8}>
-                            <PreviousCouncilMems user={council} />
-                            </Col>
-                            </>
-                        )
-                    })
-                }
-            </Row>
+            <VerticalTimeline>
+            {
+                data.map(council => {
+                    return (
+                        <VerticalTimelineElement
+                            className="vertical-timeline-element"
+                            contentStyle={{ background: '#FFD54F', color: 'black' }}
+                            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                            date={council.year}
+                            iconStyle={{ 
+                                background: 'red', color: '#fff', 
+                                backgroundImage: `url('https://previews.123rf.com/images/vectorv/vectorv1910/vectorv191023841/132930824-white-clock-icon-isolated-on-white-background-square-color-button-vector-illustration.jpg')`, 
+                                backgroundPosition: 'center',
+                                backgroundSize: 100
+                            }}
+                            >        
+                        <PreviousCouncilMems user={council} />
+            
+                </VerticalTimelineElement>
+            
+                    )
+                })
+            }            
+            </VerticalTimeline>
         </div>
     );
 }
