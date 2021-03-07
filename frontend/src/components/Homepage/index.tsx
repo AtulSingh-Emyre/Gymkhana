@@ -2,37 +2,35 @@ import React from 'react';
 import { Container, Row, Col, Button, Image, Jumbotron } from 'react-bootstrap';
 import './style.css'
 import { StyleSheet } from 'aphrodite';
-import { bounce } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
+import {CSSTransition,TransitionGroup,} from 'react-transition-group';
+import Fade from 'react-bootstrap/Fade';
 
-const testani = {
-  bounce: {
-    animation: 'x 1s',
-    animationName: Radium.keyframes(bounce, 'bounce')
-  }
-}
 
 const Homepage = () => (
   <div>
 
-    <Jumbotron style={jumb} >
-      <div style={{flex:1,height:'100%', width:'100%', backgroundColor:'black', opacity:0.25, minHeight:'400px'}}>
-      <Container style={{ flex: 1 }}>
+   
+      <div className="home">
+      <Container className="hometextcontainer">
+        <div className='textdiv'>
         <Row>
-          <h1 style={{ color: 'white', opacity:1 }}>Welcome to IIT Dharwad</h1>
+          <h1 >Welcome to IIT Dharwad</h1>
         </Row>
         <Row>
-          <p style={{ color: 'white' }}>The home of pink sunsets, rich heritage and culture and, of
+          <p>The home of pink sunsets, rich heritage and culture and, of
 								course, engineering xP.</p>
         </Row>
+        </div>
       </Container>
       </div>
-    </Jumbotron>
-    <div
-      style={aboutUsContainer}
-    // className="aboutus"
-    >
-      <Container>
+  
+    <div className="aboutus">
+      <br/>
+      <br/>
+      <Fade in={true}>
+      <CSSTransition in={true} appear={true} timeout={5000}  classNames='my-node'>
+      <Container >
         <div >
           <h2 style={{ color: 'blueviolet' }}>About</h2>
         </div>
@@ -47,45 +45,11 @@ const Homepage = () => (
           <button className="bbtn"  ><a href="#" style={{ color: 'white' }}>Constitution</a></button>
         </div>
       </Container>
+      </CSSTransition>
+      </Fade>
     </div>
   </div>
 );
 
-const jumb: React.CSSProperties = {
-  backgroundImage: `url(${require(`../../assets/logoc.jpg`)})`,
-  backgroundRepeat: `no-repeat`,
-  backgroundSize: `cover`,
-  backgroundPosition: `center`,
-  width: '100%',
-  // transp
-  backgroundColor:'black',
-  position: 'relative',
-  minHeight: '400px',
-  // height:'100%'
-}
-
-const jumbRowContainer: React.CSSProperties = {
-
-}
-
-const aboutUsContainer: React.CSSProperties = {
-  maxWidth: '100%',
-  position: 'relative',
-
-}
-
-const styles = StyleSheet.create({
-  jumb: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    backgroundImage: `url(${require(`../../assets/logoc.jpg`)})`,
-    backgroundRepeat: `no-repeat`,
-    backgroundSize: `cover`,
-    backgroundPosition: `center`,
-    width: '100%',
-    minHeight: '400px',
-    padding:0
-  }
-})
 
 export default Homepage;
