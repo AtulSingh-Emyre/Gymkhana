@@ -8,6 +8,7 @@ import {
   faMailchimp,
   faLinkedinIn,
   faLinkedin} from "@fortawesome/free-brands-svg-icons";
+
 import { IconPack } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './styles.css'

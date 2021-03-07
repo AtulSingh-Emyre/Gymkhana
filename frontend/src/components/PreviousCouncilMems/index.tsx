@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import { BiChevronsDown } from "react-icons/bi";
 
 interface Ipropss {
     user : {
@@ -17,11 +19,11 @@ const PreviousCouncilMems = (props : Ipropss) => {
     const [Hover, setHover] = useState(false);
     return (
         <div 
-        style={container} 
+        style={{...container,  background: Hover? '#FFEE58' :'#FFC400' , }} 
         onMouseEnter={()=>setHover(true)} 
         onMouseLeave={()=>setHover(false)}
         >
-            <h5> View More  </h5>
+            <h5 style={{textAlign:'center'}}> {props.user.year} <BiChevronsDown color={'black'} size={30} />  </h5>
             
                 {props.user.gsTech && Hover?<>General Secretary, Technical Affairs: {props.user.gsTech} <br/></>:<></>}
                     {props.user.gsAcad&& Hover?<> General Secretary Academic Affairs: {props.user.gsAcad}<br/></>:<></>}
@@ -34,9 +36,12 @@ const PreviousCouncilMems = (props : Ipropss) => {
 }
 const container : React.CSSProperties = {
     // margin:'5%',
-    // background:'#FFC400',
     alignItems:'center',
     alignSelf:'center',
+    width:'100%',
+    height:'100%',
+    padding:5,
+    margin:'auto',
 }
 
 
