@@ -21,11 +21,14 @@ const Homepage = () => (
           <p>The home of pink sunsets, rich heritage and culture and, of
 								course, engineering xP.</p>
         </Row>
+        <br/><br/><br/>
+        <a href="#abt" className="godownbutton" ><i className="fa fa-angle-down" aria-hidden="true"></i></a>
+        
         </div>
       </Container>
       </div>
   
-    <div className="aboutus">
+    <div className="aboutus" id="abt">
       <br/>
       <br/>
       <Fade in={true}>

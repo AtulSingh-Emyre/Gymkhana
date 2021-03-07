@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Navbar, Nav, NavDropdown, Container, } from 'react-bootstrap';
-import logo from "../../assets/logo.png";
+import logo from "../../assets/iitdhlogo.png";
 import Example from '../Modal';
 
 const Header = () => (
