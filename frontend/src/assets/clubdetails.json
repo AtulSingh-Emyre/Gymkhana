@@ -23,7 +23,7 @@
     "clubname": "Coding",
     "secyname":  "Huzaiff",
     "memblink": "google",
-    "logo": "./logo.png",
+    "logo": "logo.png",
     "clubdesc": "Lorem ipsum text"
         }
     ],
@@ -33,9 +33,8 @@
     "clubname": "Dance",
     "secyname":  "Huzaiff",
     "memblink": "google",
-    "logo": "./logo.png",
+    "logo": "logo.png",
     "clubdesc": "Lorem ipsum text"
         }
     ]
-
 }

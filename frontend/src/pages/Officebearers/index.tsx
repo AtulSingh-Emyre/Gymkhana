@@ -4,15 +4,15 @@ import PreviousCouncilMems from "../../components/PreviousCouncilMems";
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Details from '../../components/CouncilMemberDetail';
+import PreviousCouncilMemsContainer from '../../components/PreviousCouncilMemsContainer';
 
 const Officebearers: React.FC = () => {
   // making the page responsive:
   return (
     <div style={container}>
       <Header />
-
       <Details />
-      <PreviousCouncilMems user={{ gsAcadUG: "", gsAcadPG: "", gsCult: "", gsHos: "", gsTech: "", gsSports: "" }} />
+      <PreviousCouncilMemsContainer />
       <Footer />
     </div>
   );

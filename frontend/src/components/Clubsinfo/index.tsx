@@ -1,11 +1,16 @@
 import React from 'react';
-import clubdata from '../../assets/clubdetails.json';
+// import clubdata from '../../assets/clubdetails.json';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
 interface IProps {
-    club: {
+    club: Array<{
+        id: string;
         clubname: string;
-    }
+        secyname: string;
+        memblink: string;
+        logo: string;
+        clubdesc: string;
+    }>
 }
 
 const Clubsinfo = (prop : IProps) => {
@@ -14,7 +19,7 @@ return(
 <div>
 <h1>Clubs Overview</h1>
             <br/>
-    {clubdata.sports.map((item, i) => {
+    {prop.club.map((item, i) => {
         const path = item.logo;
         // + item.logo;
         return (
