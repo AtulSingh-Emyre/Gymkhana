@@ -1,11 +1,7 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
 import PreviousCouncilMems from '../PreviousCouncilMems';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import {faYoutube, faLinkedin} from "@fortawesome/free-brands-svg-icons";
-//   import { IconPack } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
   
 const data = [
     {
@@ -63,11 +59,9 @@ const PreviousCouncilMemsContainer = () => {
                                 backgroundSize: 100
                             }}
                             >        
-                        <PreviousCouncilMems user={council} />
-            
+                        <PreviousCouncilMems user={council} /> 
                 </VerticalTimelineElement>
-            
-                    )
+                )
                 })
             }            
             </VerticalTimeline>

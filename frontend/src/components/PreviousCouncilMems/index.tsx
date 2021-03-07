@@ -21,7 +21,7 @@ const PreviousCouncilMems = (props : Ipropss) => {
         onMouseEnter={()=>setHover(true)} 
         onMouseLeave={()=>setHover(false)}
         >
-            <h5> {props.user.year} </h5>
+            <h5> View More  </h5>
             
                 {props.user.gsTech && Hover?<>General Secretary, Technical Affairs: {props.user.gsTech} <br/></>:<></>}
                     {props.user.gsAcad&& Hover?<> General Secretary Academic Affairs: {props.user.gsAcad}<br/></>:<></>}
