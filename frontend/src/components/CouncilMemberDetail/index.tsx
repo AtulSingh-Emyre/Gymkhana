@@ -107,11 +107,16 @@ const col_style : React.CSSProperties = {
   height: '100%',
   margin: 'auto',
   padding: '1%',
+<<<<<<< HEAD
   maxWidth: '250px',
   minWidth: '250px',
   maxHeight: '400px',
   minHeight: '350px',
 }
+=======
+  maxWidth: '350px',
+}
+>>>>>>> e1c9bde6072b84cf6c8b73eab5be92e1d3a01d99
 const col_style_small : React.CSSProperties = {
   // minWidth: '100%',
 }

@@ -49,9 +49,9 @@ const PreviousCouncilMemsContainer = () => {
                     return (
                         <VerticalTimelineElement
                             className="vertical-timeline-element"
-                            contentStyle={{ background: '#FFD54F', color: 'black' }}
+                            contentStyle={{ background: '#FFD54F', color: 'black', padding:0 }}
                             contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                            date={council.year}
+                            // date={council.year}
                             iconStyle={{ 
                                 background: 'red', color: '#fff', 
                                 backgroundImage: `url('https://previews.123rf.com/images/vectorv/vectorv1910/vectorv191023841/132930824-white-clock-icon-isolated-on-white-background-square-color-button-vector-illustration.jpg')`, 
@@ -75,5 +75,6 @@ export default PreviousCouncilMemsContainer;
 const container: React.CSSProperties = {
     width:'100%',
     alignItems:'center',
-    alignSelf:'center'
+    alignSelf:'center',
+
 }

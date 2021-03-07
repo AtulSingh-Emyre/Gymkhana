@@ -8,6 +8,7 @@ import {
   faMailchimp,
   faLinkedinIn,
   faLinkedin} from "@fortawesome/free-brands-svg-icons";
+
 import { IconPack } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './styles.css'
@@ -30,7 +31,7 @@ const MemberCard: React.FC<IProps> = (props: IProps) => {
    <Card style={body} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className='Card'>
       <Card.Img
       src = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/43217fe1-845a-4c3d-946e-caa1cb0e5651/d631lg1-848c2df7-b30e-4b23-b64b-213c7db89c4a.png/v1/fill/w_1024,h_1024,q_80,strp/code_geass__black_knight_symbol_by_marcfwl_d631lg1-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNDMyMTdmZTEtODQ1YS00YzNkLTk0NmUtY2FhMWNiMGU1NjUxXC9kNjMxbGcxLTg0OGMyZGY3LWIzMGUtNGIyMy1iNjRiLTIxM2M3ZGI4OWM0YS5wbmciLCJoZWlnaHQiOiI8PTEwMjQiLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS53YXRlcm1hcmsiXSwid21rIjp7InBhdGgiOiJcL3dtXC80MzIxN2ZlMS04NDVhLTRjM2QtOTQ2ZS1jYWExY2IwZTU2NTFcL21hcmNmd2wtNC5wbmciLCJvcGFjaXR5Ijo5NSwicHJvcG9ydGlvbnMiOjAuNDUsImdyYXZpdHkiOiJjZW50ZXIifX0.5e6QMAEkCi9IDH4ykhHPi_NpzKum6HYHhrxCsbOEzMU'
-      style={img} className='cardImage'>
+      style={img} >
       </Card.Img>
       <Card.Body className='cardBody'>
         <Card.Title>{props.person.name}</Card.Title>
