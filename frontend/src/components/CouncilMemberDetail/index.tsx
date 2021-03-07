@@ -57,8 +57,7 @@ const Details: React.FC<IProps> = (props: IProps) => {
   const isBigScreen = useMediaQuery({ query: '(min-device-width: 250px)' })  
   const wideScreenDeviceView = (
   <div style={container}>
-    {/* <Container style={{padding:'5%', width:'100%'}}> */}
-    <h5 style={{textAlign:'center', alignSelf:'center'}}> Office Bearers 2021-22</h5>
+    <h5 style={{textAlign:'center', alignSelf:'center'}} > Office Bearers 2021-22</h5>
     <Row style={row_style}>
     {
       temp.map(data => 
@@ -100,7 +99,7 @@ const col_style : React.CSSProperties = {
   height: '100%',
   margin: 'auto',
   padding: '1%',
-  maxWidth: '293px',
+  maxWidth: '350px',
 } 
 const col_style_small : React.CSSProperties = {
   // minWidth: '100%',
