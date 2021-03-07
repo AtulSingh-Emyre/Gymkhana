@@ -5,21 +5,34 @@ a.social {
   }
 
 a.social:hover {
-  transform: translateY(-2px);
+  transform: translateY(-5px);
 }
 
 a.youtube {
     color: #eb3223;
   }
-  
+
   a.facebook {
     color: #4968ad;
   }
-  
+
   a.twitter {
     color: #49a1eb;
   }
-  
+
   a.instagram {
     color: black;
+  }
+
+  .Card{
+    background-color: white;
+    transition: 0.5s;
+  }
+
+  .Card:hover{
+    background-color: #FF6F00;
+    opacity: 0.85;
+    color: white;
+    transform: scale(1.15);
+
   }

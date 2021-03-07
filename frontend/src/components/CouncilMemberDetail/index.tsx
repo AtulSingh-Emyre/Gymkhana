@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Card, Image, CardColumns, Button, Container } from 'react-bootstrap';
+import { Row, Col, Card, Image, CardColumns, Button } from 'react-bootstrap';
 import MediaQuery, { useMediaQuery } from 'react-responsive';
 import MemberCard from '../MemberCard';
 import './style.css'
@@ -13,72 +13,79 @@ const temp = [
     website: '',
     image: ''
   }, {
-    name: 'M Sai Harsha',
+    name: 'Atul Singh',
     phone: 7892128329,
     email: 'abc@g.c',
-    councilPost: 'Academic Affairs',
+    councilPost: 'Technical Affairs',
     website: '',
     image: ''
   }, {
-    name: 'Gowri Y Subedar',
+    name: 'Atul Singh',
     phone: 7892128329,
     email: 'abc@g.c',
-    councilPost: 'Cultural Affairs',
+    councilPost: 'Technical Affairs',
     website: '',
     image: ''
   }, {
-    name: 'Sai Rahul M',
+    name: 'Atul Singh',
     phone: 7892128329,
     email: 'abc@g.c',
-    councilPost: 'Hostel Affairs',
+    councilPost: 'Technical Affairs',
     website: '',
     image: ''
-  }, {
-    name: 'Yogesh Dhyani',
-    phone: 7892128329,
-    email: 'abc@g.c',
-    councilPost: 'Sports Affairs',
-    website: '',
-    image: ''
-  }, {
-    name: 'Savsaviya Brinal Sureshbhai',
-    phone: 7892128329,
-    email: 'abc@g.c',
-    councilPost: 'Sports Affairs',
-    website: '',
-    image: ''
-  }      
+  }
 ]
 
+// interface IdeviceInfo {
+//   isDesktopOrLaptop : boolean,
+//   isBigScreen : boolean,
+//   isTabletOrMobile : boolean,
+//   isTabletOrMobileDevice : boolean,
+//   isPortrait : boolean,
+//   isRetina : boolean
+// }
+
 interface IProps {
+  // deviceInfo: IdeviceInfo
 }
 
 const Details: React.FC<IProps> = (props: IProps) => {
-  const isBigScreen = useMediaQuery({ query: '(min-device-width: 250px)' })  
-  const wideScreenDeviceView = (
-  <div style={container}>
-    {/* <Container style={{padding:'5%', width:'100%'}}> */}
-    <h5 style={{textAlign:'center', alignSelf:'center'}}> Office Bearers 2021-22</h5>
-    <Row style={row_style}>
-    {
-      temp.map(data => 
-        ( <Col 
-        xs={10} md={6} xl={4}
-        style={col_style}
-        >
-          <MemberCard person={data} />
-        </Col>    
-      ))
-    }
+  const isBigScreen = useMediaQuery({ query: '(min-device-width: 250px)' })
+
+
+  const wideScreenDeviceView = (<div style={container}>
+  <Row style={row_style}>
+    <Col
+    xs={4} md={3}
+    style={col_style}
+    >
+      <MemberCard person={temp[0]} />
+    </Col>
+    <Col
+    xs={4} md={3}
+    style={col_style}    >
+      <MemberCard person={temp[2]} />
+    </Col>
+    <Col
+    xs={4} md={3}
+    style={col_style}>
+      <MemberCard person={temp[1]} />
+    </Col>
+    <Col xs={3} md={3}
+        style={col_style}>
+      <MemberCard person={temp[1]} />
+    </Col>
+    <Col xs={3} md={3}
+        style={col_style}>
+      <MemberCard person={temp[3]} />
+    </Col>
   </Row>
-  {/* </Container> */}
-</div>
-);
+</div>);
   return (
     <>
     {
     wideScreenDeviceView
-    } 
+    }
     </>
   );
 };
@@ -92,7 +99,7 @@ const container : React.CSSProperties = {
 const row_style : React.CSSProperties = {
   height: '100%',
   margin: 'auto',
-  // padding: '3%',
+  padding: '3%',
   maxWidth: '100%',
 }
 
@@ -100,8 +107,11 @@ const col_style : React.CSSProperties = {
   height: '100%',
   margin: 'auto',
   padding: '1%',
-  maxWidth: '293px',
-} 
+  maxWidth: '250px',
+  minWidth: '250px',
+  maxHeight: '400px',
+  minHeight: '350px',
+}
 const col_style_small : React.CSSProperties = {
   // minWidth: '100%',
 }
