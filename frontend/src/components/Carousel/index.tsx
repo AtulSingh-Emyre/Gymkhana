@@ -26,7 +26,7 @@ const Carouselcomp = (prop : IProps) => {
     
     <div>
       <Carousel fade>
-        <Carousel.Item>
+        <Carousel.Item interval={1000}>
           <img
             className="d-block w-100"
             // `url(${require(`../../assets/logoc.jpg`)})`
