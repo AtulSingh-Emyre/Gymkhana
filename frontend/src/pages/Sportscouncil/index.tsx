@@ -43,7 +43,9 @@ const columns = [
       </div>
       </Jumbotron>
         <Clubsinfo club={{clubname:"sports"}}/>
+        <div className='clubdetailstable'>
       <BootstrapTable keyField='id' data={clubdata.sports} columns={ columns } />
+      </div>
       <Footer />
     </>
   );
