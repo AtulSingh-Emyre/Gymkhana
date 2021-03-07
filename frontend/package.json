@@ -19,6 +19,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-modal": "^3.10.5",
     "@types/react-responsive": "^8.0.2",
+    "@types/react-vertical-timeline-component": "^3.0.0",
     "@unform/core": "^2.1.0",
     "@unform/web": "^2.1.0",
     "aphrodite": "^2.4.0",
@@ -44,6 +45,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-transition-group": "^4.4.1",
+    "react-vertical-timeline-component": "^3.3.3",
     "styled-components": "^5.1.0",
     "typescript": "^3.8.3",
     "yup": "^0.29.0"
