@@ -31,7 +31,6 @@ const container : React.CSSProperties = {
     margin:'5%',
     alignItems:'center',
     alignSelf:'center',
-    // backgroundColor:'red'
 }
 
 

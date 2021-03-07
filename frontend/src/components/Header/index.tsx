@@ -12,7 +12,7 @@ const Header = () => (
   style = {{
     position:'sticky',
     top: 0,
-    backgroundColor:'aqua', 
+    backgroundColor:'#FF6F00', 
     paddingLeft:'2%', 
     paddingRight:'2%', 
     width:'100%'}}
@@ -20,20 +20,25 @@ const Header = () => (
     <img src={logo} style={{ maxWidth:'60px'}} />
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
-      <Nav className="ml-auto">
-        <Nav.Link href="/"  >HOME</Nav.Link>
-        <Nav.Link href="/office">OFFICE BEARERS</Nav.Link>
-        <NavDropdown title="COUNCILS" id="basic-nav-dropdown">
+      <Nav className="ml-auto" style={{marginTop:'auto', marginBottom:'auto'}}>
+        <Nav.Link href="/" style={textCol} active={true} > HOME</Nav.Link>
+        <Nav.Link href="/office" style={textCol}>OFFICE BEARERS</Nav.Link>
+        <NavDropdown  title="COUNCILS" id="basic-nav-dropdown" style={textCol}>
           <NavDropdown.Item href="/technical">TECHNICAL COUNCILS</NavDropdown.Item>
           <NavDropdown.Item href="/cultural">CULTURAL COUNCILS</NavDropdown.Item>
           <NavDropdown.Item href="/sports">SPORTS COUNCILS</NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link href="/notices">NOTICES</Nav.Link>
-        <Nav.Link href="/calendar">CALENDAR</Nav.Link>
-        <Nav.Link href="#"><Example /></Nav.Link>
+        <Nav.Link href="/notices" style={textCol}>NOTICES</Nav.Link>
+        <Nav.Link href="/calendar" style={textCol}>CALENDAR</Nav.Link>
+        <Nav.Link href="#" style={textCol}><Example /></Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
 );
 
+const textCol : React.CSSProperties = {
+  color:'white',
+  height:'40px',
+  margin:'auto'
+}
 export default Header;

@@ -15,17 +15,18 @@ const testani = {
 const Homepage = () => (
   <div>
 
-    <Jumbotron style={jumb}>
+    <Jumbotron style={jumb} >
+      <div style={{flex:1,height:'100%', width:'100%', backgroundColor:'black', opacity:0.25, minHeight:'400px'}}>
       <Container style={{ flex: 1 }}>
         <Row>
-          <h1 style={{ color: 'white' }}>Welcome to IIT Dharwad</h1>
+          <h1 style={{ color: 'white', opacity:1 }}>Welcome to IIT Dharwad</h1>
         </Row>
         <Row>
           <p style={{ color: 'white' }}>The home of pink sunsets, rich heritage and culture and, of
 								course, engineering xP.</p>
         </Row>
       </Container>
-
+      </div>
     </Jumbotron>
     <div
       style={aboutUsContainer}
@@ -43,7 +44,7 @@ const Homepage = () => (
             The moto of Technology Students' Gymkhana is YOGAH KARMASU KAUSALAM which in English means "Perfection in action is Yoga". Our goal is to bring overall development in IITians through cultivating and nurturing their extra-curricular talents.
                         </p>
 
-          <button className="bbtn"><a href="#" style={{ color: 'white' }}>Constitution</a></button>
+          <button className="bbtn"  ><a href="#" style={{ color: 'white' }}>Constitution</a></button>
         </div>
       </Container>
     </div>
@@ -56,8 +57,11 @@ const jumb: React.CSSProperties = {
   backgroundSize: `cover`,
   backgroundPosition: `center`,
   width: '100%',
+  // transp
+  backgroundColor:'black',
   position: 'relative',
   minHeight: '400px',
+  // height:'100%'
 }
 
 const jumbRowContainer: React.CSSProperties = {
@@ -79,7 +83,8 @@ const styles = StyleSheet.create({
     backgroundSize: `cover`,
     backgroundPosition: `center`,
     width: '100%',
-    minHeight: '400px'
+    minHeight: '400px',
+    padding:0
   }
 })
 

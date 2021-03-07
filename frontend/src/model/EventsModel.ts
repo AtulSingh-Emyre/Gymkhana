@@ -55,6 +55,18 @@ export class EventsSingleton {
             poster: 'www.google.com',
             result: 'www.google.com',
             notice: true
+        }, {
+            id:3,
+            council: 'Technical',
+            title: 'land rover making',
+            organiser: 'Robotics Club',
+            start: moment().add(3, 'days').format('MMMM Do YYYY, h:mm:ss a'),
+            end: moment().add(4, 'days').format('MMMM Do YYYY, h:mm:ss a'),
+            venue: 'Room 23',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat',
+            poster: 'www.google.com',
+            result: 'www.google.com',
+            notice: true
         }
       ];
     private constructor() { }
