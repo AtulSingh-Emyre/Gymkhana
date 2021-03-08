@@ -9,8 +9,6 @@ import Fade from 'react-bootstrap/Fade';
 
 const Homepage = () => (
   <div>
-
-   
       <div className="home">
       <Container className="hometextcontainer">
         <div className='textdiv'>
