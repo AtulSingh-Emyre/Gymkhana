@@ -25,14 +25,34 @@ a.youtube {
   }
 
   .Card{
+    position: absolute;
     background-color: white;
-    transition: 0.5s;
   }
 
   .Card:hover{
     background-color: #FF6F00;
     opacity: 0.85;
     color: white;
+    transition: 0.3s;
     transform: scale(1.10);
 
   }
+
+  .cardBody{
+    position: absolute;
+    animation-name: popUp;
+    animation-duration: 0.5s;
+
+  }
+
+  .cardImage{
+    position: absolute;
+    animation-name: popUp;
+    animation-duration: 0.5s;
+  }
+
+  @keyframes popUp {
+    0%{}
+    65%{transform: translateY(-50px)}
+    100%{transform: translateY(-10px)}
+    }
