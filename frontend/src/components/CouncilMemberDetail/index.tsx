@@ -64,7 +64,7 @@ const Details: React.FC<IProps> = (props: IProps) => {
     {
       data.map((council) => (
         <Col
-        xs={10} md={6} xl = {4} 
+        xs={10} md={4} xl = {3} 
         style={col_style}
         >
         <MemberCard person={council}/>
