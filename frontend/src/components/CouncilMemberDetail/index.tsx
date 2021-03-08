@@ -82,7 +82,7 @@ const Details: React.FC<IProps> = (props: IProps) => {
   );
 };
 const container : React.CSSProperties = {
-  // minHeight: '300px',
+  minHeight: '100%',
   maxWidth: '100%',
   paddingTop: '5%',
   // paddingBottom: '5%'
