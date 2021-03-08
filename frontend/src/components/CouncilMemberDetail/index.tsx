@@ -82,9 +82,10 @@ const Details: React.FC<IProps> = (props: IProps) => {
   );
 };
 const container : React.CSSProperties = {
-  minHeight: '100%',
+  minHeight: '150%',
   maxWidth: '100%',
   paddingTop: '5%',
+  position:'relative'
   // paddingBottom: '5%'
 }
 
@@ -96,7 +97,7 @@ const row_style : React.CSSProperties = {
 }
 
 const col_style : React.CSSProperties = {
-  height: '100%',
+  height: 'auto',
   margin: 'auto',
   padding: '3.4%',
   maxWidth: '450px',
