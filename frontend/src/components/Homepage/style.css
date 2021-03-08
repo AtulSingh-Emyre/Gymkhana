@@ -73,3 +73,12 @@ margin: 4px 2px;
   position: relative;
   
 }
+
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear.fade-appear-active{
+  opacity: 1;
+  transition: opacity 1000ms linear;
+}
