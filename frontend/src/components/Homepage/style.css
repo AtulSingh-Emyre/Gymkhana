@@ -76,9 +76,11 @@ margin: 4px 2px;
 
 .fade-appear {
   opacity: 0;
+  transform: translateY(-80%)
 }
 
 .fade-appear.fade-appear-active{
   opacity: 1;
-  transition: opacity 1000ms linear;
+  transform: translateY(0%);
+  transition: opacity 600ms, transform 600ms;
 }
