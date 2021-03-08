@@ -4,7 +4,7 @@ import MediaQuery, { useMediaQuery } from 'react-responsive';
 import MemberCard from '../MemberCard';
 import './style.css'
 
-const temp = [
+const data = [
   {
     name: 'Atul Singh',
     phone: 7892128329,
@@ -12,7 +12,22 @@ const temp = [
     councilPost: 'Technical Affairs',
     website: '',
     image: ''
-  }, {
+  },{
+    name: 'Atul Singh',
+    phone: 7892128329,
+    email: 'abc@g.c',
+    councilPost: 'Technical Affairs',
+    website: '',
+    image: ''
+  },{
+    name: 'Atul Singh',
+    phone: 7892128329,
+    email: 'abc@g.c',
+    councilPost: 'Technical Affairs',
+    website: '',
+    image: ''
+  },
+   {
     name: 'Atul Singh',
     phone: 7892128329,
     email: 'abc@g.c',
@@ -36,17 +51,7 @@ const temp = [
   }
 ]
 
-// interface IdeviceInfo {
-//   isDesktopOrLaptop : boolean,
-//   isBigScreen : boolean,
-//   isTabletOrMobile : boolean,
-//   isTabletOrMobileDevice : boolean,
-//   isPortrait : boolean,
-//   isRetina : boolean
-// }
-
 interface IProps {
-  // deviceInfo: IdeviceInfo
 }
 
 const Details: React.FC<IProps> = (props: IProps) => {
@@ -54,31 +59,18 @@ const Details: React.FC<IProps> = (props: IProps) => {
 
 
   const wideScreenDeviceView = (<div style={container}>
+    <h3 style={{textAlign:'center'}}>Office Bearers 2021-22</h3>
   <Row style={row_style}>
-    <Col
-    xs={4} md={3}
-    style={col_style}
-    >
-      <MemberCard person={temp[0]} />
-    </Col>
-    <Col
-    xs={4} md={3}
-    style={col_style}    >
-      <MemberCard person={temp[2]} />
-    </Col>
-    <Col
-    xs={4} md={3}
-    style={col_style}>
-      <MemberCard person={temp[1]} />
-    </Col>
-    <Col xs={3} md={3}
-        style={col_style}>
-      <MemberCard person={temp[1]} />
-    </Col>
-    <Col xs={3} md={3}
-        style={col_style}>
-      <MemberCard person={temp[3]} />
-    </Col>
+    {
+      data.map((council) => (
+        <Col
+        xs={10} md={4} xl = {3} 
+        style={col_style}
+        >
+        <MemberCard person={council}/>
+        </Col>
+      ))
+  }  
   </Row>
 </div>);
   return (
@@ -106,10 +98,8 @@ const row_style : React.CSSProperties = {
 const col_style : React.CSSProperties = {
   height: '100%',
   margin: 'auto',
-  padding: '1%',
-  maxWidth: '350px',
+  padding: '3.4%',
+  maxWidth: '400px',
 }
-const col_style_small : React.CSSProperties = {
-  // minWidth: '100%',
-}
+
 export default Details;
