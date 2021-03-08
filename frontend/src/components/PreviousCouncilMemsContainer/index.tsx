@@ -53,11 +53,11 @@ const PreviousCouncilMemsContainer = () => {
                             className="vertical-timeline-element"
                             contentStyle={{ background: '#FFD54F', color: 'black', padding:0 }}
                             contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                            // date={council.year}
+                            date={council.year}
                             icon = {
                                 <SiClockify size={100} color={'red'} />
                             }
-                            >        
+                            >      
                         <PreviousCouncilMems user={council} /> 
                 </VerticalTimelineElement>
                 )

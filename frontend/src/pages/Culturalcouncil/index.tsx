@@ -6,9 +6,10 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import clubdata from '../../assets/clubdetails.json';
 import Carouselcomp from '../../components/Carousel';
 import Container from 'react-bootstrap/Container';
+import { useMediaQuery } from 'react-responsive';
 const logo = require('../../assets/interiitsmeet.jpg');
 const Culturalcouncil: React.FC = () => {
-
+  const wideScreen = useMediaQuery({query:'(min-device-width: 1824px)'})
   const columns = [
     {
       dataField: 'id',
