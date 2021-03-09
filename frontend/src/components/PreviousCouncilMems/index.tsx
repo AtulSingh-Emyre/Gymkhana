@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { BiChevronsDown } from "react-icons/bi";
 import './styles.css'
@@ -25,19 +24,16 @@ const PreviousCouncilMems = (props : Ipropss) => {
         onMouseLeave={()=>setHover(false)}
         >
             <h5 style={{textAlign:'center'}}> {props.user.year} <BiChevronsDown color={'black'} size={30} />  </h5>
-            <div className='dropDown'>  
-            {props.user.gsTech && Hover?<>General Secretary, Technical Affairs: {props.user.gsTech} <br/></>:<></>}
-                  {props.user.gsAcad&& Hover?<> General Secretary Academic Affairs: {props.user.gsAcad}<br/></>:<></>}
-                  {props.user.gsCult&& Hover?<>General Secretary Cultural Affairs: {props.user.gsCult}<br/></>:<></>}
-                  {props.user.gsSports&& Hover? <>General Secretary Sports Affairs: {props.user.gsSports}<br/></>:<></>}
-                  {props.user.gsHos&& Hover? <>General Secretary Hostel Affairs: {props.user.gsHos}<br/></>:<></>}
-                  {props.user.gsMess&& Hover? <>General Secretary Mess Affairs: {props.user.gsMess}<br/></>:<></>}
-                  </div>
-
-
-
-
-
+           {Hover? 
+                <div className='dropDown'>  
+                  {props.user.gsTech? <>General Secretary, Technical Affairs: {props.user.gsTech} <br/></>:<></>}
+                  {props.user.gsAcad?<> General Secretary Academic Affairs: {props.user.gsAcad}<br/></>:<></>}
+                  {props.user.gsCult?<>General Secretary Cultural Affairs: {props.user.gsCult}<br/></>:<></>}
+                  {props.user.gsSports? <>General Secretary Sports Affairs: {props.user.gsSports}<br/></>:<></>}
+                  {props.user.gsHos? <>General Secretary Hostel Affairs: {props.user.gsHos}<br/></>:<></>}
+                  {props.user.gsMess? <>General Secretary Mess Affairs: {props.user.gsMess}<br/></>:<></>}
+                </div> 
+                : <></>}
         </div>
     );
 }

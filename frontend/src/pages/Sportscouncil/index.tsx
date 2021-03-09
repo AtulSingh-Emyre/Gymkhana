@@ -31,7 +31,7 @@ const Sportscouncil: React.FC = () => {
 
   return (
     <>
-      <Header />
+      <Header active = {{council:true}} />
 
      
       <Carouselcomp images={{

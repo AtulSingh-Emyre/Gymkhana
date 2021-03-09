@@ -36,7 +36,7 @@ const Culturalcouncil: React.FC = () => {
   ]
   return (
     <>
-      <Header />
+      <Header active={{council:true}} />
 
       <Carouselcomp images={{
         image1: logo, title1: "", caption1: "hello",

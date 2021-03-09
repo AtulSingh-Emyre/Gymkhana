@@ -8,7 +8,7 @@ import {CSSTransition} from 'react-transition-group';
 const Calendar: React.FC = () => {
   return (
     <>
-    <Header />
+    <Header active={{calendar:true}} />
     <CSSTransition in={true} appear={true} timeout={1000} classNames='fade'>
       <EventsCalendar/>
       </CSSTransition>  

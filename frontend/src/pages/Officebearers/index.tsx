@@ -10,7 +10,7 @@ const Officebearers: React.FC = () => {
   // making the page responsive:
   return (
     <div style={container}>
-      <Header />
+      <Header active={{office:true}}/>
       <Details />
       <PreviousCouncilMemsContainer />
       <Footer />

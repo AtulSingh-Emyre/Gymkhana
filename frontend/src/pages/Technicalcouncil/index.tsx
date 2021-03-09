@@ -30,7 +30,7 @@ const Technicalcouncil: React.FC = () => {
 
   return (
     <>
-      <Header />
+      <Header active={{council: true}} />
       <Carouselcomp images={{
         image1: logo, title1: "", caption1: "hello",
         image2: logo, title2: "", caption2: "",

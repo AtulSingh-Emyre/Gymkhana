@@ -7,7 +7,7 @@ import {CSSTransition} from 'react-transition-group';
 const Notices: React.FC = () => {
   return (
     <>
-    <Header />
+    <Header active={{notice:true}}/>
     <CSSTransition in={true} appear={true} timeout={1000} classNames='fade'>
       <Card/>
       </CSSTransition>

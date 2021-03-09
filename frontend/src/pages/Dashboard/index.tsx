@@ -8,7 +8,7 @@ import Homepage from '../../components/Homepage';
 const Dashboard: React.FC = () => {
   return (
     <div style={{minWidth:'100%'}} >
-      <Header />
+      <Header active={{home:true}} />
       <Homepage/>
       <Footer />
     </div>
