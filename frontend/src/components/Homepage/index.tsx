@@ -29,8 +29,8 @@ const Homepage = () => (
     <div className="aboutus" id="abt">
       <br/>
       <br/>
-      <Fade in={true}>
-      <CSSTransition in={true} appear={true} timeout={5000}  classNames='my-node'>
+     
+      <CSSTransition in={true} appear={true} timeout={600} classNames='fade'>
       <Container >
         <div >
           <h2 style={{ color: 'blueviolet' }}>About</h2>
@@ -47,7 +47,7 @@ const Homepage = () => (
         </div>
       </Container>
       </CSSTransition>
-      </Fade>
+    
     </div>
   </div>
 );
