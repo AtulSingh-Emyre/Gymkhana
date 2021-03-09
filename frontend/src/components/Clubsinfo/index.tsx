@@ -27,6 +27,7 @@ const Clubsinfo = (prop: IProps) => {
                             <h2>{item.clubname} Club</h2>
                             <img src={require('./../../assets/' + path)} alt={item.clubname} style={{ float: 'left', maxWidth: '60px' }} />
                             <p>{item.clubdesc}</p>
+                            <hr/>
                         </div>
                     )
                 }
