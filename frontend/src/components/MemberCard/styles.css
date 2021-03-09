@@ -26,13 +26,21 @@ a.youtube {
 
   .Card{
     background-color: white;
-    transition: 0.5s;
+    transition: 0.4s;
   }
 
   .Card:hover{
+
     background-color: #FF6F00;
     opacity: 0.85;
     color: white;
-    transform: scale(1.10);
+    animation: popUp 0.3s linear;
+    animation-fill-mode: forwards;
+}
 
+  @keyframes popUp {
+    0%{}
+    60%{transform: translateY(-30px);}
+    80%{transform: translateY(-5px);}
+    100%{transform: translateY(-15px);}
   }
