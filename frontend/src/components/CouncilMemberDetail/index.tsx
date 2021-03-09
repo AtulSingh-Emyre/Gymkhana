@@ -56,8 +56,6 @@ interface IProps {
 
 const Details: React.FC<IProps> = (props: IProps) => {
   const isBigScreen = useMediaQuery({ query: '(min-device-width: 250px)' })
-
-
   const wideScreenDeviceView = (<div style={container}>
     <h3 style={{textAlign:'center'}}>Office Bearers 2021-22</h3>
   <Row style={row_style}>

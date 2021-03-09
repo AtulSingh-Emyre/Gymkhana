@@ -9,26 +9,31 @@ import Container from 'react-bootstrap/Container';
 import { useMediaQuery } from 'react-responsive';
 const logo = require('../../assets/interiitsmeet.jpg');
 const Culturalcouncil: React.FC = () => {
-  const wideScreen = useMediaQuery({query:'(min-device-width: 1824px)'})
+  const slimScreen = useMediaQuery({query:'(max-device-width: 900px)'})
   const columns = [
-    {
-      dataField: 'id',
-      text: '#'
-    }, {
+     {
       dataField: 'clubname',
       text: 'Cultural Clubs'
     }, {
       dataField: 'secyname',
       text: 'Club Secretary'
     }, {
-      dataField: 'memblink',
-      text: 'Club Members',
-    }, {
       dataField: 'Contactdetails',
       text: 'Contact'
     },
   ];
-
+  const smallScreenCols = [
+    {
+      dataField: 'clubname',
+      text: 'Cultural Clubs'
+    }, {
+      dataField: 'secyname',
+      text: 'Club Secretary'
+    }, {
+      dataField: 'Contactdetails',
+      text: 'Contact'
+    },
+  ]
   return (
     <>
       <Header />
@@ -49,7 +54,7 @@ const Culturalcouncil: React.FC = () => {
       <Clubsinfo club={clubdata.cultural} />
       <hr />
       <h3 style={{ textDecoration: 'underline', textAlign: 'center' }}>Club Details</h3>
-      <BootstrapTable keyField='id' data={clubdata.cultural} columns={columns} />
+       <BootstrapTable keyField='id' data={clubdata.cultural} columns={slimScreen? smallScreenCols : columns} />
       <Footer />
     </>
   );
