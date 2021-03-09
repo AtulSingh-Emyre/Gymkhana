@@ -54,6 +54,7 @@ const PreviousCouncilMemsContainer = () => {
                             contentStyle={{ background: '#FFD54F', color: 'black', padding:0 }}
                             contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                             date={council.year}
+                            iconStyle={{backgroundColor:'black'}}
                             icon = {
                                 <SiClockify size={100} color={'red'} />
                             }
