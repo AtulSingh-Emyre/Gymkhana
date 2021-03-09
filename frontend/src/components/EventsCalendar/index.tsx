@@ -20,7 +20,7 @@ const EventsCalendar: React.FC<IProps> = ({ }) => {
   return (
     <Container style={{ paddingTop: '5%' }}>
       <div>
-        <h1 style={{ marginBottom: '15px', textAlign: 'center', color: 'red' }}>
+        <h1 style={{ marginBottom: '15px', textAlign: 'center', color: 'red', textDecoration: 'underline' }}>
           Student Activities Calendar
         </h1>
       </div>
