@@ -17,27 +17,28 @@ interface IProps {
   }
 }
 const MemberCard: React.FC<IProps> = (props: IProps) => {
-  
+
   const [hover, sethover] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
-  
+
   const onMouseEnter = () => sethover(true);
   const onMouseLeave = () => sethover(false);
-  
+
   return (
    <CSSTransition in={true} appear={true} timeout={1000} classNames='fade'  >
    <div style={body} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className='Card'>
    <Card.Img
+   className='cardBody'
           loading='lazy'
           onLoad = {()=>setImageLoaded(true)}
           src = {require('../../assets/CouncilMems/gs-Tech.jpg')}
-          style={imageLoaded?{...img, visibility:'visible'}:{visibility: 'hidden'}} />  
+          style={imageLoaded?{...img, visibility:'visible'}:{visibility: 'hidden'}} />
    <Card.Body className='cardBody' style={{margin:'auto', textAlign:'center'}}>
         <Card.Title>{props.person.name}</Card.Title>
         <Card.Subtitle>General Secretary, {props.person.councilPost}</Card.Subtitle>
  <Card.Text style={{paddingTop:10, alignItems:'center', margin:'auto'}}>
-            <Row style={{width:'100%', 
-            alignItems:'center', 
+            <Row style={{width:'100%',
+            alignItems:'center',
             margin:'auto',
             // backgroundColor:'black'
             }}>
@@ -62,7 +63,7 @@ const MemberCard: React.FC<IProps> = (props: IProps) => {
                 </a>
                 </Col>
         </Row>
-        </Card.Text>         
+        </Card.Text>
       </Card.Body>
     </div>
     </CSSTransition>
