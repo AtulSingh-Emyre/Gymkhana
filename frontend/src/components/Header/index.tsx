@@ -6,6 +6,7 @@ import './style.css';
 
 const Header = () => (
   <Navbar
+    variant='dark'
     expand="lg"
     collapseOnSelect
     fixed={'top'}
