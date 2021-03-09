@@ -73,3 +73,14 @@ margin: 4px 2px;
   position: relative;
   
 }
+
+.fade-appear {
+  opacity: 0;
+  transform: translateY(-80%)
+}
+
+.fade-appear.fade-appear-active{
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 600ms, transform 600ms;
+}
