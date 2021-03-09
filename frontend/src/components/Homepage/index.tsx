@@ -11,6 +11,7 @@ const Homepage = () => (
   <div>
       <div className="home">
       <Container className="hometextcontainer">
+      <CSSTransition in={true} appear={true} timeout={800} classNames='fade'>
         <div className='textdiv'>
         <Row>
           <h1 >Welcome to IIT Dharwad</h1>
@@ -23,6 +24,7 @@ const Homepage = () => (
         <a href="#abt" className="godownbutton" ><i className="fa fa-angle-down" aria-hidden="true"></i></a>
         
         </div>
+        </CSSTransition>
       </Container>
       </div>
   
