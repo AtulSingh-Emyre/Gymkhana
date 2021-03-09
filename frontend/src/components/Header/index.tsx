@@ -25,7 +25,7 @@ const Header: React.FC<IProps> = (props) => (
     style={{
       position: 'sticky',
       top: 0,
-      backgroundColor: '#FF6F00',
+      // backgroundColor: '#FF6F00',
       paddingLeft: '2%',
       paddingRight: '2%',
       width: '100%'

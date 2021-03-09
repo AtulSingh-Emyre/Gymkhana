@@ -1,3 +1,26 @@
 .navbartop{
     background-image: linear-gradient(to top, #FB8C00,#FFA726);
+    /* background-color: transparent !important;
+    border-bottom-style: solid;
+    border-bottom-color: #fff;
+    border-bottom-width: 0.2px;
+    border: opacity 0.1em; */
+}
+
+nav .nav-link{
+    font-weight: bolder;
+    /* background-color: brown; */
+    margin: auto;
+    height: 40px;
+    color: white;
+    letter-spacing: 0.4px;
+    background-color: transparent;
+    
+}
+nav .nav-link:hover, .nav-link:focus{
+    font-weight: normal;
+    /* background-color: brown; */
+    font-size: 18px;
+    transition: 300ms ease-out;
+   
 }
