@@ -2,15 +2,13 @@ import React from 'react';
 import { Button, Navbar, Nav, NavDropdown, Container, } from 'react-bootstrap';
 import logo from "../../assets/iitdhlogo.png";
 import Example from '../Modal';
-import './style.css';
 
 const Header = () => (
   <Navbar
-    variant='dark'
     expand="lg"
     collapseOnSelect
     fixed={'top'}
-    className = 'navbartop'
+    // className = {'navbar-fixed-top'}
     style={{
       position: 'sticky',
       top: 0,
