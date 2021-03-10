@@ -1,42 +1,42 @@
 import React from 'react';
 import PreviousCouncilMems from '../PreviousCouncilMems';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { SiClockify } from "react-icons/si";
 import 'react-vertical-timeline-component/style.min.css';
 import { Container } from 'react-bootstrap';
   
 const data = [
     {
-        year: '2020 - 2021', 
-        gsCult: "Sonu Sourav", 
-        gsHos: "Sonu Sourav", 
-        gsTech: "Sonu Sourav", 
+        year: '2020 - 2021',
+        gsCult: "Sonu Sourav",
+        gsHos: "Sonu Sourav",
+        gsTech: "Sonu Sourav",
         gsSports: "Sonu Sourav",
-        gsMess: "Sonu Sourav", 
+        gsMess: "Sonu Sourav",
     },
-     {
-        year: '2019 - 2020',  
-        gsCult: "Sonu Sourav", 
-        gsHos: "Sonu Sourav", 
-        gsTech: "Sonu Sourav", 
+    {
+        year: '2019 - 2020',
+        gsCult: "Sonu Sourav",
+        gsHos: "Sonu Sourav",
+        gsTech: "Sonu Sourav",
         gsSports: "Sonu Sourav",
-        gsMess: "Sonu Sourav", 
+        gsMess: "Sonu Sourav",
     },
-     {
-        year:'2018 - 2019',  
-        gsCult: "Sonu Sourav", 
-        gsHos: "Sonu Sourav", 
-        gsTech: "Sonu Sourav", 
+    {
+        year: '2018 - 2019',
+        gsCult: "Sonu Sourav",
+        gsHos: "Sonu Sourav",
+        gsTech: "Sonu Sourav",
         gsSports: "Sonu Sourav",
-        gsMess: "Sonu Sourav", 
+        gsMess: "Sonu Sourav",
     },
-    { 
-        year:'2017 - 2018',
-        gsCult: "Sonu Sourav", 
-        gsHos: "Sonu Sourav", 
-        gsTech: "Sonu Sourav", 
+    {
+        year: '2017 - 2018',
+        gsCult: "Sonu Sourav",
+        gsHos: "Sonu Sourav",
+        gsTech: "Sonu Sourav",
         gsSports: "Sonu Sourav",
-        gsMess: "Sonu Sourav", 
+        gsMess: "Sonu Sourav",
     },
 ]
 
@@ -46,7 +46,7 @@ const PreviousCouncilMemsContainer = () => {
     return (
         <div style={container}>
             
-            <h3 style={{textAlign:'center', color:'white', paddingBottom:'5%'}}>Previous Office Bearers</h3>
+            <h3 style={{textAlign:'center', color:'white', paddingBottom:'5%', textDecoration: 'underline'}}>Previous Office Bearers</h3>
             <VerticalTimeline >
             {
                 data.map(council => {

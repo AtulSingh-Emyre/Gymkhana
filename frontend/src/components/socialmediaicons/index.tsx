@@ -4,22 +4,20 @@ import { MDBIcon, MDBContainer } from 'mdbreact';
 const SocialButtonsPage = () => {
     return (
         <MDBContainer>
-            <a href="#!" className="fb-ic mr-3">
+            <a href="https://www.facebook.com/IITDhGymkhana" className="fb-ic mr-3">
                 <MDBIcon fab icon="facebook-f" />
             </a>
-            <a href="#!" className="tw-ic mr-3">
+            <a href="https://twitter.com/iitdhrwd?s=20" className="tw-ic mr-3">
                 <MDBIcon fab icon="twitter" />
             </a>
-            <a href="#!" className="li-ic mr-3">
+            <a href="https://in.linkedin.com/company/iit-dharwad" className="li-ic mr-3">
                 <MDBIcon fab icon="linkedin-in" />
             </a>
-            <a href="#!" className="ins-ic mr-3">
+            <a href="https://www.instagram.com/iitdharwad/?hl=en" className="ins-ic mr-3">
                 <MDBIcon fab icon="instagram" />
             </a>
 
-            <a href="#!" className="yt-ic mr-3">
-                <MDBIcon fab icon="youtube" />
-            </a>
+
         </MDBContainer>
     );
 }
