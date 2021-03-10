@@ -19,9 +19,9 @@ const Footer = () => {
           <MDBCol md="3" xs='10' >
             <h5 className="title">Quick Links</h5>
             <Container style={{paddingBottom:10}}>
-              <div><a href="#!">Link 1</a></div>
-              <div><a href="#!">Link 2</a></div>
-              <div><a href="#!">Link 3</a></div>
+              <div><a href="https://www.iitdh.ac.in/">IIT Dharwad</a></div>
+              <div><a href="https://smp.iitdh.ac.in/">SMP</a></div>
+              <div><a href="https://cdc.iitdh.ac.in/">CDC</a></div>
             </Container>
           </MDBCol>
           <MDBCol md="3">
