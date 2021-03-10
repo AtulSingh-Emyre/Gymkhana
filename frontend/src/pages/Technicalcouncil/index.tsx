@@ -10,17 +10,11 @@ const logo = require('../../assets/interiitsmeet.jpg');
 const Technicalcouncil: React.FC = () => {
   const columns = [
     {
-      dataField: 'id',
-      text: '#'
-    }, {
       dataField: 'clubname',
       text: 'Technical Clubs'
     }, {
       dataField: 'secyname',
       text: 'Club Secretary'
-    }, {
-      dataField: 'memblink',
-      text: 'Club Members'
     },
     {
       dataField: 'Contactdetails',

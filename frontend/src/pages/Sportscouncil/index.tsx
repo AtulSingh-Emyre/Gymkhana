@@ -11,22 +11,16 @@ import './style.css';
 const logo = require('../../assets/interiitsmeet.jpg');
 const Sportscouncil: React.FC = () => {
   const columns = [
-    {
-      dataField: 'id',
-      text: '#'
-    }, {
+     {
       dataField: 'clubname',
       text: 'Sports Clubs'
     }, {
       dataField: 'secyname',
       text: 'Club Secretary'
     }, {
-      dataField: 'memblink',
-      text: 'Club Members'
-    }, {
       dataField: 'Contactdetails',
       text: 'Contact'
-    },
+    }
   ];
 
   return (
