@@ -25,7 +25,9 @@ nav .nav-link:hover, .nav-link:focus{
     transition: 300ms ease-out;
    
 }
-
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
 .activeHover
 {
     position: relative;
