@@ -44,7 +44,7 @@ return (
       <Nav className="ml-auto" style={{ marginTop: 'auto', marginBottom: 'auto' }} defaultActiveKey={'/'} >
         <Nav.Link href="/"   className={'activeHover'}  style={textCol}> HOME</Nav.Link>
         <Nav.Link href="/office" className={'activeHover'} style={textCol}>OFFICE BEARERS</Nav.Link>
-        <NavDropdown title="COUNCILS" id="basic-nav-dropdown" style={textCol} className={'activeHover'}>
+        <NavDropdown title="COUNCILS" id="basic-nav-dropdown" style={textCol} className={'activeHover'} renderMenuOnMount={true}>
           <NavDropdown.Item href="/technical">TECHNICAL COUNCILS</NavDropdown.Item>
           <NavDropdown.Item href="/cultural">CULTURAL COUNCILS</NavDropdown.Item>
           <NavDropdown.Item href="/sports">SPORTS COUNCILS</NavDropdown.Item>
