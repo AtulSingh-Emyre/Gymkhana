@@ -42,8 +42,9 @@ const Technicalcouncil: React.FC = () => {
       <Clubsinfo club={clubdata.technical} />
       <hr />
       <h3 style={{ textDecoration: 'underline', textAlign: 'center' }}>Club Details</h3>
+      <Container>
       <BootstrapTable keyField='id' data={clubdata.technical} columns={columns} />
-
+      </Container>
       <Footer />
     </>
   );

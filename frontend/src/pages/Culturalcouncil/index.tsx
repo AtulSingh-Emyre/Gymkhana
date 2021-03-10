@@ -54,7 +54,9 @@ const Culturalcouncil: React.FC = () => {
       <Clubsinfo club={clubdata.cultural} />
       <hr />
       <h3 style={{ textDecoration: 'underline', textAlign: 'center' }}>Club Details</h3>
+      <Container>
        <BootstrapTable keyField='id' data={clubdata.cultural} columns={slimScreen? smallScreenCols : columns} />
+       </Container>
       <Footer />
     </>
   );

@@ -35,7 +35,10 @@ return (
       width: '100%'
     }}
   >
+
+    <Navbar.Brand href="/" > 
     <img src={logo} style={{ maxWidth: '60px' }} />
+    </Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="ml-auto" style={{ marginTop: 'auto', marginBottom: 'auto' }} defaultActiveKey={'/'} >
