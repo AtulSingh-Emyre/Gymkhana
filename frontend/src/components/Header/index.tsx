@@ -15,7 +15,11 @@ interface IProps {
 }
 
 
-const Header: React.FC<IProps> = (props) => (
+const Header: React.FC<IProps> = (props) => 
+{
+
+
+return (
   <Navbar
     variant='dark'
     expand="lg"
@@ -34,25 +38,27 @@ const Header: React.FC<IProps> = (props) => (
     <img src={logo} style={{ maxWidth: '60px' }} />
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
-      <Nav className="ml-auto" style={{ marginTop: 'auto', marginBottom: 'auto' }}>
-        <Nav.Link href="/" active={props.active?.home?props.active?.home:false } style={textCol} > HOME</Nav.Link>
-        <Nav.Link href="/office" active={props.active?.office?props.active?.office:false} style={textCol}>OFFICE BEARERS</Nav.Link>
-        <NavDropdown title="COUNCILS" id="basic-nav-dropdown" style={textCol} active={props.active?.council}>
+      <Nav className="ml-auto" style={{ marginTop: 'auto', marginBottom: 'auto' }} defaultActiveKey={'/'} >
+        <Nav.Link href="/"   className={'activeHover'}  style={textCol}> HOME</Nav.Link>
+        <Nav.Link href="/office" className={'activeHover'} style={textCol}>OFFICE BEARERS</Nav.Link>
+        <NavDropdown title="COUNCILS" id="basic-nav-dropdown" style={textCol} className={'activeHover'}>
           <NavDropdown.Item href="/technical">TECHNICAL COUNCILS</NavDropdown.Item>
           <NavDropdown.Item href="/cultural">CULTURAL COUNCILS</NavDropdown.Item>
           <NavDropdown.Item href="/sports">SPORTS COUNCILS</NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link href="/notices" style={textCol} active={props.active?.notice}>NOTICES</Nav.Link>
-        <Nav.Link href="/calendar" style={textCol} active={props.active?.calendar}>CALENDAR</Nav.Link>
-        <Nav.Link href="#" style={textCol}><Example /></Nav.Link>
+        <Nav.Link href="/notices" style={textCol} className={'activeHover'}>NOTICES</Nav.Link>
+        <Nav.Link href="/calendar" style={textCol} className={'activeHover'}>CALENDAR</Nav.Link>
+        <Nav.Link href="#" style={textCol} className={'activeHover'}><Example /></Nav.Link>
       </Nav>
+      
     </Navbar.Collapse>
-  </Navbar>
+   </Navbar>
 );
-
+  }
 const textCol: React.CSSProperties = {
   color: 'white',
   height: '40px',
-  margin: 'auto'
+  margin: 'auto',
+  // backgroundColor: 'white'
 }
 export default Header;

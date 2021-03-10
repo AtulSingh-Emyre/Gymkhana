@@ -32,7 +32,6 @@ const Homepage = () => (
       <br/>
       <br/>
      
-      <CSSTransition in={true} appear={true} timeout={600} classNames='fade'>
       <Container >
         <div >
           <h2 style={{ color: 'blueviolet' }}>About</h2>
@@ -48,8 +47,6 @@ const Homepage = () => (
           <button className="bbtn"  ><a href="#" style={{ color: 'white' }}>Constitution</a></button>
         </div>
       </Container>
-      </CSSTransition>
-    
     </div>
   </div>
 );

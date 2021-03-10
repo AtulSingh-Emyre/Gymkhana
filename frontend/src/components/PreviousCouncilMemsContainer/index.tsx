@@ -3,6 +3,7 @@ import PreviousCouncilMems from '../PreviousCouncilMems';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import { SiClockify } from "react-icons/si";
 import 'react-vertical-timeline-component/style.min.css';
+import { Container } from 'react-bootstrap';
   
 const data = [
     {
@@ -44,8 +45,9 @@ const data = [
 const PreviousCouncilMemsContainer = () => {
     return (
         <div style={container}>
-            <h3 style={{textAlign:'center'}}>Previous Office Bearers</h3>
-            <VerticalTimeline>
+            
+            <h3 style={{textAlign:'center', color:'white', paddingBottom:'5%'}}>Previous Office Bearers</h3>
+            <VerticalTimeline >
             {
                 data.map(council => {
                     return (
@@ -74,7 +76,8 @@ export default PreviousCouncilMemsContainer;
 
 const container: React.CSSProperties = {
     width:'100%',
+    padding:'5%',
     alignItems:'center',
     alignSelf:'center',
-
+    backgroundColor: '#bf360c'
 }
