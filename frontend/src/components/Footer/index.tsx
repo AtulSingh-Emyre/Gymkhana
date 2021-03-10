@@ -2,6 +2,7 @@ import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter, } from "mdbreact";
 import './style.css';
 import SocialButtonsPage from  '../socialmediaicons';
+import { Container } from "react-bootstrap";
 
 const Footer = () => {
   return (
@@ -15,28 +16,22 @@ const Footer = () => {
               content.
             </p>
           </MDBCol>
-          <MDBCol md="4">
+          <MDBCol md="3" xs='10' >
             <h5 className="title">Quick Links</h5>
-            <ul>
-              <li className="list-unstyled">
-                <a href="#!">Link 1</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 2</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 3</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
+            <Container style={{paddingBottom:10}}>
+              <div><a href="#!">Link 1</a></div>
+              <div><a href="#!">Link 2</a></div>
+              <div><a href="#!">Link 3</a></div>
+            </Container>
           </MDBCol>
-          <MDBCol md="2">
-            <h5 className="title" style={{marginLeft:'13px'}}>Our Handles</h5>
+          <MDBCol md="3">
+            <div style={{ margin:'auto', alignItems:'center', width:'100%', height:'100%'}}>
+            <h5 className="title" style={{margin:'auto'}}>Our Handles</h5>
+            <div style={{ margin:'auto', alignItems:'center'}}>
             <SocialButtonsPage />
+            </div>
+            </div>
           </MDBCol>
-
         </MDBRow>
       </MDBContainer>
       <div className="footer-copyright text-center py-3">
