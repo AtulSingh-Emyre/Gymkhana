@@ -1,0 +1,21 @@
+.clubs-appear {
+    opacity: 0;
+    transform: translateX(-60%)
+  }
+  
+.clubs-appear.clubs-appear-active{
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 600ms, transform 600ms;
+  }
+
+/* .clubs-appear nth-child(even){
+    opacity: 0;
+    transform: translateX(+60%)
+  }
+  
+.clubs-appear.clubs-appear-active nth-child(even){
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 600ms, transform 600ms;
+  } */
