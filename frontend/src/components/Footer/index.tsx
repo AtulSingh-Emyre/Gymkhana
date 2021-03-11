@@ -16,15 +16,9 @@ const Footer = () => {
           <MDBCol md="6" >
             <h5 className="title">Contact Us</h5>
             <p>
-<<<<<<< HEAD
-            <GrLocation/>   Indian Institute of Technology Dharwad,Karnataka,India-580011<br />
+            <a href="https://goo.gl/maps/WZiRcratqas"><GrLocation />   Indian Institute of Technology Dharwad, Karnataka, India-580011<br /></a>
             <GrMailOption />  pro@iitdh.ac.in<br />
-            <FiPhoneCall/>           +91 836 2212 839
-=======
-            <a href="https://goo.gl/maps/WZiRcratqas"><GrLocation />   Indian Institute of Technology Dharwad,Karnataka,India-580011<br /></a>
-            pro@iitdh.ac.in<br />
-            +91 836 2212 839
->>>>>>> f2dc776ad4ca7b620841ad586cc4658a7931d3d8
+            <FiPhoneCall/>  +91 836 2212 839
             </p>
           </MDBCol>
           <MDBCol md="3" xs='10' >
