@@ -3,7 +3,7 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter,MDBIcon } from "mdbreact";
 import './style.css';
 import SocialButtonsPage from '../socialmediaicons';
 import { Container } from "react-bootstrap";
-import GrLocation from "react-icons/gr";
+import {GrLocation} from "react-icons/gr";
 
 
 const Footer = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
           <MDBCol md="6" >
             <h5 className="title">Contact Us</h5>
             <p>
-            Indian Institute of Technology Dharwad,Karnataka,India-580011<br />
+            <GrLocation />   Indian Institute of Technology Dharwad,Karnataka,India-580011<br />
             pro@iitdh.ac.in<br />
             +91 836 2212 839
             </p>
