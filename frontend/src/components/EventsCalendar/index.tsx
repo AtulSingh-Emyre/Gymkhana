@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { Container } from 'react-bootstrap';
 import { EventsSingleton, IEvent } from '../../model/EventsModel';
 import SelectedEventCard from '../SelectedEventCard';
+import useScroll from '../../template/useScroll';
 
 moment.locale('en-GB');
 const localizer = momentLocalizer(moment)
@@ -15,6 +16,10 @@ interface IProps { }
 const EventsCalendar: React.FC<IProps> = ({ }) => {
   // const [EventChecked, setEventChecked] = React.useState<boolean>(false);
   const [SelectedEvent, setSelectedEvent] = React.useState<IEvent | null>(null);
+  // const [executeScroll, selectedEventReference] = useScroll()
+  const selectedEventReference = useRef<HTMLDivElement>(null);
+   
+  // const executeScrollCallback = () => executeScroll;
   const obj = EventsSingleton.getInstance();
   const events = obj.getAllEvents();
   return (
@@ -39,14 +44,19 @@ const EventsCalendar: React.FC<IProps> = ({ }) => {
         startAccessor="start"
         endAccessor="end"
         style={{ height: 500 }}
-        onSelectEvent={(event: any) => {
+        onSelectEvent={
+          (event: any) => {
           setSelectedEvent({ ...event, start: moment(event.start).format('MMMM Do YYYY, h:mm a'), end: moment(event.end).format('MMMM Do YYYY, h:mm a') });
+          if(selectedEventReference.current)
+          selectedEventReference.current.scrollIntoView({ behavior: 'smooth' });
         }}
       />
       <div>
         {/* here goes new event data form */}
       </div>
-      { SelectedEvent ? <SelectedEventCard event={SelectedEvent} /> : <></>}
+      <div ref={selectedEventReference} style={{padding:80}} >
+      { SelectedEvent ? <Container><SelectedEventCard event={SelectedEvent} /></Container> : <></>}
+      </div> 
     </Container>
   )
 };

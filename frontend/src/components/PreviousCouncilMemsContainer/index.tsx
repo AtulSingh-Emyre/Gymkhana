@@ -56,9 +56,9 @@ const PreviousCouncilMemsContainer = () => {
                             contentStyle={{ background: '#FFD54F', color: 'black', padding:0 }}
                             contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                             date={council.year}
-                            iconStyle={{backgroundColor:'black'}}
+                            iconStyle={{backgroundColor:'#311B92'}}
                             icon = {
-                                <SiClockify size={100} color={'red'} />
+                                <SiClockify size={10} color={'white'} />
                             }
                             >      
                         <PreviousCouncilMems user={council} /> 
@@ -79,5 +79,5 @@ const container: React.CSSProperties = {
     padding:'5%',
     alignItems:'center',
     alignSelf:'center',
-    backgroundColor: '#bf360c'
+    backgroundColor: '#E65100'
 }

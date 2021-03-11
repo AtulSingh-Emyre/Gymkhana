@@ -29,6 +29,7 @@ return (
     style={{
       position: 'sticky',
       top: 0,
+      maxHeight: 60,
       // backgroundColor: '#FF6F00',
       paddingLeft: '2%',
       paddingRight: '2%',
@@ -36,7 +37,7 @@ return (
     }}
   >
 
-    <Navbar.Brand href="/" > 
+    <Navbar.Brand href="/" style={{height:60}} > 
     <img src={logo} style={{ maxWidth: '60px' }} />
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
