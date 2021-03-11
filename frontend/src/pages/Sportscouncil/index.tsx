@@ -43,7 +43,7 @@ const Sportscouncil: React.FC = () => {
       <hr></hr>
       <Clubsinfo club={clubdata.sports} />
       <hr></hr>
-      <h3 style={{ textDecoration: 'underline', textAlign: 'center' }}>Club Details</h3>
+      <h3 style={{  textAlign: 'center' }}>Club Details</h3>
       <div className='clubdetailstable'>
         <Container>
         <BootstrapTable keyField='id' data={clubdata.sports} columns={columns} />
