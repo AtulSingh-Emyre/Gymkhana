@@ -35,7 +35,7 @@ const Homepage = () => (
       <CSSTransition in={true} appear={true} timeout={600} classNames='fade'>
         <Container >
           <div >
-            <h2 style={{ color: 'blueviolet', textDecoration: 'underline' }}>About</h2>
+            <h2 style={{ color: 'blueviolet'}}>About</h2>
           </div>
           <div>
             <p style={{ color: 'black' }}>
