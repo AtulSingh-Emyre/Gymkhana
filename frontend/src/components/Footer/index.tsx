@@ -4,6 +4,8 @@ import './style.css';
 import SocialButtonsPage from '../socialmediaicons';
 import { Container } from "react-bootstrap";
 import {GrLocation} from "react-icons/gr";
+import {GrMailOption} from "react-icons/gr";
+import {FiPhoneCall} from "react-icons/fi";
 
 
 const Footer = () => {
@@ -14,9 +16,9 @@ const Footer = () => {
           <MDBCol md="6" >
             <h5 className="title">Contact Us</h5>
             <p>
-            <GrLocation />   Indian Institute of Technology Dharwad,Karnataka,India-580011<br />
-            pro@iitdh.ac.in<br />
-            +91 836 2212 839
+            <GrLocation/>   Indian Institute of Technology Dharwad,Karnataka,India-580011<br />
+            <GrMailOption />  pro@iitdh.ac.in<br />
+            <FiPhoneCall/>           +91 836 2212 839
             </p>
           </MDBCol>
           <MDBCol md="3" xs='10' >
@@ -29,6 +31,7 @@ const Footer = () => {
               <div><a href="https://oss2019.github.io/">OSS</a></div>
               <div><a href="https://www.iitdh.ac.in/iic/">IIC</a></div>
             </Container>
+           
           </MDBCol>
           <MDBCol md="3">
             <div style={{ margin: 'auto', alignItems: 'center', width: '100%', height: '100%' }}>
