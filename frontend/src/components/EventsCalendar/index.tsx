@@ -6,6 +6,7 @@ import { Container } from 'react-bootstrap';
 import { EventsSingleton, IEvent } from '../../model/EventsModel';
 import SelectedEventCard from '../SelectedEventCard';
 import useScroll from '../../template/useScroll';
+import './styles.css';
 
 moment.locale('en-GB');
 const localizer = momentLocalizer(moment)
@@ -18,7 +19,7 @@ const EventsCalendar: React.FC<IProps> = ({ }) => {
   const [SelectedEvent, setSelectedEvent] = React.useState<IEvent | null>(null);
   // const [executeScroll, selectedEventReference] = useScroll()
   const selectedEventReference = useRef<HTMLDivElement>(null);
-   
+
   // const executeScrollCallback = () => executeScroll;
   const obj = EventsSingleton.getInstance();
   const events = obj.getAllEvents();
@@ -56,7 +57,7 @@ const EventsCalendar: React.FC<IProps> = ({ }) => {
       </div>
       <div ref={selectedEventReference} style={{padding:80}} >
       { SelectedEvent ? <Container><SelectedEventCard event={SelectedEvent} /></Container> : <></>}
-      </div> 
+      </div>
     </Container>
   )
 };

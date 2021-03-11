@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { IEvent } from '../../model/EventsModel';
+import './style.css';
 
 interface IProp {
     event : IEvent
@@ -8,9 +9,9 @@ interface IProp {
 
 
 const SelectedEventCard : React.FC<IProp> = (props) => {
-    return ( 
-    <Card style={{ width: '18rem' }}>
-        <Card.Body>
+    return (
+    <Card  className='selectedCard' style={{ width: '18rem' }}>
+        <Card.Body  className='selectedCard'>
             <Card.Title>{props.event.title}</Card.Title>
             <Card.Text>
                 Organized by: {props.event.organiser} , {props.event.council}
