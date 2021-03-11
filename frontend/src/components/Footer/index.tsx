@@ -1,8 +1,10 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter, } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter,MDBIcon } from "mdbreact";
 import './style.css';
 import SocialButtonsPage from  '../socialmediaicons';
 import { Container } from "react-bootstrap";
+import GrLocation from "react-icons/gr";
+
 
 const Footer = () => {
   return (
@@ -12,8 +14,9 @@ const Footer = () => {
           <MDBCol md="6" >
             <h5 className="title">Contact Us</h5>
             <p>
-              Here you can use rows and columns here to organize your footer
-              content.
+            Indian Institute of Technology Dharwad,Karnataka,India-580011<br />
+            pro@iitdh.ac.in<br />
+            +91 836 2212 839
             </p>
           </MDBCol>
           <MDBCol md="3" xs='10' >
