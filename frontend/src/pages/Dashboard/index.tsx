@@ -17,7 +17,7 @@ const Dashboard: React.FC = () => {
     <div style={{minWidth:'100%'}} >
       <Header active={{home:true}} />
       <Homepage/>
-      <Details />
+      <Footer />
     </div>
   );
 };

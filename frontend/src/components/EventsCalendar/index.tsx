@@ -26,7 +26,7 @@ const EventsCalendar: React.FC<IProps> = ({ }) => {
   return (
     <Container style={{ paddingTop: '5%' }}>
       <div>
-        <h1 style={{ marginBottom: '15px', textAlign: 'center', color: 'red', textDecoration: 'underline' }}>
+        <h1 style={{ marginBottom: '15px', textAlign: 'center', color: 'red'}}>
           Student Activities Calendar
         </h1>
       </div>
@@ -55,7 +55,7 @@ const EventsCalendar: React.FC<IProps> = ({ }) => {
       <div>
         {/* here goes new event data form */}
       </div>
-      <div ref={selectedEventReference} style={{padding:80}} >
+      <div ref={selectedEventReference} style={{padding:'5%'}} >
       { SelectedEvent ? <Container><SelectedEventCard event={SelectedEvent} /></Container> : <></>}
       </div>
     </Container>

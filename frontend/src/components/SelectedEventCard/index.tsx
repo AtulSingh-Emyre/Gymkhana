@@ -10,8 +10,8 @@ interface IProp {
 
 const SelectedEventCard : React.FC<IProp> = (props) => {
     return (
-    <Card  className='selectedCard' style={{ width: '18rem' }}>
-        <Card.Body  className='selectedCard'>
+    <Card  className='selectedCard' >
+        <Card.Body  className='selectedCard' >
             <Card.Title>{props.event.title}</Card.Title>
             <Card.Text>
                 Organized by: {props.event.organiser} , {props.event.council}
