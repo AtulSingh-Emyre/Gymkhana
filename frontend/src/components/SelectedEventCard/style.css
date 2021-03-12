@@ -1,0 +1,11 @@
+.selectedCard{
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Akaya Telivigala', cursive;
+  transition: 0.2s;
+}
+
+.selectedCard:hover{
+  transform: scale(1.02);
+
+}
