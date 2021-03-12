@@ -29,7 +29,7 @@ return (
     style={{
       position: 'sticky',
       top: 0,
-      maxHeight: 60,
+      // height: 60,
       // backgroundColor: '#FF6F00',
       paddingLeft: '2%',
       paddingRight: '2%',
@@ -37,13 +37,14 @@ return (
     }}
   >
 
-    <Navbar.Brand href="/" style={{height:60}} > 
-    <img src={logo} style={{ maxWidth: '60px' }} />
-    </Navbar.Brand>
+    <a href="/" > 
+    <img src={logo} style={{ maxWidth: '50px', maxHeight:50 }} />
+    </a>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="ml-auto" style={{ marginTop: 'auto', marginBottom: 'auto' }} defaultActiveKey={'/'} >
-        <Nav.Link href="/"   className={'activeHover'}  style={textCol}> HOME</Nav.Link>
+        <Nav.Link href="/"  
+         className={'activeHover'}  style={textCol}> HOME</Nav.Link>
         <Nav.Link href="/office" className={'activeHover'} style={textCol}>OFFICE BEARERS</Nav.Link>
         <NavDropdown title="COUNCILS" id="basic-nav-dropdown" style={textCol} className={'activeHover'} renderMenuOnMount={true}>
           <NavDropdown.Item href="/technical">TECHNICAL COUNCILS</NavDropdown.Item>
