@@ -1,15 +1,19 @@
 import React from 'react';
-import { Container, Row, Col, Button, Image, Jumbotron } from 'react-bootstrap';
+import { Container, Row} from 'react-bootstrap';
 import './style.css'
-import { StyleSheet } from 'aphrodite';
-import Radium, { StyleRoot } from 'radium';
 import { CSSTransition, TransitionGroup, } from 'react-transition-group';
-import Fade from 'react-bootstrap/Fade';
+import { useMediaQuery } from 'react-responsive';
 
+const Homepage = () => {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
-const Homepage = () => (
+  return (
   <div>
-    <div className="home">
+    <div 
+    className={'home'}
+    style={{...jumb, height: 
+      isTabletOrMobile?'80%':'100%'
+      }}  >
       <Container className="hometextcontainer">
         <CSSTransition in={true} appear={true} timeout={800} classNames='fade'>
           <div className='textdiv'>
@@ -53,6 +57,17 @@ const Homepage = () => (
     </div>
   </div>
 );
+  }
+const jumb : React.CSSProperties = {
+  position: 'relative',
+  width: '100%',
+  paddingTop: 50,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundSize: 'cover',
+  opacity: '0.90'
+}
 
 
 export default Homepage;
