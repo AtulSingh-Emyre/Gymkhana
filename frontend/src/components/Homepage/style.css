@@ -32,17 +32,17 @@ margin: 4px 2px;
 }
 
 .home{
-    /* position: relative; 
-    height: 100%;
+    position: relative; 
+    height: 100vh;
     width: 100%;
     padding-top: 50px;
     display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
     background-image: url(../../assets/logoc.jpeg);
-    /* background-size: cover;
-    opacity: 0.90; */
-    /* background-attachment: fixed; */
+    background-size: cover;
+    opacity: 0.90;
+    background-attachment: fixed; 
 }
 
 .home::before {    
@@ -88,5 +88,5 @@ margin: 4px 2px;
 .fade-appear.fade-appear-active{
   opacity: 1;
   transform: translateY(0%);
-  transition: opacity 600ms, transform 600ms;
+  transition: opacity 900ms, transform 900ms;
 }

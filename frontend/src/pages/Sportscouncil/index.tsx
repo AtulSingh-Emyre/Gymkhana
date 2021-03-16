@@ -8,6 +8,8 @@ import clubdata from '../../assets/clubdetails.json'
 import Container from 'react-bootstrap/Container';
 import { CSSTransition, TransitionGroup, } from 'react-transition-group';
 import './style.css';
+// @ts-ignore
+import LazyLoad from "react-lazyload";
 
 const logo = require('../../assets/interiitsmeet.jpg');
 const Sportscouncil: React.FC = () => {
@@ -44,8 +46,9 @@ const Sportscouncil: React.FC = () => {
       </Container>
       </CSSTransition>
       <hr></hr>
-      
+      <LazyLoad height={50}>
       <Clubsinfo club={clubdata.sports} />
+      </LazyLoad>
       <hr></hr>
       <h3 style={{  textAlign: 'center' }}>Club Details</h3>
       <div className='clubdetailstable'>

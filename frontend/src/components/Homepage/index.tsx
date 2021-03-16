@@ -3,6 +3,8 @@ import { Container, Row} from 'react-bootstrap';
 import './style.css'
 import { CSSTransition, TransitionGroup, } from 'react-transition-group';
 import { useMediaQuery } from 'react-responsive';
+// @ts-ignore
+import LazyLoad from "react-lazyload";
 
 const Homepage = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 700px)' })
@@ -28,10 +30,11 @@ const Homepage = () => {
       </Container>
     </div>
     <div className="aboutus" id="abt">
+    <LazyLoad height={200}>
       <br />
       <br />
 
-      <CSSTransition in={true} appear={true} timeout={600} classNames='fade'>
+      <CSSTransition in={true} appear={true} timeout={900} classNames='fade'>
         <Container >
           <div >
             <h2 style={{ color: 'blueviolet'}}>About</h2>
@@ -48,7 +51,7 @@ const Homepage = () => {
           </div>
         </Container>
       </CSSTransition>
-
+      </LazyLoad>
     </div>
   </div>
 );

@@ -23,8 +23,8 @@ const PreviousCouncilMems = (props : Ipropss) => {
         <>
         <h5 style={{textAlign:'center'}}> <strong> Office Bearers : {props.user.year} </strong></h5>
         <Container style={{margin:'auto', padding:'2.5%', alignItems:'center'}}>
-        <Row style={{width:'95%', alignSelf:'center', alignItems:'center', margin:'0 auto'}}>
-        {props.user.gsTech?  <>General Secretary, Technical Affairs: {props.user.gsTech} <br/></>:<></>}
+        <Row style={{width:'100%', alignSelf:'center', alignItems:'center', margin:'0 auto', backgroundColor:'black'}}>
+        {props.user.gsTech?  <div style = {{backgroundColor:'white', margin:'auto'}}>General Secretary, Technical Affairs: {props.user.gsTech} <br/></div>:<></>}
         {props.user.gsAcad? < > General Secretary Academic Affairs: {props.user.gsAcad}<br/></>:<></>}
         {props.user.gsCult? < >General Secretary Cultural Affairs: {props.user.gsCult}<br/></>:<></>}
         {props.user.gsSports? <>General Secretary Sports Affairs: {props.user.gsSports}<br/></>:<></>}
