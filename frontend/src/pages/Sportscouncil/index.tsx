@@ -52,9 +52,13 @@ const Sportscouncil: React.FC = () => {
       <hr></hr>
       <h3 style={{  textAlign: 'center' }}>Club Details</h3>
       <div className='clubdetailstable'>
+        <LazyLoad height={50}>
+        <CSSTransition in={true} appear={true} timeout={800} classNames='fade'>
         <Container>
         <BootstrapTable keyField='id' data={clubdata.sports} columns={columns} />
         </Container>
+        </CSSTransition>
+        </LazyLoad>
       </div>
       <Footer />
     </>

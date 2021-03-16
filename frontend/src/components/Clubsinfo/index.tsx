@@ -21,7 +21,11 @@ const Clubsinfo = (prop: IProps) => {
     return (
         <Container>
             <div style={{ maxWidth: '100%' }}>
+            <LazyLoad height={50}>
+            <CSSTransition in={true} appear={true} timeout={800} classNames='clubs'>
                 <h1 style={{textDecoration:'underline'}}>Clubs Overview</h1>
+                </CSSTransition>
+                </LazyLoad>
                 <br />
                 {prop.club.map((item, i) => {
                     const path = item.logo;
