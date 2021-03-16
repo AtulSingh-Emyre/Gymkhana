@@ -11,6 +11,7 @@ import HorizontalTimelineCustom from "../HorizontalTImelineCustom/index";
 const data = [
     {
         year: '2020 - 2021',
+        time: '2020',
         gsCult: "Sonu Sourav",
         gsHos: "Sonu Sourav",
         gsTech: "Sonu Sourav",
@@ -19,6 +20,7 @@ const data = [
     },
     {
         year: '2019 - 2020',
+        time: '2019',
         gsCult: "Sonu Sourav",
         gsHos: "Sonu Sourav",
         gsTech: "Sonu Sourav",
@@ -27,6 +29,7 @@ const data = [
     },
     {
         year: '2018 - 2019',
+        time: '2018',
         gsCult: "Sonu Sourav",
         gsHos: "Sonu Sourav",
         gsTech: "Sonu Sourav",
@@ -35,6 +38,7 @@ const data = [
     },
     {
         year: '2017 - 2018',
+        time:'2017',
         gsCult: "Sonu Sourav",
         gsHos: "Sonu Sourav",
         gsTech: "Sonu Sourav",
@@ -43,18 +47,26 @@ const data = [
     },
 ]
 
+const values = data.map(info => info.time);
 
 const PreviousCouncilMemsContainer = () => {
     const [Hover, setHover] = useState(false);
     const [value, setvalue] = useState(0);
     const [previous, setprevious] = useState(0);
+    const setIndex = (index : any) => {
+        console.log('data',index);
+        
+        setprevious(value);
+        setvalue(index);
+    }
+
     return (
         <div style={container}>
 
-            <h3 style={{textAlign:'center', color:'blue', paddingBottom:'5%'}}>Previous Office Bearers</h3>
-            <HorizontalTimelineCustom />
+            <h2 style={{textAlign:'center', color:'blue', paddingBottom:'5%'}}> <strong>Previous Office Bearers</strong></h2>
+            <HorizontalTimelineCustom setIndex={setIndex} values={values} />
             <CSSTransition in={true} appear={true} timeout={1000} classNames='fade'  >
-                                    <PreviousCouncilMems user={data[value]}/>
+            <PreviousCouncilMems user={data[value]}/>
             </CSSTransition>
                         
             

@@ -23,13 +23,13 @@ const PreviousCouncilMems = (props : Ipropss) => {
         <>
         <h5 style={{textAlign:'center'}}> <strong> Office Bearers : {props.user.year} </strong></h5>
         <Container style={{margin:'auto', padding:'2.5%', alignItems:'center'}}>
-        <Row style={{width:'100%', alignSelf:'center', alignItems:'center', margin:'0 auto', backgroundColor:'black'}}>
-        {props.user.gsTech?  <div style = {{backgroundColor:'white', margin:'auto'}}>General Secretary, Technical Affairs: {props.user.gsTech} <br/></div>:<></>}
-        {props.user.gsAcad? < > General Secretary Academic Affairs: {props.user.gsAcad}<br/></>:<></>}
-        {props.user.gsCult? < >General Secretary Cultural Affairs: {props.user.gsCult}<br/></>:<></>}
-        {props.user.gsSports? <>General Secretary Sports Affairs: {props.user.gsSports}<br/></>:<></>}
-        {props.user.gsHos? <>General Secretary Hostel Affairs: {props.user.gsHos}<br/></>:<></>}
-        {props.user.gsMess? <>General Secretary Mess Affairs: {props.user.gsMess}<br/></>:<></>}
+        <Row style={{width:'100%', alignSelf:'center', alignItems:'center', margin:'0 auto'}}>
+        {props.user.gsTech?  <div style = {{ width:'100%', textAlign:'center'}}>General Secretary, Technical Affairs: {props.user.gsTech} <br/></div>:<></>}
+        {props.user.gsAcad? <div style = {{ width:'100%', textAlign:'center'}}> General Secretary Academic Affairs: {props.user.gsAcad}<br/></div>:<></>}
+        {props.user.gsCult? <div style = {{ width:'100%', textAlign:'center'}}>General Secretary Cultural Affairs: {props.user.gsCult}<br/></div>:<></>}
+        {props.user.gsSports? <div style = {{ width:'100%', textAlign:'center'}}>General Secretary Sports Affairs: {props.user.gsSports}<br/></div>:<></>}
+        {props.user.gsHos? <div style = {{ width:'100%', textAlign:'center'}}>General Secretary Hostel Affairs: {props.user.gsHos}<br/></div>:<></>}
+        {props.user.gsMess? <div style = {{ width:'100%', textAlign:'center'}}>General Secretary Mess Affairs: {props.user.gsMess}<br/></div>:<></>}
         </Row>
         </Container>
         </>
