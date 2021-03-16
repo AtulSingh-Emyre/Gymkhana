@@ -12,7 +12,8 @@ export interface IEvent
         venue: string,
         poster: string,
         result: string,
-        notice: boolean
+        notice: boolean,
+        allDay? : boolean
     }
 
 export class EventsSingleton {
@@ -29,20 +30,22 @@ export class EventsSingleton {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat',
             poster: 'www.google.com',
             result: 'www.google.com',
-            notice: true
+            notice: true,
+            allDay: true
         },
         {
             id:1,
             council: 'Sports',
             title: 'Weekly Gambit arena',
             organiser: 'Chess Club',
-            start: moment().add(2, 'days').format('MMMM Do YYYY, h:mm:ss a'),
-            end: moment().add(3, 'days').format('MMMM Do YYYY, h:mm:ss a'),
+            start: moment().startOf('day').format('MMMM Do YYYY, h:mm:ss a'),
+            end: moment().endOf('day').format('MMMM Do YYYY, h:mm:ss a'),
             venue: 'Board games room',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat',
             poster: 'www.google.com',
             result: 'www.google.com',
-            notice: true
+            notice: true,
+            allDay: true,
         }, {
             id:2,
             council: 'Technical',

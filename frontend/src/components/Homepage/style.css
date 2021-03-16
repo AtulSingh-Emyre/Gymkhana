@@ -24,6 +24,13 @@ font-size: 16px;
 margin: 4px 2px;
 }
 
+.lowerleft {
+  width: 0;
+      height: 0;
+      border-bottom: 100px solid red;
+      border-left: 100px solid transparent;
+}
+
 .home{
     position: relative; 
     height: 100vh;
@@ -45,9 +52,7 @@ margin: 4px 2px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-color: rgba(0,0,0,0.25);
-    
-    
+    background-color: rgba(0,0,0,0.25);   
 }
 
 .hometextcontainer
@@ -56,7 +61,7 @@ margin: 4px 2px;
   color: #ffffff;  
   line-height: 0.9;
   text-align: center;
-  padding-bottom: 250px;
+  /* padding-bottom: 250px; */
   font-size: 18px;
 }
 .hometextcontainer h1{

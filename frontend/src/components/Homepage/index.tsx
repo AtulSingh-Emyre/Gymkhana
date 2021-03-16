@@ -5,15 +5,12 @@ import { CSSTransition, TransitionGroup, } from 'react-transition-group';
 import { useMediaQuery } from 'react-responsive';
 
 const Homepage = () => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
-
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 700px)' })
   return (
   <div>
     <div 
     className={'home'}
-    style={{...jumb, height: 
-      isTabletOrMobile?'80%':'100%'
-      }}  >
+    style={{...jumb, backgroundAttachment:'fixed', height: isTabletOrMobile? 'auto':'100%'}}  >
       <Container className="hometextcontainer">
         <CSSTransition in={true} appear={true} timeout={800} classNames='fade'>
           <div className='textdiv'>
@@ -26,12 +23,10 @@ const Homepage = () => {
             </Row>
             <br /><br /><br />
             <a href="#abt" className="godownbutton" ><i className="fa fa-angle-down" aria-hidden="true"></i></a>
-
           </div>
         </CSSTransition>
       </Container>
     </div>
-
     <div className="aboutus" id="abt">
       <br />
       <br />
@@ -61,12 +56,15 @@ const Homepage = () => {
 const jumb : React.CSSProperties = {
   position: 'relative',
   width: '100%',
-  paddingTop: 50,
+  minHeight: '100vh',
+  // paddingTop: 50,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   backgroundSize: 'cover',
-  opacity: '0.90'
+  opacity: '0.90',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
 }
 
 
