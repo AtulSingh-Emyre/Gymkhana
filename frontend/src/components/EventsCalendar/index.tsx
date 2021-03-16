@@ -30,6 +30,7 @@ const EventsCalendar: React.FC<IProps> = ({ }) => {
           Student Activities Calendar
         </h1>
       </div>
+
       <Calendar
         localizer={localizer}
         events={
@@ -37,7 +38,7 @@ const EventsCalendar: React.FC<IProps> = ({ }) => {
             const data = {
               ...event,
               start: moment(event.start, 'MMMM Do YYYY, h:mm:ss a').toDate(),
-              end: moment(event.end, 'MMMM Do YYYY, h:mm:ss a').toDate()
+              end: moment(event.end, 'MMMM Do YYYY, h:mm:ss a').toDate() ,
             }
             return data;
           })

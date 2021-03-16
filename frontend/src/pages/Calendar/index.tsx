@@ -9,9 +9,11 @@ const Calendar: React.FC = () => {
   return (
     <>
     <Header active={{calendar:true}} />
+    <div style={{width:'100%', height:'auto', paddingTop:50}}>
     <CSSTransition in={true} appear={true} timeout={1000} classNames='fade'>
       <EventsCalendar/>
-      </CSSTransition>  
+    </CSSTransition>
+    </div>  
       <Footer />
       
     </>
