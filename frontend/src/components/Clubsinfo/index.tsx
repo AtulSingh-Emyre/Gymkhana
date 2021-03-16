@@ -3,6 +3,8 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import { CSSTransition, TransitionGroup, } from 'react-transition-group';
 import './style.css';
+// @ts-ignore
+import LazyLoad from "react-lazyload";
 
 interface IProps {
     club: Array<{
@@ -25,6 +27,7 @@ const Clubsinfo = (prop: IProps) => {
                     const path = item.logo;
                     // + item.logo;
                     return (
+                        <LazyLoad height={50}>
                         <CSSTransition key = {i} in={true} appear={true} timeout={800} classNames='clubs'>
                         
                         <div key={i} style={{margin:'20px',padding:'5px'}}>
@@ -38,6 +41,7 @@ const Clubsinfo = (prop: IProps) => {
                             
                         </div>
                         </CSSTransition>
+                        </LazyLoad>
                     )
                 }
                 )}

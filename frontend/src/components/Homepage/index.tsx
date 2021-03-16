@@ -34,7 +34,7 @@ const Homepage = () => {
       <br />
       <br />
 
-      <CSSTransition in={true} appear={true} timeout={600} classNames='fade'>
+      <CSSTransition in={true} appear={true} timeout={900} classNames='fade'>
         <Container >
           <div >
             <h2 style={{ color: 'blueviolet'}}>About</h2>

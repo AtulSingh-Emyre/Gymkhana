@@ -46,7 +46,7 @@ const Sportscouncil: React.FC = () => {
       </Container>
       </CSSTransition>
       <hr></hr>
-      <LazyLoad height={200}>
+      <LazyLoad height={50}>
       <Clubsinfo club={clubdata.sports} />
       </LazyLoad>
       <hr></hr>
