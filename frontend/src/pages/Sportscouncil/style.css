@@ -6,3 +6,13 @@
 {
     width:100%;    
 }
+.fadeclubs-appear {
+    opacity: 0;
+    transform: translateY(-10%)
+  }
+  
+  .fadeclubs-appear.fadeclubs-appear-active{
+    opacity: 1;
+    transform: translateY(0%);
+    transition: opacity 900ms, transform 900ms;
+  }

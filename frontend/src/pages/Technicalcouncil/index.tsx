@@ -50,9 +50,13 @@ const Technicalcouncil: React.FC = () => {
       </LazyLoad>
       <hr />
       <h3 style={{  textAlign: 'center' }}>Club Details</h3>
+      <LazyLoad height={50}>
+        <CSSTransition in={true} appear={true} timeout={800} classNames='fadeclubs'>
       <Container>
       <BootstrapTable keyField='id' data={clubdata.technical} columns={columns} />
       </Container>
+      </CSSTransition>
+        </LazyLoad>
       <Footer />
     </>
   );

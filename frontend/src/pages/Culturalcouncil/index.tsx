@@ -62,9 +62,13 @@ const Culturalcouncil: React.FC = () => {
       </LazyLoad>
       <hr />
       <h3 style={{  textAlign: 'center' }}>Club Details</h3>
+      <LazyLoad height={50}>
+        <CSSTransition in={true} appear={true} timeout={800} classNames='fadeclubs'>
       <Container>
        <BootstrapTable keyField='id' data={clubdata.cultural} columns={slimScreen? smallScreenCols : columns} />
        </Container>
+       </CSSTransition>
+        </LazyLoad>
       <Footer />
     </>
   );
