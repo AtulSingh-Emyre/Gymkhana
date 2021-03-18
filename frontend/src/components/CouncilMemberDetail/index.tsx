@@ -57,12 +57,12 @@ interface IProps {
 const Details: React.FC<IProps> = (props: IProps) => {
   const isBigScreen = useMediaQuery({ query: '(min-device-width: 250px)' })
   const wideScreenDeviceView = (<div style={container}>
-    <h2 style={{ textAlign: 'center', textDecoration: 'underline' }}>Office Bearers 2021-22</h2>
+    {/* <h2 style={{ textAlign: 'center', textDecoration: 'underline' }}>Office Bearers 2021-22</h2> */}
     <Row style={row_style}>
       {
         data.map((council) => (
           <Col
-            xs={10} md={6} xl={4}
+            xs={12} md={6} xl={4}
             style={col_style}
           >
             <MemberCard person={council} />
@@ -83,7 +83,8 @@ const container: React.CSSProperties = {
   minHeight: '150%',
   maxWidth: '100%',
   paddingTop: '5%',
-  position: 'relative'
+  position: 'relative',
+  height:'auto'
   // paddingBottom: '5%'
 }
 

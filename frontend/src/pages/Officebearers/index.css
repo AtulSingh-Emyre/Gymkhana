@@ -1,0 +1,12 @@
+.details {
+    width: 80%;
+    background-color: white;
+    align-self: center;
+    margin:auto;
+    margin-bottom: 0;
+}
+.detailsContainer {
+    background-color: black;
+    padding-bottom: 0;   
+    width: 100%;
+}

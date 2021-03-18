@@ -1,11 +1,27 @@
 .navbartop{
     background-image: linear-gradient(to top, #FB8C00,#FFA726);
+    
+    
     /* background-color: transparent !important;
     border-bottom-style: solid;
     border-bottom-color: #fff;
     border-bottom-width: 0.2px;
     border: opacity 0.1em; */
 }
+
+.navbar {
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.top-nav-collapse {
+    background: #FB8C00 !important;
+}
+
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background: #FB8C00 !important;
+    }
+  }
 
 nav .nav-link{
     font-weight: bolder;
