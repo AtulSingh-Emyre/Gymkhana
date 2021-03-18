@@ -84,7 +84,7 @@ const container: React.CSSProperties = {
   maxWidth: '100%',
   paddingTop: '5%',
   position: 'relative',
-  height:'auto'
+  height:'fit-content'
   // paddingBottom: '5%'
 }
 

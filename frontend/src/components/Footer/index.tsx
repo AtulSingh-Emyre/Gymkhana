@@ -10,7 +10,7 @@ import {FiPhoneCall} from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <MDBFooter color="unique-color-dark" className="font-small pt-4 mt-4 " >
+    <MDBFooter color="unique-color-dark" className="font-small pt-4 mt-4 padMarF ">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6" >
