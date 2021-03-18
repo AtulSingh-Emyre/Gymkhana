@@ -24,13 +24,7 @@ const EventsCalendar: React.FC<IProps> = ({ }) => {
   const obj = EventsSingleton.getInstance();
   const events = obj.getAllEvents();
   return (
-    <Container style={{ paddingTop: '5%' }}>
-      <div>
-        <h1 style={{ marginBottom: '15px', textAlign: 'center', color: 'red'}}>
-          Student Activities Calendar
-        </h1>
-      </div>
-
+    <Container style={{  }}>
       <Calendar
         localizer={localizer}
         events={
@@ -56,7 +50,7 @@ const EventsCalendar: React.FC<IProps> = ({ }) => {
       <div>
         {/* here goes new event data form */}
       </div>
-      <div ref={selectedEventReference} style={{padding:'5%'}} >
+      <div ref={selectedEventReference} style={{padding:SelectedEvent?'5%':0}} >
       { SelectedEvent ? <Container><SelectedEventCard event={SelectedEvent} /></Container> : <></>}
       </div>
     </Container>

@@ -70,9 +70,6 @@ const Card = () => {
 
   return (
     <Container style={container}>
-      <div className="my-5">
-        <h2 style={{ textAlign: 'center',textDecoration:'underline' }}>CLUB NOTICES</h2>
-      </div>
       {
         wideScreenQuery ? wideScreenView : semiWideScreenView
       }
@@ -98,6 +95,7 @@ const Card = () => {
 
 const container: React.CSSProperties = {
   maxWidth: '100%',
+  padding:'3%'
 }
 const pagination: React.CSSProperties = {
   width: '100%',
