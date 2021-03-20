@@ -1,6 +1,5 @@
 import React from 'react';
 import { MDBIcon, MDBContainer } from 'mdbreact';
-import { Container } from 'react-bootstrap';
 
 const SocialButtonsPage = () => {
     return (

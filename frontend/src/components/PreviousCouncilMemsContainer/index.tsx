@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import PreviousCouncilMems from '../PreviousCouncilMems';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { SiClockify } from "react-icons/si";
 import 'react-vertical-timeline-component/style.min.css';
-import { Container } from 'react-bootstrap';
-import { BiChevronsDown } from 'react-icons/bi';
 import { CSSTransition } from 'react-transition-group';
 import HorizontalTimelineCustom from "../HorizontalTImelineCustom/index";
 

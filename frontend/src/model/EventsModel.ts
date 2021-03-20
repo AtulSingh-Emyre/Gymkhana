@@ -88,7 +88,7 @@ export class EventsSingleton {
     public getEvent(id : number) {
         var result: IEvent | null = null;
         EventsSingleton.eventsList.forEach(element => {
-            if(element.id == id) result = element;
+            if(element.id === id) result = element;
         });
         return result;
     }

@@ -5,7 +5,6 @@ import { MdEmail } from "react-icons/md";
 import { AiFillInstagram } from "react-icons/ai";
 import './styles.css'
 import { CSSTransition } from 'react-transition-group';
-import CrossFadeImage from '../../template/CrossFadeImage';
 interface IProps {
   person: {
     name: string;
@@ -18,15 +17,11 @@ interface IProps {
 }
 const MemberCard: React.FC<IProps> = (props: IProps) => {
 
-  const [hover, sethover] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
-
-  const onMouseEnter = () => sethover(true);
-  const onMouseLeave = () => sethover(false);
-
+  
   return (
    <CSSTransition in={true} appear={true} timeout={1000} classNames='fade'  >
-   <div style={body} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className='Card'>
+   <div style={body} className='Card'>
    <Card.Img
    className='cardBody'
           loading='lazy'
@@ -68,32 +63,6 @@ const MemberCard: React.FC<IProps> = (props: IProps) => {
     </div>
     </CSSTransition>
   );
-}
-
-const textCenter : React.CSSProperties = {
-  alignSelf:'center',
-  textAlign:'center',
-  margin:'auto'
-}
-
-const hoverBody: React.CSSProperties = {
-  backgroundColor: 'white',
-  opacity:0.5,
-  width:'100%',
-  height:'100%',
-}
-
-const unHoverTitle : React.CSSProperties = {
-  color: 'black',
-  alignItems: 'center',
-  alignSelf: 'center',
-  backgroundColor:'green',
-  width:'100%',
-  position:'absolute',
-  bottom:0,
-  padding:1,
-  margin:'auto',
-  fontSize:15
 }
 
 const img: React.CSSProperties = {

@@ -5,7 +5,6 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { Container } from 'react-bootstrap';
 import { EventsSingleton, IEvent } from '../../model/EventsModel';
 import SelectedEventCard from '../SelectedEventCard';
-import useScroll from '../../template/useScroll';
 import './styles.css';
 
 moment.locale('en-GB');

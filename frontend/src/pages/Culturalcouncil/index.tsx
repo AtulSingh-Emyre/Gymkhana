@@ -1,48 +1,47 @@
 import React, { useState, useEffect } from 'react';
-import Clubsinfo from '../../components/Clubsinfo';
+// import Clubsinfo from '../../components/Clubsinfo';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import BootstrapTable from 'react-bootstrap-table-next';
-import clubdata from '../../assets/clubdetails.json';
-import Carouselcomp from '../../components/Carousel';
-import Container from 'react-bootstrap/Container';
+// import clubdata from '../../assets/clubdetails.json';
+// import Carouselcomp from '../../components/Carousel';
+// import Container from 'react-bootstrap/Container';
 import { useMediaQuery } from 'react-responsive';
-import { CSSTransition, TransitionGroup, } from 'react-transition-group';
+// import { CSSTransition, TransitionGroup, } from 'react-transition-group';
 // @ts-ignore
-import LazyLoad from "react-lazyload";
+// import LazyLoad from "react-lazyload";
 
-const logo = require('../../assets/interiitsmeet.jpg');
+// const logo = require('../../assets/interiitsmeet.jpg');
 const Culturalcouncil: React.FC = () => {
-  const slimScreen = useMediaQuery({query:'(max-device-width: 900px)'})
-  const columns = [
-     {
-      dataField: 'clubname',
-      text: 'Cultural Clubs'
-    }, {
-      dataField: 'secyname',
-      text: 'Club Secretary'
-    }, {
-      dataField: 'Contactdetails',
-      text: 'Contact'
-    },
-  ];
-  const smallScreenCols = [
-    {
-      dataField: 'clubname',
-      text: 'Cultural Clubs'
-    }, {
-      dataField: 'secyname',
-      text: 'Club Secretary'
-    }, {
-      dataField: 'Contactdetails',
-      text: 'Contact'
-    },
-  ]
+  // const slimScreen = useMediaQuery({query:'(max-device-width: 900px)'})
+  // const columns = [
+  //    {
+  //     dataField: 'clubname',
+  //     text: 'Cultural Clubs'
+  //   }, {
+  //     dataField: 'secyname',
+  //     text: 'Club Secretary'
+  //   }, {
+  //     dataField: 'Contactdetails',
+  //     text: 'Contact'
+  //   },
+  // ];
+  // const smallScreenCols = [
+  //   {
+  //     dataField: 'clubname',
+  //     text: 'Cultural Clubs'
+  //   }, {
+  //     dataField: 'secyname',
+  //     text: 'Club Secretary'
+  //   }, {
+  //     dataField: 'Contactdetails',
+  //     text: 'Contact'
+  //   },
+  // ]
   return (
     <>
       <Header active={{council:true}} />
 
-      <Carouselcomp images={{
+      {/* <Carouselcomp images={{
         image1: logo, title1: "", caption1: "hello",
         image2: logo, title2: "", caption2: "",
         image3: logo, title3: "", caption3: "",
@@ -68,7 +67,7 @@ const Culturalcouncil: React.FC = () => {
        <BootstrapTable keyField='id' data={clubdata.cultural} columns={slimScreen? smallScreenCols : columns} />
        </Container>
        </CSSTransition>
-        </LazyLoad>
+        </LazyLoad> */}
       <Footer />
     </>
   );

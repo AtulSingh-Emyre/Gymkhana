@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import HorizontalTimeline from "react-horizontal-timeline";
 
-const VALUES = ['2019','2018','2017','2016','2015', '2019','2018','2017','2016','2015'];
+// const VALUES = ['2019','2018','2017','2016','2015', '2019','2018','2017','2016','2015'];
 
 interface IProps {
     values: any,

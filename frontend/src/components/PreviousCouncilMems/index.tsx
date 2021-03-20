@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import { BiChevronsDown } from "react-icons/bi";
-import { CSSTransition } from 'react-transition-group';
+import { Container, Row } from 'react-bootstrap';
 import './styles.css'
 
 interface Ipropss {
@@ -36,15 +34,15 @@ const PreviousCouncilMems = (props : Ipropss) => {
         
     );
 }
-const container : React.CSSProperties = {
-    // margin:'5%',
-    alignItems:'center',
-    alignSelf:'center',
-    width:'100%',
-    height:'100%',
-    padding:5,
-    margin:'auto',
-}
+// const container : React.CSSProperties = {
+//     // margin:'5%',
+//     alignItems:'center',
+//     alignSelf:'center',
+//     width:'100%',
+//     height:'100%',
+//     padding:5,
+//     margin:'auto',
+// }
 
 
 export default PreviousCouncilMems;

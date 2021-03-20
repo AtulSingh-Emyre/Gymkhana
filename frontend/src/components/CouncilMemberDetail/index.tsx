@@ -1,6 +1,6 @@
 import React from 'react';
-import { Row, Col, Card, Image, CardColumns, Button } from 'react-bootstrap';
-import MediaQuery, { useMediaQuery } from 'react-responsive';
+import { Row, Col } from 'react-bootstrap';
+import { useMediaQuery } from 'react-responsive';
 import MemberCard from '../MemberCard';
 import './style.css'
 
@@ -55,7 +55,6 @@ interface IProps {
 }
 
 const Details: React.FC<IProps> = (props: IProps) => {
-  const isBigScreen = useMediaQuery({ query: '(min-device-width: 250px)' })
   const wideScreenDeviceView = (<div style={container}>
     {/* <h2 style={{ textAlign: 'center', textDecoration: 'underline' }}>Office Bearers 2021-22</h2> */}
     <Row style={row_style}>

@@ -1,6 +1,6 @@
 import { MDBCollapse, MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDBNavLink } from 'mdbreact';
 import React, { useState } from 'react';
-import { Button, Navbar, Nav, NavDropdown, Container, } from 'react-bootstrap';
+import { Nav, NavDropdown} from 'react-bootstrap';
 import logo from "../../assets/iitdhlogo.png";
 import Example from '../Modal';
 import './style.css';
