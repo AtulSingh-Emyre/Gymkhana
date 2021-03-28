@@ -14,13 +14,13 @@ interface IProp {
 
 const ClubsCard : React.FC<IProp> = (props) => {
     return (
-        <div className="mb-4" style={{backgroundColor:props.data.bg}}>
-        <div style={{ display:'flex', justifyContent: 'space-around'}}>
+        <div className="mb-4" style={{}}>
+        <div style={{ display:'flex', justifyContent: 'space-around', backgroundColor:props.data.bg}}>
         <img
             className="img-fluid active-card-image"
             src={ props.data.src }
             alt=""
-            style={{minHeight:200,maxHeight:250, alignContent:'center', margin:'auto'}}
+            style={{minHeight:200,height:200, alignContent:'center', margin:'auto'}}
           />
         </div>
     <MDBCard style={{margin:10, padding:10, marginTop:-40, zIndex:2, backgroundColor:'white'}} className='active-club-detail'>    
@@ -49,9 +49,8 @@ const ClubsCard : React.FC<IProp> = (props) => {
         </div>
         <p className="dark-grey-text mb-lg-0 mb-md-5 mb-4">
          {props.data.desc}
-         {/* Code Geass is the official coding club at IIT Dharwad. It serves to bring together a community enriched in coding in terms both- algorithms as well as development. */}
-        </p>
-      </MDBCard>
+         </p> 
+              </MDBCard>
       </div>
     )
 }

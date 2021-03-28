@@ -3,29 +3,31 @@ import { Carousel, CarouselItem } from 'react-bootstrap';
 // import logo from '../../assets/interiitsmeet.jpg';
 
 interface IProps {
-  images: {
-    image1: string,
-    title1: string,
-    caption1: string,
-    image2: string,
-    title2: string,
-    caption2: string,
-    image3: string,
-    title3: string,
-    caption3: string,
-  }
+  // images: {
+  //   image1: string,
+  //   title1: string,
+  //   caption1: string,
+  //   image2: string,
+  //   title2: string,
+  //   caption2: string,
+  //   image3: string,
+  //   title3: string,
+  //   caption3: string,
+  // }
+}
+
+const councilInfo = {
+  about: ""
 }
 
 
+const CouncilIntro = (prop: IProps) => {
 
-
-const Carouselcomp = (prop: IProps) => {
-
-  var image1 = prop.images.image1
+  // var image1 = prop.images.image1
   return (
 
     <div >
-      <Carousel fade>
+      {/* <Carousel fade>
         <Carousel.Item interval={100}>
           <img
             className="d-block w-100"
@@ -65,9 +67,9 @@ const Carouselcomp = (prop: IProps) => {
             <p>{prop.images.caption3}</p>
           </Carousel.Caption>
         </Carousel.Item>
-      </Carousel>
+      </Carousel> */}
     </div>
   )
 }
 
-export default Carouselcomp
+export default CouncilIntro

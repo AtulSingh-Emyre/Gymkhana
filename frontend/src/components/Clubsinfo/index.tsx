@@ -1,9 +1,15 @@
 import React from 'react';
 // import clubdata from '../../assets/clubdetails.json';
 import './style.css';
+import "bootstrap/dist/css/bootstrap.css";
 // @ts-ignore
 import ClubsCard from '../ClubsCard';
-import { Card, Col, Row } from 'react-bootstrap';
+import {Col, Row } from 'react-bootstrap';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useMediaQuery } from 'react-responsive';
+
 
 interface IProps {
     // club: Array<{
@@ -29,40 +35,115 @@ const clubData = [
         src: require('../../assets/Technical Council/Clubs/AI.jpeg'),
         bg:'#101e38',
         secy: 'Akhilesh',
-        desc: 'Hardly Humans is the official AI and Data science club at IIT Dharwad. It serves to bring together a community enriched in coding in terms both- algorithms as well as development.'
+        desc: 'Code Geass is the official coding club at IIT Dharwad. It serves to bring together a community enriched in coding in terms both- algorithms as well as development.'
+    }, {
+        name: 'Robotics Club',
+        src: require('../../assets/Technical Council/Clubs/AI.jpeg'),
+        bg:'#101e38',
+        secy: 'Akhilesh',
+        desc: 'Code Geass is the official coding club at IIT Dharwad. It serves to bring together a community enriched in coding in terms both- algorithms as well as development.'
+    },  {
+        name: 'Code Geass',
+        src: require('../../assets/Technical Council/Clubs/codeGeass.png'),
+        bg:'black',
+        secy: 'Omkar DJ',
+        desc: 'Code Geass is the official coding club at IIT Dharwad. It serves to bring together a community enriched in coding in terms both- algorithms as well as development.'
+    },
+    {
+        name: 'Hardly Humans',
+        src: require('../../assets/Technical Council/Clubs/AI.jpeg'),
+        bg:'#101e38',
+        secy: 'Akhilesh',
+        desc: 'Code Geass is the official coding club at IIT Dharwad. It serves to bring together a community enriched in coding in terms both- algorithms as well as development.'
+    }, {
+        name: 'Robotics Club',
+        src: require('../../assets/Technical Council/Clubs/AI.jpeg'),
+        bg:'#101e38',
+        secy: 'Akhilesh',
+        desc: 'Code Geass is the official coding club at IIT Dharwad. It serves to bring together a community enriched in coding in terms both- algorithms as well as development.'
     }
+  
   ]
   
 
 const Clubsinfo = (prop: IProps) => {
-    const [activeClub, setactiveClub] = React.useState(0);
-    return (
-        <>
-            <div style={{padding:50, display:'flex'}}>
-              <Row style={{display:'flex', justifyContent:'space-between'}}>
-                <Col xl = {6} md={12}>  
-                <ClubsCard  data={clubData[activeClub]} />
-                </Col>
-                <Col xl={5} md={12}>
-                    <Row>
-                       <h3> <strong>TECHNICAL CLUBS </strong></h3>
-                    </Row>
-                   {
-                       clubData.map((info, index) => (
-                            <Row>
-                                <Card style={{width:'100%', padding:30, marginTop:20, marginBottom:20}} onClick = {()=> setactiveClub(index)}>
-                                    {info.name}
-                                </Card>    
-                           </Row>
-                       ))
-                   }
-                   
-                    
-                </Col>
-              </Row>
+    const isBigScreen = useMediaQuery({ query: '(min-device-width: 425px)' })
+    let settings = {
+        autoplay: true,
+        dots: true,
+        className: "center",
+        centerMode: true,
+        infinite: true,
+        // centerPadding: "60px",
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 500,
+        nextArrow: <></>,
+        prevArrow: <></>,
+        responsive: [
+          {
+            breakpoint: 1010,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 750,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },{
+            breakpoint: 420,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      };
+      
+      const wideScreenView = (<Slider {...settings} >
+      {clubData.map((current, index) => (
+        <div className="out" style={{margin:10, padding:10, maxWidth:'100%'}} key={index}>
+              <div style={{maxWidth:'95%'}}>
+              <ClubsCard data={current}/>
+              </div>
+        </div>
+      ))}
+    </Slider>)
+
+        const slimScreenView = (<> <Row>
+        {clubData.map((current, index) => (
+            <Col xs = {12} md={12}>
+            <div className="out" style={{margin:10, padding:10, maxWidth:'100%'}} key={index}>
+                  <div style={{maxWidth:'95%'}}>
+                  <ClubsCard data={current}/>
+                  </div>
             </div>
-        </>
-    )
+            </Col>
+          ))}
+          </Row>
+          </>)
+
+      return (
+        <div style={{maxWidth:"95%", margin:'auto'}}>
+            
+        <h2 style={{width:'100%', textAlign:'center', padding:20}}> <strong>Technical Clubs </strong></h2>
+        {isBigScreen? wideScreenView : slimScreenView}
+      </div>
+        
+        
+        
+        )
+    
 };
+
+const divStyle : React.CSSProperties = {
+    height: 100,
+    width: 100,
+    backgroundColor: 'orange'
+}
 
 export default Clubsinfo;

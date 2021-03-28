@@ -1,42 +1,33 @@
-import React, { useState, useEffect } from 'react';
-// import Clubsinfo from '../../components/Clubsinfo';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-// import clubdata from '../../assets/clubdetails.json'
-// import Container from 'react-bootstrap/Container';
-// import { CSSTransition, TransitionGroup, } from 'react-transition-group';
-// @ts-ignore
-// import LazyLoad from "react-lazyload";
-import PageStarter from '../../template/PageStarter';
-import Clubsinfo from '../../components/Clubsinfo';
+import React from 'react';
+import Events from '../../TechnicalCouncilComponents/Events';
+import LandingScreen from '../../TechnicalCouncilComponents/LandingScreen';
+import Projects from '../../TechnicalCouncilComponents/Projects';
+import TechHeader from '../../TechnicalCouncilComponents/TechHeader';
+import TechnicalClubs from '../../TechnicalCouncilComponents/TechnicalCLubs';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import Marquee from '../../TechnicalCouncilComponents/Marquee';
+import { Parallax } from 'react-scroll-parallax';
 
-const logo = require('../../assets/interiitsmeet.jpg');
+
+// import "./styles.css"
 const Technicalcouncil: React.FC = () => {
-  const columns = [
-    {
-      dataField: 'clubname',
-      text: 'Technical Clubs'
-    }, {
-      dataField: 'secyname',
-      text: 'Club Secretary'
-    },
-    {
-      dataField: 'Contactdetails',
-      text: 'Contact'
-    },
-  ];
-
   return (
     <>
-      <Header active={{council: true}} />
-      <PageStarter heading={'TECHNICAL COUNCIL'}>
-      <div>
-        <Clubsinfo  />
+    {/* <ParallaxProvider> */}
+      <LandingScreen />
+      <TechHeader />
+      
+        <h2 style={{padding:20}}>Techno Clubs</h2>
+         
+      <div style={{maxWidth:'100%', margin:'auto'}}>
+      <TechnicalClubs />
       </div>
-      </PageStarter>
-      <Footer />
+      <Events />
+      <div style={{maxWidth:'100%'}}>
+      <Projects />
+      </div>
+      {/* </ParallaxProvider> */}
     </>
-  );
+  )
 };
-
 export default Technicalcouncil;

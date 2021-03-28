@@ -1,8 +1,12 @@
 .active-card-image{
     z-index: 0;
+    
+    max-width: 95%;
 }
 
 .active-club-detail {
+    z-index: 3;
+    max-width: 95%;
     -webkit-transition: 1s ease-in-out;
     -moz-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
@@ -11,9 +15,9 @@
 
 
 .active-club-detail:hover {
-    -webkit-transform: translate(0,60px);
-    -moz-transform: translate(0,60px);
-    -o-transform: translate(0,60px);
-    -ms-transform: translate(0,60px);
-    transform: translate(0,60px);
+    -webkit-transform: translate(0,15px);
+    -moz-transform: translate(0,15px);
+    -o-transform: translate(0,15px);
+    -ms-transform: translate(0,15px);
+    transform: translate(0,15px);
 }
