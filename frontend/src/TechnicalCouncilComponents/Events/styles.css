@@ -1,0 +1,8 @@
+.round{
+    border-radius: 60px;   
+}
+ReactCardFlip div{
+    transition: 0.2s;
+    transform-style: preserve-3d;
+    border-radius: 60px;
+}
