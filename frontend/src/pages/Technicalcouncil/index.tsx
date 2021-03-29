@@ -1,29 +1,46 @@
 import React from 'react';
 import Events from '../../TechnicalCouncilComponents/Events';
 import LandingScreen from '../../TechnicalCouncilComponents/LandingScreen';
-import Projects from '../../TechnicalCouncilComponents/Projects';
 import TechHeader from '../../TechnicalCouncilComponents/TechHeader';
 import TechnicalClubs from '../../TechnicalCouncilComponents/TechnicalCLubs';
-import { ParallaxProvider } from 'react-scroll-parallax';
-import Marquee from '../../TechnicalCouncilComponents/Marquee';
-import { Parallax } from 'react-scroll-parallax';
+import { Parallax } from 'react-parallax';
+import { Container } from 'react-bootstrap';
 
 
 // import "./styles.css"
 const Technicalcouncil: React.FC = () => {
   return (
     <>
-    {/* <ParallaxProvider> */}
       <LandingScreen />
-      <TechHeader />
-      
-        <h2 style={{padding:20}}>Techno Clubs</h2>
-         
-      <div style={{maxWidth:'100%', margin:'auto'}}>
-      <TechnicalClubs />
+      <div style={{backgroundColor:'#546E7A'}}>
+        <TechHeader />
+        <div style={{height:100, width:'100%', textAlign:'center', margin:'auto'}}>
+          <h1 style={{padding:27, color:'white', fontFamily:'Courier New'}}>
+            <strong>Technical Clubs </strong>
+          </h1>  
+        </div> 
+        <div style={{paddingBottom:50}}>
+        <TechnicalClubs />
+        </div>
+        
+        <Parallax bgImage={require('../../assets/Technical Council/techMeet.jpeg')} strength={100}> 
+          <div style={{minHeight:300, width:'100%'}}>
+          </div>
+        </Parallax>
+        <div style={{height:100, width:'100%', textAlign:'center', margin:'auto'}}>
+          <h1 style={{margin:'auto', padding:25, color:'white', fontFamily:'Courier New'}}> <strong> Projects and Events </strong> </h1>
+        </div>
+        <div style={{width:'90%', margin:'auto'}}> 
+            <Container style={{paddingBottom:50, paddingTop:50}}>  
+              <Events />
+            </Container>
+        </div>
+        <Parallax bgImage={require('../../assets/Technical Council/techMeet.jpeg')} strength={100}> 
+          <div style={{minHeight:300, width:'100%'}}>
+          </div>
+        </Parallax>
+        
       </div>
-      <Events />
-      
     </>
   )
 };

@@ -1,16 +1,9 @@
 .navbartop{
     background-image: linear-gradient(to top, #FB8C00,#FFA726);
-    
-    
-    /* background-color: transparent !important;
-    border-bottom-style: solid;
-    border-bottom-color: #fff;
-    border-bottom-width: 0.2px;
-    border: opacity 0.1em; */
 }
 
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%
 }
@@ -20,12 +13,12 @@
 }
 
 .top-nav-collapse {
-    background: #FB8C00 !important;
+    background: #263238 !important;
 }
 
 @media (max-width: 768px) {
     .navbar:not(.top-nav-collapse) {
-      background: #FB8C00 !important;
+      background: #263238 !important;
     }
   }
 

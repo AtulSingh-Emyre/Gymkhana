@@ -28,11 +28,11 @@ const TechHeader: React.FC<IProps> = (props) =>
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    // window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', () => handleScroll);
-    };
+    // return () => {
+    //   window.removeEventListener('scroll', () => handleScroll);
+    // };
   }, []);
   const toggleCollapse = () => {
     setcollapseID(!collapseID);
@@ -48,9 +48,9 @@ const TechHeader: React.FC<IProps> = (props) =>
 
     return (
       <div
-      className={`sticky-wrapper${isSticky ? ' sticky' : ''}`} 
+        className={'sticky'} 
         ref={ref}
-      style={{zIndex:55555}}  
+        style={{zIndex:55555}}  
       >
       <MDBNavbar
         collapseOnSelect

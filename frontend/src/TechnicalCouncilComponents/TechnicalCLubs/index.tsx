@@ -1,6 +1,9 @@
 import { MDBCard, MDBIcon } from 'mdbreact';
 import React, { useState } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
+
 import "./styles.css"
 interface clubInfo {
     name : string;
@@ -88,7 +91,9 @@ const TechnicalClubs = () => {
         <div style={{height:250, width:250, backgroundColor:'yellow'}}>
         </div>
         <div style={{height:250, width:250, backgroundColor:'blue', marginLeft:5, marginTop:-245}}>
-            <img src={props.clubData.src} style={{width:'100%', height:'100%'}} />
+          <div>
+            <img src={props.clubData.src} width={250} height={250} />
+          </div>
         </div>
         </>
     }    
