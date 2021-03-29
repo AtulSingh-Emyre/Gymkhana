@@ -23,10 +23,7 @@ const Technicalcouncil: React.FC = () => {
       <TechnicalClubs />
       </div>
       <Events />
-      <div style={{maxWidth:'100%'}}>
-      <Projects />
-      </div>
-      {/* </ParallaxProvider> */}
+      
     </>
   )
 };
