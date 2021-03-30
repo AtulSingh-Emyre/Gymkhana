@@ -2,11 +2,11 @@ import React from 'react';
 import Events from '../../TechnicalCouncilComponents/Events';
 import LandingScreen from '../../TechnicalCouncilComponents/LandingScreen';
 import TechHeader from '../../TechnicalCouncilComponents/TechHeader';
+import TechFooter from '../../TechnicalCouncilComponents/TechFooter';
 import TechnicalClubs from '../../TechnicalCouncilComponents/TechnicalCLubs';
 import { Parallax } from 'react-parallax';
 import { Container } from 'react-bootstrap';
 import TechFest from '../../TechnicalCouncilComponents/TechFest';
-import Footer from '../../components/Footer';
 
 
 // import "./styles.css"
@@ -22,9 +22,9 @@ const Technicalcouncil: React.FC = () => {
           </h1>  
         </div> 
         <div style={{paddingBottom:50}}>
-        <div style={{width:'100%',marginLeft:'auto'}}>  
-          <TechnicalClubs />
-        </div>
+          <div style={{width:'100%',marginLeft:'auto'}}>  
+            <TechnicalClubs />
+          </div>
         </div>
         
         <Parallax bgImage={require('../../assets/Technical Council/techMeet.jpeg')} strength={100}> 
@@ -39,11 +39,15 @@ const Technicalcouncil: React.FC = () => {
               <Events />
             </Container>
         </div>
-        <div style={{width:'100%', backgroundColor:'white'}}>
+        <Parallax bgImage={require('../../assets/Technical Council/techMeet.jpeg')} strength={100}> 
+          <div style={{minHeight:300, width:'100%'}}>
+          </div>
+        </Parallax>
+        <div style={{width:'100%', backgroundColor:'white', marginBottom:0}}>
         <TechFest />
         </div>
-        {/* <Footer /> */}
-      </div>
+        <TechFooter />
+      </div>  
     </>
   )
 };
