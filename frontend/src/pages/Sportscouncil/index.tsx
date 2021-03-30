@@ -5,14 +5,28 @@ import './style.css';
 import Homestyle from '../../SportsCouncilComponents/Home/index';
 import {Card, Button} from 'react-bootstrap';
 import Footer from '../../components/Footer/index';
+import logo from '../../assets/Sports Council/basketball.jpg'
 
 
 const Sportscouncil: React.FC = () => {
   return (
     <div className="mainhome">
     <Header/>
+    <div className='container maintextonpage'>
+    <h1>Sports Club</h1>
+    {/* <img src={logo}  /> */}
+    </div>
+    
     <div>
     <Homestyle/>
+
+    </div>
+    <div className="clubsection">
+      <div className='container'>
+      <h1>Clubs</h1>
+
+      </div>
+    
 
     </div>
     
