@@ -4,9 +4,9 @@ import Header from '../../SportsCouncilComponents/Header/index';
 import './style.css';
 import Homestyle from '../../SportsCouncilComponents/Home/index';
 import {Card, Button} from 'react-bootstrap';
-import Footer from '../../components/Footer/index';
+import Footer from '../../SportsCouncilComponents/Footer/index';
 import logo from '../../assets/Sports Council/basketball.jpg'
-
+import ClubsImages from '../../SportsCouncilComponents/Clubs Images/index';
 
 const Sportscouncil: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const Sportscouncil: React.FC = () => {
     <div className="clubsection">
       <div className='container'>
       <h1>Clubs</h1>
-
+      <ClubsImages/>
       </div>
     
 
