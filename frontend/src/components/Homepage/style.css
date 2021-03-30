@@ -39,8 +39,6 @@ margin: 4px 2px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../../assets/logoc.jpeg);
-    background-size: cover;
     opacity: 0.90;
     background-attachment: fixed; 
 }

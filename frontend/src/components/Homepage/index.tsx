@@ -5,14 +5,16 @@ import { CSSTransition, TransitionGroup, } from 'react-transition-group';
 import { useMediaQuery } from 'react-responsive';
 // @ts-ignore
 import LazyLoad from "react-lazyload";
+import { Parallax } from 'react-parallax';
 
 const Homepage = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 700px)' })
   return (
   <div>
-    <div 
+    <Parallax blur={{ min:-20, max:0 }} bgImage={require('../../assets/logoc.jpeg')} bgImageAlt="the cat" strength={200}>
+     <div 
     className={'home'}
-    style={{...jumb, backgroundAttachment:'fixed', height: isTabletOrMobile? 'auto':'100%'}}  >
+    style={{...jumb, height: isTabletOrMobile? 'auto':'100%'}}  >
       <Container className="hometextcontainer">
         <CSSTransition in={true} appear={true} timeout={800} classNames='fade'>
           <div className='textdiv'>
@@ -29,6 +31,7 @@ const Homepage = () => {
         </CSSTransition>
       </Container>
     </div>
+    </Parallax>
     <div className="aboutus" id="abt">
     <LazyLoad height={200}>
       <br />

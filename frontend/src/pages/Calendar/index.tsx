@@ -12,13 +12,10 @@ const Calendar: React.FC = () => {
     <Header active={{calendar:true}} />
     <PageStarter heading={'STUDENTS ACTIVITY CALENDAR'}>
       <div style={{maxWidth:'100%', height:'auto', padding:'2.5%'}}>
-      <CSSTransition in={true} appear={true} timeout={1000} classNames='fade'>
         <EventsCalendar/>
-      </CSSTransition>
       </div>  
     </PageStarter>
       <Footer />
-      
     </>
   );
 };

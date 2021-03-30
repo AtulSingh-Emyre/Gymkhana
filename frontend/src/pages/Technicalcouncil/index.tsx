@@ -43,9 +43,6 @@ const Technicalcouncil: React.FC = () => {
           <div style={{minHeight:300, width:'100%'}}>
           </div>
         </Parallax>
-        <div style={{width:'100%', backgroundColor:'white', marginBottom:0}}>
-        <TechFest />
-        </div>
         <TechFooter />
       </div>  
     </>

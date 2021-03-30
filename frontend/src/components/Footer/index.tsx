@@ -18,8 +18,8 @@ const Footer = () => {
             <p>
          
             
-            <a href="https://goo.gl/maps/WZiRcratqas"><GrLocation />   Indian Institute of Technology Dharwad, Karnataka, India-580011<br /></a>
-            <GrMailOption />  pro@iitdh.ac.in<br />
+            <a href="https://goo.gl/maps/WZiRcratqas"><GrLocation style={{backgroundColor:'white'}} />   Indian Institute of Technology Dharwad, Karnataka, India-580011<br /></a>
+            <GrMailOption color={'white'} style={{backgroundColor:'white'}} />  pro@iitdh.ac.in<br />
             <FiPhoneCall/>  +91 836 2212 839
             </p>
           </MDBCol>

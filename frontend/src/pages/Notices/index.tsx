@@ -10,9 +10,7 @@ const Notices: React.FC = () => {
     <>
     <Header active={{notice:true}}/>
       <PageStarter heading={'NOTICES'}>
-      <CSSTransition in={true} appear={true} timeout={1000} classNames='fade'>
       <Card/>
-      </CSSTransition>
       </PageStarter>
       <Footer />
     </>
