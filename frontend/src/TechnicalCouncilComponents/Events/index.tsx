@@ -5,7 +5,7 @@ import ReactCardFlip from 'react-card-flip'
 import './styles.css';
 import img1 from './Images/Dummy-image.jpg';
 interface IProps {}
-const data = [{},{},{},{},{},{}];
+const data = [{},{},{},{}];
 const Events = () => {
     const EventCard: React.FC<IProps>  = (props) => {
         const [flipped, setflipped] = useState(false);
