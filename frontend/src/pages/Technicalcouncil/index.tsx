@@ -2,6 +2,7 @@ import React from 'react';
 import Events from '../../TechnicalCouncilComponents/Events';
 import LandingScreen from '../../TechnicalCouncilComponents/LandingScreen';
 import TechHeader from '../../TechnicalCouncilComponents/TechHeader';
+import TechFooter from '../../TechnicalCouncilComponents/TechFooter';
 import TechnicalClubs from '../../TechnicalCouncilComponents/TechnicalCLubs';
 import { Parallax } from 'react-parallax';
 import { Container } from 'react-bootstrap';
@@ -39,7 +40,7 @@ const Technicalcouncil: React.FC = () => {
           <div style={{minHeight:300, width:'100%'}}>
           </div>
         </Parallax>
-        
+        <TechFooter />
       </div>
     </>
   )
