@@ -5,6 +5,8 @@ import TechHeader from '../../TechnicalCouncilComponents/TechHeader';
 import TechnicalClubs from '../../TechnicalCouncilComponents/TechnicalCLubs';
 import { Parallax } from 'react-parallax';
 import { Container } from 'react-bootstrap';
+import TechFest from '../../TechnicalCouncilComponents/TechFest';
+import Footer from '../../components/Footer';
 
 
 // import "./styles.css"
@@ -35,11 +37,9 @@ const Technicalcouncil: React.FC = () => {
               <Events />
             </Container>
         </div>
-        <Parallax bgImage={require('../../assets/Technical Council/techMeet.jpeg')} strength={100}> 
-          <div style={{minHeight:300, width:'100%'}}>
-          </div>
-        </Parallax>
-        
+        <div style={{width:'100%', backgroundColor:'white'}}>
+        <TechFest />
+        </div>
       </div>
     </>
   )
