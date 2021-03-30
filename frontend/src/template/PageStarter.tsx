@@ -16,7 +16,7 @@ const PageStarter = (props: IProp) => {
           <div style={{width:'100%', position:'relative', top:0, paddingTop:50, height:'400px', backgroundColor:'black', zIndex:2}} className={'child1'} >
             <Container >
               <strong> <b>
-                <h1 style={{textAlign:'center', position:'relative', top:'100px', bottom:0, right:10, left:10, color:'white', fontFamily:'Arial Black'}}>
+                <h1 style={{textAlign:'center', position:'relative', top:'80px', bottom:0, right:10, left:10, color:'white', fontFamily:'Arial Black'}}>
                 {/* // OFFICE BEARERS */}
                 {props.heading}
                 </h1>
@@ -24,7 +24,7 @@ const PageStarter = (props: IProp) => {
             </Container>
           </div>
           <div style={{
-            width:'80%', 
+            width:'90%', 
             position: 'relative', 
             backgroundColor:'white',
             // margin:'auto', 

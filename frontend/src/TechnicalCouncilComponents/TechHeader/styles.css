@@ -17,7 +17,7 @@
 }
 
 @media (max-width: 768px) {
-    .navbar:not(.techHeader) {
+    .navbarTech:not(.techHeader) {
       background: #263238 !important;
     }
   }

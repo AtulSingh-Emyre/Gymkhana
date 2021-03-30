@@ -2,7 +2,6 @@ import { MDBCollapse, MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDB
 import React, { useEffect, useRef, useState } from 'react';
 import { Nav, NavDropdown} from 'react-bootstrap';
 import logo from "../../assets/iitdhlogo.png";
-import Example from '../../components/Modal';
 import './styles.css';
 
 interface IProps {
@@ -56,7 +55,7 @@ const TechHeader: React.FC<IProps> = (props) =>
         collapseOnSelect
         scrolling
         dark 
-        className={'techHeader'}
+        className={'techHeader navbarTech'}
         expand="md"
         style={{
           paddingLeft: '2%',

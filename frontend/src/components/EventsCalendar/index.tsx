@@ -26,6 +26,7 @@ const EventsCalendar: React.FC<IProps> = ({ }) => {
     <Container style={{  }}>
       <Calendar
         localizer={localizer}
+        views={['month', 'day', 'agenda']}
         events={
           events.map((event: IEvent) => {
             const data = {
