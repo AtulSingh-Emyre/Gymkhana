@@ -6,7 +6,7 @@ import Example from '../../components/Modal';
 import './styles.css';
 
 interface IProps {
-  active? : {
+    active? : {
     home? : boolean,
     office? : boolean,
     council? : boolean,
@@ -56,6 +56,7 @@ const TechHeader: React.FC<IProps> = (props) =>
         collapseOnSelect
         scrolling
         dark 
+        className={'techHeader'}
         expand="md"
         style={{
           paddingLeft: '2%',
@@ -68,22 +69,13 @@ const TechHeader: React.FC<IProps> = (props) =>
         <a href="/" > 
         <img src={logo} style={{ maxWidth: '50px', maxHeight:50 }} />
         </a>
-        <MDBNavbarToggler
-            onClick={toggleCollapse}
-            
-        />
-        <MDBCollapse id='navbarCollapse' className={'collapse'} isOpen={collapseID} navbar>
+        <MDBNavbarToggler onClick={toggleCollapse}/>
+        <MDBCollapse id='navbarCollapse' className={'collapseTech'} isOpen={collapseID} navbar>
           <MDBNavbarNav right>
-          <Nav.Link href="/" className={'activeHover'}  style={textCol}> HOME</Nav.Link>
-          <Nav.Link href="/office" className={'activeHover'} style={textCol}>OFFICE BEARERS</Nav.Link>
-          <NavDropdown title="COUNCILS" id="basic-nav-dropdown" style={textCol} className={'activeHover'} renderMenuOnMount={true}>
-              <NavDropdown.Item href="/technical">TECHNICAL COUNCILS</NavDropdown.Item>
-              <NavDropdown.Item href="/cultural">CULTURAL COUNCILS</NavDropdown.Item>
-              <NavDropdown.Item href="/sports">SPORTS COUNCILS</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="/notices" style={textCol} className={'activeHover'}>NOTICES</Nav.Link>
-            <Nav.Link href="/calendar" style={textCol} className={'activeHover'}>CALENDAR</Nav.Link>
-            <Nav.Link href="#" style={textCol} className={'activeHover'}><Example /></Nav.Link>
+          <Nav.Link href="/" className={'activeHover'}  style={textCol}> CLUBS</Nav.Link>
+          <Nav.Link href="/office" className={'activeHover'} style={textCol}>EVENTS</Nav.Link>
+            <Nav.Link href="/notices" style={textCol} className={'activeHover'}>FESTS</Nav.Link>
+            <Nav.Link href="/calendar" style={textCol} className={'activeHover'}>CONTACT</Nav.Link>
             </MDBNavbarNav>
           </MDBCollapse>
       </MDBNavbar>

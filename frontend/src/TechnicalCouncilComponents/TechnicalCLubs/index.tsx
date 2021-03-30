@@ -84,7 +84,7 @@ const TechnicalClubs = () => {
      </>)
 
 
-       return( <div onMouseEnter={()=>sethover(true)} onMouseLeave={()=>sethover(false)} style={{height:265, width:265, maxWidth:'100%', margin:'auto'}}> 
+       return( <div onMouseEnter={()=>sethover(true)} onMouseLeave={()=>sethover(false)} style={{height:265, width:255, maxWidth:'100%', margin:'auto'}}> 
         {
             hover? <OnHover />:
         <>
@@ -106,7 +106,7 @@ const TechnicalClubs = () => {
                 {
                     clubData.map((data:clubInfo,index:number)=> {
                         return (
-                        <Col xl={4} xs={12} md={4} style={{margin:'auto', paddingTop:25, paddingLeft:0}}>
+                        <Col xl={4} xs={12} md={4} style={{margin:'auto', paddingTop:25}}>
                         <ClubView  clubData={data}/>
                         </Col>
                         )

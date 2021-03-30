@@ -16,13 +16,14 @@ const Events = () => {
                         setflipped(!flipped)
                     }}
                     >
-                        <MDBCard className='round' style={{...jumb, 
-                            width:'90%', 
+                        <MDBCard className='round' style={{
+                            ...jumb, 
+                            width:'100%', 
                             height:'250px', 
                             backgroundColor:'black', 
                             margin:'auto', padding:20}}>
-                            <div style={{marginTop:'auto', marginBottom:'auto', marginLeft:'50px', color:'white'}}>
-                            <h1 style={{textAlign:'left', fontFamily:'monospace', fontWeight:'bolder', fontSize:'50px'}}>CODE TOPIA 1</h1>
+                            <div style={{marginTop:'auto', marginBottom:'auto', marginLeft:'20px', color:'white'}}>
+                            <h1 style={{textAlign:'left', fontFamily:'monospace', fontWeight:'bolder', fontSize:'20px'}}>CODE TOPIA 1</h1>
                             <hr color='white' style={{float:'left', width:'36%', height:'1px', borderRadius:'60px'}}/>
                             </div>
                         </MDBCard>

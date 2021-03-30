@@ -22,7 +22,9 @@ const Technicalcouncil: React.FC = () => {
           </h1>  
         </div> 
         <div style={{paddingBottom:50}}>
-        <TechnicalClubs />
+        <div style={{width:'100%',marginLeft:'auto'}}>  
+          <TechnicalClubs />
+        </div>
         </div>
         
         <Parallax bgImage={require('../../assets/Technical Council/techMeet.jpeg')} strength={100}> 
@@ -32,7 +34,7 @@ const Technicalcouncil: React.FC = () => {
         <div style={{height:100, width:'100%', textAlign:'center', margin:'auto'}}>
           <h1 style={{margin:'auto', padding:25, color:'white', fontFamily:'Courier New'}}> <strong> Projects and Events </strong> </h1>
         </div>
-        <div style={{width:'90%', margin:'auto'}}> 
+        <div style={{width:'100%', margin:'auto'}}> 
             <Container style={{paddingBottom:50, paddingTop:50}}>  
               <Events />
             </Container>
@@ -40,6 +42,7 @@ const Technicalcouncil: React.FC = () => {
         <div style={{width:'100%', backgroundColor:'white'}}>
         <TechFest />
         </div>
+        {/* <Footer /> */}
       </div>
     </>
   )
