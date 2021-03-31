@@ -51,7 +51,7 @@ const TechFooter = () => {
 
                 <Form.Group controlId="formBasicMessage">
                   <Form.Label>Message</Form.Label>
-                  <Form.Control type="text" placeholder="Message" size='lg' />
+                  <Form.Control as="textarea" rows={2} placeholder="message" />
                 </Form.Group>
                 <Button variant="info" type="submit" block>
                   Submit
