@@ -4,10 +4,12 @@ import express from 'express';
 import { Response } from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
+import cors from 'cors';
 //server file imports
 
 import { getEnvironmentVariables } from './environments/env';
 import EventRouter from './routers/EventRouter';
+import UserRouter from './routers/UserRouter';
 
 export class Server {
   public app: express.Application = express();
@@ -21,6 +23,7 @@ export class Server {
   setConfigurations() {
     this.connectMongoDb();
     this.configureBodyParser();
+    this.app.use(cors());
     console.log('Configurations have been successfully setup');
   }
 
@@ -44,6 +47,7 @@ export class Server {
 
   setRoutes() {
     this.app.use('/events', EventRouter);
+    this.app.use('/user', UserRouter);
   }
 
   error404Handler() {

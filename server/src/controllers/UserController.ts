@@ -3,7 +3,7 @@
 import { Request, Response, NextFunction } from 'express';
 import Event from '../models/client/Event';
 import moment from 'moment';
-import User from '../models/client/UserAuth';
+
 export class UserController {
   static async getAllEvents(req: Request, res: Response, next: NextFunction) {
     try {
@@ -60,17 +60,16 @@ export class UserController {
   static async login(req: Request, res: Response, next: NextFunction) {
     try {
       const iden = req.body.iden;
-      const userData = await User.find({ identifier: iden });
-      if (!userData) {
-        res.json({
-          success: false,
-          mssg: 'Unauthorized login'
+      const valid = ['gstech', 'gssports', 'gscult'];
+      if (valid.includes(iden)) {
+        return res.status(200).json({
+          success: true
         });
-      }
-      res.status(200).json({
-        success: true,
-        data: userData
-      });
+      } else
+        return res.status(200).json({
+          success: false,
+          mssg: 'unauthorized access'
+        });
     } catch (error) {
       next(error);
     }

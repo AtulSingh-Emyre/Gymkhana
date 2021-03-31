@@ -2,7 +2,10 @@ import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 
 
-const Admininputform = () => (
+const Admininputform = () => {
+  
+  
+  return (
   <div >
     <h2 style={{ margin: '25px', textAlign: 'center' }}>Add Events</h2>
     <div style={{ margin: '15px' }}>
@@ -39,6 +42,6 @@ const Admininputform = () => (
     </Button>
     </div>
   </div>
-);
+)};
 
 export default Admininputform;
