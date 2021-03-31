@@ -29,7 +29,7 @@ class EventRouter {
   }
   putRoutes() {
     // Updating an existing event
-    this.router.put('/update', EventController.updateEvents);
+    this.router.post('/update', EventController.updateEvents);
   }
   deleteRoutes() {
     // Deleting an existing event

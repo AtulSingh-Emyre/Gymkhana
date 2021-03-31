@@ -1,10 +1,11 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import { IEvent } from '../../model/EventsModel';
 import './style.css';
 
 interface IProp {
-    event : IEvent
+    event : IEvent,
+    editable : boolean
 }
 
 
@@ -24,6 +25,7 @@ const SelectedEventCard : React.FC<IProp> = (props) => {
             </Card.Text>
             <Card.Link href={props.event.poster}>Poster</Card.Link>
             <Card.Link href={props.event.result}>Result</Card.Link>
+            <Button>Edit</Button>
         </Card.Body>
     </Card>
     );
