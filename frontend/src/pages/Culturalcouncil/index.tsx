@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 // import Clubsinfo from '../../components/Clubsinfo';
-import Header from '../../components/Header';
+import CultHeader from '../../CulturalCouncilComponents/CultHeader';
 import Footer from '../../components/Footer';
-import LandingScreen from '../../CulturalCouncilComponents/LandingScreen/index';
+import Gallery from '../../CulturalCouncilComponents/Gallery'
 // import clubdata from '../../assets/clubdetails.json';
 // import Carouselcomp from '../../components/Carousel';
 // import Container from 'react-bootstrap/Container';
 import { useMediaQuery } from 'react-responsive';
+import Card from 'react-bootstrap/Card';
+import { CardGroup } from 'react-bootstrap';
 // import { CSSTransition, TransitionGroup, } from 'react-transition-group';
 // @ts-ignore
 // import LazyLoad from "react-lazyload";
@@ -40,8 +42,14 @@ const Culturalcouncil: React.FC = () => {
   // ]
   return (
     <>
-      <Header active={{council:true}} />
-      <LandingScreen />
+      <div className='CultCouncil' style={{...main}}>
+        <div className='MainCard' style={{...card}}>
+          <div style={{padding: '20px'}}>
+            <Gallery />
+          </div>
+        </div>
+      </div>
+      {/* <Header active={{council:true}} /> */}
       {/* <Carouselcomp images={{
         image1: logo, title1: "", caption1: "hello",
         image2: logo, title2: "", caption2: "",
@@ -69,9 +77,23 @@ const Culturalcouncil: React.FC = () => {
        </Container>
        </CSSTransition>
         </LazyLoad> */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
+
+const card:React.CSSProperties = {
+  width:'90%',
+  height:'100%',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  padding: '0',
+  borderRadius:'60px'
+}
+
+const main:React.CSSProperties = {
+  background: 'linear-gradient(to right, #4B515D, #3E4551)',
+  height: 'auto'
+}
 
 export default Culturalcouncil;

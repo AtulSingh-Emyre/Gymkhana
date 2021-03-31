@@ -30,13 +30,7 @@ const Footer = () => {
               <i className="fa fa-phone mr-3" /> + 01 234 567 88
             </p>
             <p>
-<<<<<<< HEAD
-            <a href="https://goo.gl/maps/WZiRcratqas"><GrLocation style={{backgroundColor:'white'}} />   Indian Institute of Technology Dharwad, Karnataka, India-580011<br /></a>
-            <GrMailOption color={'white'} style={{backgroundColor:'white'}} />  pro@iitdh.ac.in<br />
-            <FiPhoneCall/>  +91 836 2212 839
-=======
               <i className="fa fa-print mr-3" /> + 01 234 567 89
->>>>>>> ba0396e37e28c77c639755d77c9b597c7e2e99d4
             </p>
           </MDBCol>
           <MDBCol md="3" xs='10' >
