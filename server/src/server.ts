@@ -3,13 +3,12 @@
 import express from 'express';
 import { Response } from 'express';
 import bodyParser from 'body-parser';
-import { Client } from 'pg';
-
-// import mongoose from 'mongoose';
+import mongoose from 'mongoose';
 //server file imports
-// import { getEnvironmentVariables } from './environments/env';
-import CouncilMemberRouter from './routers/CouncilMemberRouter';
+
+import { getEnvironmentVariables } from './environments/env';
 import EventRouter from './routers/EventRouter';
+
 export class Server {
   public app: express.Application = express();
   constructor() {
@@ -32,19 +31,18 @@ export class Server {
   }
 
   async connectMongoDb() {
-    const connectionString =
-      'postgressql://postgres:root@localhost:5432/gymkhana';
-    const client = new Client({ connectionString });
-    client.connect();
-    const res = await client.query('SELECT $1::text as message', [
-      'Hello world!'
-    ]);
-    console.log(res.rows[0].message); // Hello world!
-    await client.end();
+    const databaseUrl = getEnvironmentVariables().db_url;
+    mongoose.connect(databaseUrl, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false
+    });
+    mongoose.connection.on('open', () => {
+      console.log('connection successfully made with database');
+    });
   }
 
   setRoutes() {
-    this.app.use('/council', CouncilMemberRouter);
     this.app.use('/events', EventRouter);
   }
 
