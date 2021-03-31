@@ -31,7 +31,7 @@ const Events = () => {
                     <div className='back' style={{width:'auto', height:'auto '}} onMouseLeave={() => {
                         setflipped(!flipped)
                         }}>
-                        <MDBCard className='round' style={{...jumb, width:'90%', height:'250px', backgroundColor:'black', margin:'auto', padding:20}}>
+                        <MDBCard className='round' style={{...jumb, width:'100%', height:'250px', backgroundColor:'black', margin:'auto', padding:20}}>
                             <div style={{marginTop:'auto', marginBottom:'auto', marginLeft:'30px', marginRight:'30px', color:'white'}}>
                                 <h1 style={{textAlign:'left', fontSize:'20px', fontWeight:'bolder'}}>
                                  organized by

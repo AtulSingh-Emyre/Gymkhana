@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import Clubsinfo from '../../components/Clubsinfo';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import LandingScreen from '../../CulturalCouncilComponents/LandingScreen/index';
 // import clubdata from '../../assets/clubdetails.json';
 // import Carouselcomp from '../../components/Carousel';
 // import Container from 'react-bootstrap/Container';
@@ -40,7 +41,7 @@ const Culturalcouncil: React.FC = () => {
   return (
     <>
       <Header active={{council:true}} />
-
+      <LandingScreen />
       {/* <Carouselcomp images={{
         image1: logo, title1: "", caption1: "hello",
         image2: logo, title2: "", caption2: "",

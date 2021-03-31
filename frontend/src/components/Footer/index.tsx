@@ -16,8 +16,6 @@ const Footer = () => {
           <MDBCol md="6" >
             <h5 className="title">Contact Us</h5>
             <p>
-         
-            
             <a href="https://goo.gl/maps/WZiRcratqas"><GrLocation style={{backgroundColor:'white'}} />   Indian Institute of Technology Dharwad, Karnataka, India-580011<br /></a>
             <GrMailOption color={'white'} style={{backgroundColor:'white'}} />  pro@iitdh.ac.in<br />
             <FiPhoneCall/>  +91 836 2212 839
