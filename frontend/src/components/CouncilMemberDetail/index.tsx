@@ -6,10 +6,10 @@ import './style.css'
 
 const data = [
   {
-    name: 'Atul Singh',
+    name: 'Mummaneni Sai Harsha',
     phone: 7892128329,
     email: 'abc@g.c',
-    councilPost: 'Technical Affairs',
+    councilPost: 'Academic Affairs',
     website: '',
     image: ''
   }, {
@@ -20,32 +20,32 @@ const data = [
     website: '',
     image: ''
   }, {
-    name: 'Atul Singh',
+    name: 'Gowri Y Subedar',
     phone: 7892128329,
     email: 'abc@g.c',
-    councilPost: 'Technical Affairs',
+    councilPost: 'Cultural Affairs',
     website: '',
     image: ''
   },
   {
-    name: 'Atul Singh',
+    name: 'Durga Naga Sai Rahul M',
     phone: 7892128329,
     email: 'abc@g.c',
-    councilPost: 'Technical Affairs',
+    councilPost: 'Hostel Affairs',
     website: '',
     image: ''
   }, {
-    name: 'Atul Singh',
+    name: 'Yogesh Dhyani',
     phone: 7892128329,
     email: 'abc@g.c',
-    councilPost: 'Technical Affairs',
+    councilPost: 'Sports Affairs',
     website: '',
     image: ''
   }, {
-    name: 'Atul Singh',
+    name: 'Savsaviya Brinal Sureshbhai',
     phone: 7892128329,
     email: 'abc@g.c',
-    councilPost: 'Technical Affairs',
+    councilPost: 'Mess Secretary',
     website: '',
     image: ''
   }
