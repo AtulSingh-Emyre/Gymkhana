@@ -6,8 +6,8 @@ import { useMediaQuery } from 'react-responsive';
 function Gallery() {
     // const isTabletOrMobile = useMediaQuery({ query: '(max-width: 700px)' })
     return (
-        <div style={{...jumb}}>
-            <Carousel className='sportscarousel' fade={true} style={{width:'auto', height:'auto'}}>
+        <div style={{...st}}>
+            <Carousel fade controls indicators style={{width:'auto', height:'auto'}}>
                 <Carousel.Item interval={1000}>
                     <img className="d-block w-100" src={logo} alt="Img 1" />
                     <Carousel.Caption>
@@ -31,10 +31,11 @@ function Gallery() {
     )
 }
 
-const jumb : React.CSSProperties = {
-    width: '50%',
-    height: '60%',
-    marginTop:100, 
+const st : React.CSSProperties = {
+    position: 'relative',
+    width: '45%',
+    height: '40%',
+    marginTop:20, 
     marginLeft:'auto', 
     marginRight:'auto'
 }
