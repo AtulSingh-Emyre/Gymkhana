@@ -52,17 +52,17 @@ const Admin: React.FC = () => {
 
   return (
     <>
-      <Container>
-        {
-          LoggedIn ? <><EventsCalendar editable={true} />
-            <Admininputform /></> : <div style={{ marginLeft: 50, width: '100%' }}>  <GoogleLogin
-              clientId="92821589740-n027pnhb5hla7cfjc76emtvg6hvkhd4u.apps.googleusercontent.com" //CLIENTID NOT CREATED YET
-              buttonText="LOGIN WITH GOOGLE"
-              onSuccess={responseGoogle}
-              onFailure={responseGoogle}
-            /> </div>
-        }
-      </Container>
+    <Container>
+     {
+       !LoggedIn? <><EventsCalendar editable={true} />
+       <Admininputform /></> :<div style={{marginLeft:50, width:'100%'}}>  <GoogleLogin
+                clientId="92821589740-n027pnhb5hla7cfjc76emtvg6hvkhd4u.apps.googleusercontent.com" //CLIENTID NOT CREATED YET
+                buttonText="LOGIN WITH GOOGLE"
+                onSuccess={responseGoogle}
+                onFailure={responseGoogle}
+            /> </div>  
+     } 
+     </Container>
     </>
   );
 };
