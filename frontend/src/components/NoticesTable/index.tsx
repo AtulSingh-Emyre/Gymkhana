@@ -1,16 +1,31 @@
-import React from 'react';
+import moment from 'moment';
+import React, { useEffect } from 'react';
 import { Container, Pagination, Table, } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import { EventsSingleton } from '../../model/EventsModel';
+import { CalendarEventRepository } from '../../services/CalendarEventServices';
 import NoticeTableRow from '../NoticeTableRow';
 
 
 const Card = () => {
+  const [data, setdata] = React.useState<any>([]);
+  // const [executeScroll, selectedEventReference] = useScroll()
+  useEffect(() => {
+    const serverReq = async () => {
+      const resp = await CalendarEventRepository.getEvents();
+      console.log(resp);
+      setdata(resp.data.data);
+      console.log(data);
+      
+      return resp; 
+    }
+    serverReq();
+  }, []);
+  
   const wideScreenQuery = useMediaQuery({
     query: '(min-device-width: 700px)'
   });
-  const obj = EventsSingleton.getInstance();
-  const data = obj.getAllEvents();
+  
 
   const wideScreenView = (
     <Table striped bordered hover style={container}>
@@ -27,15 +42,15 @@ const Card = () => {
       </thead>
       <tbody>
         {
-          data.map((data, index) => data.notice ? (
-
+          data.map((data:any, index:number) => data.notice ? 
+            (
             <NoticeTableRow data={{
               attachment: [{ poster: data.poster }, { result: data.result }],
-              date: data.start.split(',')[0],
+              date: moment(data.start).format('MMMM Do YYYY'),
               id: index + 1,
               organiser: data.organiser,
               event: data.title,
-              time: data.start.split(',')[1],
+              time: moment(data.start).format(' h:mm:ss a'),
               venue: data.venue
             }} />
 
@@ -55,10 +70,10 @@ const Card = () => {
     </thead>
     <tbody>
       {
-        data.map((data, index) => data.notice ? (
+        data.map((data:any, index:number) => data.notice ? (
           <NoticeTableRow data={{
             attachment: [{ poster: data.poster }, { result: data.result }],
-            date: data.start.split(',')[0],
+            date: moment(data.start).format('MMMM Do YYYY'),
             id: index + 1,
             organiser: data.organiser,
           }} />
