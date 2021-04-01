@@ -11,7 +11,7 @@ function CultHeader() {
             <MDBNavbar fixed={'top'} dark expand='md' style={{...st}}>
                 <MDBNavbarNav left>
                     <a href="/" > 
-                        <img src={logo} style={{ maxWidth: '50px', maxHeight:50, marginLeft:'10px', marginTop:'10px' }} />
+                        <img src={logo} style={{ maxWidth: '50px', maxHeight:'50px', marginLeft:'10px', marginTop:'10px' }} />
                     </a>
                 </MDBNavbarNav>
                 <MDBNavbarNav right>
@@ -25,6 +25,7 @@ function CultHeader() {
 const st : React.CSSProperties = {
     boxShadow: '0 0 0 0',
     position: 'sticky',
+    height: 'auto'
 }
 
 export default CultHeader;

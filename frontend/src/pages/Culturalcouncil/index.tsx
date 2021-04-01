@@ -15,7 +15,7 @@ const Culturalcouncil: React.FC = () => {
 };
 
 const main:React.CSSProperties = {
-  background: 'linear-gradient(to right, #FEDBD0, #FEDBD0)',
+  background: '#FFA88F',
   height: 'auto',
   paddingTop:'55px',
   paddingBottom:'55px'

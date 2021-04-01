@@ -34,8 +34,8 @@ function Gallery() {
 const st : React.CSSProperties = {
     position: 'relative',
     width: '45%',
-    height: '40%',
-    marginTop:20, 
+    height: '45%',
+    marginTop:'0', 
     marginLeft:'auto', 
     marginRight:'auto'
 }
