@@ -1,18 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 
-interface ClubInfo {
-    name: string;
-    secy: string;
-    memb:string;
-    logo:string;
-    desc:string;
-}
-
-interface Iprops {
-    ClubData : ClubInfo;
-}
-
 const ClubData = [
     {
         "name": "Dance Club",
