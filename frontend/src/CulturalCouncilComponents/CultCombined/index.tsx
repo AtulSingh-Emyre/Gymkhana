@@ -2,17 +2,17 @@ import React from 'react'
 import CultHeader from '../../CulturalCouncilComponents/CultHeader';
 import Gallery from '../../CulturalCouncilComponents/Gallery';
 import CultClubs from '../../CulturalCouncilComponents/CultClubs';
-// import CultFooter from '../CultFooter';
+import CultFooter from '../CultFooter';
 
 function Compiled() {
     return (
         <div className='MainCard' style={{...card}}>
           <CultHeader />
           <Gallery />
-            <div style={{width:'90%', height:'25%', marginLeft:'auto', marginTop:'-15px', marginRight:'auto'}}>
+            <div style={{width:'90%', height:'25%', marginLeft:'auto', marginTop:'-35px', marginRight:'auto'}}>
                 <div style={{width:'75%', marginRight:'auto', float:'left', position:'relative'}}>
                     <h3 style={{color:'#8A003E'}}><strong>CULTURAL COUNCIL</strong></h3>
-                    <p style={{color:'#DF0054'}}> 
+                    <p style={{color:'#DF0054', fontWeight:'bolder'}}> 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
                         magna aliqua. Turpis egestas maecenas pharetra convallis posuere morbi leo urna. Orci sagittis eu volutpat odio 
                         facilisis mauris sit amet. Ut consequat semper viverra nam libero justo laoreet sit. Velit ut tortor pretium viverra 
@@ -28,8 +28,8 @@ function Compiled() {
                     <CultClubs />
                 </div>
             </div>
-            <div style={{width:'auto', position:'relative', marginTop:'-35px'}}>
-                {/* <CultFooter /> */}
+            <div style={{width:'auto', position:'relative', marginTop:'-37px', marginLeft:'-10px', marginRight:'-10px'}}>
+                <CultFooter />
             </div>
         </div>
     )
@@ -37,7 +37,7 @@ function Compiled() {
 
 const card:React.CSSProperties = {
     width:'90%',
-    height:'1100px',
+    height:'1150px',
     marginLeft: 'auto',
     marginRight: 'auto',
     padding: '10px',
