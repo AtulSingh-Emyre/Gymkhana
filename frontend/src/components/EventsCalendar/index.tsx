@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
@@ -6,37 +6,37 @@ import { Container } from 'react-bootstrap';
 import { EventsSingleton, IEvent } from '../../model/EventsModel';
 import SelectedEventCard from '../SelectedEventCard';
 import './styles.css';
+import { CalendarEventRepository } from '../../services/CalendarEventServices';
 
 moment.locale('en-GB');
 const localizer = momentLocalizer(moment)
 
 
-interface IProps { }
+interface IProps { 
+  editable : boolean
+}
 
-const EventsCalendar: React.FC<IProps> = ({ }) => {
+const EventsCalendar: React.FC<IProps> = ({ editable }) => {
   // const [EventChecked, setEventChecked] = React.useState<boolean>(false);
+  const [events, setevents] = useState<any>([]);
   const [SelectedEvent, setSelectedEvent] = React.useState<IEvent | null>(null);
   // const [executeScroll, selectedEventReference] = useScroll()
   const selectedEventReference = useRef<HTMLDivElement>(null);
-
-  // const executeScrollCallback = () => executeScroll;
-  const obj = EventsSingleton.getInstance();
-  const events = obj.getAllEvents();
+  useEffect(() => {
+    const serverReq = async () => {
+      const resp = await CalendarEventRepository.getEvents();
+      console.log(resp);
+      setevents(resp.data.data);
+      return resp; 
+    }
+    serverReq();
+  }, []);
   return (
     <Container style={{  }}>
       <Calendar
         localizer={localizer}
         views={['month', 'day', 'agenda']}
-        events={
-          events.map((event: IEvent) => {
-            const data = {
-              ...event,
-              start: moment(event.start, 'MMMM Do YYYY, h:mm:ss a').toDate(),
-              end: moment(event.end, 'MMMM Do YYYY, h:mm:ss a').toDate() ,
-            }
-            return data;
-          })
-        }
+        events={ events }
         startAccessor="start"
         endAccessor="end"
         style={{ height: 500 }}
@@ -51,7 +51,7 @@ const EventsCalendar: React.FC<IProps> = ({ }) => {
         {/* here goes new event data form */}
       </div>
       <div ref={selectedEventReference} style={{padding:SelectedEvent?'5%':0}} >
-      { SelectedEvent ? <Container><SelectedEventCard event={SelectedEvent} /></Container> : <></>}
+      { SelectedEvent ? <Container><SelectedEventCard event={SelectedEvent} editable={editable} /></Container> : <></>}
       </div>
     </Container>
   )
