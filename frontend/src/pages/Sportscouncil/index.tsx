@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavDropdown, Jumbotron } from 'react-bootstrap';
 import Header from '../../SportsCouncilComponents/Header/index';
 import './style.css';
 import Homestyle from '../../SportsCouncilComponents/Home/index';
@@ -7,6 +7,7 @@ import {Card, Button} from 'react-bootstrap';
 import Footer from '../../SportsCouncilComponents/Footer/index';
 import logo from '../../assets/Sports Council/basketball.jpg'
 import ClubsImages from '../../SportsCouncilComponents/Clubs Images/index';
+import Cards from '../../SportsCouncilComponents/Cards/index';
 
 const Sportscouncil: React.FC = () => {
   return (
@@ -23,24 +24,23 @@ const Sportscouncil: React.FC = () => {
     </div>
     <div className="clubsection">
       <div className='container'>
-      <h1>Clubs</h1>
+      <h1>Feed</h1>
       <ClubsImages/>
       </div>
     
 
     </div>
+    <div className='container'>
+    {/* <Jumbotron> */}
+    <div >
+      <br/>
+      <br/>
+      <h1>Clubs</h1>
+      <Cards/>
+    </div>
+    {/* </Jumbotron> */}
+    </div>
     
-    {/* <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-</Card> */}
 <Footer/>
     </div>
    
