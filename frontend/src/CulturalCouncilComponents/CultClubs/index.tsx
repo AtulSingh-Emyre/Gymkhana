@@ -127,7 +127,7 @@ function CultClubs() {
             <Modal.Body>
                 <h5><strong>Club Secretary:</strong>       {ClubData[0].secy}</h5>
                 <br/>
-                <h5><strong>Club Secretary:</strong></h5><p>{ClubData[0].desc}</p>
+                <h5><strong>About the Club:</strong></h5><p>{ClubData[0].desc}</p>
             </Modal.Body>
         </Modal>
 
@@ -138,7 +138,7 @@ function CultClubs() {
             <Modal.Body>
                 <h5><strong>Club Secretary:</strong>       {ClubData[1].secy}</h5>
                 <br/>
-                <h5><strong>Club Secretary:</strong></h5><p>{ClubData[1].desc}</p>
+                <h5><strong>About the Club:</strong></h5><p>{ClubData[1].desc}</p>
             </Modal.Body>
         </Modal>
         <Modal show={show2} onHide={handleClose2}>
@@ -148,7 +148,7 @@ function CultClubs() {
             <Modal.Body>
                 <h5><strong>Club Secretary:</strong>       {ClubData[2].secy}</h5>
                 <br/>
-                <h5><strong>Club Secretary:</strong></h5><p>{ClubData[2].desc}</p>
+                <h5><strong>About the Club:</strong></h5><p>{ClubData[2].desc}</p>
             </Modal.Body>
         </Modal>
         <Modal show={show3} onHide={handleClose3}>
@@ -158,7 +158,7 @@ function CultClubs() {
             <Modal.Body>
                 <h5><strong>Club Secretary:</strong>       {ClubData[3].secy}</h5>
                 <br/>
-                <h5><strong>Club Secretary:</strong></h5><p>{ClubData[3].desc}</p>
+                <h5><strong>About the Club:</strong></h5><p>{ClubData[3].desc}</p>
             </Modal.Body>
         </Modal>
         <Modal show={show4} onHide={handleClose4}>
@@ -168,7 +168,7 @@ function CultClubs() {
             <Modal.Body>
                 <h5><strong>Club Secretary:</strong>       {ClubData[4].secy}</h5>
                 <br/>
-                <h5><strong>Club Secretary:</strong></h5><p>{ClubData[4].desc}</p>
+                <h5><strong>About the Club:</strong></h5><p>{ClubData[4].desc}</p>
             </Modal.Body>
         </Modal>
         <Modal show={show5} onHide={handleClose5}>
@@ -178,7 +178,7 @@ function CultClubs() {
             <Modal.Body>
                 <h5><strong>Club Secretary:</strong>       {ClubData[5].secy}</h5>
                 <br/>
-                <h5><strong>Club Secretary:</strong></h5><p>{ClubData[5].desc}</p>
+                <h5><strong>About the Club:</strong></h5><p>{ClubData[5].desc}</p>
             </Modal.Body>
         </Modal>
         <Modal show={show6} onHide={handleClose6}>
@@ -188,7 +188,7 @@ function CultClubs() {
             <Modal.Body>
                 <h5><strong>Club Secretary:</strong>       {ClubData[6].secy}</h5>
                 <br/>
-                <h5><strong>Club Secretary:</strong></h5><p>{ClubData[6].desc}</p>
+                <h5><strong>About the Club:</strong></h5><p>{ClubData[6].desc}</p>
             </Modal.Body>
         </Modal>
     </>);
