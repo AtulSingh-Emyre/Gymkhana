@@ -8,7 +8,8 @@ const ClubsImages: React.FC = () => {
       <div >
      <br/>
      <br/>
-      <Carousel className='sportscarousel'>
+     <div className='sportscarousel'>
+      <Carousel >
   <Carousel.Item interval={1000}>
     <img
       className="d-block w-100"
@@ -43,6 +44,7 @@ const ClubsImages: React.FC = () => {
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
+</div>
       </div>
      
     
