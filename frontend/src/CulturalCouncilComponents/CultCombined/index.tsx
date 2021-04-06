@@ -31,7 +31,7 @@ function Compiled() {
                         <CultClubs />
                     </div>
                 </div>
-                <div style={{width:'auto', position:'relative', marginTop:'-37px', marginLeft:'-10px', marginRight:'-10px'}}>
+                <div style={{width:'auto', position:'relative', marginTop:'-15px', marginLeft:'-10px', marginRight:'-10px'}}>
                     <CultFooter />
                 </div>
             </div>
