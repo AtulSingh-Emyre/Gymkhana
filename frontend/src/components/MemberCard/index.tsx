@@ -28,7 +28,7 @@ const MemberCard: React.FC<IProps> = (props: IProps) => {
    className='cardBody'
           loading='lazy'
           onLoad = {()=>setImageLoaded(true)}
-          src = {require('../../assets/CouncilMems/gs-Tech.jpg')}
+          src = {props.person.image}
           style={imageLoaded?{...img, visibility:'visible'}:{visibility: 'hidden'}} />
    <Card.Body className='cardBody' style={{margin:'auto', textAlign:'center'}}>
         <Card.Title>{props.person.name}</Card.Title>

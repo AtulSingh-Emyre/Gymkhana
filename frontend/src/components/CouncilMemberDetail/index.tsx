@@ -2,6 +2,12 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
 import MemberCard from '../MemberCard';
+import techImg from '../../assets/CouncilMems/gs-Tech.jpg';
+import acadImg from '../../assets/CouncilMems/gs-Acad.jpg';
+import cultImg from '../../assets/CouncilMems/gs-Cult.jpg';
+import hostelImg from '../../assets/CouncilMems/gs-Hostel.jpg';
+import sportsImg from '../../assets/CouncilMems/gs-Sports.jpg';
+import messImg from '../../assets/CouncilMems/gs-Mess.jpg';
 import './style.css'
 
 const data = [
@@ -13,7 +19,7 @@ const data = [
     website: '',
     linkedIn: '',
     insta: '',
-    image: ''
+    image: acadImg
   }, {
     name: 'Atul Singh',
     phone: 7892128329,
@@ -22,7 +28,7 @@ const data = [
     website: '',
     linkedIn: '',
     insta: '',
-    image: ''
+    image: techImg
   }, {
     name: 'Gowri Y Subedar',
     phone: 7892128329,
@@ -31,7 +37,7 @@ const data = [
     website: '',
     linkedIn: '',
     insta: '',
-    image: ''
+    image: cultImg
   },
   {
     name: 'Durga Naga Sai Rahul M',
@@ -41,7 +47,7 @@ const data = [
     website: '',
     linkedIn: '',
     insta: '',
-    image: ''
+    image: hostelImg
   }, {
     name: 'Yogesh Dhyani',
     phone: 7892128329,
@@ -50,7 +56,7 @@ const data = [
     website: '',
     linkedIn: '',
     insta: '',
-    image: ''
+    image: sportsImg
   }, {
     name: 'Savsaviya Brinal Sureshbhai',
     phone: 7892128329,
@@ -59,7 +65,7 @@ const data = [
     website: '',
     linkedIn: '',
     insta: '',
-    image: 'images.png'
+    image: messImg
   }
 ]
 
