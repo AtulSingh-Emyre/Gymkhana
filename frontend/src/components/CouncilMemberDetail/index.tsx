@@ -7,8 +7,8 @@ import './style.css'
 const data = [
   {
     name: 'Mummaneni Sai Harsha',
-    phone: 7892128329,
-    email: 'abc@g.c',
+    phone: 7337031100,
+    email: 'gsacad@iitdh.ac.in',
     councilPost: 'Academic Affairs',
     website: '',
     image: ''
@@ -47,7 +47,7 @@ const data = [
     email: 'abc@g.c',
     councilPost: 'Mess Secretary',
     website: '',
-    image: ''
+    image: 'images.png'
   }
 ]
 
