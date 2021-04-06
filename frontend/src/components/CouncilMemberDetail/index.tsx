@@ -11,6 +11,8 @@ const data = [
     email: 'gsacad@iitdh.ac.in',
     councilPost: 'Academic Affairs',
     website: '',
+    linkedIn: '',
+    insta: '',
     image: ''
   }, {
     name: 'Atul Singh',
@@ -18,6 +20,8 @@ const data = [
     email: 'abc@g.c',
     councilPost: 'Technical Affairs',
     website: '',
+    linkedIn: '',
+    insta: '',
     image: ''
   }, {
     name: 'Gowri Y Subedar',
@@ -25,6 +29,8 @@ const data = [
     email: 'abc@g.c',
     councilPost: 'Cultural Affairs',
     website: '',
+    linkedIn: '',
+    insta: '',
     image: ''
   },
   {
@@ -33,6 +39,8 @@ const data = [
     email: 'abc@g.c',
     councilPost: 'Hostel Affairs',
     website: '',
+    linkedIn: '',
+    insta: '',
     image: ''
   }, {
     name: 'Yogesh Dhyani',
@@ -40,6 +48,8 @@ const data = [
     email: 'abc@g.c',
     councilPost: 'Sports Affairs',
     website: '',
+    linkedIn: '',
+    insta: '',
     image: ''
   }, {
     name: 'Savsaviya Brinal Sureshbhai',
@@ -47,6 +57,8 @@ const data = [
     email: 'abc@g.c',
     councilPost: 'Mess Secretary',
     website: '',
+    linkedIn: '',
+    insta: '',
     image: 'images.png'
   }
 ]

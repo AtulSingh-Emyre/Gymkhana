@@ -12,6 +12,8 @@ interface IProps {
     email: string;
     councilPost: string;
     website: string;
+    linkedIn: string;
+    insta: string;
     image: string;
   }
 }
@@ -38,22 +40,22 @@ const MemberCard: React.FC<IProps> = (props: IProps) => {
             // backgroundColor:'black'
             }}>
               <Col xs={3} md={3} xl={3} >
-                <a href="https://www.twitter.com/jamesqquick" className="twitter social" style={{alignItems:'center', margin:'auto'}}>
+                <a href={`tel:${props.person.phone}`} className="twitter social" style={{alignItems:'center', margin:'auto'}}>
                     <FaPhoneSquare size={20} color={'black'} />
                 </a>
               </Col>
                 <Col  xs={3} md={3} xl={3} >
-                <a href="https://www.twitter.com/jamesqquick" className="twitter social" style={{alignItems:'center', margin:'auto'}}>
+                <a href={`mailto:${props.person.email}`} className="twitter social" style={{alignItems:'center', margin:'auto'}}>
                     <MdEmail size={25} color={'black'} />
                 </a>
                 </Col>
                 <Col  xs={3} md={3} xl={3} >
-                <a href="https://www.twitter.com/jamesqquick" className="twitter social" style={{alignItems:'center', margin:'auto'}}>
+                <a href={props.person.linkedIn} className="twitter social" style={{alignItems:'center', margin:'auto'}}>
                     <FaLinkedin size={20} color={'black'}  />
                 </a>
                 </Col>
                 <Col  xs={3} md={3} xl={3}  >
-                <a href="https://www.twitter.com/jamesqquick" className="twitter social" style={{alignItems:'center', margin:'auto'}}>
+                <a href={props.person.insta} className="twitter social" style={{alignItems:'center', margin:'auto'}}>
                     <AiFillInstagram size={20} color={'black'} />
                 </a>
                 </Col>
