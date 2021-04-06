@@ -17,32 +17,32 @@ const data = [
     email: 'gsacad@iitdh.ac.in',
     councilPost: 'Academic Affairs',
     website: 'https://www.google.com/',
-    linkedIn: 'https://www.linkedin.com/',
-    insta: 'https://www.instagram.com/',
+    linkedIn: 'https://www.linkedin.com/in/mummaneni-sai-harsha-725a691a0/',
+    insta: 'https://www.instagram.com/___harsha.chowdhary___/',
     image: acadImg
   }, {
     name: 'Atul Singh',
     phone: 7892128329,
-    email: 'abc@g.c',
+    email: 'gstech@iitdh.ac.in',
     councilPost: 'Technical Affairs',
     website: 'https://www.google.com/',
     linkedIn: 'https://www.linkedin.com/',
-    insta: 'https://www.instagram.com/',
+    insta: 'https://www.instagram.com/atulsingh.pks/',
     image: techImg
   }, {
     name: 'Gowri Y Subedar',
-    phone: 7892128329,
-    email: 'abc@g.c',
+    phone: 8277522336,
+    email: 'gscult@iitdh.ac.in',
     councilPost: 'Cultural Affairs',
     website: 'https://www.google.com/',
     linkedIn: 'https://www.linkedin.com/',
-    insta: 'https://www.instagram.com/',
+    insta: 'https://www.instagram.com/gowrisubedar',
     image: cultImg
   },
   {
     name: 'Durga Naga Sai Rahul M',
     phone: 7892128329,
-    email: 'abc@g.c',
+    email: 'gsha@iitdh.ac.in',
     councilPost: 'Hostel Affairs',
     website: 'https://www.google.com/',
     linkedIn: 'https://www.linkedin.com/',
@@ -51,20 +51,20 @@ const data = [
   }, {
     name: 'Yogesh Dhyani',
     phone: 7892128329,
-    email: 'abc@g.c',
+    email: 'gssports@iitdh.ac.in',
     councilPost: 'Sports Affairs',
     website: 'https://www.google.com/',
-    linkedIn: 'https://www.linkedin.com/',
-    insta: 'https://www.instagram.com/',
+    linkedIn: 'https://www.linkedin.com/in/yogesh-dhyani-b0a1511ab/',
+    insta: 'https://www.instagram.com/yogesh_dhyani0945',
     image: sportsImg
   }, {
     name: 'Savsaviya Brinal Sureshbhai',
     phone: 7892128329,
-    email: 'abc@g.c',
+    email: 'messcommittee@iitdh.ac.in',
     councilPost: 'Mess Secretary',
     website: 'https://www.google.com/',
-    linkedIn: 'https://www.linkedin.com/',
-    insta: 'https://www.instagram.com/',
+    linkedIn: 'https://www.linkedin.com/in/brinal-savsaviya-b851a5193/?originalSubdomain=in',
+    insta: 'https://www.instagram.com/brinal_8055',
     image: messImg
   }
 ]
