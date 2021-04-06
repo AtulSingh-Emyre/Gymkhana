@@ -8,16 +8,17 @@ const LandingScreen = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 700px)' })
   return (
   <div>
-      <Parallax blur={{ min:-20, max:0 }} bgImage="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX38879118.jpg" bgImageAlt="the cat" strength={500}>
+      {/* <Parallax blur={{ min:-20, max:0 }} bgImage="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX38879118.jpg" bgImageAlt="the cat" strength={500}> */}
         <div className="homeTech"  style={{...jumb,  height: isTabletOrMobile? 'auto':'100%'}}>
-        <Container className="homeTechtextcontainer" >
+        <img src={require('../../assets/Technical Council/logo.png')} width={250} height={300} style={{margin:'auto', marginTop:'35vh'}}></img>
+          <Container className="homeTechtextcontainer" style={{position:'absolute', margin:'auto', marginTop:'15vh'}}>
                 <Parallax strength={300}>
                 <h1 style={{margin:'auto', fontFamily:'Cambria'}}>Technical Council</h1>
                 <h3 style={{margin:'auto', fontFamily:'Cambria'}}>IIT Dharwad</h3>
                 </Parallax>
         </Container>
         </div>
-      </Parallax>
+      {/* </Parallax> */}
   </div>
 );
   }
@@ -29,6 +30,7 @@ const jumb : React.CSSProperties = {
   alignItems: 'center',
   justifyContent: 'center',
   backgroundSize: 'cover',
+  backgroundColor:'black',
   opacity: '0.90',
 }
 
