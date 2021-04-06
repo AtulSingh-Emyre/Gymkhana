@@ -16,27 +16,27 @@ const data = [
     phone: 7337031100,
     email: 'gsacad@iitdh.ac.in',
     councilPost: 'Academic Affairs',
-    website: '',
-    linkedIn: '',
-    insta: '',
+    website: 'https://www.google.com/',
+    linkedIn: 'https://www.linkedin.com/',
+    insta: 'https://www.instagram.com/',
     image: acadImg
   }, {
     name: 'Atul Singh',
     phone: 7892128329,
     email: 'abc@g.c',
     councilPost: 'Technical Affairs',
-    website: '',
-    linkedIn: '',
-    insta: '',
+    website: 'https://www.google.com/',
+    linkedIn: 'https://www.linkedin.com/',
+    insta: 'https://www.instagram.com/',
     image: techImg
   }, {
     name: 'Gowri Y Subedar',
     phone: 7892128329,
     email: 'abc@g.c',
     councilPost: 'Cultural Affairs',
-    website: '',
-    linkedIn: '',
-    insta: '',
+    website: 'https://www.google.com/',
+    linkedIn: 'https://www.linkedin.com/',
+    insta: 'https://www.instagram.com/',
     image: cultImg
   },
   {
@@ -44,27 +44,27 @@ const data = [
     phone: 7892128329,
     email: 'abc@g.c',
     councilPost: 'Hostel Affairs',
-    website: '',
-    linkedIn: '',
-    insta: '',
+    website: 'https://www.google.com/',
+    linkedIn: 'https://www.linkedin.com/',
+    insta: 'https://www.instagram.com/',
     image: hostelImg
   }, {
     name: 'Yogesh Dhyani',
     phone: 7892128329,
     email: 'abc@g.c',
     councilPost: 'Sports Affairs',
-    website: '',
-    linkedIn: '',
-    insta: '',
+    website: 'https://www.google.com/',
+    linkedIn: 'https://www.linkedin.com/',
+    insta: 'https://www.instagram.com/',
     image: sportsImg
   }, {
     name: 'Savsaviya Brinal Sureshbhai',
     phone: 7892128329,
     email: 'abc@g.c',
     councilPost: 'Mess Secretary',
-    website: '',
-    linkedIn: '',
-    insta: '',
+    website: 'https://www.google.com/',
+    linkedIn: 'https://www.linkedin.com/',
+    insta: 'https://www.instagram.com/',
     image: messImg
   }
 ]
