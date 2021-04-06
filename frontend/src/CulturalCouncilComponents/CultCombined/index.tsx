@@ -22,22 +22,16 @@ function Compiled() {
                     <div style={{width:'75%', marginRight:'auto', float:'left', position:'relative'}}>
                         <h3 style={{color:'#8A003E'}}><strong>CULTURAL COUNCIL</strong></h3>
                         <p style={{color:'#DF0054', fontWeight:'bolder'}}> 
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                            magna aliqua. Turpis egestas maecenas pharetra convallis posuere morbi leo urna. Orci sagittis eu volutpat odio 
-                            facilisis mauris sit amet. Ut consequat semper viverra nam libero justo laoreet sit. Velit ut tortor pretium viverra 
-                            suspendisse. Ut tristique et egestas quis ipsum suspendisse ultrices. Amet mattis vulputate enim nulla aliquet porttitor. 
-                            In ornare quam viverra orci sagittis eu volutpat. Mattis nunc sed blandit libero volutpat sed. Tempus iaculis urna id volutpat. 
-                            Interdum velit laoreet id donec ultrices tincidunt. Lorem mollis aliquam ut porttitor. Tellus orci ac auctor augue mauris. 
-                            Porta lorem mollis aliquam ut. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Scelerisque mauris 
-                            pellentesque pulvinar pellentesque habitant morbi. Nam libero justo laoreet sit amet. Egestas purus viverra accumsan in nisl
-                            nisi scelerisque asdin.
+                            Welcome to the CULTURAL COUNCIL! Here we do a lot of cool stuff and our main motive is to enable 
+                            students to pursue their hobbies,interests apart from the usual academics. Platform for various
+                            events like Music,Art,Dance etc is open welcoming students to showcase their hidden talents!
                         </p>
                     </div>
                     <div style={{width:'20%',  marginLeft:'auto', marginBottom:'0', float:'right', textAlign:'right'}}>
                         <CultClubs />
                     </div>
                 </div>
-                <div style={{width:'auto', position:'relative', marginTop:'-37px', marginLeft:'-10px', marginRight:'-10px'}}>
+                <div style={{width:'auto', position:'relative', marginTop:'-15px', marginLeft:'-10px', marginRight:'-10px'}}>
                     <CultFooter />
                 </div>
             </div>

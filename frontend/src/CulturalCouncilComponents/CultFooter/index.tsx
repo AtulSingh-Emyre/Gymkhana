@@ -18,17 +18,15 @@ const CultFooter = () => {
                 <hr className="amber accent-4 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px" }} />
               </div>
               <p>
-                <i className="fa fa-home mr-3" /> New York, NY 10012, US
+                <i className="fa fa-home mr-3" />Indian Institute of Technology Dharwad, Karnataka, India - 580011
               </p>
               <p>
-                <i className="fa fa-envelope mr-3" /> info@example.com
+                <i className="fa fa-envelope mr-3" /> pro@iitdh.ac.in
               </p>
               <p>
-                <i className="fa fa-phone mr-3" /> + 01 234 567 88
+                <i className="fa fa-phone mr-3" /> +91 836 2212 839
               </p>
-              <p>
-                <i className="fa fa-print mr-3" /> + 01 234 567 89
-              </p>
+             
             </div>
           </MDBCol>
           <MDBCol md="3" xs='10' >
