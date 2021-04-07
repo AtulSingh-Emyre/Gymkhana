@@ -35,7 +35,7 @@ const clubData = [
         name: 'Robotics Club',
         src: require('../../assets/Technical Council/Clubs/AI.jpeg'),
         bg:'#101e38',
-        secy: 'Akhilesh',
+        secy: 'Sohan Anisetty',
         desc: 'Robotics Club'
     }
   
