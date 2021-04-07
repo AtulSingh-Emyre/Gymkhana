@@ -11,6 +11,8 @@ interface clubInfo {
     bg:string;
     secy:string;
     desc:string;
+    phone:string;
+    email:string;
 }
 interface Iprop{
     clubData : clubInfo;
@@ -23,20 +25,26 @@ const clubData = [
         src: require('../../assets/Technical Council/Clubs/codeGeass.png'),
         bg:'black',
         secy: 'Omkar DJ',
-        desc: 'Coding Club'
+        desc: 'Coding Club',
+        phone: '',
+        email: ''
     },
     {
         name: 'Hardly Humans',
         src: require('../../assets/Technical Council/Clubs/AI.jpeg'),
         bg:'#101e38',
         secy: 'Akhilesh Bharadwaj',
-        desc: 'AI and Datascience club'
+        desc: 'AI and Datascience club',
+        phone: '',
+        email: ''
     }, {
         name: 'Robotics Club',
         src: require('../../assets/Technical Council/Clubs/AI.jpeg'),
         bg:'#101e38',
         secy: 'Sohan Anisetty',
-        desc: 'Robotics Club'
+        desc: 'Robotics Club',
+        phone: '',
+        email: ''
     }
   
   ]
@@ -65,12 +73,12 @@ const TechnicalClubs = () => {
         {/* </div> */}
         
         <div className="d-flex justify-content-between">
-          <a href="#!" className="deep-orange-text">
+          <a href={`tel:${props.clubData.phone}`} className="deep-orange-text">
             <h6 className="font-weight-bold">
               <MDBIcon icon="phone" className="pr-2" />
             </h6>
           </a>
-          <a href="#!" className="deep-orange-text">
+          <a href={`mailto:${props.clubData.email}`} className="deep-orange-text">
             <h6 className="font-weight-bold">
               <MDBIcon icon="envelope" className="pr-2" />
             </h6>
