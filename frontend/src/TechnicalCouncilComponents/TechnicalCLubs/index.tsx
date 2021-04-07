@@ -11,7 +11,7 @@ interface clubInfo {
     bg:string;
     secy:string;
     desc:string;
-    phone:string;
+    phone:number;
     email:string;
 }
 interface Iprop{
@@ -26,8 +26,8 @@ const clubData = [
         bg:'black',
         secy: 'Omkar DJ',
         desc: 'Coding Club',
-        phone: '',
-        email: ''
+        phone: 8861860976,
+        email: 'codingclub@iitdh.ac.in'
     },
     {
         name: 'Hardly Humans',
@@ -35,16 +35,16 @@ const clubData = [
         bg:'#101e38',
         secy: 'Akhilesh Bharadwaj',
         desc: 'AI and Datascience club',
-        phone: '',
-        email: ''
+        phone: 1233454322,
+        email: 'aiclub@iitdh.ac.in'
     }, {
         name: 'Robotics Club',
         src: require('../../assets/Technical Council/Clubs/AI.jpeg'),
         bg:'#101e38',
         secy: 'Sohan Anisetty',
         desc: 'Robotics Club',
-        phone: '',
-        email: ''
+        phone: 1233454322,
+        email: 'robotics@iitdh.ac.in'
     }
   
   ]
