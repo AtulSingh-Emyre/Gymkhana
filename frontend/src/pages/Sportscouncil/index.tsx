@@ -13,17 +13,20 @@ const Sportscouncil: React.FC = () => {
   return (
     <div className="mainhome">
     <Header/>
-    <div className='container maintextonpage'>
-    <h1>Sports Club</h1>
-    {/* <img src={logo}  /> */}
+    <div>
+      
     </div>
     
     <div>
+      <div className='container maintextonpage' style={{marginLeft:'15%'}}>
+      <h1><strong>Sports Club IIT Dharwad</strong></h1>
+      <h4>Khela Hobe xD.</h4>
+      <a href="#feeds" className="godownbutton" style={{marginLeft:'20%', zIndex:3}}><i className="fa fa-angle-down" aria-hidden="true"></i></a>
+      </div>
     <Homestyle/>
-
     </div>
     <div className="clubsection">
-      <div className='container'>
+      <div className='container' id="feeds" style={{...smoothScroll}}>
       <h1>Feed</h1>
       <ClubsImages/>
       </div>
@@ -32,7 +35,7 @@ const Sportscouncil: React.FC = () => {
     </div>
     <div className='container'>
     {/* <Jumbotron> */}
-    <div >
+    <div id="clubs">
       <br/>
       <br/>
       <h1>Clubs</h1>
@@ -40,14 +43,16 @@ const Sportscouncil: React.FC = () => {
     </div>
     {/* </Jumbotron> */}
     </div>
-    
-<Footer/>
+    <div className='footer' id="footer">
+      <Footer/>
     </div>
-   
-  
-
+    </div>
   );
-
 };
+
+const smoothScroll : React.CSSProperties = {
+  scrollBehavior: 'smooth',
+  msScrollTranslation: 'vertical-to-horizontal'
+}
 
 export default Sportscouncil;
