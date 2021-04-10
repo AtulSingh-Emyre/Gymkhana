@@ -17,7 +17,8 @@
     transition: opacity 900ms, transform 900ms;
   } */
 .mainhome{
-  background-color: rgb(31, 75, 170);
+  background-color: #1FC1E9;
+  overflow-x: hidden;
 }
 .clubsection{
   scroll-behavior: smooth;
