@@ -158,7 +158,7 @@ class deck extends PureComponent {
 const styles = {
         width:'80%', 
         height: '400px', 
-        transform:'translate(60%)',
+        transform:'translate(52%)',
         left: 0,
         top: 0,
         zIndex: 0

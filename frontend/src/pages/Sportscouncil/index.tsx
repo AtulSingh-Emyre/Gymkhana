@@ -14,25 +14,25 @@ const Sportscouncil = () => {
   return (
     <div className="mainhome">
     <Header/>
-    <div style={{position: 'relative', zIndex:0}}>
+    <div style={{position: 'relative', zIndex:3}}>
       <div className='container maintextonpage' style={{marginLeft:'15%'}}>
       <h1><strong>Sports Club IIT Dharwad</strong></h1>
       <h4>Khela Hobe xD.</h4>
-      <a href="#feeds" className="godownbutton" style={{marginLeft:'18%'}}><i className="fa fa-angle-down" aria-hidden="true"></i></a>
+      <a href="#feeds" className="godownbutton" style={{marginLeft:'18%', zIndex:3}}><i className="fa fa-angle-down" aria-hidden="true"></i></a>
       </div>
     <Homestyle/>
     </div>
+    <br id="feeds"/>
     <div className="clubsection">
-      <div className='container' id="feeds" style={{...smoothScroll}}>
+      <div className='container' style={{...smoothScroll}}>
       <h1>Feed</h1>
       <ClubsImages/>
       </div>
-    
-
     </div>
+    <br id="clubs"/>
     <div className='container clubs' style={{height:'auto', width:'auto', marginLeft:'auto', marginRight:'auto'}}>
     {/* <Jumbotron> */}
-    <div id="clubs">
+    <div>
       <h1>Clubs</h1>
       <div>
         <Deck />

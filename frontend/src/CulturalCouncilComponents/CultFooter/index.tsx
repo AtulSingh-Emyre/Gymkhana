@@ -6,7 +6,7 @@ import './styles.css';
 
 const CultFooter = () => {
   return (
-    <MDBFooter color="pink darken-4" className="font-small pt-4 mt-4">
+    <MDBFooter color="pink darken-4" className="font-small pt-4 mt-4 padMarF">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6" >
@@ -30,7 +30,6 @@ const CultFooter = () => {
             </div>
           </MDBCol>
           <MDBCol md="3" xs='10' >
-            <div style={{marginLeft:'-55px'}}>
               <h5 className="title">QUICK LINKS</h5>
               <br />
               <hr className="amber accent-4 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px" }} />
@@ -42,7 +41,6 @@ const CultFooter = () => {
                 <div><a href="https://oss2019.github.io/">OSS</a></div>
                 <div><a href="https://www.iitdh.ac.in/iic/">IIC</a></div>
               </Container>
-            </div>
           </MDBCol>
           <MDBCol md="3">
             <div style={{ margin: 'auto', alignItems: 'center', width: '100%', height: '100%' }}>
