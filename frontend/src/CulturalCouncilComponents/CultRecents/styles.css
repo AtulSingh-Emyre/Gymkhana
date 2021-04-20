@@ -3,3 +3,6 @@
     color:'#442C2E';
     box-shadow:'none';
 }
+.navbar.navbar-dark .navbar-nav .nav-item .nav-link{
+    color: #8a003e !important;
+}

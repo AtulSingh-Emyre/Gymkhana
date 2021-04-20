@@ -5,9 +5,10 @@ import Card from 'react-bootstrap/Card';
 import { CardGroup } from 'react-bootstrap';
 
 const Culturalcouncil: React.FC = () => {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 770px)' })
   return (
     <>
-      <div className='CultCouncil' style={{...main}}>
+      <div className='CultCouncil' style={{...main, paddingTop:isTabletOrMobile? '0px': '55px', paddingBottom:isTabletOrMobile? '0px': '55px'}}>
         <Compiled />
       </div>
     </>
@@ -16,9 +17,7 @@ const Culturalcouncil: React.FC = () => {
 
 const main:React.CSSProperties = {
   background: '#FFA88F',
-  height: 'auto',
-  paddingTop:'55px',
-  paddingBottom:'55px'
+  height: 'auto'
 }
 
 export default Culturalcouncil;
