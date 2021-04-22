@@ -3,16 +3,11 @@ import { Nav, Dropdown, NavDropdown} from 'react-bootstrap';
 import './styles.css';
 
 const CultRecents = () => {
-
-  const [bg, setbg] = useState(false);
-
   return (
       <NavDropdown 
       title="RECENT EVENTS" 
       id="basic-nav-dropdown" 
-      style={{...st, backgroundColor: bg? 'rgba(138, 0, 62, 0.1)': '#ffffff'}} 
-      onMouseEnter={() => setbg(true)}
-      onMouseLeave={() => setbg(false)}
+      style={{...st, backgroundColor: '#880e4f'}}
       renderMenuOnMount={true}>
           <NavDropdown.Item style={{color:'#DF0054'}}>EVENT 1</NavDropdown.Item>
           <NavDropdown.Item style={{color:'#DF0054'}}>EVENT 2</NavDropdown.Item>
@@ -27,10 +22,9 @@ const CultRecents = () => {
 }
 
 const st : React.CSSProperties = {
-  color: '#8a003e',
   height: '40px',
   margin: 'auto',
-  fontSize: '10',
+  fontSize: '8',
   fontWeight: 'bolder',
   borderRadius: '5px'
 }

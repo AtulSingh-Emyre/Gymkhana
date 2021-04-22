@@ -6,8 +6,17 @@ import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDB
 
 function Gallery() {
     // const isTabletOrMobile = useMediaQuery({ query: '(max-width: 700px)' })
+    const width = window.innerWidth;
+    const st : React.CSSProperties = {
+        position: 'relative',
+        width: '65%',
+        height: 0.525*width,
+        marginTop:'2%', 
+        marginLeft:'auto', 
+        marginRight:'auto'
+    }
     return (
-        <div style={{...st}}>
+        <div style={st}>
             <MDBCarousel
                 activeItem={1}
                 length={3}
@@ -59,15 +68,6 @@ function Gallery() {
             </MDBCarousel>
         </div>
     )
-}
-
-const st : React.CSSProperties = {
-    position: 'relative',
-    width: '45%',
-    height: '45%',
-    marginTop:'2%', 
-    marginLeft:'auto', 
-    marginRight:'auto'
 }
 
 export default Gallery;

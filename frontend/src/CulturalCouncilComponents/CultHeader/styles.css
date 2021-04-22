@@ -9,3 +9,8 @@
       background-color: white !important;
     }
 }
+@media (min-width: 0px) {
+    :is(.CultHeader) CultRecents .navbar.navbar-dark .navbar-nav{
+        color: #8a003e !important;
+    }
+}
