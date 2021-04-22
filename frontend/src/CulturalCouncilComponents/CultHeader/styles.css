@@ -1,0 +1,16 @@
+.navbartop{
+    background-image: linear-gradient(to top, white,white);
+}
+.CultHeader{
+    background-color: white !important;
+}
+@media (max-width: 770px) {
+    .navbarTech:not(.top-nav-collapse) {
+      background-color: white !important;
+    }
+}
+@media (min-width: 0px) {
+    :is(.CultHeader) CultRecents .navbar.navbar-dark .navbar-nav{
+        color: #8a003e !important;
+    }
+}

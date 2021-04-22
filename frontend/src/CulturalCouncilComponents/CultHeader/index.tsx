@@ -3,15 +3,16 @@ import { MDBCollapse, MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDB
 import { Nav, NavDropdown} from 'react-bootstrap';
 import logo from "../../assets/iitdhlogo.png";
 import CultRecents from "../../CulturalCouncilComponents/CultRecents";
+import './styles.css';
 
 function CultHeader() {
 
     return (
-        <div>
-            <MDBNavbar fixed={'top'} dark expand='md' style={{...st}}>
+        <div style={{maxHeight:'30%'}}>
+            <MDBNavbar fixed={'top'} dark expand='md' className={'CultHeader navbarTech'} style={{...st}}>
                 <MDBNavbarNav left>
                     <a href="/" > 
-                        <img src={logo} style={{ maxWidth: '50px', maxHeight:'50px', marginLeft:'10px', marginTop:'10px' }} />
+                        <img src={logo} style={{ maxWidth: '40px', maxHeight:'40px', marginLeft:'10px' }} />
                     </a>
                 </MDBNavbarNav>
                 <MDBNavbarNav right>

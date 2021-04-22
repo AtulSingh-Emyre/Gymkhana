@@ -1,35 +1,60 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { MDBCollapse, MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDBNavLink } from 'mdbreact';
+import Example from '../../components/Modal';
+import logo from "../../assets/iitdhlogo.png";
 import './style.css';
-const Header: React.FC = () => {
+const SportsHeader: React.FC = () => {
+  const [collapseID, setcollapseID] = useState(false);
+  const toggleCollapse = () => {
+    setcollapseID(!collapseID);
+  }
   return (
-      
-<Navbar expand="lg" className='navbarsports' variant='dark'>
-<div className='container'>
-  <Navbar.Brand href="#home">IIT Dharwad Sports Council</Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="ml-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#link">Link</Nav.Link>
-      <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
-    </Nav>
-   
-  </Navbar.Collapse>
-  </div>
-</Navbar>
-
-
-
-
-
+    <div>
+        <MDBNavbar
+          // variant='dark'
+          // expand="lg"
+          // collapseOnSelect
+          scrolling
+          fixed={'top'}
+          dark 
+          className={'CultHeader'}
+          expand="md"
+          style={{...st}}
+        >
+          <a href="/" > 
+          <img src={logo} style={{ maxWidth: '50px', maxHeight:50 }} />
+          </a>
+          <MDBNavbarToggler
+              onClick={toggleCollapse}
+              
+          />
+          <MDBCollapse id='navbarCollapse' className={'collapse'} isOpen={collapseID} navbar>
+          {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav"> */}
+            {/* <Nav className="ml-auto" style={{ marginTop: 'auto', marginBottom: 'auto' }} defaultActiveKey={'/'} > */}
+            <MDBNavbarNav right>
+            <Nav.Link href="#feeds" className={'activeHover'} style={textCol}>FEEDS</Nav.Link>
+              <Nav.Link href="#clubs" style={textCol} className={'activeHover'}>CLUBS</Nav.Link>
+              <Nav.Link href="#footer" style={textCol} className={'activeHover'}>CONTACT US</Nav.Link>
+              </MDBNavbarNav>
+            {/* </Nav> */}
+            </MDBCollapse>
+        </MDBNavbar>
+    </div>
   );
-
 };
-export default Header;
+
+const textCol: React.CSSProperties = {
+  color: 'white',
+  height: '40px',
+  margin: 'auto',
+  fontSize: '10'
+  // backgroundColor: 'white'
+}
+
+const st: React.CSSProperties = {
+  height: 'auto'
+}
+
+export default SportsHeader;
