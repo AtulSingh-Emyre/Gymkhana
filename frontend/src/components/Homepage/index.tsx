@@ -11,7 +11,7 @@ const Homepage = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 700px)' })
   return (
   <div>
-    <Parallax blur={{ min:-20, max:0 }} bgImage={require('../../assets/logoc.jpeg')} bgImageAlt="the cat" strength={200}>
+    <Parallax blur={{ min:-20, max:0 }} bgImage={require('../../assets/logoc.jpeg')} bgImageAlt="the cat" strength={500}>
      <div 
     className={'home'}
     style={{...jumb, height: isTabletOrMobile? 'auto':'100%'}}  >
@@ -19,10 +19,10 @@ const Homepage = () => {
         <CSSTransition in={true} appear={true} timeout={800} classNames='fade'>
           <div className='textdiv'>
             <Row>
-              <h1 >Students' Gymkhana-IIT Dh </h1>
+              <h1 >Students' Gymkhana </h1>
             </Row>
             <Row>
-              <p>The right stop for being informed about all activities of IIT Dharwad</p>
+              <p> The right stop for being informed about all student activities of IIT Dharwad!</p>
             </Row>
             <br /><br /><br />
             <a href="#abt" className="godownbutton" ><i className="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -43,10 +43,10 @@ const Homepage = () => {
           </div>
           <div>
             <p style={{ color: 'black' }}>
-        Students’ Gymkhana is the hub of the numerous extra-curricular and co-curricular activities in IIT Dharwad ranging from sports to socio-cultural events. The Gymkhana is managed by the students, for the students, under the guidance and active participation of the faculty and staff members.
+        Students’ Gymkhana, IIT Dharwad is the hub of the numerous extra-curricular and co-curricular activities in IIT Dharwad ranging from sports to socio-cultural events. The Gymkhana is managed by the students, for the students, under the guidance and active participation of the faculty and staff members.
                         </p>
             <p style={{ color: 'black' }}>
-              The moto of Technology Students' Gymkhana is YOGAH KARMASU KAUSALAM which in English means "Perfection in action is Yoga". Our goal is to bring overall development in IITians through cultivating and nurturing their extra-curricular talents.
+          The goal of the body is to bring overall development in IITians through cultivating and nurturing their extra-curricular talents.
                         </p>
 
             <button className="bbtn"  ><a href="#" style={{ color: 'white' }}>Constitution</a></button>
