@@ -3,9 +3,30 @@ import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import ReactCardFlip from 'react-card-flip'
 import './styles.css';
-import img1 from './Images/Dummy-image.jpg';
-interface IProps {}
-const data = [{},{},{},{}];
+interface IProps {
+    info: {
+        title: string,
+        description: string,
+        link: string
+    }
+}
+const data = [{
+    title:"Summer of Innovation",
+    description: "A summer long technical event comprising of problem statements from multiple domains and contributed by each club.",
+    link: "https://oss2019.github.io/"
+},{
+    title: "Code Topia",
+    description: "A workshop for the freshers in coding domain in order to provide resources and basic understanding of fundamental concepts used in coding.",
+    link: ""
+},{
+    title: "PARSEC",
+    description: "The annual technical event of IIT Dharwad.",
+    link: "https://parsec.iitdh.ac.in/"
+},{
+    title: "Arduino Workshop",
+    description: "An introductory workshop for freshers regarding arduino Uno board.",
+    link:""
+}];
 const Events = () => {
     const EventCard: React.FC<IProps>  = (props) => {
         const [flipped, setflipped] = useState(false);
@@ -23,7 +44,7 @@ const Events = () => {
                             backgroundColor:'black', 
                             margin:'auto', padding:20}}>
                             <div style={{marginTop:'auto', marginBottom:'auto', marginLeft:'20px', color:'white'}}>
-                            <h1 style={{textAlign:'left', fontFamily:'monospace', fontWeight:'bolder', fontSize:'20px'}}>CODE TOPIA 1</h1>
+                            <h1 style={{textAlign:'left', fontFamily:'monospace', fontWeight:'bolder', fontSize:'20px'}}>{props.info.title}</h1>
                             <hr color='white' style={{float:'left', width:'36%', height:'1px', borderRadius:'60px'}}/>
                             </div>
                         </MDBCard>
@@ -34,9 +55,9 @@ const Events = () => {
                         <MDBCard className='round' style={{...jumb, width:'100%', height:'250px', backgroundColor:'black', margin:'auto', padding:20}}>
                             <div style={{marginTop:'auto', marginBottom:'auto', marginLeft:'30px', marginRight:'30px', color:'white'}}>
                                 <h1 style={{textAlign:'left', fontSize:'20px', fontWeight:'bolder'}}>
-                                 organized by
-                                 know more
-                                </h1>
+                                 {props.info.description}
+                                 </h1>
+                                 <a href={props.info.link}>know more {">"} </a>
                             </div>
                         </MDBCard>
                     </div>
@@ -48,7 +69,7 @@ const Events = () => {
     <div>
         <Row style={{margin:'auto'}}>
             {
-                data.map((info,index)=> (<EventCard />))
+                data.map((info,index)=> (<EventCard info={{...info}} />))
             }
         </Row>
         </div>

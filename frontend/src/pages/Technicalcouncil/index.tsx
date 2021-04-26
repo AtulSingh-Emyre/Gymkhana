@@ -6,8 +6,6 @@ import TechFooter from '../../TechnicalCouncilComponents/TechFooter';
 import TechnicalClubs from '../../TechnicalCouncilComponents/TechnicalCLubs';
 import { Parallax } from 'react-parallax';
 import { Container } from 'react-bootstrap';
-import TechFest from '../../TechnicalCouncilComponents/TechFest';
-
 
 // import "./styles.css"
 const Technicalcouncil: React.FC = () => {

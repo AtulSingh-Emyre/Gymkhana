@@ -20,10 +20,10 @@ const TechFooter = () => {
 
             </p>
             <p>
-              <i className="fa fa-envelope mr-3" />  pro@iitdh.ac.in
+              <i className="fa fa-envelope mr-3" />  gstech@iitdh.ac.in
             </p>
             <p>
-              <i className="fa fa-phone mr-3" /> +91 836 2212 839
+              <i className="fa fa-phone mr-3" /> +91 789 212 8329
             </p>
           
            
