@@ -7,7 +7,7 @@ import {Card, Button} from 'react-bootstrap';
 import Footer from '../../SportsCouncilComponents/Footer/index';
 import logo from '../../assets/Sports Council/basketball.jpg'
 import ClubsImages from '../../SportsCouncilComponents/Clubs Images/index';
-import Deck from '../../SportsCouncilComponents/CardGroup';
+// import Deck from '../../SportsCouncilComponents/CardGroup';
 import { relative } from 'node:path';
 
 const Sportscouncil = () => {
@@ -35,7 +35,7 @@ const Sportscouncil = () => {
     <div>
       <h1>Clubs</h1>
       <div>
-        <Deck />
+        {/* <Deck /> */}
       </div>
     </div>
     {/* </Jumbotron> */}
