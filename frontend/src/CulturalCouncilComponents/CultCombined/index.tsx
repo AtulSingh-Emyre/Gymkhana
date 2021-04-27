@@ -7,20 +7,19 @@ import styled, { keyframes } from 'styled-components';
 import {fadeInLeft} from 'react-animations';
 import { useMediaQuery } from 'react-responsive';
 import './styles.css'
+import { MDBCol, MDBContainer, MDBRow } from 'mdbreact';
  
 const Animation = keyframes`${fadeInLeft}`;
 const noAnimation = keyframes`${false}`;
 
 function Compiled() {
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 770px)' })
-    const tag = useMediaQuery({ query: '(max-width: 500px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 770px)' });
     const BouncyDiv = styled.div`
     animation: 1s ${isTabletOrMobile? noAnimation : Animation};
     `;
-    const width = window.innerWidth;
     const card:React.CSSProperties = {
         width:'90%',
-        height: 545+0.525*width,
+        height: 'auto',
         marginLeft: 'auto',
         marginRight: 'auto',
         padding: '10px',
@@ -34,20 +33,22 @@ function Compiled() {
             <div className='MainCard' style={isTabletOrMobile?full:card}>
             <CultHeader />
             <Gallery />
-                <div className="info-div" style={{width:'90%', height:'25%', marginLeft:'auto', marginTop:'-10%', marginRight:'auto', display: 'flex'}}>
-                    <div style={{width:'65%', height:'40%', marginRight:'auto', position:'relative'}}>
-                        <h3 style={{color:'#8A003E'}}><strong>CULTURAL COUNCIL</strong></h3>
-                        <p style={{color:'#DF0054', fontWeight:'bolder'}}> 
-                            Welcome to the CULTURAL COUNCIL! Here we do a lot of cool stuff and our main motive is to enable 
-                            students to pursue their hobbies,interests apart from the usual academics. Platform for various
-                            events like Music,Art,Dance etc is open welcoming students to showcase their hidden talents!
-                        </p>
-                    </div>
-                    <div style={{width:'30%',  marginLeft:'auto', marginBottom:'0', textAlign:'right'}}>
-                        <CultClubs />
-                    </div>
-                </div>
-                <div className="footer" style={{width:'auto', marginTop:'-5%', marginLeft:'-10px', marginRight:'-10px'}}>
+                <MDBContainer fluid className="text-center">
+                        <MDBRow className="info-div" style={{width:'auto', marginLeft:'5%', marginRight:'5%', marginTop:'5%'}}>
+                            <MDBCol className="text-md-left" md="6" style={{width:'75%'}}>
+                                <h3 style={{color:'#8A003E'}}><strong>CULTURAL COUNCIL</strong></h3>
+                                <p className="para" style={{color:'#DF0054', fontWeight:'bolder'}}> 
+                                    Welcome to the CULTURAL COUNCIL! Here we do a lot of cool stuff and our main motive is to enable 
+                                    students to pursue their hobbies,interests apart from the usual academics. Platform for various
+                                    events like Music,Art,Dance etc is open welcoming students to showcase their hidden talents!
+                                </p>
+                            </MDBCol>
+                            <MDBCol className="text-md-right" md="6" xs='10' style={{width: '15%'}}>
+                                <CultClubs />
+                            </MDBCol>
+                        </MDBRow>
+                </MDBContainer>
+                <div className="footer" style={{width:'auto', marginLeft:'-10px', marginRight:'-10px', marginBottom:'-1%', alignItems:'center'}}>
                     <CultFooter />
                 </div>
             </div>

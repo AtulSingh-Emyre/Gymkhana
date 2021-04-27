@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Container } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
+import './styles.css';
 
 const ClubData = [
     {
@@ -80,47 +82,47 @@ function CultClubs() {
     const handleShow6 = () => setShow6(true)
   
     return (<>
-        <u style={{color:'#8A003E'}}><h4 style={{fontWeight:'bold', color:'#8A003E'}}>CLUBS</h4></u>
+        <h4 className="title" style={{fontWeight:'bold', color:'#8A003E'}}>CLUBS</h4>
         {/* <br/> */}
-        <ul style={{listStyle:'none'}}>
-            <li>
+        <Container style={{listStyle:'none', marginLeft:'0', paddingRight:'0', paddingLeft: '0'}}>
+            <div>
                 <div onClick={handleShow0}> 
-                    <h6 style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[0].name}</h6>
+                    <h6 className="name" style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[0].name}</h6>
                 </div>
-            </li>
-            <li>
+            </div>
+            <div>
                 <div onClick={handleShow1}>
-                    <h6 style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[1].name}</h6>
+                    <h6 className="name" style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[1].name}</h6>
                 </div>
-            </li>
-            <li>
+            </div>
+            <div>
                 <div onClick={handleShow2}>
-                    <h6 style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[2].name}</h6>
+                    <h6 className="name" style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[2].name}</h6>
                 </div>
-            </li>
-            <li>
+            </div>
+            <div>
                 <div onClick={handleShow3}>
-                    <h6 style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[3].name}</h6>
+                    <h6 className="name" style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[3].name}</h6>
                 </div>
-            </li>
-            <li>
+            </div>
+            <div>
                 <div onClick={handleShow4}>
-                    <h6 style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[4].name}</h6>
+                    <h6 className="name" style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[4].name}</h6>
                 </div>
-            </li>
-            <li>
+            </div>
+            <div>
                 <div onClick={handleShow5}>
-                    <h6 style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[5].name}</h6>
+                    <h6 className="name" style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[5].name}</h6>
                 </div>
-            </li>
-            <li>
+            </div>
+            <div>
                 <div onClick={handleShow6}>
-                    <h6 style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[6].name}</h6>
+                    <h6 className="name" style={{fontFamily:'sans-serif', cursor:'pointer', color:'#DF0054'}}>{ClubData[6].name}</h6>
                 </div>
-            </li>
-        </ul>
+            </div>
+        </Container>
 
-        <Modal show={show0} onHide={handleClose0}>
+        <Modal show={show0} onHide={handleClose0} centered size="lg">
             <Modal.Header closeButton>
                 <Modal.Title>{ClubData[0].name}</Modal.Title>
             </Modal.Header>
@@ -131,7 +133,7 @@ function CultClubs() {
             </Modal.Body>
         </Modal>
 
-        <Modal show={show1} onHide={handleClose1}>
+        <Modal show={show1} onHide={handleClose1} centered size="lg">
             <Modal.Header closeButton>
                 <Modal.Title>{ClubData[1].name}</Modal.Title>
             </Modal.Header>
@@ -141,7 +143,7 @@ function CultClubs() {
                 <h5><strong>About the Club:</strong></h5><p>{ClubData[1].desc}</p>
             </Modal.Body>
         </Modal>
-        <Modal show={show2} onHide={handleClose2}>
+        <Modal show={show2} onHide={handleClose2} centered size="lg">
             <Modal.Header closeButton>
                 <Modal.Title>{ClubData[2].name}</Modal.Title>
             </Modal.Header>
@@ -151,7 +153,7 @@ function CultClubs() {
                 <h5><strong>About the Club:</strong></h5><p>{ClubData[2].desc}</p>
             </Modal.Body>
         </Modal>
-        <Modal show={show3} onHide={handleClose3}>
+        <Modal show={show3} onHide={handleClose3} centered size="lg">
             <Modal.Header closeButton>
                 <Modal.Title>{ClubData[3].name}</Modal.Title>
             </Modal.Header>
@@ -161,7 +163,7 @@ function CultClubs() {
                 <h5><strong>About the Club:</strong></h5><p>{ClubData[3].desc}</p>
             </Modal.Body>
         </Modal>
-        <Modal show={show4} onHide={handleClose4}>
+        <Modal show={show4} onHide={handleClose4} centered size="lg">
             <Modal.Header closeButton>
                 <Modal.Title>{ClubData[4].name}</Modal.Title>
             </Modal.Header>
@@ -171,7 +173,7 @@ function CultClubs() {
                 <h5><strong>About the Club:</strong></h5><p>{ClubData[4].desc}</p>
             </Modal.Body>
         </Modal>
-        <Modal show={show5} onHide={handleClose5}>
+        <Modal show={show5} onHide={handleClose5} centered size="lg">
             <Modal.Header closeButton>
                 <Modal.Title>{ClubData[5].name}</Modal.Title>
             </Modal.Header>
@@ -181,7 +183,7 @@ function CultClubs() {
                 <h5><strong>About the Club:</strong></h5><p>{ClubData[5].desc}</p>
             </Modal.Body>
         </Modal>
-        <Modal show={show6} onHide={handleClose6}>
+        <Modal show={show6} onHide={handleClose6} centered size="lg">
             <Modal.Header closeButton>
                 <Modal.Title>{ClubData[6].name}</Modal.Title>
             </Modal.Header>

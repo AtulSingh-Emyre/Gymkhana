@@ -26,7 +26,7 @@ const st : React.CSSProperties = {
   margin: 'auto',
   fontSize: '8',
   fontWeight: 'bolder',
-  borderRadius: '5px'
+  borderRadius: '13px'
 }
 
 export default CultRecents;
