@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 // @ts-ignore
 import LazyLoad from "react-lazyload";
 import { Parallax } from 'react-parallax';
+import Feed from '../Feed';
 
 const Homepage = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 700px)' })
@@ -53,6 +54,7 @@ const Homepage = () => {
           </div>
         </Container>
       </CSSTransition>
+      <Feed />
       </LazyLoad>
     </div>
   </div>

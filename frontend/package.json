@@ -65,6 +65,7 @@
     "react-scroll-parallax": "^2.3.5",
     "react-slick": "^0.28.1",
     "react-spring": "^9.0.0",
+    "react-stacked-carousel": "^1.1.2",
     "react-toastify": "^7.0.3",
     "react-transition-group": "^4.4.1",
     "react-vertical-timeline-component": "^3.3.3",
