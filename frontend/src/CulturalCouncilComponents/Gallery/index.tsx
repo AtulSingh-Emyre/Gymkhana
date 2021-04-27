@@ -5,12 +5,11 @@ import { useMediaQuery } from 'react-responsive';
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBMask, MDBView } from 'mdbreact';
 
 function Gallery() {
-    // const isTabletOrMobile = useMediaQuery({ query: '(max-width: 700px)' })
     const width = window.innerWidth;
     const st : React.CSSProperties = {
         position: 'relative',
         width: '65%',
-        height: 0.525*width,
+        height: '65%',
         marginTop:'2%', 
         marginLeft:'auto', 
         marginRight:'auto'
@@ -43,7 +42,7 @@ function Gallery() {
                             <img
                             className="d-block w-100"
                             src={require('../../assets/interiitsmeet.jpg')}
-                            alt="First slide"
+                            alt="Second slide"
                             />
                         <MDBMask overlay="black-light" />
                         </div>
@@ -56,7 +55,7 @@ function Gallery() {
                             <img
                             className="d-block w-100"
                             src={require('../../assets/interiitsmeet.jpg')}
-                            alt="First slide"
+                            alt="Second slide"
                             />
                         <MDBMask overlay="black-light" />
                         </div>
