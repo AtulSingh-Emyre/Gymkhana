@@ -6,6 +6,7 @@ declare module 'react-google-login';
 declare module 'react-scroll-parallax';
 declare module 'react-datetime-picker';
 declare module 'react-parallax';
+declare module 'react-stacked-carousel';
 declare module '*.scss' {
     const content: {[className: string]: string};
     export = content;
