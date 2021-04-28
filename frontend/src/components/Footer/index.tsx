@@ -10,7 +10,9 @@ import { FiPhoneCall } from "react-icons/fi";
 
 const Footer = () => {
   return (
+    
     <MDBFooter color="unique-color-dark" className="font-small pt-4 mt-4 padMarF ">
+      <div className='container'>
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6" >
@@ -60,12 +62,15 @@ const Footer = () => {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+      </div>
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Copyright: <a href="https://www.iitdh.ac.in"> IIT Dharwad </a>
         </MDBContainer>
       </div>
+      
     </MDBFooter>
+    
   );
 }
 
