@@ -6,10 +6,10 @@ import Homestyle from '../../SportsCouncilComponents/Home/index';
 import {Card, Button} from 'react-bootstrap';
 import Footer from '../../SportsCouncilComponents/Footer/index';
 import logo from '../../assets/Sports Council/basketball.jpg'
-import ClubsImages from '../../SportsCouncilComponents/Clubs Images/index';
+import ClubsImages from '../../SportsCouncilComponents/Clubs Images';
 import Deck from '../../SportsCouncilComponents/Cards';
 import { relative } from 'node:path';
-import { MDBContainer, MDBRow } from 'mdbreact';
+import { MDBCol, MDBContainer, MDBRow } from 'mdbreact';
 
 const Sportscouncil = () => {
   return (
@@ -23,18 +23,15 @@ const Sportscouncil = () => {
       </div>
     <Homestyle/>
     </div>
-    <br id="feeds"/>
-    <MDBContainer>
-      <MDBRow className="clubsection">
-        <div className='container' style={{...smoothScroll}}>
-        <h1>Feed</h1>
-        <ClubsImages/>
-        </div>
-      </MDBRow>
+    <h1 className="container" style={{color: '#1f4baa', fontWeight: 'bolder'}}>Feed</h1>
+    <br/>
+    <MDBContainer>    
+      <ClubsImages/>
+      <br/><br/><br/>
       <MDBRow className='container clubs' style={{height:'auto', width:'auto', marginLeft:'auto', marginRight:'auto'}}>
       {/* <Jumbotron> */}
         <div className="container">
-          <h1>Clubs</h1>
+          <h1 style={{color: '#1f4baa', fontWeight: 'bolder'}}>Clubs</h1>
           <div>
             <Deck />
           </div>
