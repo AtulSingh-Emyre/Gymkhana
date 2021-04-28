@@ -9,6 +9,7 @@ import logo from '../../assets/Sports Council/basketball.jpg'
 import ClubsImages from '../../SportsCouncilComponents/Clubs Images/index';
 import Deck from '../../SportsCouncilComponents/Cards';
 import { relative } from 'node:path';
+import { MDBContainer, MDBRow } from 'mdbreact';
 
 const Sportscouncil = () => {
   return (
@@ -23,24 +24,24 @@ const Sportscouncil = () => {
     <Homestyle/>
     </div>
     <br id="feeds"/>
-    <div className="clubsection">
-      <div className='container' style={{...smoothScroll}}>
-      <h1>Feed</h1>
-      <ClubsImages/>
-      </div>
-    </div>
-    
-    <br id="clubs"/>
-    <div className='container clubs' style={{height:'auto', width:'auto', marginLeft:'auto', marginRight:'auto'}}>
-    {/* <Jumbotron> */}
-    <div>
-      <h1>Clubs</h1>
-      <div>
-        <Deck />
-      </div>
-    </div>
-    {/* </Jumbotron> */}
-    </div>
+    <MDBContainer>
+      <MDBRow className="clubsection">
+        <div className='container' style={{...smoothScroll}}>
+        <h1>Feed</h1>
+        <ClubsImages/>
+        </div>
+      </MDBRow>
+      <MDBRow className='container clubs' style={{height:'auto', width:'auto', marginLeft:'auto', marginRight:'auto'}}>
+      {/* <Jumbotron> */}
+        <div className="container">
+          <h1>Clubs</h1>
+          <div>
+            <Deck />
+          </div>
+        </div>
+      {/* </Jumbotron> */}
+      </MDBRow>
+    </MDBContainer>
     <div className='footer' id="footer">
       <Footer/>
     </div>
