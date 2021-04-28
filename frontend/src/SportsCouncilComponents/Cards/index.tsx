@@ -13,12 +13,11 @@ const Clubs = () => {
   }
   
   return (
-    <div className="main">
+    <div className="main" style={{ width:'90%', height:'100%', minHeight:320}}>
       <StackedCarousel
         autoRotate={true}
         rotationInterval={2000}
         onCardChange={onCardChange}
-        containerClassName={"container"}
         cardClassName="card"
         style={{...stile}}
       >
