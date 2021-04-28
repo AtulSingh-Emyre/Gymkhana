@@ -29,6 +29,7 @@ const Sportscouncil = () => {
       <ClubsImages/>
       </div>
     </div>
+    
     <br id="clubs"/>
     <div className='container clubs' style={{height:'auto', width:'auto', marginLeft:'auto', marginRight:'auto'}}>
     {/* <Jumbotron> */}
