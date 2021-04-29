@@ -9,7 +9,7 @@ function CultHeader() {
 
     return (
         <div style={{maxHeight:'30%'}}>
-            <MDBNavbar fixed={'top'} dark expand='md' className={'CultHeader navbarTech'} style={{...st}}>
+            <MDBNavbar fixed={'top'} dark expand='md' className={'CultHeader navbarCult'} style={{...st}}>
                 <MDBNavbarNav left>
                     <a href="/" > 
                         <img src={logo} style={{ maxWidth: '45px', maxHeight:'45px', marginLeft:'10px' }} />

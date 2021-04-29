@@ -1,6 +1,11 @@
-.navbarsports{
-    background-color: transparent;
+.navbartop{
+    background-image: linear-gradient(to top, #1f4baa,#1f4baa);
 }
-.CultHeader{
+.SportsHeader{
     background: #1f4baa !important;
+}
+@media (max-width: 768px) {
+    .navbarSports:not(.top-nav-collapse) {
+      background-color: #1f4baa !important;
+    }
 }

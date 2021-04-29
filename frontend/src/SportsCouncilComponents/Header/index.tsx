@@ -4,10 +4,11 @@ import { MDBCollapse, MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDB
 import Example from '../../components/Modal';
 import logo from "../../assets/iitdhlogo.png";
 import './style.css';
+
 const SportsHeader: React.FC = () => {
   return (
     <div style={{maxHeight:'30%'}}>
-            <MDBNavbar fixed={'top'} dark expand='md' className={'CultHeader navbarTech'} style={{...st}}>
+            <MDBNavbar fixed={'top'} dark expand='md' className={'SportsHeader navbarSports'} style={{...st}}>
                 <MDBNavbarNav left>
                     <a href="/" > 
                         <img src={logo} style={{ maxWidth: '45px', maxHeight:'45px', marginLeft:'10px' }} />
