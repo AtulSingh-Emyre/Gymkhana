@@ -1,35 +1,86 @@
-import React from 'react'
+import React, { useState } from 'react'
 // @ts-ignore
 import { CardView } from 'react-card-with-image';
+import { StackedCarousel } from 'react-stacked-carousel'
 import 'react-card-with-image/dist/index.css';
+import 'react-stacked-carousel/dist/index.css';
 import './style.css';
+import { MDBRow } from 'mdbreact';
 
-interface Iprops {
-  txt: string;
-  color: string;
-  num: number;
-  x: number;
-  y: number;
-  z_index: number;
-  scale: number;
-}
-
-const Clubs = (props: Iprops) => {
+const Clubs = () => {
+  const [card, setCard] = useState(null);
+  const onCardChange = (event: any) => {
+    console.log("Card", event);
+  }
+  const [hover, setHover] = useState(false);
+  
   return (
-    <div style={{...stile,
-      left: `${props.x}px`,
-      top: `${props.y}px`,
-      zIndex: props.z_index,
-      transform: `translate(-50%, -50%) scale(${props.scale})`,
-      backgroundColor: props.color,
-      color: props.txt,
-      textAlign: 'center',
-      fontFamily: 'sans-serif',
-      padding: '20px'
-    }} className='card'>
-      <h2><u><strong>{info[props.num].clubname}</strong></u></h2>
-      <h5>{info[props.num].secyname}</h5>
-      <p>{info[props.num].clubdesc}</p>
+    <div className="main" style={{ width:'100%'}} onMouseEnter={() => setHover(!hover)} onMouseLeave={() => setHover(!hover)}>
+      <StackedCarousel
+        autoRotate={!hover}
+        onCardChange={onCardChange}
+        containerClassName="coll"
+        cardClassName="data"
+        leftButton={<div style={{width: '0', height: '0'}}></div>}
+        rightButton={<div style={{width: '0', height: '0'}}></div>}
+        style={{width: '90%', height: '100%', minHeight: '320px'}}
+      >
+        <div className="element" key={'child1'}>
+          <h2>{info[0].clubname}</h2>
+          <h5>{info[0].secyname}</h5>
+          <p style={{fontSize: '15px'}}>{info[0].clubdesc}</p>
+        </div>
+        <div className="element" key={'child2'}>
+          <h2>{info[1].clubname}</h2>
+          <h5>{info[1].secyname}</h5>
+          <p style={{fontSize: '15px'}}>{info[1].clubdesc}</p>
+        </div>
+        <div className="element" key={'child3'}>
+          <h2>{info[2].clubname}</h2>
+          <h5>{info[2].secyname}</h5>
+          <p style={{fontSize: '15px'}}>{info[2].clubdesc}</p>
+        </div>
+        <div className="element" key={'child4'}>
+          <h2>{info[3].clubname}</h2>
+          <h5>{info[3].secyname}</h5>
+          <p style={{fontSize: '15px'}}>{info[3].clubdesc}</p>
+        </div>
+        <div className="element" key={'child5'}>
+          <h2>{info[4].clubname}</h2>
+          <h5>{info[4].secyname}</h5>
+          <p style={{fontSize: '15px'}}>{info[4].clubdesc}</p>
+        </div>
+        <div className="element" key={'child6'}>
+          <h2>{info[5].clubname}</h2>
+          <h5>{info[5].secyname}</h5>
+          <p style={{fontSize: '15px'}}>{info[5].clubdesc}</p>
+        </div>
+        <div className="element" key={'child7'}>
+          <h2>{info[6].clubname}</h2>
+          <h5>{info[6].secyname}</h5>
+          <p style={{fontSize: '15px'}}>{info[6].clubdesc}</p>
+        </div>
+        <div className="element" key={'child8'}>
+          <h2>{info[7].clubname}</h2>
+          <h5>{info[7].secyname}</h5>
+          <p style={{fontSize: '15px'}}>{info[7].clubdesc}</p>
+        </div>
+        <div className="element" key={'child9'}>
+          <h2>{info[8].clubname}</h2>
+          <h5>{info[8].secyname}</h5>
+          <p style={{fontSize: '15px'}}>{info[8].clubdesc}</p>
+        </div>
+        <div className="element" key={'child10'}>
+          <h2>{info[9].clubname}</h2>
+          <h5>{info[9].secyname}</h5>
+          <p style={{fontSize: '15px'}}>{info[9].clubdesc}</p>
+        </div>
+        <div className="element" key={'child11'}>
+          <h2>{info[10].clubname}</h2>
+          <h5>{info[10].secyname}</h5>
+          <p style={{fontSize: '15px'}}>{info[10].clubdesc}</p>
+        </div>
+      </StackedCarousel>
     </div>
   )
 }
@@ -42,7 +93,7 @@ const info = [
       memblink: "google",
       logo: "logo.png",
       Contactdetails: "123456 123456",
-      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
       id: 2,
@@ -51,7 +102,7 @@ const info = [
       memblink: "google",
       logo: "logo.png",
       Contactdetails: "123456 123456",
-      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
       id: 3,
@@ -60,7 +111,7 @@ const info = [
       memblink: "google",
       logo: "logo.png",
       Contactdetails: "123456 123456",
-      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
       id: 4,
@@ -69,7 +120,7 @@ const info = [
       memblink: "google",
       logo: "logo.png",
       Contactdetails: "123456 123456",
-      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
       id: 5,
@@ -78,7 +129,7 @@ const info = [
       memblink: "google",
       logo: "logo.png",
       Contactdetails: "123456 123456",
-      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
       id: 6,
@@ -87,7 +138,7 @@ const info = [
       memblink: "google",
       logo: "logo.png",
       Contactdetails: "123456 123456",
-      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
       id: 7,
@@ -96,7 +147,7 @@ const info = [
       memblink: "google",
       logo: "logo.png",
       Contactdetails: "123456 123456",
-      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
       id: 8,
@@ -105,7 +156,7 @@ const info = [
       memblink: "google",
       logo: "logo.png",
       Contactdetails: "123456 123456",
-      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   
   {
@@ -115,7 +166,7 @@ const info = [
       memblink: "google",
       logo: "logo.png",
       Contactdetails: "123456 123456",
-      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
       id: 10,
@@ -124,7 +175,7 @@ const info = [
       memblink: "google",
       logo: "logo.png",
       Contactdetails: "123456 123456",
-      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
       id: 11,
@@ -133,7 +184,7 @@ const info = [
       memblink: "google",
       logo: "logo.png",
       Contactdetails: "123456 123456",
-      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      clubdesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   }
 ]
 

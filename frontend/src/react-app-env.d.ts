@@ -1,4 +1,5 @@
 /// <reference types="react-scripts" />
+declare module 'react-stacked-carousel';
 declare module 'react-animations';
 declare module 'radium';
 declare module 'react-google-login';

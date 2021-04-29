@@ -6,6 +6,7 @@ const TechFooter = () => {
   return (
     <div style={{backgroundColor:'black', marginTop:-25}}>
       <MDBFooter color="blue darken-4" className="font-small pt-4 mt-4 f">
+        <div className='container'>
         <MDBContainer fluid className="text-center text-md-left">
           <MDBRow>
             <MDBCol md="6">
@@ -51,22 +52,25 @@ const TechFooter = () => {
 
                 <Form.Group controlId="formBasicMessage">
                   <Form.Label>Message</Form.Label>
-                  <Form.Control as="textarea" rows={2} placeholder="message" />
+                  <Form.Control as="textarea" rows={2} placeholder="Enter your message" />
                 </Form.Group>
-                <Button variant="info" type="submit" block>
+                <Button variant="info" type="submit" >
                   Submit
   </Button>
               </Form>
             </MDBCol>
           </MDBRow>
         </MDBContainer>
+        </div>
         <br></br>
         <div className="footer-copyright text-center py-3" style={{marginTop:'5px'}}>
           <MDBContainer fluid>
             &copy; {new Date().getFullYear()} Copyright: <a href="https://www.iitdh.ac.in/"> IIT Dharwad </a>
           </MDBContainer>
         </div>
+        
       </MDBFooter>
+      
     </div>
   )
 }

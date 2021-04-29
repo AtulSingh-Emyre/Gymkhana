@@ -30,7 +30,7 @@
     "@unform/core": "^2.1.0",
     "@unform/web": "^2.1.0",
     "aphrodite": "^2.4.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "i": "^0.3.6",
     "json-loader": "^0.5.7",

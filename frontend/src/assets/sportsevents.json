@@ -1,0 +1,22 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "name": "Event 1",
+            "image": "interiitsmeet.jpg",
+            "description": "Lorem Ipsum event 1. I dunno more so don't ask me."
+        },
+        {
+            "id": 2,
+            "name": "Event 2",
+            "image": "interiitsmeet.jpg",
+            "description": "Lorem Ipsum event 2. I dunno more so don't ask me."
+        },
+        {
+            "id": 3,
+            "name": "Event 3",
+            "image": "interiitsmeet.jpg",
+            "description": "Lorem Ipsum event 3. I dunno more so don't ask me."
+        }
+    ]
+}
