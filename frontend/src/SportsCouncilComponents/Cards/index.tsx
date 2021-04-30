@@ -22,8 +22,9 @@ const Clubs = () => {
         onCardChange={onCardChange}
         containerClassName="coll"
         cardClassName="data"
-        leftButton={<button style={{background: 'transparent', border: 'none', color: '#1f4baa', fontWeight: 'bold'}}>{"<"}</button>}
-        rightButton={<button style={{background: 'transparent', border: 'none', color: '#1f4baa', fontWeight: 'bold'}}>{">"}</button>}
+        
+        leftButton={<span style={{background: 'transparent', border: 'none', color: '#1f4baa', fontWeight: 'bold', fontSize: 'larger'}}>&lsaquo;</span>}
+        rightButton={<span style={{background: 'transparent', border: 'none', color: '#1f4baa', fontWeight: 'bold', fontSize: 'larger'}}>&rsaquo;</span>}
         style={{width: '90%', height: '100%', minHeight: '320px'}}
       >
         <div className="element" key={'child1'}>

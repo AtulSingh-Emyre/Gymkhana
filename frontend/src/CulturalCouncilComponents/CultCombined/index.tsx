@@ -32,10 +32,11 @@ function Compiled() {
         <BouncyDiv>
             <div className='MainCard' style={isTabletOrMobile?full:card}>
             <CultHeader />
+            <div style={{display:isTabletOrMobile?'initial':'none'}}><br/><br/><br/></div>
             <Gallery />
                 <MDBContainer fluid className="text-center">
-                        <MDBRow className="info-div" style={{width:'auto', marginLeft:'5%', marginRight:'5%', marginTop:'5%'}}>
-                            <MDBCol className="text-md-left" md="6" style={{width:'75%'}}>
+                        <MDBRow className="info-div" style={{width:'auto', marginLeft:'5%', marginRight:'5%', marginTop: '5%'}}>
+                            <MDBCol className="text-md-left" md="6">
                                 <h3 style={{color:'#8A003E'}}><strong>CULTURAL COUNCIL</strong></h3>
                                 <p className="para" style={{color:'#DF0054', fontWeight:'bolder'}}> 
                                     Welcome to the CULTURAL COUNCIL! Here we do a lot of cool stuff and our main motive is to enable 
@@ -43,7 +44,7 @@ function Compiled() {
                                     events like Music,Art,Dance etc is open welcoming students to showcase their hidden talents!
                                 </p>
                             </MDBCol>
-                            <MDBCol className="text-md-right" md="6" xs='10' style={{width: '15%'}}>
+                            <MDBCol className="text-md-right" md="6" xs='10'>
                                 <CultClubs />
                             </MDBCol>
                         </MDBRow>

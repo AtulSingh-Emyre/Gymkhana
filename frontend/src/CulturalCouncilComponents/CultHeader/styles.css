@@ -6,7 +6,7 @@
 }
 @media (max-width: 770px) {
     .navbarCult:not(.top-nav-collapse) {
-      background-color: white !important;
+      background-color: #880e4f !important;
     }
 }
 @media (min-width: 0px) {

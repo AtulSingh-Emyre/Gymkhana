@@ -5,7 +5,6 @@ import { useMediaQuery } from 'react-responsive';
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBMask, MDBView } from 'mdbreact';
 
 function Gallery() {
-    const width = window.innerWidth;
     const st : React.CSSProperties = {
         position: 'relative',
         width: '65%',
