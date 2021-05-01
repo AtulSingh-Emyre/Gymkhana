@@ -16,11 +16,11 @@ const Sportscouncil = () => {
     <div className="mainhome">
     <Header/>
     <div style={{position: 'relative', zIndex:3}}>
-      <div className='container maintextonpage' style={{marginLeft:'15%'}}>
-      <h1><strong>Sports Club IIT Dharwad</strong></h1>
+      <MDBContainer className='container maintextonpage' style={{marginLeft:'7.5%'}}>
+      <h1><strong>Sports Council IIT Dharwad</strong></h1>
       <h4>Khela Hobe xD.</h4>
       <a href="#feeds" className="godownbutton" style={{marginLeft:'18%', zIndex:3}}><i className="fa fa-angle-down" aria-hidden="true"></i></a>
-      </div>
+      </MDBContainer>
     <Homestyle/>
     </div>
     <h1 className="container" style={{color: '#1f4baa', fontWeight: 'bolder'}}>Feed</h1>

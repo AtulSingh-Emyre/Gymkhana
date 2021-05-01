@@ -1,0 +1,11 @@
+.nav-tabs .nav-link {
+    color: #1f4baa;
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+.modal-dialog .modal-content {
+    border: 0;
+    border-radius: 10px !important;
+    box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+}

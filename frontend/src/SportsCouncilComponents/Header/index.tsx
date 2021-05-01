@@ -3,6 +3,8 @@ import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { MDBCollapse, MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDBNavLink } from 'mdbreact';
 import Example from '../../components/Modal';
 import logo from "../../assets/iitdhlogo.png";
+import Events from '../Events';
+import SportsMeet from '../SportsMeet';
 import './style.css';
 
 const SportsHeader: React.FC = () => {
@@ -15,9 +17,9 @@ const SportsHeader: React.FC = () => {
                     </a>
                 </MDBNavbarNav>
                 <MDBNavbarNav right>
-                  <Nav.Link href="#feeds" className={'activeHover'} style={textCol}>FEEDS</Nav.Link>
-                  <Nav.Link href="#clubs" style={textCol} className={'activeHover'}>CLUBS</Nav.Link>
-                  <Nav.Link href="#footer" style={textCol} className={'activeHover'}>CONTACT US</Nav.Link>
+                  <Nav.Link className={'activeHover'} style={textCol}><Events/></Nav.Link>
+                  <Nav.Link style={textCol} className={'activeHover'}><SportsMeet/></Nav.Link>
+                  <Nav.Link href="#footer" style={textCol} className={'activeHover'}><button style={{backgroundColor: 'transparent', border: 'none', color: 'white'}}>CONTACT US</button></Nav.Link>
                 </MDBNavbarNav>
             </MDBNavbar>
         </div>

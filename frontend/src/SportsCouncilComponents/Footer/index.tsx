@@ -26,8 +26,6 @@ const TechFooter = () => {
             <p>
               <i className="fa fa-phone mr-3" /> +91 836 2212 839
             </p>
-          
-           
             </MDBCol>
             <MDBCol md="6">
             <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
