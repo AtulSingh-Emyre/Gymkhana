@@ -30,21 +30,9 @@ function SportsMeet() {
                             <MDBCol style={{marginTop: '2%'}}>
                                 <Cards/>
                             </MDBCol>
-                            <MDBCol style={{marginTop: '2%'}}>
-                                <Cards/>
-                            </MDBCol>
-                            <MDBCol style={{marginTop: '2%'}}>
-                                <Cards/>
-                            </MDBCol>
                         </MDBRow>
                         <br/>
                         <MDBRow style={{marginTop: '2%'}}>
-                            <MDBCol style={{marginTop: '2%'}}>
-                                <Cards/>
-                            </MDBCol>
-                            <MDBCol style={{marginTop: '2%'}}>
-                                <Cards/>
-                            </MDBCol>
                             <MDBCol style={{marginTop: '2%'}}>
                                 <Cards/>
                             </MDBCol>

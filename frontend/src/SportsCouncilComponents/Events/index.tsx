@@ -34,15 +34,9 @@ function Events() {
                 </Modal.Header>
                 <Modal.Body>
                     <Tabs justify defaultActiveKey="own">
-                        <Tab eventKey="own" title="Events at IIT Dharwad">
+                        <Tab eventKey="own" title="Institute Events">
                             <MDBContainer>
                                 <MDBRow style={{marginTop: '2%'}}>
-                                    <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
-                                    </MDBCol>
-                                    <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
-                                    </MDBCol>
                                     <MDBCol style={{marginTop: '2%'}}>
                                         <Cards/>
                                     </MDBCol>
@@ -52,12 +46,6 @@ function Events() {
                                 </MDBRow>
                                 <br/>
                                 <MDBRow style={{marginTop: '2%'}}>
-                                    <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
-                                    </MDBCol>
-                                    <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
-                                    </MDBCol>
                                     <MDBCol style={{marginTop: '2%'}}>
                                         <Cards/>
                                     </MDBCol>
@@ -76,21 +64,9 @@ function Events() {
                                     <MDBCol style={{marginTop: '2%'}}>
                                         <Cards/>
                                     </MDBCol>
-                                    <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
-                                    </MDBCol>
-                                    <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
-                                    </MDBCol>
                                 </MDBRow>
                                 <br/>
                                 <MDBRow style={{marginTop: '2%'}}>
-                                    <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
-                                    </MDBCol>
-                                    <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
-                                    </MDBCol>
                                     <MDBCol style={{marginTop: '2%'}}>
                                         <Cards/>
                                     </MDBCol>

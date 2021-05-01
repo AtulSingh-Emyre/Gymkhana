@@ -12,7 +12,7 @@ function EventsCard() {
                         Some quick example text to build on the card title and make
                         up the bulk of the card&apos;s content.
                     </MDBCardText>
-                    <a href="#"><button className="shadow-box-example hoverable" style={{backgroundColor: '#1f4baa', border: 'none', color: 'white', width: '30%', borderRadius: '5px'}}>Poster</button></a>
+                    <a href="#"><button className="shadow-box-example hoverable" style={{backgroundColor: '#1f4baa', border: 'none', color: 'white', borderRadius: '5px'}}>Poster</button></a>
                 </MDBCardBody>
             </MDBCard>
         </div>

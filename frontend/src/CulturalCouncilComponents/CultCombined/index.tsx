@@ -34,24 +34,10 @@ function Compiled() {
             <CultHeader />
             <div style={{display:isTabletOrMobile?'initial':'none'}}><br/><br/><br/></div>
             <Gallery />
-                <MDBContainer fluid className="text-center">
-                        <MDBRow className="info-div" style={{width:'auto', marginLeft:'5%', marginRight:'5%', marginTop: '5%'}}>
-                            <MDBCol className="text-md-left" md="6">
-                                <h3 style={{color:'#8A003E'}}><strong>CULTURAL COUNCIL</strong></h3>
-                                <p className="para" style={{color:'#DF0054', fontWeight:'bolder'}}> 
-                                    Welcome to the CULTURAL COUNCIL! Here we do a lot of cool stuff and our main motive is to enable 
-                                    students to pursue their hobbies,interests apart from the usual academics. Platform for various
-                                    events like Music,Art,Dance etc is open welcoming students to showcase their hidden talents!
-                                </p>
-                            </MDBCol>
-                            <MDBCol className="text-md-right" md="6" xs='10'>
-                                <CultClubs />
-                            </MDBCol>
-                        </MDBRow>
-                </MDBContainer>
-                <div className="footer" style={{width:'auto', marginLeft:'-10px', marginRight:'-10px', marginBottom:'-1%', alignItems:'center'}}>
-                    <CultFooter />
-                </div>
+            <CultClubs />
+            <div className="footer" style={{width:'auto', marginLeft:'-10px', marginRight:'-10px', marginBottom:'-1%', alignItems:'center'}}>
+                <CultFooter />
+            </div>
             </div>
         </BouncyDiv>
     )
