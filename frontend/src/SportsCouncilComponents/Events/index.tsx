@@ -2,11 +2,15 @@ import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle, 
 import { Button, Dropdown, Modal, Tab, Tabs } from 'react-bootstrap';
 import React, { useState } from 'react'
 import Cards from '../EventsCard'
+import info from '../../assets/sportsevents.json'
 import './styles.css'
 
 function Events() {
     const [events, setEvents] = useState(false);
     const [active, setActive] = useState("2021");
+
+    let data_own = active=="2021"?info.instituteEvents[2021]:active=="2020"?info.instituteEvents[2020]:active=="2019"?info.instituteEvents[2019]:info.instituteEvents[2018];
+    let data_inter = active=="2021"?info.interCollegeEvents[2021]:active=="2020"?info.interCollegeEvents[2020]:active=="2019"?info.interCollegeEvents[2019]:info.interCollegeEvents[2018];
 
     return (<>
         <MDBContainer>
@@ -38,19 +42,19 @@ function Events() {
                             <MDBContainer>
                                 <MDBRow style={{marginTop: '2%'}}>
                                     <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
+                                        <Cards data={data_own[0]} img={require("../../assets/interiitsmeet.jpg")}/>
                                     </MDBCol>
                                     <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
+                                        <Cards data={data_own[1]} img={require("../../assets/interiitsmeet.jpg")}/>
                                     </MDBCol>
                                 </MDBRow>
                                 <br/>
                                 <MDBRow style={{marginTop: '2%'}}>
                                     <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
+                                        <Cards data={data_own[2]} img={require("../../assets/interiitsmeet.jpg")}/>
                                     </MDBCol>
                                     <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
+                                        <Cards data={data_own[3]} img={require("../../assets/interiitsmeet.jpg")}/>
                                     </MDBCol>
                                 </MDBRow>
                             </MDBContainer>
@@ -59,19 +63,19 @@ function Events() {
                             <MDBContainer>
                                 <MDBRow style={{marginTop: '2%'}}>
                                     <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
+                                        <Cards data={data_inter[0]} img={require("../../assets/interiitsmeet.jpg")}/>
                                     </MDBCol>
                                     <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
+                                        <Cards data={data_inter[1]} img={require("../../assets/interiitsmeet.jpg")}/>
                                     </MDBCol>
                                 </MDBRow>
                                 <br/>
                                 <MDBRow style={{marginTop: '2%'}}>
                                     <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
+                                        <Cards data={data_inter[2]} img={require("../../assets/interiitsmeet.jpg")}/>
                                     </MDBCol>
                                     <MDBCol style={{marginTop: '2%'}}>
-                                        <Cards/>
+                                        <Cards data={data_inter[3]} img={require("../../assets/interiitsmeet.jpg")}/>
                                     </MDBCol>
                                 </MDBRow>
                             </MDBContainer>

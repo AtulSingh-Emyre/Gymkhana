@@ -1,18 +1,28 @@
 import { MDBCard, MDBCardBody, MDBCardText, MDBCardTitle } from 'mdbreact'
+import { Interface } from 'node:readline'
 import React, { useState } from 'react'
 
-function EventsCard() {
+interface Iprops {
+    data: {
+        id: number,
+        name: string,
+        desc: string,
+        link: string
+    },
+    img: string
+}
+
+function EventsCard(props: Iprops) {
     return (
         <div>
             <MDBCard>
-                <img className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg"/>
+                <img className="img-fluid" src={props.img}/>
                 <MDBCardBody>
-                    <MDBCardTitle>Card title</MDBCardTitle>
+                    <MDBCardTitle>{props.data.name}</MDBCardTitle>
                     <MDBCardText>
-                        Some quick example text to build on the card title and make
-                        up the bulk of the card&apos;s content.
+                        {props.data.desc}
                     </MDBCardText>
-                    <a href="#"><button className="shadow-box-example hoverable" style={{backgroundColor: '#1f4baa', border: 'none', color: 'white', borderRadius: '5px'}}>Poster</button></a>
+                    {props.data.link=="#"?<div/>:<a href={props.data.link}><button className="shadow-box-example hoverable" style={{backgroundColor: '#1f4baa', border: 'none', color: 'white', borderRadius: '5px'}}>Poster</button></a>}
                 </MDBCardBody>
             </MDBCard>
         </div>
