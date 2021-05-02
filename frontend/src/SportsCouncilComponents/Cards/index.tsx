@@ -22,7 +22,6 @@ const Clubs = () => {
         onCardChange={onCardChange}
         containerClassName="coll"
         cardClassName="data"
-        
         leftButton={<span style={{background: 'transparent', border: 'none', color: '#1f4baa', fontWeight: 'bold', fontSize: 'larger'}}>&lsaquo;</span>}
         rightButton={<span style={{background: 'transparent', border: 'none', color: '#1f4baa', fontWeight: 'bold', fontSize: 'larger'}}>&rsaquo;</span>}
         style={{width: '90%', height: '100%', minHeight: '320px'}}
