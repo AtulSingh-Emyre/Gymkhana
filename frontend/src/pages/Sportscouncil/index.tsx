@@ -23,7 +23,7 @@ const Sportscouncil = () => {
       </MDBContainer>
     <Homestyle/>
     </div>
-    <h1 className="container" style={{color: '#1f4baa', fontWeight: 'bolder'}}>Feed</h1>
+    <h1 className="container" id="feeds" style={{color: '#1f4baa', fontWeight: 'bolder'}}>Feed</h1>
     <br/>
     <MDBContainer>    
       <ClubsImages/>
