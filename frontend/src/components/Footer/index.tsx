@@ -24,9 +24,6 @@ const Footer = () => {
             </div>
             <p>
               <i className="fa fa-home mr-3" /> Indian Institute of Technology Dharwad, Karnataka, India - 580011
-
-
-
             </p>
             <p>
               <i className="fa fa-envelope mr-3" /> pro@iitdh.ac.in
@@ -34,7 +31,6 @@ const Footer = () => {
             <p>
               <i className="fa fa-phone mr-3" /> +91 836 2212 839
             </p>
-           
           </MDBCol>
           <MDBCol md="3" xs='10' >
             <h5 className="title">QUICK LINKS</h5>
@@ -68,9 +64,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Copyright: <a href="https://www.iitdh.ac.in"> IIT Dharwad </a>
         </MDBContainer>
       </div>
-      
     </MDBFooter>
-    
   );
 }
 
