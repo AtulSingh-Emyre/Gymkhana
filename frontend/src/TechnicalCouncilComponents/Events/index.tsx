@@ -13,19 +13,11 @@ interface IProps {
 const data = [{
     title:"Summer of Innovation",
     description: "A summer long technical event comprising of problem statements from multiple domains and contributed by each club.",
-    link: "https://oss2019.github.io/"
-},{
-    title: "Code Topia",
-    description: "A workshop for the freshers in coding domain in order to provide resources and basic understanding of fundamental concepts used in coding.",
-    link: ""
+    link: "https://oss2019.github.io/summer-of-innovation-2021/#/"
 },{
     title: "PARSEC",
     description: "The annual technical event of IIT Dharwad.",
     link: "https://parsec.iitdh.ac.in/"
-},{
-    title: "Arduino Workshop",
-    description: "An introductory workshop for freshers regarding arduino Uno board.",
-    link:""
 }];
 const Events = () => {
     const EventCard: React.FC<IProps>  = (props) => {
@@ -66,7 +58,7 @@ const Events = () => {
         )
     }
     const event = (<>
-    <div>
+    <div id={"eventsTech"}>
         <Row style={{margin:'auto'}}>
             {
                 data.map((info,index)=> (<EventCard info={{...info}} />))

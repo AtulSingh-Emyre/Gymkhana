@@ -4,7 +4,7 @@ import { Modal, Button, Form } from 'react-bootstrap';
 import './style.css';
 const TechFooter = () => {
   return (
-    <div style={{backgroundColor:'black', marginTop:-25}}>
+    <div style={{backgroundColor:'black', marginTop:-25}} id={"contactTech"}>
       <MDBFooter color="stylish-color-dark" className="font-small pt-4 mt-4 f">
         <MDBContainer fluid className="text-center text-md-left">
           <MDBRow>

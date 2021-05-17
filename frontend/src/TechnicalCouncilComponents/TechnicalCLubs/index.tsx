@@ -109,7 +109,7 @@ const TechnicalClubs = () => {
     }
     
     return (
-        <div style={{maxWidth:'100%'}}>
+        <div id={"clubsTech"} style={{maxWidth:'100%'}}>
                 <Row style={{maxWidth:'100%', margin:'auto'}}>
                 {
                     clubData.map((data:clubInfo,index:number)=> {

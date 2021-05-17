@@ -25,10 +25,10 @@ const Technicalcouncil: React.FC = () => {
           </div>
         </div>
         
-        <Parallax bgImage={require('../../assets/Technical Council/techMeet.jpeg')} strength={100}> 
+        {/* <Parallax bgImage={require('../../assets/Technical Council/techMeet.jpeg')} strength={100}> 
           <div style={{minHeight:300, width:'100%'}}>
           </div>
-        </Parallax>
+        </Parallax> */}
         <div style={{height:100, width:'100%', textAlign:'center', margin:'auto'}}>
           <h1 style={{margin:'auto', padding:25, color:'white', fontFamily:'Courier New'}}> <strong> Projects and Events </strong> </h1>
         </div>
@@ -37,10 +37,10 @@ const Technicalcouncil: React.FC = () => {
               <Events />
             </Container>
         </div>
-        <Parallax bgImage={require('../../assets/Technical Council/techMeet.jpeg')} strength={100}> 
+        {/* <Parallax bgImage={require('../../assets/Technical Council/IMG_4067.jpg')} strength={100}> 
           <div style={{minHeight:300, width:'100%'}}>
           </div>
-        </Parallax>
+        </Parallax> */}
         <TechFooter />
       </div>  
     </>

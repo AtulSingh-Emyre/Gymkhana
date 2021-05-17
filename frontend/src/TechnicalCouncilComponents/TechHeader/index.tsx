@@ -17,6 +17,7 @@ interface IProps {
 
 const TechHeader: React.FC<IProps> = (props) => 
 {
+
   const [collapseID, setcollapseID] = useState(false);
   const [isSticky, setSticky] = useState(false);
   const ref = useRef<any>(null);
@@ -37,6 +38,29 @@ const TechHeader: React.FC<IProps> = (props) =>
     setcollapseID(!collapseID);
   }
   
+  const goClubsOnPress = () => {  
+    const offsetTop  = document.getElementById("clubsTech")!.offsetTop;
+    window.scrollTo({
+      top: offsetTop-100, 
+      behavior: "smooth"
+    });
+  }
+  const goEventsOnPress = () => {  
+    const offsetTop  = document.getElementById("eventsTech")!.offsetTop;
+    window.scrollTo({
+      top: offsetTop-100, 
+      behavior: "smooth"
+    });
+  }
+  const goContactOnPress = () => {  
+    const offsetTop  = document.getElementById("contactTech")!.offsetTop;
+    window.scrollTo({
+      top: offsetTop-100, 
+      behavior: "smooth"
+    });
+  }
+
+
   const overlay = (
     <div
       id='sidenav-overlay'
@@ -71,10 +95,10 @@ const TechHeader: React.FC<IProps> = (props) =>
         <MDBNavbarToggler onClick={toggleCollapse}/>
         <MDBCollapse id='navbarCollapse' className={'collapseTech'} isOpen={collapseID} navbar>
           <MDBNavbarNav right>
-          <Nav.Link href="/" className={'activeHover'}  style={textCol}> CLUBS</Nav.Link>
-          <Nav.Link href="/office" className={'activeHover'} style={textCol}>EVENTS</Nav.Link>
-            <Nav.Link href="/notices" style={textCol} className={'activeHover'}>FESTS</Nav.Link>
-            <Nav.Link href="/calendar" style={textCol} className={'activeHover'}>CONTACT</Nav.Link>
+          <Nav.Link onClick={goClubsOnPress} className={'activeHover'}  style={textCol}> CLUBS</Nav.Link>
+          <Nav.Link onClick={goEventsOnPress} className={'activeHover'}  style={textCol}> EVENTS</Nav.Link>
+            <Nav.Link href="https://parsec.iitdh.ac.in/" style={textCol} className={'activeHover'}>FESTS</Nav.Link>
+            <Nav.Link onClick={goContactOnPress} style={textCol} className={'activeHover'}>CONTACT</Nav.Link>
             </MDBNavbarNav>
           </MDBCollapse>
       </MDBNavbar>

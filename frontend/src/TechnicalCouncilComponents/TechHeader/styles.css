@@ -1,7 +1,9 @@
-.navbartop{
+/* .navbartop{
     background-image: linear-gradient(to top, #FB8C00,#FFA726);
-}
-
+} */
+/* .navbar {
+  background-color: #263238;
+} */
 .sticky {
   position: sticky;
   top: 0;
