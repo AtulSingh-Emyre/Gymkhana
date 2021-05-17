@@ -1,49 +1,89 @@
 import React, { useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
+// import { Container } from 'react-bootstrap/lib/Tab';
 import { StackedCarousel } from 'react-stacked-carousel'
 import 'react-stacked-carousel/dist/index.css';
 import './styles.css';
+
+const data = [
+    {
+        title: 'Summer of Innovation, 2021',
+        desc: 'A technical event lasting for the entirety of summer which involves release of problem statements across several domains.',
+        img: 'https://placeimg.com/640/480/arch',
+        href: 'https://oss2019.github.io/summer-of-innovation-2021/#/'
+    },{
+        title: 'Summer of innovation, 2021',
+        desc: '   A technical event lasting for the entirety of summer which involves release of problem statements across several domains.',
+        img: 'https://placeimg.com/640/480/arch',
+        href: 'https://oss2019.github.io/summer-of-innovation-2021/#/'
+    },{
+        title: 'Summer of innovation, 2021',
+        desc: '   A technical event lasting for the entirety of summer which involves release of problem statements across several domains.',
+        img: 'https://placeimg.com/640/480/arch',
+        href: 'https://oss2019.github.io/summer-of-innovation-2021/#/'
+    }
+];
+
+
 const Feed = () => {
     const [card, setCard] = useState(null);
     const onCardChange = (event:any) => {
         console.log("Card", event);
     }
     return (
-        <div style={{width:'90%', margin:'auto', marginTop:50}}>
+        <Container style={{
+            height:'100%',
+            width:'100%', 
+            margin:'auto', marginTop:50}}>
+        <div >
+        <Row style={{margin:'auto', marginTop:10}}>
+            <h2 style={{color: 'blueviolet', textAlign:'center',margin:'auto', marginBottom:20}}>
+                Recent Activity
+            </h2>
+        </Row>
         <Row>
-        <Col xl ={6} md = {4} xs={12}>
-            <Row>
-            <h1>
-                Feed
-            </h1>
-            </Row>
-            <Row style={{margin:'auto', marginTop:50}}>
-            <h3>
-                Summer of innovation II
-            </h3>
-            <p>
-                A technical event lasting for the entirety of summer which involves
-                release of problem statements across several domains.
-            </p>
-            </Row>
-        </Col>
-        <Col xl ={6} md = {8} xs={12}>   
-        <div style={{width:'100%'}}> 
+        <Col xl ={12} md = {12} xs={12}>   
+        <div style={{width:'100%', height:'100%'}}> 
         <StackedCarousel
-          autoRotate={false}
+          autoRotate={true}
           cardClassName="homeFeedCard"
           onCardChange={onCardChange}
-          style={{ width:'90%', height:'100%', minHeight:320}}
+          style={{ width:'90%', height:'100%', minHeight:320, backgroundColor:'white'}}
           >
-          <img key="img1" src="https://placeimg.com/640/480/arch" width={1000} height={1000} />
-          <img key="img2" src="https://placeimg.com/640/480/tech" width={1000} height={1000} />
-          <img key="img3" src="https://placeimg.com/640/480/nature" width={1000} height={1000} />
-          <img key="img4" src="https://placeimg.com/640/480/animals" width={1000} height={1000} />
+              {
+                  data.map((cardData) => <div style={{
+                    backgroundColor:'white',
+                    color:'black', 
+                    height:'100%', position:'relative'}}>
+                    <Row style={{height:'100%'}}>
+                        <Col xl={4} md={5} xs={12}>
+                        <div style={{width:'100%', height:'100%'
+                    ,backgroundImage:`url(`+cardData.img+`)`,
+                    backgroundSize:'cover'
+                    }}/>
+                        {/* <img key="img1" src={cardData.img} height={500} />   */}
+                
+                        </Col>
+                        <Col xl ={8} md = {7} xs={12} >
+                            <Row style={{margin:'auto', padding:10, marginTop:50, zIndex:2, position:'relative'}}>
+                            <h3>
+                            {cardData.title}
+                            </h3>
+                            <p>
+                            {cardData.desc}
+                            </p>
+        
+                            </Row>
+                        </Col>
+                    </Row>
+                </div>)
+              }
         </StackedCarousel>
         </div>
         </Col>
         </Row>
         </div>
+        </Container>
     );
 }
 

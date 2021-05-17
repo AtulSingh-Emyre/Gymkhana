@@ -1,14 +1,16 @@
 .bbtn{
-    border-radius: 52px;
+    /* border-radius: 5px; */
     background-color: #FF6F00;
   border: none;
   color: white;
-  padding: 20px;
+  padding: 5px;
+  width:100%;
+  max-height: 50px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  /* text-decoration: none; */
+  /* display: inline-block; */
   font-size: 16px;
-  margin: 4px 2px;
+  /* margin: 4px 2px; */
 }
 
 .bbtn1{
@@ -39,7 +41,7 @@ margin: 4px 2px;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.90;
+    /* opacity: ; */
     background-attachment: fixed; 
 }
 
