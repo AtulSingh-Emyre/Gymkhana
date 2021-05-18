@@ -12,7 +12,7 @@ const Calendar: React.FC = () => {
     <Header active={{calendar:true}} />
     <PageStarter heading={'STUDENTS ACTIVITY CALENDAR'}>
       <div style={{maxWidth:'100%', height:'auto', padding:'2.5%'}}>
-        <EventsCalendar editable={true}/>
+        <EventsCalendar editable={false}/>
       </div>  
     </PageStarter>
       <Footer />

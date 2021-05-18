@@ -5,7 +5,6 @@ import { CSSTransition } from 'react-transition-group';
 import HorizontalTimelineCustom from "../HorizontalTImelineCustom/index";
 
 const data = [
-    
     {
         year: '2016 - 2017',
         time:'2016',

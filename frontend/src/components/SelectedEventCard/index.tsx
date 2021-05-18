@@ -55,7 +55,13 @@ const SelectedEventCard : React.FC<IProp> = (props) => {
             </Card.Text>
             <Card.Link href={props.event.poster}>Poster</Card.Link>
             <Card.Link href={props.event.result}>Result</Card.Link>
-            <Button onClick={() => setvisible(true)} >Edit</Button> <Button onClick={deleteEvent}>Delete</Button>
+            {props.editable? <>
+              <br/>
+              <Button onClick={() => setvisible(true)} >Edit</Button> <Button onClick={deleteEvent}>Delete</Button>
+
+            </>
+            
+            :<></>}
         </Card.Body>
         {visible?modal:<></>}
     </Card>

@@ -38,6 +38,7 @@ const Card = () => {
           <th>Time</th>
           <th>Venue</th>
           <th>Attachment</th>
+          
         </tr>
       </thead>
       <tbody>

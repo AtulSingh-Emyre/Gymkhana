@@ -60,7 +60,14 @@ export class UserController {
   static async login(req: Request, res: Response, next: NextFunction) {
     try {
       const iden = req.body.iden;
-      const valid = ['gstech', 'gssports', 'gscult'];
+      const valid = [
+        'gstech',
+        'gssports',
+        'gscult',
+        'gsacad',
+        'gsha',
+        'messcommittee'
+      ];
       if (valid.includes(iden)) {
         return res.status(200).json({
           success: true

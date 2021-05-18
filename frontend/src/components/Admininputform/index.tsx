@@ -16,13 +16,13 @@ const Admininputform = (props: IProp) => {
     council: false,
     description: false,
     venue:false,
-    organiser: false
+    organizer: false
   });
   const [errMssg, seterrMssg] = useState("");
   const [state, setState] = useState({
     title: props.postData?props.postData.title:"",
     council: props.postData?props.postData.council:"",
-    organiser: props.postData?props.postData.organiser:"",
+    organizer: props.postData?props.postData.organizer:"",
     description: props.postData?props.postData.description: "",
     venue: props.postData?props.postData.venue:"",
     poster: props.postData?props.postData.poster:"",
@@ -49,9 +49,9 @@ const Admininputform = (props: IProp) => {
         toast("Please enter the description of the event");
         return;
       }
-      else if(state.organiser.length == 0) {
+      else if(state.organizer.length == 0) {
         toast("Please enter the name of the organising body");
-        seterror({...error, organiser:true});
+        seterror({...error, organizer:true});
         return;
       }
       else if(state.venue.length == 0) {
@@ -88,9 +88,9 @@ const Admininputform = (props: IProp) => {
         toast("Please enter the description of the event");
         return;
       }
-      else if(state.organiser.length == 0) {
+      else if(state.organizer.length == 0) {
         toast("Please enter the name of the organising body");
-        seterror({...error, organiser:true});
+        seterror({...error, organizer:true});
         return;
       }
       else if(state.venue.length == 0) {
@@ -150,9 +150,9 @@ const Admininputform = (props: IProp) => {
             <Form.Label>Council</Form.Label>
             <Form.Control type="text" placeholder="Enter council name" name="council" value={state.council} onChange={handleChange} />
           </Form.Group>
-          <Form.Group controlId="formBasicorganiser">
-            <Form.Label>Organiser</Form.Label>
-            <Form.Control type="text" placeholder="Enter organiser name" name="organiser" value={state.organiser} onChange={handleChange} />
+          <Form.Group controlId="formBasicorganizer">
+            <Form.Label>Organizer</Form.Label>
+            <Form.Control type="text" placeholder="Enter organizer name" name="organizer" value={state.organizer} onChange={handleChange} />
           </Form.Group>
           <Row>
             <Col xl={6} md={6} xs={12}>

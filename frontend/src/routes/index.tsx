@@ -17,18 +17,16 @@ import Admininput from '../pages/Admininput';
 
 const Routes: React.FC = () => (
   <Switch>
-    <Route path="/" exact component={Dashboard} />
-    
+    <Route path="/" exact component={Dashboard} />  
     <Route path="/notices"  component={Notices} />
     <Route path="/calendar"  component={Calendar} />
     <Route path="/office"  component={Officebearers} />
     <Route path="/technical"  component={Technicalcouncil} />
-    <Route path="/sports"  component={Sportscouncil} />
-    <Route path="/cultural"  component={Culturalcouncil} />
-    <Route path="/hostel" component={Hostelcouncil} />
+    {/* <Route path="/sports"  component={Sportscouncil} /> */}
+    {/* <Route path="/cultural"  component={Culturalcouncil} /> */}
+    {/* <Route path="/hostel" component={Hostelcouncil} /> */}
     <Route path="/admin"  component={Admin} />
     <Route path="/addevent"  component={Admininput} />
-    
   </Switch>
 );
 
