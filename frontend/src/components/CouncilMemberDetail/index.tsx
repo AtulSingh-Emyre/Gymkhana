@@ -7,7 +7,7 @@ import acadImg from '../../assets/CouncilMems/gs-Acad.jpg';
 import cultImg from '../../assets/CouncilMems/gs-Cult.jpg';
 import hostelImg from '../../assets/CouncilMems/gs-Hostel.jpg';
 import sportsImg from '../../assets/CouncilMems/gs-Sports.jpg';
-import messImg from '../../assets/CouncilMems/gs-Mess.jpg';
+import messImg from '../../assets/CouncilMems/gs-Mess.png';
 import './style.css'
 
 const data = [
@@ -58,10 +58,10 @@ const data = [
     insta: 'https://www.instagram.com/yogesh_dhyani0945',
     image: sportsImg
   }, {
-    name: 'Savsaviya Brinal Sureshbhai',
+    name: 'Savsaviya Brinal S',
     phone: 7892128329,
     email: 'messcommittee@iitdh.ac.in',
-    councilPost: 'Mess Secretary',
+    councilPost: 'Mess Affairs',
     website: 'https://www.google.com/',
     linkedIn: 'https://www.linkedin.com/in/brinal-savsaviya-b851a5193/?originalSubdomain=in',
     insta: 'https://www.instagram.com/brinal_8055',
