@@ -12,7 +12,7 @@ interface IProps {
 }
 const data = [{
     title:"Summer of Innovation",
-    description: "A summer long technical event comprising of problem statements from multiple domains and contributed by each club.",
+    description: "A summer long technical event comprising of problem statements from multiple domains.",
     link: "https://oss2019.github.io/summer-of-innovation-2021/#/"
 },{
     title: "PARSEC",

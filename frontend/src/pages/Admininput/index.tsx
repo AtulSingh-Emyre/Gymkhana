@@ -7,7 +7,6 @@ import EventsCalendar from '../../components/EventsCalendar';
 import { RootState, useAppDispatch, useAppSelector } from '../../Store';
 
 interface Iprop {
-  // LoggedIn: boolean
 }
 
 const Admininput: React.FC = (props:Iprop) => {

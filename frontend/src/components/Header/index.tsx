@@ -2,7 +2,7 @@ import { MDBCollapse, MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDB
 import React, { useState } from 'react';
 import { Nav, NavDropdown} from 'react-bootstrap';
 import logo from "../../assets/iitdhlogo.png";
-import Example from '../Modal';
+import Example from '../ContactForm';
 import './style.css';
 
 interface IProps {

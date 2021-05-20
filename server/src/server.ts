@@ -5,11 +5,14 @@ import { Response } from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import nodemailer from 'nodemailer';
 //server file imports
 
 import { getEnvironmentVariables } from './environments/env';
 import EventRouter from './routers/EventRouter';
 import UserRouter from './routers/UserRouter';
+import ContactRouter from './routers/ContactRouter';
+import { ContactEmail } from './middlewares/ContactEmail';
 
 export class Server {
   public app: express.Application = express();
@@ -23,6 +26,7 @@ export class Server {
   setConfigurations() {
     this.connectMongoDb();
     this.configureBodyParser();
+    this.configureNodemailer();
     this.app.use(cors());
     console.log('Configurations have been successfully setup');
   }
@@ -44,10 +48,28 @@ export class Server {
       console.log('connection successfully made with database');
     });
   }
-
+  configureNodemailer() {
+    const contactEmail = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'contact.gymkhana.iitdh@gmail.com',
+        pass: 'contact2$2$'
+      }
+    });
+    contactEmail.verify((error: any) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Ready to Send');
+      }
+    });
+    const nodemailerData = ContactEmail.getInstance();
+    nodemailerData.setContactEmail(contactEmail);
+  }
   setRoutes() {
     this.app.use('/events', EventRouter);
     this.app.use('/user', UserRouter);
+    this.app.use('/contact', ContactRouter);
   }
 
   error404Handler() {

@@ -55,7 +55,7 @@ const TechnicalClubs = () => {
     const ClubView: React.FC<Iprop> = (props) => {
        const [hover, sethover] = useState(false); 
        const OnHover = () =>  (<>
-        <MDBCard style={{width:250,height:250, backgroundColor:'yellow', padding:10}}>    
+        <MDBCard style={{width:260,height:260, backgroundColor:'yellow', padding:10}}>    
         <h3 className="font-weight-bold dark-grey-text mb-3 p-0" style={{textAlign:'center'}}>
           <a href="#!">{props.clubData.name}</a>
         </h3>
@@ -87,20 +87,20 @@ const TechnicalClubs = () => {
         </div>
         
               </MDBCard>
-              <div style={{height:250, width:250, backgroundImage:'url('+props.clubData.src+')', backgroundSize: 'cover', marginLeft:5, marginTop:-245}}>
-        </div>      
+              <div style={{height:260, width:260, backgroundColor:'white', backgroundImage:'url('+props.clubData.src+')', backgroundSize: 'cover', marginLeft:15, marginTop:-245}} />
+        {/* </div>       */}
      </>)
 
 
-       return( <div onMouseEnter={()=>sethover(true)} onMouseLeave={()=>sethover(false)} style={{height:265, width:255, maxWidth:'100%', margin:'auto'}}> 
+       return( <div onMouseEnter={()=>sethover(true)} onMouseLeave={()=>sethover(false)} style={{height:275, width:265, maxWidth:'100%', margin:'auto'}}> 
         {
             hover? <OnHover />:
         <>
-        <div style={{height:250, width:250, backgroundColor:'yellow'}}>
-        </div>
-        <div style={{height:250, width:250, backgroundColor:'blue', marginLeft:5, marginTop:-245}}>
+        <MDBCard className={"techclubcard_dets"} style={{height:260, width:260, backgroundColor:'yellow'}} />
+        
+        <div style={{height:260, width:260, backgroundColor:'white', marginLeft:15, marginTop:-245, position:'relative', zIndex:1}}>
           <div>
-            <img src={props.clubData.src} width={250} height={250} />
+            <img src={props.clubData.src} width={260} height={260} />
           </div>
         </div>
         </>
@@ -114,7 +114,7 @@ const TechnicalClubs = () => {
                 {
                     clubData.map((data:clubInfo,index:number)=> {
                         return (
-                        <Col xl={4} xs={12} md={4} style={{margin:'auto', paddingTop:25}}>
+                        <Col xl={4} xs={12} md={6} style={{margin:'auto',marginTop:15,paddingTop:25}}>
                         <ClubView  clubData={data}/>
                         </Col>
                         )

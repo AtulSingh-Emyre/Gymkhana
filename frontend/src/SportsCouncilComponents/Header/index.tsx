@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { MDBCollapse, MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDBNavLink } from 'mdbreact';
-import Example from '../../components/Modal';
+import Example from '../../components/ContactForm';
 import logo from "../../assets/iitdhlogo.png";
 import Events from '../Events';
 import SportsMeet from '../SportsMeet';

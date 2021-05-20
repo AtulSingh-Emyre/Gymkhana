@@ -2,7 +2,7 @@ import { MDBCollapse, MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDB
 import React, { useState } from 'react';
 import { Nav, NavDropdown} from 'react-bootstrap';
 import logo from "../../assets/iitdhlogo.png";
-import Example from '../../components/Modal';
+// import Example from '../../components/ContactForm';
 import GForm from '../GrievanceForm';
 import './style.css';
 
@@ -64,7 +64,7 @@ const Header: React.FC<IProps> = (props) =>
           {/* <Nav className="ml-auto" style={{ marginTop: 'auto', marginBottom: 'auto' }} defaultActiveKey={'/'} > */}
           <MDBNavbarNav right>
             <Nav.Link href="#" style={textCol} className={'activeHover'}><GForm/></Nav.Link>
-            <Nav.Link href="#" style={textCol} className={'activeHover'}><Example /></Nav.Link>
+            {/* <Nav.Link href="#" style={textCol} className={'activeHover'}><Example /></Nav.Link> */}
           </MDBNavbarNav>
           {/* </Nav> */}
           </MDBCollapse>
