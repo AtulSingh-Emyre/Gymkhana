@@ -56,7 +56,7 @@ const Homepage = () => {
       <CSSTransition in={true} appear={true} timeout={900} classNames='fade'>
         <Container style={{margin:'auto', width:'90%', 
         padding:20,
-        marginTop:'-10vh', 
+        marginTop:'-5vh', 
         position:'relative',
         backgroundColor:'white', zIndex:2}} 
         
@@ -103,7 +103,7 @@ const jumb : React.CSSProperties = {
   // paddingTop: 50,
   // backgroundImage:`url('https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-car-activity-board-background-material-image_155752.jpg')`,
   // backgroundImage:`url('https://png.pngtree.com/thumb_back/fw800/back_our/20190617/ourmid/pngtree-outdoor-publicity-board-background-image_127489.jpg')`,
-  backgroundImage: `url('./homepage-bg.jpg')`,
+  backgroundImage: `url('./homepage-bg.jpeg')`,
   display: 'flex',
   // backgroundImage: homeimage,
   zIndex: 1,

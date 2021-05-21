@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button, Form } from 'react-bootstrap';
-import { MdEmail } from 'react-icons/md';
+import { Modal, Button, Form, FormControl } from 'react-bootstrap';
 import { toast, ToastContainer } from 'react-toastify';
 import { ContactServices } from '../../services/ContactServices';
 
@@ -22,7 +21,7 @@ export interface IContactQuery {
     mssg: string;
 }  
 const defaultVal : IContactQuery = {
-    council: councils.acad,
+    council: councils.tech,
     email: "",
     mssg: "",
     name: "",
@@ -32,7 +31,7 @@ const defaultVal : IContactQuery = {
 const ContactForm = () => {
     const [show, setShow] = useState(false);
     const [contactQuery, setContactQuery] = useState<IContactQuery>({
-        council: councils.acad,
+        council: councils.tech,
         email: "",
         mssg: "",
         name: "",
@@ -64,9 +63,7 @@ const ContactForm = () => {
 
     return (
         <>
-            <p onClick={handleShow}>
-                CONTACT
-        </p>
+        <p onClick={handleShow}>CONTACT</p>
             <ToastContainer/>
             <Modal
                 show={show}
@@ -79,16 +76,20 @@ const ContactForm = () => {
                     <Modal.Title>Write To Us</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form>
-                        <Form.Group controlId="ContactFormForm.ControlInput1">
+                    <form>
+                        <Form.Group 
+                        controlId="ContactFormForm.ControlInput1"
+                        >
                             <Form.Label>Name</Form.Label>
-                            <Form.Control className='form-input' type='text' placeholder='Name' 
+                            <FormControl className='form-input' type='text' placeholder='Name' 
                               value={contactQuery.name} 
                               onChange={
                                 (event: any) => {
                                     console.log(event.target.value);
                                     setContactQuery({...contactQuery, name: event.target.value});
-                                }} />
+                                }} 
+                                />
+                                 <Form.Text className="text-muted"></Form.Text>
                         </Form.Group>
                         <Form.Group controlId="ContactFormForm.ControlInput1">
                             <Form.Label>Email</Form.Label>
@@ -97,7 +98,9 @@ const ContactForm = () => {
                                 (event: any) => {
                                     console.log(event.target.value);
                                     setContactQuery({...contactQuery, email: event.target.value});
-                                }} />
+                                }} 
+                                
+                                />
                         
                         </Form.Group>
                         <Form.Group controlId="ContactFormForm.ControlInput1">
@@ -113,7 +116,7 @@ const ContactForm = () => {
 
                         <Form.Group controlId="ContactFormForm.ControlTextarea1">
                             <Form.Label>Message</Form.Label>
-                            <Form.Control as="textarea" rows={3}       value={contactQuery.mssg} 
+                            <FormControl as="textarea" rows={3}       value={contactQuery.mssg} 
                               onChange={
                                 (event: any) => {
                                     console.log(event.target.value);
@@ -121,13 +124,13 @@ const ContactForm = () => {
                                 }}/>
                         
                         </Form.Group>
-                    </Form>
+                    </form>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
             </Button>
-                    <Button variant="primary">Submit</Button>
+                    <Button variant="primary" onClick={handleSubmit}>Submit</Button>
                 </Modal.Footer>
             </Modal>
         </>
