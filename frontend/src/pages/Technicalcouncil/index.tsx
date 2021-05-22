@@ -6,6 +6,7 @@ import TechFooter from '../../TechnicalCouncilComponents/TechFooter';
 import TechnicalClubs from '../../TechnicalCouncilComponents/TechnicalCLubs';
 import { Parallax } from 'react-parallax';
 import { Container } from 'react-bootstrap';
+import TechGallery from '../../TechnicalCouncilComponents/TechGallery';
 
 // import "./styles.css"
 const Technicalcouncil: React.FC = () => {
@@ -41,6 +42,10 @@ const Technicalcouncil: React.FC = () => {
           <div style={{minHeight:300, width:'100%'}}>
           </div>
         </Parallax> */}
+        <div style={{height:100, width:'100%', textAlign:'center', margin:'auto'}}>
+          <h1 style={{margin:'auto', padding:5, color:'white', fontFamily:'Courier New'}}> <strong> Gallery </strong> </h1>
+        </div>
+        <TechGallery />
         <TechFooter />
       </div>  
     </>

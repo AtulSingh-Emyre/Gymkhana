@@ -10,6 +10,7 @@ interface clubInfo {
     src: string;
     bg:string;
     secy:string;
+    secyImg: string;
     desc:string;
     phone:number;
     email:string;
@@ -25,6 +26,7 @@ const clubData = [
         src: require('../../assets/Technical Council/Clubs/codeGeass.png'),
         bg:'black',
         secy: 'Omkar DJ',
+        secyImg: require('../../assets/Technical Council/Clubs/codeGeass.png'),
         desc: 'Coding Club',
         phone: 8861860976,
         email: 'codingclub@iitdh.ac.in'
@@ -34,6 +36,7 @@ const clubData = [
         src: require('../../assets/Technical Council/Clubs/AI.jpeg'),
         bg:'#101e38',
         secy: 'Akhilesh Bharadwaj',
+        secyImg: require('../../assets/Technical Council/Clubs/AI_secy.png'),
         desc: 'AI and Datascience club',
         phone: 1233454322,
         email: 'aiclub@iitdh.ac.in'
@@ -42,11 +45,11 @@ const clubData = [
         src: require('../../assets/Technical Council/Clubs/AI.jpeg'),
         bg:'#101e38',
         secy: 'Sohan Anisetty',
+        secyImg: require('../../assets/Technical Council/Clubs/Robotics_secy.jpg'),
         desc: 'Robotics Club',
         phone: 1233454322,
         email: 'robotics@iitdh.ac.in'
     }
-  
   ]
   
 
@@ -59,7 +62,7 @@ const TechnicalClubs = () => {
         <h3 className="font-weight-bold dark-grey-text mb-3 p-0" style={{textAlign:'center'}}>
           <a href="#!">{props.clubData.name}</a>
         </h3>
-        <Image src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" roundedCircle width={100} height={100} style={{margin:'auto', marginTop:3}} />
+        <Image src={props.clubData.secyImg} roundedCircle width={100} height={100} style={{margin:'auto', marginTop:3}} />
         <h6 className="font-weight-bold" style={{textAlign:'center', paddingTop:10}}>
          {props.clubData.desc}
         </h6> 
