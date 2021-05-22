@@ -9,7 +9,7 @@ const data = [
     {
         title: 'Summer of Innovation, 2021',
         desc: 'A technical event lasting for the entirety of summer which involves release of problem statements across several domains.',
-        img: 'https://placeimg.com/640/480/arch',
+        img: require('../../assets/Feed/Summer_Of_Innovation.png'),
         href: 'https://oss2019.github.io/summer-of-innovation-2021/#/'
     },{
         title: 'Summer of innovation, 2021',
