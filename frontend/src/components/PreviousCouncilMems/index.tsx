@@ -34,15 +34,5 @@ const PreviousCouncilMems = (props : Ipropss) => {
         
     );
 }
-// const container : React.CSSProperties = {
-//     // margin:'5%',
-//     alignItems:'center',
-//     alignSelf:'center',
-//     width:'100%',
-//     height:'100%',
-//     padding:5,
-//     margin:'auto',
-// }
-
 
 export default PreviousCouncilMems;
