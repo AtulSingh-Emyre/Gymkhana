@@ -6,6 +6,8 @@ import "react-image-gallery/styles/css/image-gallery.css";
 const images = [
   {
     original: require('../../assets/Technical Council/Gallery/img1.jpg'),
+    height:'100%',
+    width:'100%',
     thumbnail: require('../../assets/Technical Council/Gallery/img1.jpg'),
   },
   {

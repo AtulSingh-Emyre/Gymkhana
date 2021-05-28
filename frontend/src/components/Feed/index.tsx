@@ -13,14 +13,14 @@ const data = [
         href: 'https://oss2019.github.io/summer-of-innovation-2021/#/'
     },{
         title: 'Inter Branch Chess Tournament', 
-        desc: 'A team based rapid chess tournament with prizes worth 2k.',
-        img: 'https://placeimg.com/640/480/arch',
-        href: 'https://oss2019.github.io/summer-of-innovation-2021/#/'
+        desc: 'Buckle up for a team based inter branch rapid chess tournament with prizes worth 2k.',
+        img: require('../../assets/Feed/Inter_Branch_Chess.jpeg'),
+        href: ''
     },{
-        title: 'Summer of innovation, 2021',
-        desc: '   A technical event lasting for the entirety of summer which involves release of problem statements across several domains.',
-        img: 'https://placeimg.com/640/480/arch',
-        href: 'https://oss2019.github.io/summer-of-innovation-2021/#/'
+        title: 'A Musical Evening with Calvin Jerome Suares',
+        desc: 'An audience pleaser music show with an amazing and talented singer Calvin Jerome Suares to rock the evening!',
+        img: require('../../assets/Feed/Calvin_Jerome_Suares_Live_Show.png'),
+        href: 'https://www.youtube.com/channel/UCrx2MGi5Za6RoMILjTmT9Cg'
     }
 ];
 
@@ -54,7 +54,10 @@ const Feed = () => {
                   data.map((cardData) => <div style={{
                     backgroundColor:'white',
                     color:'black', 
-                    height:'100%', position:'relative'}}>
+                    height:'100%', 
+                    position:'relative'}}
+                    
+                    >
                     <Row style={{height:'100%'}}>
                         <Col xl={4} md={5} xs={12}>
                         <div style={{width:'100%', height:'100%'
@@ -66,9 +69,10 @@ const Feed = () => {
                         </Col>
                         <Col xl ={8} md = {7} xs={12} >
                             <Row style={{margin:'auto', padding:10, marginTop:50, zIndex:2, position:'relative'}}>
+                            <a href={cardData.href}>
                             <h3>
                             {cardData.title}
-                            </h3>
+                            </h3></a>
                             <p>
                             {cardData.desc}
                             </p>
