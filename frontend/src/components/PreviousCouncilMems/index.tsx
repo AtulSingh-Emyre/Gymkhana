@@ -20,7 +20,7 @@ const PreviousCouncilMems = (props : Ipropss) => {
     return(
         <>
         <h5 style={{textAlign:'center'}}> <strong> Office Bearers : {props.user.year} </strong></h5>
-        <Container style={{margin:'auto', padding:'2.5%', alignItems:'center'}}>
+        <Container style={{margin:'auto', padding:'2.5%', alignItems:'center',fontSize:'22px'}}>
         <Row style={{width:'100%', alignSelf:'center', alignItems:'center', margin:'0 auto'}}>
         {props.user.gsTech?  <div style = {{ width:'100%', textAlign:'center'}}>General Secretary, Technical Affairs: {props.user.gsTech} <br/></div>:<></>}
         {props.user.gsAcad? <div style = {{ width:'100%', textAlign:'center'}}> General Secretary Academic Affairs: {props.user.gsAcad}<br/></div>:<></>}
