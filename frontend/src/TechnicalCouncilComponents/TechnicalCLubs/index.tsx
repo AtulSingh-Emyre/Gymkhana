@@ -3,12 +3,14 @@ import React, { useState } from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { Background } from 'react-parallax';
 import { Parallax } from 'react-parallax';
+import { toast, ToastContainer } from 'react-toastify';
 
 import "./styles.css"
 interface clubInfo {
     name : string;
     src: string;
     bg:string;
+    linkedin:string;
     secy:string;
     secyImg: string;
     desc:string;
@@ -25,6 +27,7 @@ const clubData = [
         name: 'Code Geass',
         src: require('../../assets/Technical Council/Clubs/codeGeass.png'),
         bg:'black',
+        linkedin:'https://www.linkedin.com/in/iamodj/',
         secy: 'Omkar DJ',
         secyImg: require('../../assets/Technical Council/Clubs/code_secy.jpg'),
         desc: 'Coding Club',
@@ -36,6 +39,7 @@ const clubData = [
         src: require('../../assets/Technical Council/Clubs/AI.jpeg'),
         bg:'#101e38',
         secy: 'Akhilesh Bharadwaj',
+        linkedin: 'https://www.linkedin.com/in/akhilesh-k-bharadwaj-a11a6b1a0/',
         secyImg: require('../../assets/Technical Council/Clubs/AI_secy.png'),
         desc: 'AI and Datascience club',
         phone: 1233454322,
@@ -44,6 +48,7 @@ const clubData = [
         name: 'Robotics Club',
         src: require('../../assets/Technical Council/Clubs/AI.jpeg'),
         bg:'#101e38',
+        linkedin: 'https://www.linkedin.com/in/sohan-anisetty-b10188175/',
         secy: 'Sohan Anisetty',
         secyImg: require('../../assets/Technical Council/Clubs/Robotics_secy.jpg'),
         desc: 'Robotics Club',
@@ -57,18 +62,18 @@ const clubData = [
 const TechnicalClubs = () => {
     const ClubView: React.FC<Iprop> = (props) => {
        const [hover, sethover] = useState(false); 
-       
        const OnHover = () =>  (<>
+       
         <MDBCard style={{width:260,height:260, backgroundColor:'yellow', padding:10}}>    
             <h3 className="font-weight-bold dark-grey-text mb-3 p-0" style={{textAlign:'center'}}>
-              <a href="#!">{props.clubData.name}</a>
+              <a href={''}>{props.clubData.name}</a>
             </h3>
             <Image src={props.clubData.secyImg} roundedCircle width={100} height={100} style={{margin:'auto', marginTop:3}} />
             <h6 className="font-weight-bold" style={{textAlign:'center', paddingTop:10}}>
             {props.clubData.desc}
             </h6> 
             {/* <div className="d-flex" style={{}}> */}
-              <a href="#!" className="deep-orange-text">
+              <a href={props.clubData.linkedin} className="deep-orange-text">
                 <h6 className="font-weight-bold" style={{textAlign:'center'}}>
                   <MDBIcon icon="graduation-cap" className="pr-2" />
                     {props.clubData.secy}
@@ -77,12 +82,22 @@ const TechnicalClubs = () => {
             {/* </div> */}
             
             <div className="d-flex justify-content-between">
-              <a href={`tel:${props.clubData.phone}`} className="deep-orange-text">
+              <a href={`tel:${props.clubData.phone}`}
+              // onClick={() => {
+              //   navigator.clipboard.writeText(props.clubData.phone.toString());
+              //   toast('Copied to Clipboard');  
+              // }}
+              className="deep-orange-text">
                 <h6 className="font-weight-bold">
                   <MDBIcon icon="phone" className="pr-2" />
                 </h6>
               </a>
-              <a href={`mailto:${props.clubData.email}`} className="deep-orange-text">
+              <a href={`mailto:${props.clubData.email}`} 
+              // onClick={() => {
+              //   navigator.clipboard.writeText(props.clubData.email)
+              //   toast('Copied to Clipboard');
+              // }}
+              className="deep-orange-text">
                 <h6 className="font-weight-bold">
                   <MDBIcon icon="envelope" className="pr-2" />
                 </h6>
@@ -98,6 +113,7 @@ const TechnicalClubs = () => {
 
        return( 
        <div onMouseEnter={()=>sethover(true)} onMouseLeave={()=>sethover(false)} style={{height:275, width:265, maxWidth:'100%', margin:'auto'}}> 
+       <ToastContainer />
         {
             hover? <OnHover />:
         <>
