@@ -11,6 +11,8 @@ declare module 'react-spring';
 declare module 'react-stacked-carousel';
 declare module 'react-scroll-horizontal';
 
+declare module 'react-responsive-modal';
+
 declare module '*.scss' {
     const content: {[className: string]: string};
     export = content;

@@ -9,10 +9,11 @@ import NoticeTableRow from '../NoticeTableRow';
 
 const Card = () => {
   const [data, setdata] = React.useState<any>([]);
+  const [skip, setSkip] = React.useState<number>(0);
   // const [executeScroll, selectedEventReference] = useScroll()
   useEffect(() => {
     const serverReq = async () => {
-      const resp = await CalendarEventRepository.getEvents();
+      const resp = await CalendarEventRepository.getEvents(skip,20);
       console.log(resp);
       setdata(resp.data.data);
       console.log(data);
@@ -20,7 +21,7 @@ const Card = () => {
       return resp; 
     }
     serverReq();
-  }, []);
+  }, [skip]);
   
   const wideScreenQuery = useMediaQuery({
     query: '(min-device-width: 700px)'
@@ -91,18 +92,18 @@ const Card = () => {
       }
       <Pagination style={pagination}>
         <div style={autoMargin}>
-          <Pagination.First />
-          <Pagination.Prev />
-          <Pagination.Ellipsis />
-          {wideScreenQuery ? <><Pagination.Item disabled >{10}</Pagination.Item>
-            <Pagination.Item >{11}</Pagination.Item></> : <></>
-          }
-          <Pagination.Item active >{12}</Pagination.Item>
-          {wideScreenQuery ? <><Pagination.Item >{13}</Pagination.Item>
-            <Pagination.Item disabled >{14}</Pagination.Item></> : <></>}
-          <Pagination.Ellipsis />
-          <Pagination.Next />
-          <Pagination.Last />
+          <Pagination.First onClick={() => {
+            setSkip(0);
+          }} />
+          <Pagination.Prev onClick={() => {
+            setSkip(skip-20>0?skip-20:0);
+          }}/>
+          <Pagination.Next onClick={() => {
+            setSkip(skip+20);
+          }}/>
+          <Pagination.Last onClick={() => {
+            setSkip(-20);
+          }} />
         </div>
       </Pagination>
     </Container>

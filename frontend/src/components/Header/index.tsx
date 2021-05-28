@@ -66,9 +66,9 @@ const Header: React.FC<IProps> = (props) =>
           <Nav.Link href="/office" className={'activeHover'} style={textCol}>OFFICE BEARERS</Nav.Link>
           <NavDropdown title="COUNCILS" id="basic-nav-dropdown" style={textCol} className={'activeHover'} renderMenuOnMount={true}>
               <NavDropdown.Item href="/technical">TECHNICAL COUNCILS</NavDropdown.Item>
-              <NavDropdown.Item href="/cultural">CULTURAL COUNCILS</NavDropdown.Item>
+              {/* <NavDropdown.Item href="/cultural">CULTURAL COUNCILS</NavDropdown.Item>
               <NavDropdown.Item href="/sports">SPORTS COUNCILS</NavDropdown.Item>
-              <NavDropdown.Item href="/hostel">HOSTEL COUNCILS</NavDropdown.Item>
+              <NavDropdown.Item href="/hostel">HOSTEL COUNCILS</NavDropdown.Item> */}
             </NavDropdown>
             <Nav.Link href="/notices" style={textCol} className={'activeHover'}>NOTICES</Nav.Link>
             <Nav.Link href="/calendar" style={textCol} className={'activeHover'}>CALENDAR</Nav.Link>

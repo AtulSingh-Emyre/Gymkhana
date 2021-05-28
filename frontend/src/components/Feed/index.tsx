@@ -12,8 +12,8 @@ const data = [
         img: require('../../assets/Feed/Summer_Of_Innovation.png'),
         href: 'https://oss2019.github.io/summer-of-innovation-2021/#/'
     },{
-        title: 'Summer of innovation, 2021',
-        desc: '   A technical event lasting for the entirety of summer which involves release of problem statements across several domains.',
+        title: 'Inter Branch Chess Tournament', 
+        desc: 'A team based rapid chess tournament with prizes worth 2k.',
         img: 'https://placeimg.com/640/480/arch',
         href: 'https://oss2019.github.io/summer-of-innovation-2021/#/'
     },{

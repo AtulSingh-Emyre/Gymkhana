@@ -6,7 +6,13 @@ import moment from 'moment';
 export class EventController {
   static async getAllEvents(req: Request, res: Response, next: NextFunction) {
     try {
-      const resp = await Event.find({}).sort({ start: -1 });
+      const data = req.params.data;
+      const skipAndSplit = data.split(' ');
+      console.log(data);
+      const resp = await Event.find({})
+        .sort({ start: -1 })
+        .skip(parseInt(skipAndSplit[0]))
+        .limit(parseInt(skipAndSplit[1]));
       console.log(resp);
       res.status(200).json({
         data: resp,

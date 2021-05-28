@@ -16,7 +16,7 @@ class EventRouter {
   }
   getRoutes() {
     // Getting data of all the events ordered by time from latest.
-    this.router.get('/all', EventController.getAllEvents);
+    this.router.get('/all/:data', EventController.getAllEvents);
     // Getting upcoming/on-going events
     this.router.get('/current', EventController.getEventsCurrent);
     // Getting previous events

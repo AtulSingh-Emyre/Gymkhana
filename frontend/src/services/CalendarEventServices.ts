@@ -1,9 +1,9 @@
 import api from "./api";
 
 export class CalendarEventRepository {
-    static async getEvents(){
+    static async getEvents(skip:number,limit: number){
         try{
-        const response : any = await api.get('/events/all');   
+        const response : any = await api.get('/events/all/'+skip+' '+limit);   
         return response;
         }
         catch(e){

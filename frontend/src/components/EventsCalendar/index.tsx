@@ -28,7 +28,7 @@ const EventsCalendar: React.FC<IProps> = ({ editable }) => {
   
   useEffect(() => {
     const serverReq = async () => {
-      const resp = await CalendarEventRepository.getEvents();
+      const resp = await CalendarEventRepository.getEvents(0,50);
       console.log(resp);
       setevents(resp.data.data);
       return resp; 

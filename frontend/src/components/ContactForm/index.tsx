@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Modal, Button, Form, FormControl } from 'react-bootstrap';
+import {Modal, Button, Form, FormControl } from 'react-bootstrap';
 import { toast, ToastContainer } from 'react-toastify';
 import { ContactServices } from '../../services/ContactServices';
+import 'react-responsive-modal/styles.css';
+// import { Modal } from 'react-responsive-modal';
 
 enum councils {
     tech = "gstech@iitdh.ac.in",
@@ -62,10 +64,18 @@ const ContactForm = () => {
 
 
     return (
-        <>
+        <div>
         <p onClick={handleShow}>CONTACT</p>
             <ToastContainer/>
+            <div
+            onKeyDown={e => e.stopPropagation()}
+            onClick={e => e.stopPropagation()}
+            onFocus={e => e.stopPropagation()}
+            onMouseOver={e => e.stopPropagation()}
+            >
             <Modal
+                // open={show} onClose={handleClose} center
+                // style={{marginTop:30}}
                 show={show}
                 onHide={handleClose}
                 backdrop="static"
@@ -73,23 +83,38 @@ const ContactForm = () => {
                 size='lg'
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>Write To Us</Modal.Title>
+                    <Modal.Title>
+                        Write To Us
+                        </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <form>
-                        <Form.Group 
-                        controlId="ContactFormForm.ControlInput1"
-                        >
+                    <Form.Group controlId="exampleForm.ControlSelect1">
+                            <Form.Label>Select Council</Form.Label>
+                            <Form.Control as="select" onChange={(e) => setContactQuery({...contactQuery, council: e.target.value as councils})}>
+                                <option value={councils.acad}>Academic Council</option>
+                                <option value={councils.cult}>Cultural Council</option>
+                                <option value={councils.hostel}>Hostel Council</option>
+                                <option value={councils.mess}>Mess committee</option>
+                                <option value={councils.sports}>Sports Council</option>
+                                <option value={councils.tech}>Technical Council</option>
+                            </Form.Control>
+                        </Form.Group>
+                        <Form.Group controlId="ContactFormForm.ControlInput1">
                             <Form.Label>Name</Form.Label>
-                            <FormControl className='form-input' type='text' placeholder='Name' 
+                            <FormControl
+                             className='form-input' 
+                             type='text' 
+                             placeholder='Name' 
                               value={contactQuery.name} 
                               onChange={
                                 (event: any) => {
                                     console.log(event.target.value);
                                     setContactQuery({...contactQuery, name: event.target.value});
-                                }} 
-                                />
-                                 <Form.Text className="text-muted"></Form.Text>
+                                }}/>
+                                 <Form.Text 
+                                 className="text-muted"
+                                 ></Form.Text>
                         </Form.Group>
                         <Form.Group controlId="ContactFormForm.ControlInput1">
                             <Form.Label>Email</Form.Label>
@@ -98,10 +123,7 @@ const ContactForm = () => {
                                 (event: any) => {
                                     console.log(event.target.value);
                                     setContactQuery({...contactQuery, email: event.target.value});
-                                }} 
-                                
-                                />
-                        
+                                }}/>
                         </Form.Group>
                         <Form.Group controlId="ContactFormForm.ControlInput1">
                             <Form.Label>Phone Number</Form.Label>
@@ -110,10 +132,8 @@ const ContactForm = () => {
                                 (event: any) => {
                                     console.log(event.target.value);
                                     setContactQuery({...contactQuery, phone: event.target.value});
-                                }} />
-                        
+                                }}/>
                         </Form.Group>
-
                         <Form.Group controlId="ContactFormForm.ControlTextarea1">
                             <Form.Label>Message</Form.Label>
                             <FormControl as="textarea" rows={3}       value={contactQuery.mssg} 
@@ -121,9 +141,9 @@ const ContactForm = () => {
                                 (event: any) => {
                                     console.log(event.target.value);
                                     setContactQuery({...contactQuery, mssg: event.target.value});
-                                }}/>
-                        
+                            }}/>
                         </Form.Group>
+                        
                     </form>
                 </Modal.Body>
                 <Modal.Footer>
@@ -133,7 +153,8 @@ const ContactForm = () => {
                     <Button variant="primary" onClick={handleSubmit}>Submit</Button>
                 </Modal.Footer>
             </Modal>
-        </>
+            </div>
+        </div>
     );
 }
 
