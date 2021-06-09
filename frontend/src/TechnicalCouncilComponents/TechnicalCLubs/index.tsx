@@ -42,17 +42,17 @@ const clubData = [
         linkedin: 'https://www.linkedin.com/in/akhilesh-k-bharadwaj-a11a6b1a0/',
         secyImg: require('../../assets/Technical Council/Clubs/AI_secy.png'),
         desc: 'AI and Datascience club',
-        phone: 1233454322,
+        phone: 6354808691,
         email: 'aiclub@iitdh.ac.in'
     }, {
         name: 'Robotics Club',
-        src: require('../../assets/Technical Council/Clubs/AI.jpeg'),
+        src: require('../../assets/Technical Council/Clubs/Robotics.png'),
         bg:'#101e38',
         linkedin: 'https://www.linkedin.com/in/sohan-anisetty-b10188175/',
         secy: 'Sohan Anisetty',
         secyImg: require('../../assets/Technical Council/Clubs/Robotics_secy.jpg'),
         desc: 'Robotics Club',
-        phone: 1233454322,
+        phone: 9820687340,
         email: 'robotics@iitdh.ac.in'
     }
   ]
