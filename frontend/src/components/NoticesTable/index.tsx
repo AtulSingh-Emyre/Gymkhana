@@ -50,7 +50,7 @@ const Card = () => {
               attachment: [{ poster: data.poster }, { result: data.result }],
               date: moment(data.start).format('MMMM Do YYYY'),
               id: index + 1,
-              organiser: data.organiser,
+              organiser: data.organizer,
               event: data.title,
               time: moment(data.start).format(' h:mm:ss a'),
               venue: data.venue
@@ -77,7 +77,7 @@ const Card = () => {
             attachment: [{ poster: data.poster }, { result: data.result }],
             date: moment(data.start).format('MMMM Do YYYY'),
             id: index + 1,
-            organiser: data.organiser,
+            organiser: data.organizer,
           }} />
         ) : <></>)
       }

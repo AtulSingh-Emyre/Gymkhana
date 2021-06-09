@@ -1,24 +1,20 @@
 import { MDBCard } from 'mdbreact';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import ReactCardFlip from 'react-card-flip'
+import ReactCardFlip from 'react-card-flip';
+import api from '../../services/api';
+// import {TechEventRepository} from '../../services/TechEventRepository'
 import './styles.css';
 interface IProps {
     info: {
         title: string,
         description: string,
-        link: string
-    }
+        link: string,
+        created_at: any,
+        updated_at: any,
+    } | any;
 }
-const data = [{
-    title:"Summer of Innovation",
-    description: "A summer long technical event comprising of problem statements from multiple domains.",
-    link: "https://oss2019.github.io/summer-of-innovation-2021/#/"
-},{
-    title: "PARSEC",
-    description: "The annual technical event of IIT Dharwad.",
-    link: "https://parsec.iitdh.ac.in/"
-}];
+
 const Events = () => {
     const EventCard: React.FC<IProps>  = (props) => {
         const [flipped, setflipped] = useState(false);
@@ -57,11 +53,31 @@ const Events = () => {
             </Col>
         )
     }
+
+    const [data, setdata] = useState<any>([]);
+    useEffect(() => {
+        const serverReq = async () => {
+            try{
+            const resp = await await api.get('/tech/current');
+            // console.log(resp);
+            setdata(resp.data.data);
+            console.log(data);
+            return resp;
+            }
+            catch(err) {
+                console.log(err);
+            } 
+          }
+          serverReq();
+        return () => {
+        };
+    }, []);
+
     const event = (<>
     <div id={"eventsTech"}>
         <Row style={{margin:'auto'}}>
             {
-                data.map((info,index)=> (<EventCard info={{...info}} />))
+                data.map((info: any,index: number)=> (<EventCard info={{...info}} />))
             }
         </Row>
         </div>

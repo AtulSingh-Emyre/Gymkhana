@@ -13,6 +13,7 @@ import EventRouter from './routers/EventRouter';
 import UserRouter from './routers/UserRouter';
 import ContactRouter from './routers/ContactRouter';
 import { ContactEmail } from './middlewares/ContactEmail';
+import TechEventRouter from './routers/TechEventRouter';
 
 export class Server {
   public app: express.Application = express();
@@ -38,15 +39,20 @@ export class Server {
   }
 
   async connectMongoDb() {
-    const databaseUrl = getEnvironmentVariables().db_url;
-    mongoose.connect(databaseUrl, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useFindAndModify: false
-    });
-    mongoose.connection.on('open', () => {
-      console.log('connection successfully made with database');
-    });
+    try {
+      const databaseUrl = getEnvironmentVariables().db_url;
+      mongoose.connect(databaseUrl, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false
+      });
+      mongoose.connection.on('open', () => {
+        console.log('connection successfully made with database');
+      });
+    } catch (error) {
+      console.log(error);
+      this.connectMongoDb();
+    }
   }
   configureNodemailer() {
     const contactEmail = nodemailer.createTransport({
@@ -70,6 +76,7 @@ export class Server {
     this.app.use('/events', EventRouter);
     this.app.use('/user', UserRouter);
     this.app.use('/contact', ContactRouter);
+    this.app.use('/tech', TechEventRouter);
   }
 
   error404Handler() {

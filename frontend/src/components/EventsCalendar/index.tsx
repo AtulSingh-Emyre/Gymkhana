@@ -25,12 +25,18 @@ const EventsCalendar: React.FC<IProps> = ({ editable }) => {
   // const [executeScroll, selectedEventReference] = useScroll()
   const selectedEventReference = useRef<HTMLDivElement>(null);
   
+  console.log('data',events);
   
   useEffect(() => {
     const serverReq = async () => {
-      const resp = await CalendarEventRepository.getEvents(0,50);
-      console.log(resp);
-      setevents(resp.data.data);
+      const resp = await CalendarEventRepository.getEvents(0,300);
+      // console.log(resp);
+      const data = await resp.data.data.map( (item:any) => {
+        item.start = new Date(item.start);
+        item.end = new Date(item.end);
+        return item;
+      })
+      setevents(data);
       return resp; 
     }
     serverReq();
@@ -44,7 +50,7 @@ const EventsCalendar: React.FC<IProps> = ({ editable }) => {
     <Container style={{  }}>
       <Calendar
         localizer={localizer}
-        views = {['month', 'agenda']}
+        views = {['month','week','day', 'agenda']}
         events = { events.map((event : any) => View ==='agenda'? event.allDay?event:undefined : !event.allDay? event:undefined) }
         onView = {onViewChange}
         startAccessor="start"
