@@ -14,13 +14,19 @@ import UserRouter from './routers/UserRouter';
 import ContactRouter from './routers/ContactRouter';
 import { ContactEmail } from './middlewares/ContactEmail';
 
+const path = require('path');
+
 export class Server {
   public app: express.Application = express();
   constructor() {
+    this.app.use(express.static(path.join(__dirname, 'build')));
     this.setConfigurations();
     this.setRoutes();
-    this.error404Handler();
-    this.handleErrors();
+    // this.error404Handler();
+    // this.handleErrors();
+    this.app.get('*', function (req, res) {
+      res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    });
   }
 
   setConfigurations() {
@@ -72,23 +78,23 @@ export class Server {
     this.app.use('/contact', ContactRouter);
   }
 
-  error404Handler() {
-    this.app.use((req, res) => {
-      res.status(404).json({
-        message: 'Not Found',
-        status_code: 404
-      });
-    });
-  }
+  // error404Handler() {
+  //   this.app.use((req, res) => {
+  //     res.status(404).json({
+  //       message: 'Not Found',
+  //       status_code: 404
+  //     });
+  //   });
+  // }
 
-  handleErrors() {
-    this.app.use((error: any, req: any, res: Response) => {
-      const errorStatus = req.errorStatus || 500;
-      res.status(errorStatus).json({
-        message: error.message || 'Something Went Wrong. Please Try Again',
-        status_code: errorStatus,
-        success: false
-      });
-    });
-  }
+  // handleErrors() {
+  //   this.app.use((error: any, req: any, res: Response) => {
+  //     const errorStatus = req.errorStatus || 500;
+  //     res.status(errorStatus).json({
+  //       message: error.message || 'Something Went Wrong. Please Try Again',
+  //       status_code: errorStatus,
+  //       success: false
+  //     });
+  //   });
+  // }
 }

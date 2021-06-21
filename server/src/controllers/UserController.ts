@@ -66,7 +66,8 @@ export class UserController {
         'gscult',
         'gsacad',
         'gsha',
-        'messcommittee'
+        'messcommittee',
+        '190020020'
       ];
       if (valid.includes(iden)) {
         return res.status(200).json({
