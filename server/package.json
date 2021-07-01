@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec ts-node src/index.ts",
-    "create-bundle": "tsc && node dist/index.js",
+    "create-bundle": "tsc && node src/index.js",
     "start": "node dist/index.js",
     "format": "prettier --write \"**/*.{ts,tsx,js,scss}\" && npm run lint:fix",
     "format-check": "prettier --check \"**/*.{ts,tsx,js,scss}\"",
@@ -43,6 +43,7 @@
     "npm": "^7.6.0",
     "pg": "^8.5.1",
     "popups": "^1.1.3",
+    "react-calendar": "^3.4.0",
     "react-native-image-picker": "^2.3.3",
     "read-excel-file": "^5.0.0",
     "request": "^2.88.2",
