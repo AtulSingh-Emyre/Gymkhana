@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import express from 'express';
-import { Response } from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
@@ -14,8 +13,7 @@ import UserRouter from './routers/UserRouter';
 import ContactRouter from './routers/ContactRouter';
 import { ContactEmail } from './middlewares/ContactEmail';
 import TechEventRouter from './routers/TechEventRouter';
-
-const path = require('path');
+import path from 'path';
 
 export class Server {
   public app: express.Application = express();
