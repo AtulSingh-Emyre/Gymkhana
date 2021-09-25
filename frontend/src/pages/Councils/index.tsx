@@ -30,7 +30,7 @@ const councilInfo = [
 const Councils = () => {
     return (
         <Row style={{maxWidth:'100%', margin:'auto'}}>
-            <PageStarter heading={'COUNCILS'}>
+            <PageStarter heading={'COUNCILS'} id={'councils'} >
                 <Container>
                 <Row style={{maxWidth:'100%', margin:'auto'}}>
         

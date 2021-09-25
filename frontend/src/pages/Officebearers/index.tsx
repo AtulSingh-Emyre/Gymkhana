@@ -6,21 +6,16 @@ import PreviousCouncilMemsContainer from '../../components/PreviousCouncilMemsCo
 import './index.css';
 import PageStarter from '../../template/PageStarter';
 const Officebearers: React.FC = () => {
-  // making the page responsive:
   return (
     <div style={container}>
-      {/* <Header active={{office:true}}/> */}
-      <PageStarter heading={'OFFICE BEARERS'}>
-        <Details />
-      
-      <div style={{ position:'relative', 
-      backgroundColor:'white', width:'100%', padding:0, margin:0}}>
-      <PreviousCouncilMemsContainer/>
-      
-      </div>
+      <PageStarter heading={'SECRETARIES'} id={'secretaries'}>
+          <Details />
+          <div style={{ position:'relative', 
+          backgroundColor:'white', width:'100%', padding:0, margin:'auto'}}>
+            <PreviousCouncilMemsContainer/>      
+          </div>
       </PageStarter>
-      {/* <Footer /> */}
-      </div>
+    </div>
   );
 };
 

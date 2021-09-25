@@ -3,16 +3,13 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact";
 import './style.css';
 import SocialButtonsPage from '../socialmediaicons';
 import { Container } from "react-bootstrap";
-import { GrLocation } from "react-icons/gr";
-import { GrMailOption } from "react-icons/gr";
-import { FiPhoneCall } from "react-icons/fi";
 
 
 const Footer = () => {
   return (
     
     <MDBFooter color="unique-color-dark" className="font-small pt-4 mt-4 padMarF ">
-      <div className='container'>
+      <div className='container' id={'contact'}>
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6" >

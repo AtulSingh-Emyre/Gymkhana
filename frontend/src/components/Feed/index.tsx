@@ -32,7 +32,7 @@ const Feed = () => {
         console.log("Card", event);
     }
     return (
-        <PageStarter heading={'RECENT ACTIVITIES'}>
+        <PageStarter heading={'RECENT ACTIVITIES'} id={'recentActs'}>
         <Row>
         <Col xl ={12} md = {12} xs={12}>   
         <div style={{width:'100%', height:'100%'}}> 

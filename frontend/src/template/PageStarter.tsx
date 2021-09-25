@@ -5,13 +5,16 @@ import { Container } from 'react-bootstrap';
 interface IProp {
     heading: string;
     children: any;
-    color?: string
+    color?: string;
+    id?:string;
 }
 
 
 const PageStarter = (props: IProp) => {
     return (
-        <div style={{width:'100%', 
+        <div 
+        id={props.id}
+        style={{width:'100%', 
         // height:'calc(inherit - 50px)',
         position:'relative', backgroundColor:props.color?props.color:'white', padding:30, marginBottom:0}}>
           <div style={{width:'100%', position:'relative', top:0, paddingTop:20, height:'150px', zIndex:2}} className={'child1'} >

@@ -3,7 +3,6 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Homepage from '../../components/Homepage';
 import Officebearers from '../Officebearers';
-import Calendar from '../Calendar';
 import About from '../../components/About';
 import Feed from '../../components/Feed';
 import Gallery from '../Gallery';
@@ -19,7 +18,6 @@ const Dashboard: React.FC = () => {
       <Feed />
       <Officebearers />
       <Gallery />
-      {/* <Calendar />       */}
       <Footer />
     </div>
   );

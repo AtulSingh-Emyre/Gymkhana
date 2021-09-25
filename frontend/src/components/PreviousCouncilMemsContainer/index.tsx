@@ -67,35 +67,11 @@ const PreviousCouncilMemsContainer = () => {
 
     return (
         <div style={container}>
-
-            <h2 style={{textAlign:'center', color:'blue', paddingBottom:'5%'}}> <strong>Previous Office Bearers</strong></h2>
+            <h2 style={{textAlign:'center', color:'blue', paddingBottom:'5%', margin:'auto'}}> <strong>SECRETARIES TIMELINE</strong></h2>
             <HorizontalTimelineCustom setIndex={setIndex} values={values} />
             <CSSTransition in={true} appear={true} timeout={1000} classNames='fade'  >
             <PreviousCouncilMems user={data[value]}/>
             </CSSTransition>
-                        
-            
-{/*             
-            <VerticalTimeline >
-            {
-                data.map(council => {
-                    return (
-                        <VerticalTimelineElement
-                            className="vertical-timeline-element"
-                            contentStyle={{ background: '#FFD54F', color: 'black', padding:0 }}
-                            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                            // date={council.year}
-                            iconStyle={{backgroundColor:'#bf360c', alignSelf:'center'}}
-                            icon = {<SiClockify color={'white'}/>}
-                            >   
-                                <CSSTransition in={true} appear={true} timeout={1000} classNames='fade'  >
-                                    <PreviousCouncilMems user={council}/>
-                                </CSSTransition>
-                        </VerticalTimelineElement>
-                )
-                })
-            }            
-            </VerticalTimeline> */}
         </div>
     );
 }
@@ -108,5 +84,4 @@ const container: React.CSSProperties = {
     padding:'5%',
     alignItems:'center',
     alignSelf:'center',
-    // backgroundColor: '#E65100'
 }

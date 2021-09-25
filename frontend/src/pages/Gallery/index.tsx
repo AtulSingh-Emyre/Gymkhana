@@ -7,7 +7,7 @@ const Gallery = () => {
     return (
         <div>
             <Row>
-        <PageStarter heading={'GALLERY'}>
+        <PageStarter heading={'GALLERY'} id={'gallery'}>
             <GalleryHome />
         </PageStarter>
         </Row>

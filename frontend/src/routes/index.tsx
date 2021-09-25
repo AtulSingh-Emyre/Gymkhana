@@ -8,9 +8,9 @@ import Notices from '../pages/Notices';
 import Calendar from '../pages/Calendar';
 import Officebearers from '../pages/Officebearers';
 import Technicalcouncil from '../pages/Technicalcouncil';
-import Sportscouncil from '../pages/Sportscouncil';
-import Culturalcouncil from '../pages/Culturalcouncil';
-import Hostelcouncil from '../pages/Hostelcouncil';
+// import Sportscouncil from '../pages/Sportscouncil';
+// import Culturalcouncil from '../pages/Culturalcouncil';
+// import Hostelcouncil from '../pages/Hostelcouncil';
 import Admin from '../pages/Admin';
 import Admininput from '../pages/Admininput';
 
