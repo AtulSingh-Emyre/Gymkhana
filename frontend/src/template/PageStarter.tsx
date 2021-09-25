@@ -5,6 +5,7 @@ import { Container } from 'react-bootstrap';
 interface IProp {
     heading: string;
     children: any;
+    color?: string
 }
 
 
@@ -12,11 +13,11 @@ const PageStarter = (props: IProp) => {
     return (
         <div style={{width:'100%', 
         // height:'calc(inherit - 50px)',
-        position:'relative', backgroundColor:'white', padding:0, marginBottom:0}}>
-          <div style={{width:'100%', position:'relative', top:0, paddingTop:50, height:'400px', backgroundColor:'black', zIndex:2}} className={'child1'} >
+        position:'relative', backgroundColor:props.color?props.color:'white', padding:30, marginBottom:0}}>
+          <div style={{width:'100%', position:'relative', top:0, paddingTop:20, height:'150px', zIndex:2}} className={'child1'} >
             <Container >
               <strong> <b>
-                <h1 style={{textAlign:'center', position:'relative', top:'80px', bottom:0, right:10, left:10, color:'white', fontFamily:'Arial Black'}}>
+                <h1 style={{textAlign:'center', position:'relative', top:'20px', bottom:0, right:10, left:10, color:'blueviolet', fontFamily:'Arial Black'}}>
                 {/* // OFFICE BEARERS */}
                 {props.heading}
                 </h1>
@@ -24,18 +25,18 @@ const PageStarter = (props: IProp) => {
             </Container>
           </div>
           <div style={{
-            width:'90%', 
+            width:'100%', 
             position: 'relative', 
             backgroundColor:'white',
             // margin:'auto', 
             margin:'auto',
-            marginTop:'-100px',
+            marginTop:'0px',
             zIndex:3, 
           }} className={'child2'}>
-            <MDBCard >
+            {/* <MDBCard > */}
                 {props.children}
             {/* <Details /> */}
-            </MDBCard>
+            {/* </MDBCard> */}
           </div>
         </div>
        

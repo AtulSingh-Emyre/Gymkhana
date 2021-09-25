@@ -10,7 +10,7 @@ declare module 'react-lazyload';
 declare module 'react-spring';
 declare module 'react-stacked-carousel';
 declare module 'react-scroll-horizontal';
-
+declare module 'react-grid-gallery';
 declare module 'react-responsive-modal';
 
 declare module '*.scss' {

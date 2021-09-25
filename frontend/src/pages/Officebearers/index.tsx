@@ -9,15 +9,17 @@ const Officebearers: React.FC = () => {
   // making the page responsive:
   return (
     <div style={container}>
-      <Header active={{office:true}}/>
+      {/* <Header active={{office:true}}/> */}
       <PageStarter heading={'OFFICE BEARERS'}>
         <Details />
-      </PageStarter>
+      
       <div style={{ position:'relative', 
       backgroundColor:'white', width:'100%', padding:0, margin:0}}>
       <PreviousCouncilMemsContainer/>
+      
       </div>
-      <Footer />
+      </PageStarter>
+      {/* <Footer /> */}
       </div>
   );
 };

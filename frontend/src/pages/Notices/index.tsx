@@ -8,11 +8,11 @@ import PageStarter from '../../template/PageStarter';
 const Notices: React.FC = () => {
   return (
     <>
-    <Header active={{notice:true}}/>
+    {/* <Header active={{notice:true}}/> */}
       <PageStarter heading={'NOTICES'}>
       <Card/>
       </PageStarter>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

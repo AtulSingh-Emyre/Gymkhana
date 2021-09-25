@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 // import { Container } from 'react-bootstrap/lib/Tab';
 import { StackedCarousel } from 'react-stacked-carousel'
 import 'react-stacked-carousel/dist/index.css';
+import PageStarter from '../../template/PageStarter';
 import './styles.css';
 
 const data = [
@@ -31,16 +32,7 @@ const Feed = () => {
         console.log("Card", event);
     }
     return (
-        <Container style={{
-            height:'100%',
-            width:'100%', 
-            margin:'auto', marginTop:50}}>
-        <div >
-        <Row style={{margin:'auto', marginTop:10}}>
-            <h2 style={{color: 'blueviolet', textAlign:'center',margin:'auto', marginBottom:20}}>
-                Recent Activity
-            </h2>
-        </Row>
+        <PageStarter heading={'RECENT ACTIVITIES'}>
         <Row>
         <Col xl ={12} md = {12} xs={12}>   
         <div style={{width:'100%', height:'100%'}}> 
@@ -86,8 +78,7 @@ const Feed = () => {
         </div>
         </Col>
         </Row>
-        </div>
-        </Container>
+        </PageStarter>
     );
 }
 

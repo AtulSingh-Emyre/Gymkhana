@@ -51,7 +51,7 @@ const Header: React.FC<IProps> = (props) =>
         }}
       >
         <a href="/" > 
-        <img src={logo} style={{ maxWidth: '50px', maxHeight:50 }} />
+        <img src={logo} style={{ maxWidth: '150px', maxHeight:50 }} />
         </a>
         <MDBNavbarToggler
             onClick={toggleCollapse}

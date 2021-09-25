@@ -54,6 +54,7 @@
     "react-dom": "^16.13.1",
     "react-event-calendar": "^0.3.0",
     "react-google-login": "^5.2.2",
+    "react-grid-gallery": "^0.5.5",
     "react-horizontal-timeline": "^1.5.3",
     "react-icons": "^3.11.0",
     "react-image-gallery": "^1.0.9",

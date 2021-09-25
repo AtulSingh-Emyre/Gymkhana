@@ -9,13 +9,13 @@ import PageStarter from '../../template/PageStarter';
 const Calendar: React.FC = () => {
   return (
     <>
-    <Header active={{calendar:true}} />
+    {/* <Header active={{calendar:true}} /> */}
     <PageStarter heading={'STUDENTS ACTIVITY CALENDAR'}>
       <div style={{maxWidth:'100%', height:'auto', padding:'2.5%'}}>
         <EventsCalendar editable={false}/>
       </div>  
     </PageStarter>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
