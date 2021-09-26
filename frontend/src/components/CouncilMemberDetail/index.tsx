@@ -108,7 +108,7 @@ const container: React.CSSProperties = {
 const row_style: React.CSSProperties = {
   height: '100%',
   margin: 'auto',
-  padding: '3%',
+  // padding: '3%',
   maxWidth: '100%',
 }
 

@@ -4,8 +4,7 @@ import { Card } from 'react-bootstrap';
 const CouncilCard = (props:{data:{title:string, desc:string}}) => {
     return (
         <div>
-           <Card border="secondary" style={{ width: '18rem', margin:'auto' }}>
-    {/* <Card.Header></Card.Header> */}
+           <Card border="secondary" style={{ width: '95%', margin:'auto' }}>
     <Card.Body>
       <Card.Title>{props.data.title}</Card.Title>
       <Card.Text>

@@ -37,7 +37,7 @@ const Councils = () => {
                 {
                     councilInfo.map((data) => 
                     <>
-                        <Col md={4} xs={6} xl={4} lg={3}
+                        <Col md={6} xs={12} xl={4} lg={4}
                         style={{margin:'auto', padding:10}}
                         >    
                             <CouncilCard data={data}/>

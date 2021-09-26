@@ -32,35 +32,47 @@ const Feed = () => {
         console.log("Card", event);
     }
     return (
-        <PageStarter heading={'RECENT ACTIVITIES'} id={'recentActs'}>
-        <Row>
+        <div style={{maxWidth:'100%', width:'100%', backgroundColor:'white'}} id={'recentActs'}>
+        {/* <PageStarter heading={'RECENT ACTIVITIES'} id={'recentActs'}> */}
+        <div style={{width:'100%', position:'relative', top:0, paddingTop:20, height:'150px', zIndex:2}} className={'child1'} >
+            <Container >
+              <strong> <b>
+                <h3 style={{maxWidth:'100%',textAlign:'center', position:'relative', top:'20px', bottom:0, right:10, left:10, color:'blueviolet', fontFamily:'Arial Black'}}>
+                {/* // OFFICE BEARERS */}
+                {'RECENT ACTIVITIES'}
+                </h3>
+                </b> </strong>
+            </Container>
+          </div>
+            
+        <Row style={{maxWidth:'100%', margin:'auto', backgroundColor:'white'}}>
         <Col xl ={12} md = {12} xs={12}>   
         <div style={{width:'100%', height:'100%'}}> 
         <StackedCarousel
           autoRotate={true}
           cardClassName="homeFeedCard"
           onCardChange={onCardChange}
-          style={{ width:'90%', height:'100%', minHeight:320, backgroundColor:'white'}}
+          style={{ width:'100%', height:'auto', minHeight:350, minWidth:210}}
           >
               {
                   data.map((cardData) => <div style={{
-                    backgroundColor:'white',
+                    // backgroundColor:'white',
                     color:'black', 
+                    width:'100%',
+                    // minWidth:280,
                     height:'100%', 
                     position:'relative'}}
                     
                     >
                     <Row style={{height:'100%'}}>
                         <Col xl={4} md={5} xs={12}>
-                        <div style={{width:'100%', height:'100%'
+                        <div style={{width:'100%',height:'100%'
                     ,backgroundImage:`url(`+cardData.img+`)`,
                     backgroundSize:'cover'
                     }}/>
-                        {/* <img key="img1" src={cardData.img} height={500} />   */}
-                
                         </Col>
                         <Col xl ={8} md = {7} xs={12} >
-                            <Row style={{margin:'auto', padding:10, marginTop:50, zIndex:2, position:'relative'}}>
+                            <Row style={{width:'100%', height:'100%', margin:'auto', padding:10, marginTop:50, zIndex:2, position:'relative'}}>
                             <a href={cardData.href}>
                             <h3>
                             {cardData.title}
@@ -78,7 +90,8 @@ const Feed = () => {
         </div>
         </Col>
         </Row>
-        </PageStarter>
+        {/* </PageStarter> */}
+        </div>
     );
 }
 

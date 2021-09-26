@@ -5,8 +5,8 @@ import PageStarter from '../../template/PageStarter';
 
 const Gallery = () => {
     return (
-        <div>
-            <Row>
+        <div style={{maxWidth:'100%'}}>
+            <Row style={{maxWidth:'100%'}}>
         <PageStarter heading={'GALLERY'} id={'gallery'}>
             <GalleryHome />
         </PageStarter>

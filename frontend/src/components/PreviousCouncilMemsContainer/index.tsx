@@ -59,15 +59,13 @@ const PreviousCouncilMemsContainer = () => {
     const [value, setvalue] = useState(0);
     const [previous, setprevious] = useState(0);
     const setIndex = (index : any) => {
-        console.log('data',index);
-        
         setprevious(value);
         setvalue(index);
     }
 
     return (
         <div style={container}>
-            <h2 style={{textAlign:'center', color:'blue', paddingBottom:'5%', margin:'auto'}}> <strong>SECRETARIES TIMELINE</strong></h2>
+            <h2 style={{textAlign:'center', color:'blue', paddingBottom:'5%', margin:'auto'}}> <strong>Previous Office Bearers</strong></h2>
             <HorizontalTimelineCustom setIndex={setIndex} values={values} />
             <CSSTransition in={true} appear={true} timeout={1000} classNames='fade'  >
             <PreviousCouncilMems user={data[value]}/>
@@ -81,7 +79,7 @@ export default PreviousCouncilMemsContainer;
 
 const container: React.CSSProperties = {
     width:'100%',
-    padding:'5%',
+    maxWidth:'100%',
     alignItems:'center',
     alignSelf:'center',
 }

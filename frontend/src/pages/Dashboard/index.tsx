@@ -10,15 +10,20 @@ import Councils from '../Councils';
 
 const Dashboard: React.FC = () => {
   return (
-    <div style={{minWidth:'100%'}} >
-      <Header active={{home:true}} />
+    <div style={{maxWidth:'100%'}} >
+       <div style={{maxWidth:'100%'}}>
+      <Header active={{home:true}} /></div>
       <Homepage/>
       <About/>
+      <div style={{margin:'auto'}}>
       <Councils/>
+      </div>
       <Feed />
       <Officebearers />
       <Gallery />
+      <div style={{maxWidth:'100%'}}>
       <Footer />
+      </div>
     </div>
   );
 };

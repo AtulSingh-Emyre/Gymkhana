@@ -34,6 +34,7 @@ const GalleryHome = () => {
         <div style={{maxWidth:"100%", marginTop:50}}>
                 <Gallery 
                 images={IMAGES}
+                
                 enableImageSelection ={false}
                 />
         </div>

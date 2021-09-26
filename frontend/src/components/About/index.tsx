@@ -4,8 +4,9 @@ import PageStarter from '../../template/PageStarter';
 
 const About = () => {
     return (
+      <div style={{maxWidth:'100%'}}>
     <PageStarter heading={'About'} id={'about'}>
-        <div  className="aboutus" >
+        <div  className="aboutus" style={{margin:'auto'}}>
             <p style={{ color: 'black' }}>
         Students’ Gymkhana, IIT Dharwad is the hub of the numerous extra-curricular and co-curricular activities in IIT Dharwad ranging from sports to socio-cultural events. The Gymkhana is managed by the students, for the students, under the guidance and active participation of the faculty and staff members.
                         </p>
@@ -24,6 +25,7 @@ const About = () => {
             </Row>
           </div>
       </PageStarter>
+      </div>
     );
 }
 
