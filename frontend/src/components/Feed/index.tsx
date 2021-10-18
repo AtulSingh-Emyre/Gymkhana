@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 // import { Container } from 'react-bootstrap/lib/Tab';
 import { StackedCarousel } from 'react-stacked-carousel'
@@ -26,9 +26,7 @@ const data = [
 
 
 const Feed = () => {
-    const [card, setCard] = useState(null);
     const onCardChange = (event:any) => {
-        console.log("Card", event);
     }
     return (
         <div style={{maxWidth:'100%', width:'100%', backgroundColor:'white'}} id={'recentActs'}>

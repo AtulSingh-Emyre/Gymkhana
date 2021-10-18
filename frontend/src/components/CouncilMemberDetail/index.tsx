@@ -1,6 +1,5 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { useMediaQuery } from 'react-responsive';
 import MemberCard from '../MemberCard';
 import techImg from '../../assets/CouncilMems/gs-Tech.jpg';
 import acadImg from '../../assets/CouncilMems/gs-Acad.jpg';

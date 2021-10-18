@@ -1,5 +1,4 @@
-import { MDBCard } from 'mdbreact';
-import React, { ReactPropTypes } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
 
 interface IProp {

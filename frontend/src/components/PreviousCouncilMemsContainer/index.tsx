@@ -55,11 +55,8 @@ const data = [
 const values = data.map(info => info.time);
 
 const PreviousCouncilMemsContainer = () => {
-    const [Hover, setHover] = useState(false);
     const [value, setvalue] = useState(0);
-    const [previous, setprevious] = useState(0);
     const setIndex = (index : any) => {
-        setprevious(value);
         setvalue(index);
     }
 

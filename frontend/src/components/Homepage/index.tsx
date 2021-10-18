@@ -1,22 +1,13 @@
 import React from 'react';
-import { Button, Col, Container, Row} from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import { Link } from "react-scroll";
 import './style.css'
-import { CSSTransition, TransitionGroup, } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 import { useMediaQuery } from 'react-responsive';
 // @ts-ignore
 
 const Homepage = () => {
-  const goDownOnPress = () => {
-    console.log(1);
-    
-    const offsetTop  = document.getElementById("abt")!.offsetTop;
-    window.scrollTo({
-      top: offsetTop-100, 
-      behavior: "smooth"
-    });
-
-  }
+  
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 700px)' })
   return (
   <div style={{maxWidth:'100%'}}>

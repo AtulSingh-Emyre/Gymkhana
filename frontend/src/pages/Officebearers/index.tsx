@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import Details from '../../components/CouncilMemberDetail';
 import PreviousCouncilMemsContainer from '../../components/PreviousCouncilMemsContainer';
 import './index.css';

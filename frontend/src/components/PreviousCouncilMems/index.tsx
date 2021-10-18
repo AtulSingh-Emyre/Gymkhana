@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import './styles.css'
 
@@ -16,7 +16,6 @@ interface Ipropss {
 
 
 const PreviousCouncilMems = (props : Ipropss) => {
-    const [Hover, setHover] = useState(false);
     return(
         <>
         <h5 style={{textAlign:'center'}}> <strong> Office Bearers : {props.user.year} </strong></h5>

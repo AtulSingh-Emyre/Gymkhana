@@ -1,6 +1,6 @@
-import { MDBCollapse, MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDBNavLink } from 'mdbreact';
+import { MDBCollapse, MDBNavbar, MDBNavbarNav, MDBNavbarToggler } from 'mdbreact';
 import React, { useState } from 'react';
-import { Nav, NavDropdown} from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 import logo from "../../assets/iitdhlogoLight.png";
 import './style.css';
 import { Link } from "react-scroll";
@@ -51,7 +51,7 @@ const Header: React.FC<IProps> = (props) =>
         }}
       >
         <a href="/" > 
-        <img src={logo} style={{ maxWidth: '150px', maxHeight:50 }} />
+        <img src={logo} alt={'loading...'} style={{ maxWidth: '150px', maxHeight:50 }} />
         </a>
         <MDBNavbarToggler
             onClick={toggleCollapse}
