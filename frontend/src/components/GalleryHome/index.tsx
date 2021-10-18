@@ -1,7 +1,5 @@
 // import React from 'react';
-import { Col, Row } from 'react-bootstrap';
 import React from 'react';
-import { render } from 'react-dom';
 import Gallery from 'react-grid-gallery';
 
 const IMAGES =

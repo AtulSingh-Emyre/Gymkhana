@@ -12,6 +12,7 @@ declare module 'react-stacked-carousel';
 declare module 'react-scroll-horizontal';
 declare module 'react-grid-gallery';
 declare module 'react-responsive-modal';
+declare module 'react-horizontal-timeline';
 
 declare module '*.scss' {
     const content: {[className: string]: string};

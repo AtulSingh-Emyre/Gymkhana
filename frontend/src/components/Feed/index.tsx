@@ -3,7 +3,6 @@ import { Col, Container, Row } from 'react-bootstrap';
 // import { Container } from 'react-bootstrap/lib/Tab';
 import { StackedCarousel } from 'react-stacked-carousel'
 import 'react-stacked-carousel/dist/index.css';
-import PageStarter from '../../template/PageStarter';
 import './styles.css';
 
 const data = [
