@@ -10,8 +10,6 @@ interface IProps {
 
 const HorizontalTimelineCustom : React.FC<IProps> = (props) => {
     const [value, setvalue] = useState(0);
-    const [previous, setprevious] = useState(0);
-
     return (
         <div style = {{
             width:'100%',  
@@ -23,7 +21,6 @@ const HorizontalTimelineCustom : React.FC<IProps> = (props) => {
              <HorizontalTimeline
                 index={value}
                 indexClick={(index : any) => {
-                    setprevious(value);
                     setvalue(index);
                     props.setIndex(index);
                 }}

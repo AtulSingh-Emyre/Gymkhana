@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import './style.css';
 import SocialButtonsPage from '../socialmediaicons';
 import { Container } from "react-bootstrap";
