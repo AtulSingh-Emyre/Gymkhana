@@ -1,6 +1,8 @@
 import React from 'react';
 import { MDBIcon, MDBContainer } from 'mdbreact';
 
+import { socialStyle } from './styles';
+
 const SocialButtonsPage = () => {
     return (
         <MDBContainer>
@@ -20,11 +22,6 @@ const SocialButtonsPage = () => {
     );
 }
 
-const socialStyle : React.CSSProperties = {
-    margin: 'auto',
-    alignContent: 'center',
-    alignItems: 'center',
-    alignSelf: 'center'
-}
+
 
 export default SocialButtonsPage;

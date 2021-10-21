@@ -41,3 +41,41 @@ export const Container = styled.div`
     }
   }
 `;
+
+export const styleSheet = {
+  heading: {
+    margin: 'auto',
+    // textAlign: 'center'
+  },
+  m20: {
+    marginTop:20
+  },
+  ma: {
+    margin: 'auto'
+  },
+  margin: {
+    margin: 'auto',
+    marginTop: 50
+  },
+  elevate: {
+    margin: 'auto',
+    zIndex: 1
+  },
+  fullWidth: {
+    maxWidth: '100%'
+  },
+  jumb: {
+    // position: 'relative',
+    width: '100%',
+    minHeight: '120vh',
+    backgroundImage: `url('./homepage-bg.jpeg')`,
+    display: 'flex',
+    zIndex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundSize: 'cover',
+    opacity: '1',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }
+}

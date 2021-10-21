@@ -1,24 +1,23 @@
 import React from 'react';
-import Details from '../../components/CouncilMemberDetail';
+
 import PreviousCouncilMemsContainer from '../../components/PreviousCouncilMemsContainer';
-import './index.css';
+import Details from '../../components/CouncilMemberDetail';
 import PageStarter from '../../template/PageStarter';
+import { styleSheet } from './styles';
+import './index.css';
+
 const Officebearers: React.FC = () => {
+
   return (
-    <div style={container}>
+    <div style={styleSheet.container}>
       <PageStarter heading={'SECRETARIES'} id={'secretaries'}>
-          <Details />
-          <div style={{ position:'relative', 
-          backgroundColor:'white', width:'100%', padding:0, margin:'auto'}}>
-            <PreviousCouncilMemsContainer/>      
-          </div>
+        <Details />
+        <div style={styleSheet.info}>
+          <PreviousCouncilMemsContainer/>
+        </div>
       </PageStarter>
     </div>
   );
 };
 
-const container: React.CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-}
 export default Officebearers;

@@ -41,3 +41,28 @@ export const Container = styled.div`
     }
   }
 `;
+
+export const styleSheet = {
+  position: {
+    // position: 'sticky'
+  },
+  w60: {
+    width: '60px'
+  },
+  ma: {
+    margin: 'auto'
+  },
+  mac: {
+    margin: 'auto',
+    alignItems: 'center'
+  },
+  col: {
+    margin: 'auto',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%'
+  },
+  pb10: {
+    paddingBottom: 10
+  }
+}
