@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
+import { styleSheet } from './styles';
+
 interface IProp {
     heading: string;
     children: any;
@@ -8,45 +10,25 @@ interface IProp {
     id?:string;
 }
 
-
 const PageStarter = (props: IProp) => {
     return (
-        <div 
-        id={props.id}
-        style={{
-          maxWidth:'100%',
-          margin:'auto', 
-          position:'relative', 
-          backgroundColor:props.color?props.color:'white', 
-          padding:30, 
-          marginBottom:0
-        }}>
-          <div style={{width:'100%', position:'relative', top:0, paddingTop:20, height:'150px', zIndex:2}} className={'child1'} >
-            <Container >
-              <strong> <b>
-                <h3 style={{maxWidth:'100%',textAlign:'center', position:'relative', top:'20px', bottom:0, right:10, left:10, color:'blueviolet', fontFamily:'Arial Black'}}>
-                {/* // OFFICE BEARERS */}
-                {props.heading}
+      <div id={props.id} style={{ backgroundColor:props.color?props.color:'white', ...styleSheet.container }}>
+        <div style={styleSheet.header} className={'child1'}>
+          <Container >
+            <strong>
+              <b>
+                <h3 style={{ ...styleSheet.heading, textAlign: 'center' }}>
+                  {props.heading}
                 </h3>
-                </b> </strong>
-            </Container>
-          </div>
-          <div style={{
-            width:'100%', 
-            position: 'relative', 
-            backgroundColor:'white',
-            // margin:'auto', 
-            margin:'auto',
-            marginTop:'0px',
-            zIndex:3, 
-          }} className={'child2'}>
-            {/* <MDBCard > */}
-                {props.children}
-            {/* <Details /> */}
-            {/* </MDBCard> */}
-          </div>
+              </b>
+            </strong>
+          </Container>
         </div>
-       
+        <br/>
+        <div style={styleSheet.children} className={'child2'}>
+          {props.children}
+        </div>
+      </div>
     );
 }
 
