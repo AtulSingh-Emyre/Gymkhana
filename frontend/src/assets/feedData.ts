@@ -14,5 +14,15 @@ export const data = [
         "desc": "An audience pleaser music show with an amazing and talented singer Calvin Jerome Suares to rock the evening!",
         "img": `${require('./Feed/Calvin_Jerome_Suares_Live_Show.png')}`,
         "href": "https://www.youtube.com/channel/UCrx2MGi5Za6RoMILjTmT9Cg"
+    },{
+        "title": "General Sports Championship 2021",
+        "desc": "Inter Branch Sports Championship held in Autumn 2021 across various outdoor and indoor sports.",
+        "img": `${require('./Feed/GC_Poster.jpg')}`,
+        "href": ""
+    },{
+        "title": "Sporotech 2021",
+        "desc": "A technical event involving robotic innovations which would find application in sports.",
+        "img": `${require('./Feed/sporotech.jpeg')}`,
+        "href": "https://oss2019.github.io/RoboticsForSports/"
     }
 ]

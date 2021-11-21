@@ -2,13 +2,13 @@
 import React from 'react';
 import Gallery from 'react-grid-gallery';
 
-import IMAGES from '../../assets/galleryImages.json';
+import {gallery} from '../../assets/galleryImages';
 import { styleSheet } from './styles';
 
 const GalleryHome = () => { 
         return (
 			<div style={styleSheet.root}>
-				<Gallery images={IMAGES} enableImageSelection ={false} />
+				<Gallery images={gallery} enableImageSelection ={false} />
 			</div>
         );
 }
