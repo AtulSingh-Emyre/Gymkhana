@@ -5,22 +5,22 @@
     },
     {
         "title": "Cultural Council",
-        "desc": "The Cultural Council is involved in conduction of various cultural related activities in the institute."
+        "desc": "The Cultural Council is involved in conduction of various culture related activities in the institute for the student body."
     },
     {
         "title": "Sports Council",
-        "desc": "The Sports Council is involved in conduction of sports related activities in the institute."
+        "desc": "The Sports Council is involved in conduction of sports related activities in the institute. Both indoor as well as outdoor sports are included in the same."
     },
     {
         "title": "Academic Council",
-        "desc": "The technical council is involved in conduction of technical activities in the institute and aims to grow the technical culture."
+        "desc": "The Academic council is involved in overseeing and taking care of the various academic aspects of the student body."
     },
     {
         "title": "Hostel Council",
-        "desc": "The technical council is involved in conduction of technical activities in the institute and aims to grow the technical culture."
+        "desc": "The Hostel Council primarily takes care of all the activities, issues and events that pertain to student hostels and social factors."
     },
     {
-        "title": "Mess Commette",
-        "desc": "The technical council is involved in conduction of technical activities in the institute and aims to grow the technical culture."
+        "title": "Mess Committee",
+        "desc": "The Mess Committee oversees the mess functions and takes care of the quality, interests and activities of the mess."
     }
 ]

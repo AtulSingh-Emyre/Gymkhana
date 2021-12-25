@@ -70,10 +70,22 @@ export const gallery = [
         "caption": "Interbranch Tennis GC 2021"	
         },
 	{
-        "src": require('./Gallery/img5.JPG'),
-        "thumbnail": require('./Gallery/img5.JPG'),
+        "src": require('./Gallery/img11.JPG'),
+        "thumbnail": require('./Gallery/img11.JPG'),
         "thumbnailWidth": 300,
         "thumbnailHeight": 212,
-        "caption": "Interbranch Throwball GC 2021"	
+        "caption": "Interbranch Football GC 2021"	
+        },{
+        "src": require('./Gallery/img12.jpg'),
+        "thumbnail": require('./Gallery/img12.jpg'),
+        "thumbnailWidth": 300,
+        "thumbnailHeight": 212,
+        "caption": "Clointfusion Hackathon 2021"	
+        },{
+        "src": require('./Gallery/img13.JPG'),
+        "thumbnail": require('./Gallery/img13.JPG'),
+        "thumbnailWidth": 300,
+        "thumbnailHeight": 212,
+        "caption": "Interbranch Football GC 2021"	
         }
 ]

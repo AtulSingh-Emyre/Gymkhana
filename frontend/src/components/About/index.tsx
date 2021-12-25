@@ -1,10 +1,12 @@
-import React from 'react';
-import { Button, Col, Row} from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Button, Card, Col, Row} from 'react-bootstrap';
 
 import PageStarter from '../../template/PageStarter';
 import { styleSheet } from './styles';
 
 const About = () => {
+    const [constit, setConstit] = useState(false);
+    const [ruleBook, setRuleBook] = useState(false);
     return (
       <div style={styleSheet.fullWidth}>
         <PageStarter heading={'About'} id={'about'}>
@@ -18,10 +20,13 @@ const About = () => {
             <br/>
             <Row style={styleSheet.row}>
               <Col xl={3} sm={5} md={5} xs={12}>
-                <Button variant="dark" style={styleSheet.button} >Constitution</Button>
+                <Button variant="dark" style={styleSheet.button} onClick={() => setConstit(!constit)} >Constitution</Button>
+              { constit && <Card.Text style={{fontSize:12,margin:'auto', font: 'red',textAlign:'center'}}>Coming Soon..</Card.Text>}
               </Col>
               <Col xl={3} md={5} sm={5} xs={12}>
-                <Button variant="dark" style={styleSheet.button} >Rule Book</Button>
+                <Button variant="dark" style={styleSheet.button} onClick={() => setRuleBook(!ruleBook)}>Rule Book</Button>
+                { ruleBook && <Card.Text style={{fontSize:12,margin:'auto', font: 'red',textAlign:'center'}}>Coming Soon..</Card.Text>}
+
               </Col>
             </Row>
           </div>
