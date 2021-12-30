@@ -73,19 +73,25 @@ export const gallery = [
         "src": require('./Gallery/img11.JPG'),
         "thumbnail": require('./Gallery/img11.JPG'),
         "thumbnailWidth": 300,
-        "thumbnailHeight": 212,
+        "thumbnailHeight": 180,
         "caption": "Interbranch Football GC 2021"	
         },{
         "src": require('./Gallery/img12.jpg'),
         "thumbnail": require('./Gallery/img12.jpg'),
         "thumbnailWidth": 300,
-        "thumbnailHeight": 212,
+        "thumbnailHeight": 190,
         "caption": "Clointfusion Hackathon 2021"	
         },{
         "src": require('./Gallery/img13.JPG'),
         "thumbnail": require('./Gallery/img13.JPG'),
         "thumbnailWidth": 300,
-        "thumbnailHeight": 212,
+        "thumbnailHeight": 190,
         "caption": "Interbranch Football GC 2021"	
+        },{
+        "src": require('./Gallery/img14.jpeg'),
+        "thumbnail": require('./Gallery/img14.jpeg'),
+        "thumbnailWidth": 300,
+        "thumbnailHeight": 150,
+        "caption": "Summer of Innovation 2021"	
         }
 ]

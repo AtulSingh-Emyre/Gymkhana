@@ -16,6 +16,7 @@
     "react-grid-gallery": "^0.5.5",
     "react-horizontal-timeline": "^1.5.3",
     "react-icons": "^3.11.0",
+    "react-parallax": "^3.3.0",
     "react-responsive": "^8.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",

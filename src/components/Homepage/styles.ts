@@ -67,14 +67,12 @@ export const styleSheet = {
   jumb: {
     // position: 'relative',
     width: '100%',
-    minHeight: '120vh',
-    backgroundImage: `url('./homepage-bg.jpeg')`,
+    minHeight: '100vh',
     display: 'flex',
     zIndex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundSize: 'cover',
-    opacity: '1',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'
   }
